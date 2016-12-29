@@ -48,6 +48,8 @@ class SteamClient:
             EMsg.ClientPersonaState: [self.on_friend_state],
             EMsg.ClientRequestValidationMailResponse: [self.on_validate_email],
             EMsg.ClientUpdateMachineAuth: [self.on_sentry],
+            EMsg.ClientPlayingSessionState: [self.on_playing_state],
+            EMsg.ClientLoggedOff: [self.on_logged_off],
         }
 
         self.persona_name = ''
@@ -60,6 +62,17 @@ class SteamClient:
                 handler(hdr, data)
             else:
                 handler(data)
+
+    def connect(self):
+        for i in xrange(3):
+            for server in random.sample(steam.servers, len(steam.servers)):
+                print 'connecting to:', server
+                try:
+                    self.connection = Connection(*server)
+                    return
+                except Exception:
+                    print 'timeout'
+        raise socket.error('could not connect to server')
 
     def login(self, username, password, sentry_hash=None, code=None):
         self.steam_id = steam.SteamID(0)
@@ -76,15 +89,7 @@ class SteamClient:
         self.msg_queue = Queue.Queue()
         self.current_job = 0
 
-        for i in xrange(3):
-            for server in random.sample(steam.servers, len(steam.servers)):
-                print 'connecting to:', server
-                try:
-                    self.connection = Connection(*server)
-                    return
-                except Exception:
-                    print 'timeout'
-        raise socket.error('could not connect to server')
+        self.connect()
 
     def set_persona(self, name=None, state=None):
         # FIXME: online state doesn't seem to work
@@ -114,12 +119,19 @@ class SteamClient:
         game = steam_server.CMsgClientGamesPlayed()
         played = steam_server.CMsgClientGamesPlayed.GamePlayed()
         played.game_id = app_id
-        played.game_extra_info = steam.games[app_id]
+        # This just errors
+        # played.game_extra_info = steam.games[app_id]
         played.process_id = 1234
         played.token = self.connect_tokens.pop(-1)
         game.games_played.extend([played])
         self.send(EMsg.ClientGamesPlayedWithDataBlob | proto_mask, game)
         self.in_game = app_id
+
+    def disconnect(self):
+        print('Disconnect')
+        if self.connection.recv():
+            msg = steam_server.CMsgGSDisconnectNotice()
+            self.send(EMsg.ClientBroadcastDisconnect | proto_mask, msg)
 
     def pump(self):
         thread.start_new_thread(self.msg_pump, ())
@@ -190,14 +202,22 @@ class SteamClient:
             self.connection.key = self._tmpkey
             logon = steam_server.CMsgClientLogon()
             logon.obfustucated_private_ip = 0
+
             logon.account_name = self.username
             logon.password = self.password
-            logon.should_remember_password = 0
+            logon.should_remember_password = True
+
+            if self.login_key:
+                logon.login_key = self.login_key
+
             logon.protocol_version = MsgClientLogon.CurrentProtocol
             logon.client_os_type = EOSType.Win311
+
             if self.code:
                 logon.auth_code = self.code
-            # latest package version is required to get a sentry file
+                logon.two_factor_code = self.code
+
+            # latest package version is required to get a sentry file 1771
             logon.client_package_version = 1771
             if self.sentry_hash:
                 logon.sha_sentryfile = self.sentry_hash
@@ -256,6 +276,10 @@ class SteamClient:
     def on_account_info(self, msg):
         self.persona_name = msg.persona_name
 
+    def on_playing_state(self, data):
+        data.read('?')
+        self.in_game = data.read('b') # This should be an integer containing the appid, but its not, so this returns 1 or 0
+
     def on_cm_list(self, msg):
         # TODO: do something with this server list
         addrs = []
@@ -312,6 +336,12 @@ class SteamClient:
         for t in msg.tokens:
             self.connect_tokens.insert(0, t)
         self.connect_tokens = self.connect_tokens[:msg.max_tokens_to_keep]
+
+    def on_logged_off(self, msg):
+        self.connection.socket.close()
+        self.code = None
+
+        self.connect()
 
     def heartbeat(self, wait=9):
         while 1:
