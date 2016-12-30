@@ -314,7 +314,6 @@ class EMsg(Enum):
         'ClientGetLicenses': 728,
         'ClientGetLegacyGameKey': 730,
         'ClientAckVACBan2': 732,
-        'ClientAckMessageByGID': 735,
         'ClientGetPurchaseReceipts': 736,
         'ClientAckPurchaseReceipt': 737,
         'ClientSendGuestPass': 739,
@@ -355,8 +354,6 @@ class EMsg(Enum):
         'ClientInitPurchaseResponse': 789,
         'ClientAddFriend': 791,
         'ClientAddFriendResponse': 792,
-        'ClientInviteFriend': 793,
-        'ClientInviteFriendResponse': 794,
         'ClientAckGuestPassResponse': 796,
         'ClientRedeemGuestPassResponse': 797,
         'ClientUpdateGuestPassesList': 798,
@@ -1233,6 +1230,8 @@ class EMsg(Enum):
         'ClientDisableTestLicenseResponse': 5446,
         'ClientRequestValidationMail': 5448,
         'ClientRequestValidationMailResponse': 5449,
+        'ClientCheckAppBetaPassword': 5450,
+        'ClientCheckAppBetaPasswordResponse': 5451,
         'ClientToGC': 5452,
         'ClientFromGC': 5453,
         'ClientRequestChangeMail': 5454,
@@ -1243,7 +1242,6 @@ class EMsg(Enum):
         'ClientPersonalQAChange3': 5459,
         'ClientResetForgottenPassword3': 5460,
         'ClientRequestForgottenPasswordEmail3': 5461,
-        'ClientCreateAccount3': 5462,
         'ClientNewLoginKey': 5463,
         'ClientNewLoginKeyAccepted': 5464,
         'ClientStoreUserStats2': 5466,
@@ -1346,8 +1344,6 @@ class EMsg(Enum):
         'ClientItemAnnouncements': 5576,
         'ClientRequestItemAnnouncements': 5577,
         'ClientFriendMsgEchoToSender': 5578,
-        'ClientChangeSteamGuardOptions': 5579,
-        'ClientChangeSteamGuardOptionsResponse': 5580,
         'ClientOGSGameServerPingSample': 5581,
         'ClientCommentNotifications': 5582,
         'ClientRequestCommentNotifications': 5583,
@@ -1498,12 +1494,8 @@ class EMsg(Enum):
         'ClientUCMDeletePublishedFileResponse': 7316,
         'ClientUCMEnumerateUserPublishedFiles': 7317,
         'ClientUCMEnumerateUserPublishedFilesResponse': 7318,
-        'ClientUCMSubscribePublishedFile': 7319,
-        'ClientUCMSubscribePublishedFileResponse': 7320,
         'ClientUCMEnumerateUserSubscribedFiles': 7321,
         'ClientUCMEnumerateUserSubscribedFilesResponse': 7322,
-        'ClientUCMUnsubscribePublishedFile': 7323,
-        'ClientUCMUnsubscribePublishedFileResponse': 7324,
         'ClientUCMUpdatePublishedFile': 7325,
         'ClientUCMUpdatePublishedFileResponse': 7326,
         'UCMUpdatePublishedFile': 7327,
@@ -1846,6 +1838,12 @@ class EResult(Enum):
         'RefundToWallet': 98,
         'EmailSendFailure': 99,
         'NotSettled': 100,
+        'NeedCaptcha': 101,
+        'GSLTDenied': 102,
+        'GSOwnerDenied': 103,
+        'InvalidItemType': 104,
+        'IPBanned': 105,
+        'GSLTExpired': 106,
     }
     
 class EUniverse(Enum):
@@ -1998,6 +1996,7 @@ class EPersonaStateFlag(Enum):
         'OnlineUsingWeb': 256,
         'OnlineUsingMobile': 512,
         'OnlineUsingBigPicture': 1024,
+        'OnlineUsingVR': 2048,
     }
     
 class EClientPersonaStateFlag(Enum):
@@ -2723,6 +2722,14 @@ class ELeaderboardSortMethod(Enum):
         'Descending': 2,
     }
     
+class ELeaderboardDisplayType(Enum):
+    constants = {
+        'none': 0,
+        'Numeric': 1,
+        'TimeSeconds': 2,
+        'TimeMilliSeconds': 3,
+    }
+    
 class ELeaderboardUploadScoreMethod(Enum):
     constants = {
         'none': 0,
@@ -3134,19 +3141,6 @@ class MsgClientChatRoomInfo(Message):
     properties = (
         ('steamIdChat', 'ulong', 0),
         ('type', 'int', 0),
-    )
-    struct = generate_struct(properties)
-    
-class MsgClientGetNumberOfCurrentPlayers(Message):
-    properties = (
-        ('gameID', 'ulong', 0),
-    )
-    struct = generate_struct(properties)
-    
-class MsgClientGetNumberOfCurrentPlayersResponse(Message):
-    properties = (
-        ('result', 'int', 0),
-        ('numPlayers', 'uint', 0),
     )
     struct = generate_struct(properties)
     
