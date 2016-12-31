@@ -16,6 +16,8 @@ PROTO_MAPPING = {
     EMsg.ClientGameConnectTokens: steam_server.CMsgClientGameConnectTokens,
     EMsg.ClientFromGC: steam_server2.CMsgGCClient,
     EMsg.ClientPersonaState:steam_server.CMsgClientPersonaState,
+    EMsg.ClientFriendMsgIncoming:steam_server.CMsgClientFriendMsgIncoming,
+    EMsg.ClientPlayingSessionState:steam_server2.CMsgClientPlayingSessionState,
 }
 WANTS_HEADER = [EMsg.ClientUpdateMachineAuth]
 EMSGS = dict(map(reversed, steamd.EMsg.constants.items()))

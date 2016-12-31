@@ -276,9 +276,8 @@ class SteamClient:
     def on_account_info(self, msg):
         self.persona_name = msg.persona_name
 
-    def on_playing_state(self, data):
-        data.read('?')
-        self.in_game = data.read('b') # This should be an integer containing the appid, but its not, so this returns 1 or 0
+    def on_playing_state(self, msg):
+        self.in_game = msg.playing_app
 
     def on_cm_list(self, msg):
         # TODO: do something with this server list
@@ -312,7 +311,8 @@ class SteamClient:
                 self.friends[fid].name = friend.player_name
 
     def on_friend_msg(self, msg):
-        print msg
+        if msg.chat_entry_type == 1:
+            print('New msg from {}: {}, at {}'.format(msg.steamid_from, msg.message, msg.rtime32_server_timestamp))
 
     def on_addrinfo(self, msg):
         # ask steam to send us a validation email if we don't have a verified email address
