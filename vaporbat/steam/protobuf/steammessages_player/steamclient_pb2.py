@@ -13,16 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import google.protobuf.descriptor_pb2
-import steammessages_unified_base.steamclient_pb2
+from steammessages_unified_base import steamclient_pb2 as steammessages__unified__base_dot_steamclient__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='steammessages_player.steamclient.proto',
   package='',
-  serialized_pb=_b('\n&steammessages_player.steamclient.proto\x1a google/protobuf/descriptor.proto\x1a,steammessages_unified_base.steamclient.proto\"3\n\"CPlayer_GetGameBadgeLevels_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\"\xb5\x01\n#CPlayer_GetGameBadgeLevels_Response\x12\x14\n\x0cplayer_level\x18\x01 \x01(\r\x12:\n\x06\x62\x61\x64ges\x18\x02 \x03(\x0b\x32*.CPlayer_GetGameBadgeLevels_Response.Badge\x1a<\n\x05\x42\x61\x64ge\x12\r\n\x05level\x18\x01 \x01(\x05\x12\x0e\n\x06series\x18\x02 \x01(\x05\x12\x14\n\x0c\x62order_color\x18\x03 \x01(\r\"\x82\x01\n\"CPlayer_GetLastPlayedTimes_Request\x12\\\n\x0fmin_last_played\x18\x01 \x01(\rBC\x82\xb5\x18?The most recent last-played time the client already knows about\"\xc0\x01\n#CPlayer_GetLastPlayedTimes_Response\x12\x38\n\x05games\x18\x01 \x03(\x0b\x32).CPlayer_GetLastPlayedTimes_Response.Game\x1a_\n\x04Game\x12\r\n\x05\x61ppid\x18\x01 \x01(\x05\x12\x15\n\rlast_playtime\x18\x02 \x01(\r\x12\x17\n\x0fplaytime_2weeks\x18\x03 \x01(\x05\x12\x18\n\x10playtime_forever\x18\x04 \x01(\x05\"\x1b\n\x19\x43Player_AcceptSSA_Request\"\x1c\n\x1a\x43Player_AcceptSSA_Response\"`\n$CPlayer_LastPlayedTimes_Notification\x12\x38\n\x05games\x18\x01 \x03(\x0b\x32).CPlayer_GetLastPlayedTimes_Response.Game\",\n*CPlayerClient_GetSystemInformation_Request\"\xf5\x04\n\x11\x43\x43lientSystemInfo\x12#\n\x03\x63pu\x18\x01 \x01(\x0b\x32\x16.CClientSystemInfo.CPU\x12\x30\n\nvideo_card\x18\x02 \x01(\x0b\x32\x1c.CClientSystemInfo.VideoCard\x12\x18\n\x10operating_system\x18\x03 \x01(\t\x12\x10\n\x08os_64bit\x18\x04 \x01(\x08\x12\x15\n\rsystem_ram_mb\x18\x05 \x01(\x05\x12\x14\n\x0c\x61udio_device\x18\x06 \x01(\t\x12\x1c\n\x14\x61udio_driver_version\x18\x07 \x01(\t\x1a\xe0\x01\n\x03\x43PU\x12\x11\n\tspeed_mhz\x18\x01 \x01(\x05\x12\x0e\n\x06vendor\x18\x02 \x01(\t\x12\x1a\n\x12logical_processors\x18\x03 \x01(\x05\x12\x1b\n\x13physical_processors\x18\x04 \x01(\x05\x12\x16\n\x0ehyperthreading\x18\x05 \x01(\x08\x12\r\n\x05\x66\x63mov\x18\x06 \x01(\x08\x12\x0c\n\x04sse2\x18\x07 \x01(\x08\x12\x0c\n\x04sse3\x18\x08 \x01(\x08\x12\r\n\x05ssse3\x18\t \x01(\x08\x12\r\n\x05sse4a\x18\n \x01(\x08\x12\r\n\x05sse41\x18\x0b \x01(\x08\x12\r\n\x05sse42\x18\x0c \x01(\x08\x1a\xae\x01\n\tVideoCard\x12\x0e\n\x06\x64river\x18\x01 \x01(\t\x12\x16\n\x0e\x64river_version\x18\x02 \x01(\t\x12\x13\n\x0b\x64river_date\x18\x03 \x01(\r\x12\x17\n\x0f\x64irectx_version\x18\x04 \x01(\t\x12\x16\n\x0eopengl_version\x18\x05 \x01(\t\x12\x10\n\x08vendorid\x18\x06 \x01(\x05\x12\x10\n\x08\x64\x65viceid\x18\x07 \x01(\x05\x12\x0f\n\x07vram_mb\x18\x08 \x01(\x05\"V\n+CPlayerClient_GetSystemInformation_Response\x12\'\n\x0bsystem_info\x18\x01 \x01(\x0b\x32\x12.CClientSystemInfo2\xed\x03\n\x06Player\x12\xb6\x01\n\x12GetGameBadgeLevels\x12#.CPlayer_GetGameBadgeLevels_Request\x1a$.CPlayer_GetGameBadgeLevels_Response\"U\x82\xb5\x18QReturns the Steam Level of a user, the Badge level for the game, and if it\'s foil\x12\x95\x01\n\x18\x43lientGetLastPlayedTimes\x12#.CPlayer_GetLastPlayedTimes_Request\x1a$.CPlayer_GetLastPlayedTimes_Response\".\x82\xb5\x18*Gets the last-played times for the account\x12\x63\n\tAcceptSSA\x12\x1a.CPlayer_AcceptSSA_Request\x1a\x1b.CPlayer_AcceptSSA_Response\"\x1d\x82\xb5\x18\x19User is accepting the SSA\x1a-\x82\xb5\x18)A service for accessing Steam player data2\x93\x03\n\x0cPlayerClient\x12\x8c\x01\n\x15NotifyLastPlayedTimes\x12%.CPlayer_LastPlayedTimes_Notification\x1a\x0b.NoResponse\"?\x82\xb5\x18;Notification from server to client of more recent play time\x12\xc3\x01\n\x14GetSystemInformation\x12+.CPlayerClient_GetSystemInformation_Request\x1a,.CPlayerClient_GetSystemInformation_Response\"P\x82\xb5\x18LRequest from the server to the client for information about the users system\x1a.\x82\xb5\x18&Steam player data client notifications\xc0\xb5\x18\x02')
+  syntax='proto2',
+  serialized_pb=_b('\n&steammessages_player.steamclient.proto\x1a,steammessages_unified_base.steamclient.proto\"3\n\"CPlayer_GetGameBadgeLevels_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\"\xb5\x01\n#CPlayer_GetGameBadgeLevels_Response\x12\x14\n\x0cplayer_level\x18\x01 \x01(\r\x12:\n\x06\x62\x61\x64ges\x18\x02 \x03(\x0b\x32*.CPlayer_GetGameBadgeLevels_Response.Badge\x1a<\n\x05\x42\x61\x64ge\x12\r\n\x05level\x18\x01 \x01(\x05\x12\x0e\n\x06series\x18\x02 \x01(\x05\x12\x14\n\x0c\x62order_color\x18\x03 \x01(\r\"\x82\x01\n\"CPlayer_GetLastPlayedTimes_Request\x12\\\n\x0fmin_last_played\x18\x01 \x01(\rBC\x82\xb5\x18?The most recent last-played time the client already knows about\"\xc0\x01\n#CPlayer_GetLastPlayedTimes_Response\x12\x38\n\x05games\x18\x01 \x03(\x0b\x32).CPlayer_GetLastPlayedTimes_Response.Game\x1a_\n\x04Game\x12\r\n\x05\x61ppid\x18\x01 \x01(\x05\x12\x15\n\rlast_playtime\x18\x02 \x01(\r\x12\x17\n\x0fplaytime_2weeks\x18\x03 \x01(\x05\x12\x18\n\x10playtime_forever\x18\x04 \x01(\x05\"\x1b\n\x19\x43Player_AcceptSSA_Request\"\x1c\n\x1a\x43Player_AcceptSSA_Response\"`\n$CPlayer_LastPlayedTimes_Notification\x12\x38\n\x05games\x18\x01 \x03(\x0b\x32).CPlayer_GetLastPlayedTimes_Response.Game\",\n*CPlayerClient_GetSystemInformation_Request\"\xf5\x04\n\x11\x43\x43lientSystemInfo\x12#\n\x03\x63pu\x18\x01 \x01(\x0b\x32\x16.CClientSystemInfo.CPU\x12\x30\n\nvideo_card\x18\x02 \x01(\x0b\x32\x1c.CClientSystemInfo.VideoCard\x12\x18\n\x10operating_system\x18\x03 \x01(\t\x12\x10\n\x08os_64bit\x18\x04 \x01(\x08\x12\x15\n\rsystem_ram_mb\x18\x05 \x01(\x05\x12\x14\n\x0c\x61udio_device\x18\x06 \x01(\t\x12\x1c\n\x14\x61udio_driver_version\x18\x07 \x01(\t\x1a\xe0\x01\n\x03\x43PU\x12\x11\n\tspeed_mhz\x18\x01 \x01(\x05\x12\x0e\n\x06vendor\x18\x02 \x01(\t\x12\x1a\n\x12logical_processors\x18\x03 \x01(\x05\x12\x1b\n\x13physical_processors\x18\x04 \x01(\x05\x12\x16\n\x0ehyperthreading\x18\x05 \x01(\x08\x12\r\n\x05\x66\x63mov\x18\x06 \x01(\x08\x12\x0c\n\x04sse2\x18\x07 \x01(\x08\x12\x0c\n\x04sse3\x18\x08 \x01(\x08\x12\r\n\x05ssse3\x18\t \x01(\x08\x12\r\n\x05sse4a\x18\n \x01(\x08\x12\r\n\x05sse41\x18\x0b \x01(\x08\x12\r\n\x05sse42\x18\x0c \x01(\x08\x1a\xae\x01\n\tVideoCard\x12\x0e\n\x06\x64river\x18\x01 \x01(\t\x12\x16\n\x0e\x64river_version\x18\x02 \x01(\t\x12\x13\n\x0b\x64river_date\x18\x03 \x01(\r\x12\x17\n\x0f\x64irectx_version\x18\x04 \x01(\t\x12\x16\n\x0eopengl_version\x18\x05 \x01(\t\x12\x10\n\x08vendorid\x18\x06 \x01(\x05\x12\x10\n\x08\x64\x65viceid\x18\x07 \x01(\x05\x12\x0f\n\x07vram_mb\x18\x08 \x01(\x05\"V\n+CPlayerClient_GetSystemInformation_Response\x12\'\n\x0bsystem_info\x18\x01 \x01(\x0b\x32\x12.CClientSystemInfo2\xed\x03\n\x06Player\x12\xb6\x01\n\x12GetGameBadgeLevels\x12#.CPlayer_GetGameBadgeLevels_Request\x1a$.CPlayer_GetGameBadgeLevels_Response\"U\x82\xb5\x18QReturns the Steam Level of a user, the Badge level for the game, and if it\'s foil\x12\x95\x01\n\x18\x43lientGetLastPlayedTimes\x12#.CPlayer_GetLastPlayedTimes_Request\x1a$.CPlayer_GetLastPlayedTimes_Response\".\x82\xb5\x18*Gets the last-played times for the account\x12\x63\n\tAcceptSSA\x12\x1a.CPlayer_AcceptSSA_Request\x1a\x1b.CPlayer_AcceptSSA_Response\"\x1d\x82\xb5\x18\x19User is accepting the SSA\x1a-\x82\xb5\x18)A service for accessing Steam player data2\x93\x03\n\x0cPlayerClient\x12\x8c\x01\n\x15NotifyLastPlayedTimes\x12%.CPlayer_LastPlayedTimes_Notification\x1a\x0b.NoResponse\"?\x82\xb5\x18;Notification from server to client of more recent play time\x12\xc3\x01\n\x14GetSystemInformation\x12+.CPlayerClient_GetSystemInformation_Request\x1a,.CPlayerClient_GetSystemInformation_Response\"P\x82\xb5\x18LRequest from the server to the client for information about the users system\x1a.\x82\xb5\x18&Steam player data client notifications\xc0\xb5\x18\x02\x42\x03\x80\x01\x01')
   ,
-  dependencies=[google.protobuf.descriptor_pb2.DESCRIPTOR,steammessages_unified_base.steamclient_pb2.DESCRIPTOR,])
+  dependencies=[steammessages__unified__base_dot_steamclient__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -50,11 +50,12 @@ _CPLAYER_GETGAMEBADGELEVELS_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=122,
-  serialized_end=173,
+  serialized_start=88,
+  serialized_end=139,
 )
 
 
@@ -94,11 +95,12 @@ _CPLAYER_GETGAMEBADGELEVELS_RESPONSE_BADGE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=297,
-  serialized_end=357,
+  serialized_start=263,
+  serialized_end=323,
 )
 
 _CPLAYER_GETGAMEBADGELEVELS_RESPONSE = _descriptor.Descriptor(
@@ -130,11 +132,12 @@ _CPLAYER_GETGAMEBADGELEVELS_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=176,
-  serialized_end=357,
+  serialized_start=142,
+  serialized_end=323,
 )
 
 
@@ -160,11 +163,12 @@ _CPLAYER_GETLASTPLAYEDTIMES_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=360,
-  serialized_end=490,
+  serialized_start=326,
+  serialized_end=456,
 )
 
 
@@ -211,11 +215,12 @@ _CPLAYER_GETLASTPLAYEDTIMES_RESPONSE_GAME = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=590,
-  serialized_end=685,
+  serialized_start=556,
+  serialized_end=651,
 )
 
 _CPLAYER_GETLASTPLAYEDTIMES_RESPONSE = _descriptor.Descriptor(
@@ -240,11 +245,12 @@ _CPLAYER_GETLASTPLAYEDTIMES_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=493,
-  serialized_end=685,
+  serialized_start=459,
+  serialized_end=651,
 )
 
 
@@ -263,11 +269,12 @@ _CPLAYER_ACCEPTSSA_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=687,
-  serialized_end=714,
+  serialized_start=653,
+  serialized_end=680,
 )
 
 
@@ -286,11 +293,12 @@ _CPLAYER_ACCEPTSSA_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=716,
-  serialized_end=744,
+  serialized_start=682,
+  serialized_end=710,
 )
 
 
@@ -316,11 +324,12 @@ _CPLAYER_LASTPLAYEDTIMES_NOTIFICATION = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=746,
-  serialized_end=842,
+  serialized_start=712,
+  serialized_end=808,
 )
 
 
@@ -339,11 +348,12 @@ _CPLAYERCLIENT_GETSYSTEMINFORMATION_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=844,
-  serialized_end=888,
+  serialized_start=810,
+  serialized_end=854,
 )
 
 
@@ -446,11 +456,12 @@ _CCLIENTSYSTEMINFO_CPU = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1119,
-  serialized_end=1343,
+  serialized_start=1085,
+  serialized_end=1309,
 )
 
 _CCLIENTSYSTEMINFO_VIDEOCARD = _descriptor.Descriptor(
@@ -524,11 +535,12 @@ _CCLIENTSYSTEMINFO_VIDEOCARD = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1346,
-  serialized_end=1520,
+  serialized_start=1312,
+  serialized_end=1486,
 )
 
 _CCLIENTSYSTEMINFO = _descriptor.Descriptor(
@@ -595,11 +607,12 @@ _CCLIENTSYSTEMINFO = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=891,
-  serialized_end=1520,
+  serialized_start=857,
+  serialized_end=1486,
 )
 
 
@@ -625,11 +638,12 @@ _CPLAYERCLIENT_GETSYSTEMINFORMATION_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1522,
-  serialized_end=1608,
+  serialized_start=1488,
+  serialized_end=1574,
 )
 
 _CPLAYER_GETGAMEBADGELEVELS_RESPONSE_BADGE.containing_type = _CPLAYER_GETGAMEBADGELEVELS_RESPONSE
@@ -756,6 +770,8 @@ CPlayerClient_GetSystemInformation_Response = _reflection.GeneratedProtocolMessa
 _sym_db.RegisterMessage(CPlayerClient_GetSystemInformation_Response)
 
 
+DESCRIPTOR.has_options = True
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\200\001\001'))
 _CPLAYER_GETLASTPLAYEDTIMES_REQUEST.fields_by_name['min_last_played'].has_options = True
 _CPLAYER_GETLASTPLAYEDTIMES_REQUEST.fields_by_name['min_last_played']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030?The most recent last-played time the client already knows about'))
 # @@protoc_insertion_point(module_scope)

@@ -13,16 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import google.protobuf.descriptor_pb2
-import steammessages_unified_base.steamclient_pb2
+from steammessages_unified_base import steamclient_pb2 as steammessages__unified__base_dot_steamclient__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='steammessages_broadcast.steamclient.proto',
   package='',
-  serialized_pb=_b('\n)steammessages_broadcast.steamclient.proto\x1a google/protobuf/descriptor.proto\x1a,steammessages_unified_base.steamclient.proto\"\x9d\x01\n(CBroadcast_BeginBroadcastSession_Request\x12\x12\n\npermission\x18\x01 \x01(\x05\x12\x0e\n\x06gameid\x18\x02 \x01(\x04\x12\x1a\n\x12\x63lient_instance_id\x18\x03 \x01(\x04\x12\r\n\x05title\x18\x04 \x01(\t\x12\x0e\n\x06\x63\x65llid\x18\x05 \x01(\r\x12\x12\n\nrtmp_token\x18\x06 \x01(\x04\"A\n)CBroadcast_BeginBroadcastSession_Response\x12\x14\n\x0c\x62roadcast_id\x18\x01 \x01(\x06\">\n&CBroadcast_EndBroadcastSession_Request\x12\x14\n\x0c\x62roadcast_id\x18\x01 \x01(\x06\")\n\'CBroadcast_EndBroadcastSession_Response\"w\n\'CBroadcast_StartBroadcastUpload_Request\x12\x14\n\x0c\x62roadcast_id\x18\x01 \x01(\x06\x12\x0e\n\x06\x63\x65llid\x18\x02 \x01(\r\x12\x0f\n\x07\x61s_rtmp\x18\x03 \x01(\x08\x12\x15\n\rdelay_seconds\x18\x04 \x01(\r\"q\n(CBroadcast_StartBroadcastUpload_Response\x12\x14\n\x0cupload_token\x18\x01 \x01(\t\x12\x16\n\x0eupload_address\x18\x02 \x01(\t\x12\x17\n\x0fupload_relay_id\x18\x03 \x01(\x06\"f\n1CBroadcast_NotifyBroadcastUploadStop_Notification\x12\x1a\n\x12\x62roadcast_relay_id\x18\x01 \x01(\x06\x12\x15\n\rupload_result\x18\x02 \x01(\r\"i\n!CBroadcast_WatchBroadcast_Request\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x1d\n\x15\x65xisting_broadcast_id\x18\x02 \x01(\x06\x12\x14\n\x0cviewer_token\x18\x03 \x01(\x06\"\xd7\x05\n\"CBroadcast_WatchBroadcast_Response\x12[\n\x08response\x18\x01 \x01(\x0e\x32\x32.CBroadcast_WatchBroadcast_Response.EWatchResponse:\x15k_EWatchResponseReady\x12\x0f\n\x07mpd_url\x18\x02 \x01(\t\x12\x14\n\x0c\x62roadcast_id\x18\x03 \x01(\x06\x12\x0e\n\x06gameid\x18\x04 \x01(\x04\x12\r\n\x05title\x18\x05 \x01(\t\x12\x13\n\x0bnum_viewers\x18\x06 \x01(\r\x12\x12\n\npermission\x18\x07 \x01(\x05\x12\x0f\n\x07is_rtmp\x18\x08 \x01(\x08\x12\x15\n\rseconds_delay\x18\t \x01(\x05\x12\x14\n\x0cviewer_token\x18\n \x01(\x06\"\xa6\x03\n\x0e\x45WatchResponse\x12\x19\n\x15k_EWatchResponseReady\x10\x01\x12 \n\x1ck_EWatchResponseNotAvailable\x10\x02\x12&\n\"k_EWatchResponseWaitingForApproval\x10\x03\x12#\n\x1fk_EWatchResponseWaitingForStart\x10\x04\x12\"\n\x1ek_EWatchResponseInvalidSession\x10\x05\x12%\n!k_EWatchResponseTooManyBroadcasts\x10\x06\x12\'\n#k_EWatchResponseWaitingForReconnect\x10\x07\x12&\n\"k_EWatchResponseSystemNotSupported\x10\x08\x12\"\n\x1ek_EWatchResponseUserRestricted\x10\t\x12#\n\x1fk_EWatchResponseClientOutOfDate\x10\n\x12%\n!k_EWatchResponsePoorUploadQuality\x10\x0b\"N\n%CBroadcast_GetBroadcastStatus_Request\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x14\n\x0c\x62roadcast_id\x18\x02 \x01(\x06\"\xae\x01\n&CBroadcast_GetBroadcastStatus_Response\x12\x0e\n\x06gameid\x18\x01 \x01(\x04\x12\r\n\x05title\x18\x02 \x01(\t\x12\x13\n\x0bnum_viewers\x18\x03 \x01(\r\x12\x12\n\npermission\x18\x04 \x01(\x05\x12\x0f\n\x07is_rtmp\x18\x05 \x01(\x08\x12\x15\n\rseconds_delay\x18\x06 \x01(\x05\x12\x14\n\x0cis_publisher\x18\x07 \x01(\x08\"R\n$CBroadcast_InviteToBroadcast_Request\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x19\n\x11\x61pproval_response\x18\x02 \x01(\x08\"8\n%CBroadcast_InviteToBroadcast_Response\x12\x0f\n\x07success\x18\x01 \x01(\x08\"|\n-CBroadcast_SendBroadcastStateToServer_Request\x12\x12\n\npermission\x18\x01 \x01(\x05\x12\x0e\n\x06gameid\x18\x02 \x01(\x04\x12\r\n\x05title\x18\x03 \x01(\t\x12\x18\n\x10game_data_config\x18\x04 \x01(\t\"0\n.CBroadcast_SendBroadcastStateToServer_Response\"O\n7CBroadcast_NotifyBroadcastSessionHeartbeat_Notification\x12\x14\n\x0c\x62roadcast_id\x18\x01 \x01(\x06\"P\n\'CBroadcast_GetBroadcastChatInfo_Request\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x14\n\x0c\x62roadcast_id\x18\x02 \x01(\x06\"M\n(CBroadcast_GetBroadcastChatInfo_Response\x12\x0f\n\x07\x63hat_id\x18\x01 \x01(\x06\x12\x10\n\x08view_url\x18\x02 \x01(\t\"[\n\"CBroadcast_PostChatMessage_Request\x12\x0f\n\x07\x63hat_id\x18\x01 \x01(\x06\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x13\n\x0binstance_id\x18\x03 \x01(\r\"\\\n#CBroadcast_PostChatMessage_Response\x12\x14\n\x0cpersona_name\x18\x01 \x01(\t\x12\x0f\n\x07in_game\x18\x02 \x01(\x08\x12\x0e\n\x06result\x18\x03 \x01(\x05\"`\n(CBroadcast_MuteBroadcastChatUser_Request\x12\x0f\n\x07\x63hat_id\x18\x01 \x01(\x06\x12\x14\n\x0cuser_steamid\x18\x02 \x01(\x06\x12\r\n\x05muted\x18\x03 \x01(\x08\"+\n)CBroadcast_MuteBroadcastChatUser_Response\"U\n,CBroadcast_GetBroadcastChatUserNames_Request\x12\x0f\n\x07\x63hat_id\x18\x01 \x01(\x06\x12\x14\n\x0cuser_steamid\x18\x02 \x03(\x06\"\xb4\x01\n-CBroadcast_GetBroadcastChatUserNames_Response\x12Q\n\rpersona_names\x18\x01 \x03(\x0b\x32:.CBroadcast_GetBroadcastChatUserNames_Response.PersonaName\x1a\x30\n\x0bPersonaName\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x0f\n\x07persona\x18\x02 \x01(\t\"\xf8\x01\n,CBroadcast_BroadcastViewerState_Notification\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x61\n\x05state\x18\x02 \x01(\x0e\x32:.CBroadcast_BroadcastViewerState_Notification.EViewerState:\x16k_EViewerNeedsApproval\"T\n\x0c\x45ViewerState\x12\x1a\n\x16k_EViewerNeedsApproval\x10\x01\x12\x15\n\x11k_EViewerWatching\x10\x02\x12\x11\n\rk_EViewerLeft\x10\x03\"F\n.CBroadcast_WaitingBroadcastViewer_Notification\x12\x14\n\x0c\x62roadcast_id\x18\x01 \x01(\x06\"\x95\x01\n+CBroadcast_StopBroadcastUpload_Notification\x12\x14\n\x0c\x62roadcast_id\x18\x01 \x01(\x06\x12\x1a\n\x12\x62roadcast_relay_id\x18\x02 \x01(\x06\x12\x15\n\rupload_result\x18\x03 \x01(\r\x12\x1d\n\x15too_many_poor_uploads\x18\x04 \x01(\x08\"=\n%CBroadcast_SessionClosed_Notification\x12\x14\n\x0c\x62roadcast_id\x18\x01 \x01(\x06\"L\n-CBroadcast_ViewerBroadcastInvite_Notification\x12\x1b\n\x13\x62roadcaster_steamid\x18\x01 \x01(\x06\"T\n\'CBroadcast_BroadcastStatus_Notification\x12\x14\n\x0c\x62roadcast_id\x18\x01 \x01(\x06\x12\x13\n\x0bnum_viewers\x18\x02 \x01(\x05\x32\xca\x11\n\tBroadcast\x12\xed\x01\n\x15\x42\x65ginBroadcastSession\x12).CBroadcast_BeginBroadcastSession_Request\x1a*.CBroadcast_BeginBroadcastSession_Response\"}\x82\xb5\x18yRequest from client to directory to begin a broadcast session. No data being sent to relay; just available for broadcast.\x12\xba\x01\n\x13\x45ndBroadcastSession\x12\'.CBroadcast_EndBroadcastSession_Request\x1a(.CBroadcast_EndBroadcastSession_Response\"P\x82\xb5\x18LRequest from client to stop a broadcast session. Any uploads will terminate.\x12\xac\x01\n\x14StartBroadcastUpload\x12(.CBroadcast_StartBroadcastUpload_Request\x1a).CBroadcast_StartBroadcastUpload_Response\"?\x82\xb5\x18;Request from client to begin sending video for a broadcast.\x12\x99\x01\n\x19NotifyBroadcastUploadStop\x12\x32.CBroadcast_NotifyBroadcastUploadStop_Notification\x1a\x0b.NoResponse\";\x82\xb5\x18\x37Tells directory that client stopped uploading broadcast\x12\x87\x01\n\x0eWatchBroadcast\x12\".CBroadcast_WatchBroadcast_Request\x1a#.CBroadcast_WatchBroadcast_Response\",\x82\xb5\x18(Request from viewer to watch a broadcast\x12\x96\x01\n\x12GetBroadcastStatus\x12&.CBroadcast_GetBroadcastStatus_Request\x1a\'.CBroadcast_GetBroadcastStatus_Response\"/\x82\xb5\x18+Request from viewer about broadcast details\x12\xa2\x01\n\x11InviteToBroadcast\x12%.CBroadcast_InviteToBroadcast_Request\x1a&.CBroadcast_InviteToBroadcast_Response\">\x82\xb5\x18:Invites another steam user to watch the caller\'s broadcast\x12\xc8\x01\n\x1aSendBroadcastStateToServer\x12..CBroadcast_SendBroadcastStateToServer_Request\x1a/.CBroadcast_SendBroadcastStateToServer_Response\"I\x82\xb5\x18\x45Sends users current broadcast state (permissions, game) to the server\x12\xa2\x01\n\x1fNotifyBroadcastSessionHeartbeat\x12\x38.CBroadcast_NotifyBroadcastSessionHeartbeat_Notification\x1a\x0b.NoResponse\"8\x82\xb5\x18\x34Tells directory broadcast session is still available\x12\x94\x01\n\x14GetBroadcastChatInfo\x12(.CBroadcast_GetBroadcastChatInfo_Request\x1a).CBroadcast_GetBroadcastChatInfo_Response\"\'\x82\xb5\x18#Gets chat room info for a broadcast\x12\x8a\x01\n\x0fPostChatMessage\x12#.CBroadcast_PostChatMessage_Request\x1a$.CBroadcast_PostChatMessage_Response\",\x82\xb5\x18(Post chat message to specified chat room\x12\x96\x01\n\x15MuteBroadcastChatUser\x12).CBroadcast_MuteBroadcastChatUser_Request\x1a*.CBroadcast_MuteBroadcastChatUser_Response\"&\x82\xb5\x18\"Mute a user in your broadcast chat\x12\xa3\x01\n\x19GetBroadcastChatUserNames\x12-.CBroadcast_GetBroadcastChatUserNames_Request\x1a..CBroadcast_GetBroadcastChatUserNames_Response\"\'\x82\xb5\x18#Get names for list of users in chat\x1a*\x82\xb5\x18&Methods for Steam broadcast operations2\xea\x08\n\x0f\x42roadcastClient\x12\xa1\x01\n\x1aNotifyBroadcastViewerState\x12-.CBroadcast_BroadcastViewerState_Notification\x1a\x0b.NoResponse\"G\x82\xb5\x18\x43Notification from server to client that a viewers state has changed\x12\xbd\x01\n\x1cNotifyWaitingBroadcastViewer\x12/.CBroadcast_WaitingBroadcastViewer_Notification\x1a\x0b.NoResponse\"_\x82\xb5\x18[Notification from server to client one or more users is waiting for user to start broadcast\x12\xd6\x01\n\x19NotifyStopBroadcastUpload\x12,.CBroadcast_StopBroadcastUpload_Notification\x1a\x0b.NoResponse\"~\x82\xb5\x18zNotification from server to client telling it to stop uploading when the last viewer has disconnected from their broadcast\x12\xb5\x01\n\x13NotifySessionClosed\x12&.CBroadcast_SessionClosed_Notification\x1a\x0b.NoResponse\"i\x82\xb5\x18\x65Notification from server to client telling it a session has been closed unexpectedly by the directory\x12\xc3\x01\n\x1bNotifyViewerBroadcastInvite\x12..CBroadcast_ViewerBroadcastInvite_Notification\x1a\x0b.NoResponse\"g\x82\xb5\x18\x63Notification from server to client that a broadcaster is inviting a viewer to watch their broadcast\x12\x95\x01\n\x15NotifyBroadcastStatus\x12(.CBroadcast_BroadcastStatus_Notification\x1a\x0b.NoResponse\"E\x82\xb5\x18\x41Notification from server to client about current broadcast status\x1a\x04\xc0\xb5\x18\x02')
+  syntax='proto2',
+  serialized_pb=_b('\n)steammessages_broadcast.steamclient.proto\x1a,steammessages_unified_base.steamclient.proto\"\x9d\x01\n(CBroadcast_BeginBroadcastSession_Request\x12\x12\n\npermission\x18\x01 \x01(\x05\x12\x0e\n\x06gameid\x18\x02 \x01(\x04\x12\x1a\n\x12\x63lient_instance_id\x18\x03 \x01(\x04\x12\r\n\x05title\x18\x04 \x01(\t\x12\x0e\n\x06\x63\x65llid\x18\x05 \x01(\r\x12\x12\n\nrtmp_token\x18\x06 \x01(\x04\"A\n)CBroadcast_BeginBroadcastSession_Response\x12\x14\n\x0c\x62roadcast_id\x18\x01 \x01(\x06\">\n&CBroadcast_EndBroadcastSession_Request\x12\x14\n\x0c\x62roadcast_id\x18\x01 \x01(\x06\")\n\'CBroadcast_EndBroadcastSession_Response\"w\n\'CBroadcast_StartBroadcastUpload_Request\x12\x14\n\x0c\x62roadcast_id\x18\x01 \x01(\x06\x12\x0e\n\x06\x63\x65llid\x18\x02 \x01(\r\x12\x0f\n\x07\x61s_rtmp\x18\x03 \x01(\x08\x12\x15\n\rdelay_seconds\x18\x04 \x01(\r\"q\n(CBroadcast_StartBroadcastUpload_Response\x12\x14\n\x0cupload_token\x18\x01 \x01(\t\x12\x16\n\x0eupload_address\x18\x02 \x01(\t\x12\x17\n\x0fupload_relay_id\x18\x03 \x01(\x06\"f\n1CBroadcast_NotifyBroadcastUploadStop_Notification\x12\x1a\n\x12\x62roadcast_relay_id\x18\x01 \x01(\x06\x12\x15\n\rupload_result\x18\x02 \x01(\r\"\x91\x01\n!CBroadcast_WatchBroadcast_Request\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x1d\n\x15\x65xisting_broadcast_id\x18\x02 \x01(\x06\x12\x14\n\x0cviewer_token\x18\x03 \x01(\x06\x12\x11\n\tclient_ip\x18\x04 \x01(\r\x12\x13\n\x0b\x63lient_cell\x18\x05 \x01(\r\"\xd7\x05\n\"CBroadcast_WatchBroadcast_Response\x12[\n\x08response\x18\x01 \x01(\x0e\x32\x32.CBroadcast_WatchBroadcast_Response.EWatchResponse:\x15k_EWatchResponseReady\x12\x0f\n\x07mpd_url\x18\x02 \x01(\t\x12\x14\n\x0c\x62roadcast_id\x18\x03 \x01(\x06\x12\x0e\n\x06gameid\x18\x04 \x01(\x04\x12\r\n\x05title\x18\x05 \x01(\t\x12\x13\n\x0bnum_viewers\x18\x06 \x01(\r\x12\x12\n\npermission\x18\x07 \x01(\x05\x12\x0f\n\x07is_rtmp\x18\x08 \x01(\x08\x12\x15\n\rseconds_delay\x18\t \x01(\x05\x12\x14\n\x0cviewer_token\x18\n \x01(\x06\"\xa6\x03\n\x0e\x45WatchResponse\x12\x19\n\x15k_EWatchResponseReady\x10\x01\x12 \n\x1ck_EWatchResponseNotAvailable\x10\x02\x12&\n\"k_EWatchResponseWaitingForApproval\x10\x03\x12#\n\x1fk_EWatchResponseWaitingForStart\x10\x04\x12\"\n\x1ek_EWatchResponseInvalidSession\x10\x05\x12%\n!k_EWatchResponseTooManyBroadcasts\x10\x06\x12\'\n#k_EWatchResponseWaitingForReconnect\x10\x07\x12&\n\"k_EWatchResponseSystemNotSupported\x10\x08\x12\"\n\x1ek_EWatchResponseUserRestricted\x10\t\x12#\n\x1fk_EWatchResponseClientOutOfDate\x10\n\x12%\n!k_EWatchResponsePoorUploadQuality\x10\x0b\"N\n%CBroadcast_GetBroadcastStatus_Request\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x14\n\x0c\x62roadcast_id\x18\x02 \x01(\x06\"\xae\x01\n&CBroadcast_GetBroadcastStatus_Response\x12\x0e\n\x06gameid\x18\x01 \x01(\x04\x12\r\n\x05title\x18\x02 \x01(\t\x12\x13\n\x0bnum_viewers\x18\x03 \x01(\r\x12\x12\n\npermission\x18\x04 \x01(\x05\x12\x0f\n\x07is_rtmp\x18\x05 \x01(\x08\x12\x15\n\rseconds_delay\x18\x06 \x01(\x05\x12\x14\n\x0cis_publisher\x18\x07 \x01(\x08\"R\n$CBroadcast_InviteToBroadcast_Request\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x19\n\x11\x61pproval_response\x18\x02 \x01(\x08\"8\n%CBroadcast_InviteToBroadcast_Response\x12\x0f\n\x07success\x18\x01 \x01(\x08\"|\n-CBroadcast_SendBroadcastStateToServer_Request\x12\x12\n\npermission\x18\x01 \x01(\x05\x12\x0e\n\x06gameid\x18\x02 \x01(\x04\x12\r\n\x05title\x18\x03 \x01(\t\x12\x18\n\x10game_data_config\x18\x04 \x01(\t\"0\n.CBroadcast_SendBroadcastStateToServer_Response\"O\n7CBroadcast_NotifyBroadcastSessionHeartbeat_Notification\x12\x14\n\x0c\x62roadcast_id\x18\x01 \x01(\x06\"x\n\'CBroadcast_GetBroadcastChatInfo_Request\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x14\n\x0c\x62roadcast_id\x18\x02 \x01(\x06\x12\x11\n\tclient_ip\x18\x03 \x01(\r\x12\x13\n\x0b\x63lient_cell\x18\x04 \x01(\r\"h\n(CBroadcast_GetBroadcastChatInfo_Response\x12\x0f\n\x07\x63hat_id\x18\x01 \x01(\x06\x12\x10\n\x08view_url\x18\x02 \x01(\t\x12\x19\n\x11view_url_template\x18\x03 \x01(\t\"[\n\"CBroadcast_PostChatMessage_Request\x12\x0f\n\x07\x63hat_id\x18\x01 \x01(\x06\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x13\n\x0binstance_id\x18\x03 \x01(\r\"\\\n#CBroadcast_PostChatMessage_Response\x12\x14\n\x0cpersona_name\x18\x01 \x01(\t\x12\x0f\n\x07in_game\x18\x02 \x01(\x08\x12\x0e\n\x06result\x18\x03 \x01(\x05\"`\n(CBroadcast_MuteBroadcastChatUser_Request\x12\x0f\n\x07\x63hat_id\x18\x01 \x01(\x06\x12\x14\n\x0cuser_steamid\x18\x02 \x01(\x06\x12\r\n\x05muted\x18\x03 \x01(\x08\"+\n)CBroadcast_MuteBroadcastChatUser_Response\"N\n%CBroadcast_RemoveUserChatText_Request\x12\x0f\n\x07\x63hat_id\x18\x01 \x01(\x06\x12\x14\n\x0cuser_steamid\x18\x02 \x01(\x06\"(\n&CBroadcast_RemoveUserChatText_Response\"U\n,CBroadcast_GetBroadcastChatUserNames_Request\x12\x0f\n\x07\x63hat_id\x18\x01 \x01(\x06\x12\x14\n\x0cuser_steamid\x18\x02 \x03(\x06\"\xb4\x01\n-CBroadcast_GetBroadcastChatUserNames_Response\x12Q\n\rpersona_names\x18\x01 \x03(\x0b\x32:.CBroadcast_GetBroadcastChatUserNames_Response.PersonaName\x1a\x30\n\x0bPersonaName\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x0f\n\x07persona\x18\x02 \x01(\t\"\xf8\x01\n,CBroadcast_BroadcastViewerState_Notification\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x61\n\x05state\x18\x02 \x01(\x0e\x32:.CBroadcast_BroadcastViewerState_Notification.EViewerState:\x16k_EViewerNeedsApproval\"T\n\x0c\x45ViewerState\x12\x1a\n\x16k_EViewerNeedsApproval\x10\x01\x12\x15\n\x11k_EViewerWatching\x10\x02\x12\x11\n\rk_EViewerLeft\x10\x03\"F\n.CBroadcast_WaitingBroadcastViewer_Notification\x12\x14\n\x0c\x62roadcast_id\x18\x01 \x01(\x06\"\x95\x01\n+CBroadcast_StopBroadcastUpload_Notification\x12\x14\n\x0c\x62roadcast_id\x18\x01 \x01(\x06\x12\x1a\n\x12\x62roadcast_relay_id\x18\x02 \x01(\x06\x12\x15\n\rupload_result\x18\x03 \x01(\r\x12\x1d\n\x15too_many_poor_uploads\x18\x04 \x01(\x08\"=\n%CBroadcast_SessionClosed_Notification\x12\x14\n\x0c\x62roadcast_id\x18\x01 \x01(\x06\"L\n-CBroadcast_ViewerBroadcastInvite_Notification\x12\x1b\n\x13\x62roadcaster_steamid\x18\x01 \x01(\x06\"T\n\'CBroadcast_BroadcastStatus_Notification\x12\x14\n\x0c\x62roadcast_id\x18\x01 \x01(\x06\x12\x13\n\x0bnum_viewers\x18\x02 \x01(\x05\x32\xe1\x12\n\tBroadcast\x12\xed\x01\n\x15\x42\x65ginBroadcastSession\x12).CBroadcast_BeginBroadcastSession_Request\x1a*.CBroadcast_BeginBroadcastSession_Response\"}\x82\xb5\x18yRequest from client to directory to begin a broadcast session. No data being sent to relay; just available for broadcast.\x12\xba\x01\n\x13\x45ndBroadcastSession\x12\'.CBroadcast_EndBroadcastSession_Request\x1a(.CBroadcast_EndBroadcastSession_Response\"P\x82\xb5\x18LRequest from client to stop a broadcast session. Any uploads will terminate.\x12\xac\x01\n\x14StartBroadcastUpload\x12(.CBroadcast_StartBroadcastUpload_Request\x1a).CBroadcast_StartBroadcastUpload_Response\"?\x82\xb5\x18;Request from client to begin sending video for a broadcast.\x12\x99\x01\n\x19NotifyBroadcastUploadStop\x12\x32.CBroadcast_NotifyBroadcastUploadStop_Notification\x1a\x0b.NoResponse\";\x82\xb5\x18\x37Tells directory that client stopped uploading broadcast\x12\x87\x01\n\x0eWatchBroadcast\x12\".CBroadcast_WatchBroadcast_Request\x1a#.CBroadcast_WatchBroadcast_Response\",\x82\xb5\x18(Request from viewer to watch a broadcast\x12\x96\x01\n\x12GetBroadcastStatus\x12&.CBroadcast_GetBroadcastStatus_Request\x1a\'.CBroadcast_GetBroadcastStatus_Response\"/\x82\xb5\x18+Request from viewer about broadcast details\x12\xa2\x01\n\x11InviteToBroadcast\x12%.CBroadcast_InviteToBroadcast_Request\x1a&.CBroadcast_InviteToBroadcast_Response\">\x82\xb5\x18:Invites another steam user to watch the caller\'s broadcast\x12\xc8\x01\n\x1aSendBroadcastStateToServer\x12..CBroadcast_SendBroadcastStateToServer_Request\x1a/.CBroadcast_SendBroadcastStateToServer_Response\"I\x82\xb5\x18\x45Sends users current broadcast state (permissions, game) to the server\x12\xa2\x01\n\x1fNotifyBroadcastSessionHeartbeat\x12\x38.CBroadcast_NotifyBroadcastSessionHeartbeat_Notification\x1a\x0b.NoResponse\"8\x82\xb5\x18\x34Tells directory broadcast session is still available\x12\x94\x01\n\x14GetBroadcastChatInfo\x12(.CBroadcast_GetBroadcastChatInfo_Request\x1a).CBroadcast_GetBroadcastChatInfo_Response\"\'\x82\xb5\x18#Gets chat room info for a broadcast\x12\x8a\x01\n\x0fPostChatMessage\x12#.CBroadcast_PostChatMessage_Request\x1a$.CBroadcast_PostChatMessage_Response\",\x82\xb5\x18(Post chat message to specified chat room\x12\x96\x01\n\x15MuteBroadcastChatUser\x12).CBroadcast_MuteBroadcastChatUser_Request\x1a*.CBroadcast_MuteBroadcastChatUser_Response\"&\x82\xb5\x18\"Mute a user in your broadcast chat\x12\x94\x01\n\x12RemoveUserChatText\x12&.CBroadcast_RemoveUserChatText_Request\x1a\'.CBroadcast_RemoveUserChatText_Response\"-\x82\xb5\x18)Tell all viewers to remove user chat text\x12\xa3\x01\n\x19GetBroadcastChatUserNames\x12-.CBroadcast_GetBroadcastChatUserNames_Request\x1a..CBroadcast_GetBroadcastChatUserNames_Response\"\'\x82\xb5\x18#Get names for list of users in chat\x1a*\x82\xb5\x18&Methods for Steam broadcast operations2\xea\x08\n\x0f\x42roadcastClient\x12\xa1\x01\n\x1aNotifyBroadcastViewerState\x12-.CBroadcast_BroadcastViewerState_Notification\x1a\x0b.NoResponse\"G\x82\xb5\x18\x43Notification from server to client that a viewers state has changed\x12\xbd\x01\n\x1cNotifyWaitingBroadcastViewer\x12/.CBroadcast_WaitingBroadcastViewer_Notification\x1a\x0b.NoResponse\"_\x82\xb5\x18[Notification from server to client one or more users is waiting for user to start broadcast\x12\xd6\x01\n\x19NotifyStopBroadcastUpload\x12,.CBroadcast_StopBroadcastUpload_Notification\x1a\x0b.NoResponse\"~\x82\xb5\x18zNotification from server to client telling it to stop uploading when the last viewer has disconnected from their broadcast\x12\xb5\x01\n\x13NotifySessionClosed\x12&.CBroadcast_SessionClosed_Notification\x1a\x0b.NoResponse\"i\x82\xb5\x18\x65Notification from server to client telling it a session has been closed unexpectedly by the directory\x12\xc3\x01\n\x1bNotifyViewerBroadcastInvite\x12..CBroadcast_ViewerBroadcastInvite_Notification\x1a\x0b.NoResponse\"g\x82\xb5\x18\x63Notification from server to client that a broadcaster is inviting a viewer to watch their broadcast\x12\x95\x01\n\x15NotifyBroadcastStatus\x12(.CBroadcast_BroadcastStatus_Notification\x1a\x0b.NoResponse\"E\x82\xb5\x18\x41Notification from server to client about current broadcast status\x1a\x04\xc0\xb5\x18\x02\x42\x03\x80\x01\x01')
   ,
-  dependencies=[google.protobuf.descriptor_pb2.DESCRIPTOR,steammessages_unified_base.steamclient_pb2.DESCRIPTOR,])
+  dependencies=[steammessages__unified__base_dot_steamclient__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -80,8 +80,8 @@ _CBROADCAST_WATCHBROADCAST_RESPONSE_EWATCHRESPONSE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1212,
-  serialized_end=1634,
+  serialized_start=1219,
+  serialized_end=1641,
 )
 _sym_db.RegisterEnumDescriptor(_CBROADCAST_WATCHBROADCAST_RESPONSE_EWATCHRESPONSE)
 
@@ -106,8 +106,8 @@ _CBROADCAST_BROADCASTVIEWERSTATE_NOTIFICATION_EVIEWERSTATE = _descriptor.EnumDes
   ],
   containing_type=None,
   options=None,
-  serialized_start=3218,
-  serialized_end=3302,
+  serialized_start=3414,
+  serialized_end=3498,
 )
 _sym_db.RegisterEnumDescriptor(_CBROADCAST_BROADCASTVIEWERSTATE_NOTIFICATION_EVIEWERSTATE)
 
@@ -169,11 +169,12 @@ _CBROADCAST_BEGINBROADCASTSESSION_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=126,
-  serialized_end=283,
+  serialized_start=92,
+  serialized_end=249,
 )
 
 
@@ -199,11 +200,12 @@ _CBROADCAST_BEGINBROADCASTSESSION_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=285,
-  serialized_end=350,
+  serialized_start=251,
+  serialized_end=316,
 )
 
 
@@ -229,11 +231,12 @@ _CBROADCAST_ENDBROADCASTSESSION_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=352,
-  serialized_end=414,
+  serialized_start=318,
+  serialized_end=380,
 )
 
 
@@ -252,11 +255,12 @@ _CBROADCAST_ENDBROADCASTSESSION_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=416,
-  serialized_end=457,
+  serialized_start=382,
+  serialized_end=423,
 )
 
 
@@ -303,11 +307,12 @@ _CBROADCAST_STARTBROADCASTUPLOAD_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=459,
-  serialized_end=578,
+  serialized_start=425,
+  serialized_end=544,
 )
 
 
@@ -347,11 +352,12 @@ _CBROADCAST_STARTBROADCASTUPLOAD_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=580,
-  serialized_end=693,
+  serialized_start=546,
+  serialized_end=659,
 )
 
 
@@ -384,11 +390,12 @@ _CBROADCAST_NOTIFYBROADCASTUPLOADSTOP_NOTIFICATION = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=695,
-  serialized_end=797,
+  serialized_start=661,
+  serialized_end=763,
 )
 
 
@@ -420,6 +427,20 @@ _CBROADCAST_WATCHBROADCAST_REQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='client_ip', full_name='CBroadcast_WatchBroadcast_Request.client_ip', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='client_cell', full_name='CBroadcast_WatchBroadcast_Request.client_cell', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -428,11 +449,12 @@ _CBROADCAST_WATCHBROADCAST_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=799,
-  serialized_end=904,
+  serialized_start=766,
+  serialized_end=911,
 )
 
 
@@ -522,11 +544,12 @@ _CBROADCAST_WATCHBROADCAST_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=907,
-  serialized_end=1634,
+  serialized_start=914,
+  serialized_end=1641,
 )
 
 
@@ -559,11 +582,12 @@ _CBROADCAST_GETBROADCASTSTATUS_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1636,
-  serialized_end=1714,
+  serialized_start=1643,
+  serialized_end=1721,
 )
 
 
@@ -631,11 +655,12 @@ _CBROADCAST_GETBROADCASTSTATUS_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1717,
-  serialized_end=1891,
+  serialized_start=1724,
+  serialized_end=1898,
 )
 
 
@@ -668,11 +693,12 @@ _CBROADCAST_INVITETOBROADCAST_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1893,
-  serialized_end=1975,
+  serialized_start=1900,
+  serialized_end=1982,
 )
 
 
@@ -698,11 +724,12 @@ _CBROADCAST_INVITETOBROADCAST_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1977,
-  serialized_end=2033,
+  serialized_start=1984,
+  serialized_end=2040,
 )
 
 
@@ -749,11 +776,12 @@ _CBROADCAST_SENDBROADCASTSTATETOSERVER_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2035,
-  serialized_end=2159,
+  serialized_start=2042,
+  serialized_end=2166,
 )
 
 
@@ -772,11 +800,12 @@ _CBROADCAST_SENDBROADCASTSTATETOSERVER_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2161,
-  serialized_end=2209,
+  serialized_start=2168,
+  serialized_end=2216,
 )
 
 
@@ -802,11 +831,12 @@ _CBROADCAST_NOTIFYBROADCASTSESSIONHEARTBEAT_NOTIFICATION = _descriptor.Descripto
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2211,
-  serialized_end=2290,
+  serialized_start=2218,
+  serialized_end=2297,
 )
 
 
@@ -831,6 +861,20 @@ _CBROADCAST_GETBROADCASTCHATINFO_REQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='client_ip', full_name='CBroadcast_GetBroadcastChatInfo_Request.client_ip', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='client_cell', full_name='CBroadcast_GetBroadcastChatInfo_Request.client_cell', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -839,11 +883,12 @@ _CBROADCAST_GETBROADCASTCHATINFO_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2292,
-  serialized_end=2372,
+  serialized_start=2299,
+  serialized_end=2419,
 )
 
 
@@ -868,6 +913,13 @@ _CBROADCAST_GETBROADCASTCHATINFO_RESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='view_url_template', full_name='CBroadcast_GetBroadcastChatInfo_Response.view_url_template', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -876,11 +928,12 @@ _CBROADCAST_GETBROADCASTCHATINFO_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2374,
-  serialized_end=2451,
+  serialized_start=2421,
+  serialized_end=2525,
 )
 
 
@@ -920,11 +973,12 @@ _CBROADCAST_POSTCHATMESSAGE_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2453,
-  serialized_end=2544,
+  serialized_start=2527,
+  serialized_end=2618,
 )
 
 
@@ -964,11 +1018,12 @@ _CBROADCAST_POSTCHATMESSAGE_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2546,
-  serialized_end=2638,
+  serialized_start=2620,
+  serialized_end=2712,
 )
 
 
@@ -1008,11 +1063,12 @@ _CBROADCAST_MUTEBROADCASTCHATUSER_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2640,
-  serialized_end=2736,
+  serialized_start=2714,
+  serialized_end=2810,
 )
 
 
@@ -1031,11 +1087,74 @@ _CBROADCAST_MUTEBROADCASTCHATUSER_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2738,
-  serialized_end=2781,
+  serialized_start=2812,
+  serialized_end=2855,
+)
+
+
+_CBROADCAST_REMOVEUSERCHATTEXT_REQUEST = _descriptor.Descriptor(
+  name='CBroadcast_RemoveUserChatText_Request',
+  full_name='CBroadcast_RemoveUserChatText_Request',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='chat_id', full_name='CBroadcast_RemoveUserChatText_Request.chat_id', index=0,
+      number=1, type=6, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='user_steamid', full_name='CBroadcast_RemoveUserChatText_Request.user_steamid', index=1,
+      number=2, type=6, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2857,
+  serialized_end=2935,
+)
+
+
+_CBROADCAST_REMOVEUSERCHATTEXT_RESPONSE = _descriptor.Descriptor(
+  name='CBroadcast_RemoveUserChatText_Response',
+  full_name='CBroadcast_RemoveUserChatText_Response',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2937,
+  serialized_end=2977,
 )
 
 
@@ -1068,11 +1187,12 @@ _CBROADCAST_GETBROADCASTCHATUSERNAMES_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2783,
-  serialized_end=2868,
+  serialized_start=2979,
+  serialized_end=3064,
 )
 
 
@@ -1105,11 +1225,12 @@ _CBROADCAST_GETBROADCASTCHATUSERNAMES_RESPONSE_PERSONANAME = _descriptor.Descrip
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3003,
-  serialized_end=3051,
+  serialized_start=3199,
+  serialized_end=3247,
 )
 
 _CBROADCAST_GETBROADCASTCHATUSERNAMES_RESPONSE = _descriptor.Descriptor(
@@ -1134,11 +1255,12 @@ _CBROADCAST_GETBROADCASTCHATUSERNAMES_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2871,
-  serialized_end=3051,
+  serialized_start=3067,
+  serialized_end=3247,
 )
 
 
@@ -1172,11 +1294,12 @@ _CBROADCAST_BROADCASTVIEWERSTATE_NOTIFICATION = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3054,
-  serialized_end=3302,
+  serialized_start=3250,
+  serialized_end=3498,
 )
 
 
@@ -1202,11 +1325,12 @@ _CBROADCAST_WAITINGBROADCASTVIEWER_NOTIFICATION = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3304,
-  serialized_end=3374,
+  serialized_start=3500,
+  serialized_end=3570,
 )
 
 
@@ -1253,11 +1377,12 @@ _CBROADCAST_STOPBROADCASTUPLOAD_NOTIFICATION = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3377,
-  serialized_end=3526,
+  serialized_start=3573,
+  serialized_end=3722,
 )
 
 
@@ -1283,11 +1408,12 @@ _CBROADCAST_SESSIONCLOSED_NOTIFICATION = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3528,
-  serialized_end=3589,
+  serialized_start=3724,
+  serialized_end=3785,
 )
 
 
@@ -1313,11 +1439,12 @@ _CBROADCAST_VIEWERBROADCASTINVITE_NOTIFICATION = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3591,
-  serialized_end=3667,
+  serialized_start=3787,
+  serialized_end=3863,
 )
 
 
@@ -1350,11 +1477,12 @@ _CBROADCAST_BROADCASTSTATUS_NOTIFICATION = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3669,
-  serialized_end=3753,
+  serialized_start=3865,
+  serialized_end=3949,
 )
 
 _CBROADCAST_WATCHBROADCAST_RESPONSE.fields_by_name['response'].enum_type = _CBROADCAST_WATCHBROADCAST_RESPONSE_EWATCHRESPONSE
@@ -1385,6 +1513,8 @@ DESCRIPTOR.message_types_by_name['CBroadcast_PostChatMessage_Request'] = _CBROAD
 DESCRIPTOR.message_types_by_name['CBroadcast_PostChatMessage_Response'] = _CBROADCAST_POSTCHATMESSAGE_RESPONSE
 DESCRIPTOR.message_types_by_name['CBroadcast_MuteBroadcastChatUser_Request'] = _CBROADCAST_MUTEBROADCASTCHATUSER_REQUEST
 DESCRIPTOR.message_types_by_name['CBroadcast_MuteBroadcastChatUser_Response'] = _CBROADCAST_MUTEBROADCASTCHATUSER_RESPONSE
+DESCRIPTOR.message_types_by_name['CBroadcast_RemoveUserChatText_Request'] = _CBROADCAST_REMOVEUSERCHATTEXT_REQUEST
+DESCRIPTOR.message_types_by_name['CBroadcast_RemoveUserChatText_Response'] = _CBROADCAST_REMOVEUSERCHATTEXT_RESPONSE
 DESCRIPTOR.message_types_by_name['CBroadcast_GetBroadcastChatUserNames_Request'] = _CBROADCAST_GETBROADCASTCHATUSERNAMES_REQUEST
 DESCRIPTOR.message_types_by_name['CBroadcast_GetBroadcastChatUserNames_Response'] = _CBROADCAST_GETBROADCASTCHATUSERNAMES_RESPONSE
 DESCRIPTOR.message_types_by_name['CBroadcast_BroadcastViewerState_Notification'] = _CBROADCAST_BROADCASTVIEWERSTATE_NOTIFICATION
@@ -1548,6 +1678,20 @@ CBroadcast_MuteBroadcastChatUser_Response = _reflection.GeneratedProtocolMessage
   ))
 _sym_db.RegisterMessage(CBroadcast_MuteBroadcastChatUser_Response)
 
+CBroadcast_RemoveUserChatText_Request = _reflection.GeneratedProtocolMessageType('CBroadcast_RemoveUserChatText_Request', (_message.Message,), dict(
+  DESCRIPTOR = _CBROADCAST_REMOVEUSERCHATTEXT_REQUEST,
+  __module__ = 'steammessages_broadcast.steamclient_pb2'
+  # @@protoc_insertion_point(class_scope:CBroadcast_RemoveUserChatText_Request)
+  ))
+_sym_db.RegisterMessage(CBroadcast_RemoveUserChatText_Request)
+
+CBroadcast_RemoveUserChatText_Response = _reflection.GeneratedProtocolMessageType('CBroadcast_RemoveUserChatText_Response', (_message.Message,), dict(
+  DESCRIPTOR = _CBROADCAST_REMOVEUSERCHATTEXT_RESPONSE,
+  __module__ = 'steammessages_broadcast.steamclient_pb2'
+  # @@protoc_insertion_point(class_scope:CBroadcast_RemoveUserChatText_Response)
+  ))
+_sym_db.RegisterMessage(CBroadcast_RemoveUserChatText_Response)
+
 CBroadcast_GetBroadcastChatUserNames_Request = _reflection.GeneratedProtocolMessageType('CBroadcast_GetBroadcastChatUserNames_Request', (_message.Message,), dict(
   DESCRIPTOR = _CBROADCAST_GETBROADCASTCHATUSERNAMES_REQUEST,
   __module__ = 'steammessages_broadcast.steamclient_pb2'
@@ -1613,4 +1757,6 @@ CBroadcast_BroadcastStatus_Notification = _reflection.GeneratedProtocolMessageTy
 _sym_db.RegisterMessage(CBroadcast_BroadcastStatus_Notification)
 
 
+DESCRIPTOR.has_options = True
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\200\001\001'))
 # @@protoc_insertion_point(module_scope)

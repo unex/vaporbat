@@ -13,16 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import google.protobuf.descriptor_pb2
-import steammessages_unified_base.steamclient_pb2
+from steammessages_unified_base import steamclient_pb2 as steammessages__unified__base_dot_steamclient__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='steammessages_gameservers.steamclient.proto',
   package='',
-  serialized_pb=_b('\n+steammessages_gameservers.steamclient.proto\x1a google/protobuf/descriptor.proto\x1a,steammessages_unified_base.steamclient.proto\"\x9f\x01\n\"CGameServers_GetServerList_Request\x12(\n\x06\x66ilter\x18\x01 \x01(\tB\x18\x82\xb5\x18\x14Query filter string.\x12O\n\x05limit\x18\x02 \x01(\r:\x03\x31\x30\x30\x42;\x82\xb5\x18\x37The maximum number of servers to return in the response\"\xe0\x03\n#CGameServers_GetServerList_Response\x12\x65\n\x07servers\x18\x01 \x03(\x0b\x32+.CGameServers_GetServerList_Response.ServerB\'\x82\xb5\x18#List of servers matching the filter\x1a\xd1\x02\n\x06Server\x12\x30\n\x04\x61\x64\x64r\x18\x01 \x01(\tB\"\x82\xb5\x18\x1eThe server\'s IP and query port\x12\x10\n\x08gameport\x18\x02 \x01(\r\x12\x10\n\x08specport\x18\x03 \x01(\r\x12\x0f\n\x07steamid\x18\x04 \x01(\x06\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\r\n\x05\x61ppid\x18\x06 \x01(\r\x12\x0f\n\x07gamedir\x18\x07 \x01(\t\x12\x0f\n\x07version\x18\x08 \x01(\t\x12\x0f\n\x07product\x18\t \x01(\t\x12\x0e\n\x06region\x18\n \x01(\x05\x12\x0f\n\x07players\x18\x0b \x01(\x05\x12\x13\n\x0bmax_players\x18\x0c \x01(\x05\x12\x0c\n\x04\x62ots\x18\r \x01(\x05\x12\x0b\n\x03map\x18\x0e \x01(\t\x12\x0e\n\x06secure\x18\x0f \x01(\x08\x12\x11\n\tdedicated\x18\x10 \x01(\x08\x12\n\n\x02os\x18\x11 \x01(\t\x12\x10\n\x08gametype\x18\x12 \x01(\t\"@\n*CGameServers_GetServerSteamIDsByIP_Request\x12\x12\n\nserver_ips\x18\x01 \x03(\t\"\x90\x01\n%CGameServers_IPsWithSteamIDs_Response\x12>\n\x07servers\x18\x01 \x03(\x0b\x32-.CGameServers_IPsWithSteamIDs_Response.Server\x1a\'\n\x06Server\x12\x0c\n\x04\x61\x64\x64r\x18\x01 \x01(\t\x12\x0f\n\x07steamid\x18\x02 \x01(\x06\"E\n*CGameServers_GetServerIPsBySteamID_Request\x12\x17\n\x0fserver_steamids\x18\x01 \x03(\x06\x32\xab\x04\n\x0bGameServers\x12\x8c\x01\n\rGetServerList\x12#.CGameServers_GetServerList_Request\x1a$.CGameServers_GetServerList_Response\"0\x82\xb5\x18,Gets a list of servers given a filter string\x12\xa4\x01\n\x15GetServerSteamIDsByIP\x12+.CGameServers_GetServerSteamIDsByIP_Request\x1a&.CGameServers_IPsWithSteamIDs_Response\"6\x82\xb5\x18\x32Gets a list of server SteamIDs given a list of IPs\x12\xad\x01\n\x15GetServerIPsBySteamID\x12+.CGameServers_GetServerIPsBySteamID_Request\x1a&.CGameServers_IPsWithSteamIDs_Response\"?\x82\xb5\x18;Gets a list of server IP addresses given a list of SteamIDs\x1a\x36\x82\xb5\x18\x32\x41 service for searching and managing game servers.')
+  syntax='proto2',
+  serialized_pb=_b('\n+steammessages_gameservers.steamclient.proto\x1a,steammessages_unified_base.steamclient.proto\"\x9f\x01\n\"CGameServers_GetServerList_Request\x12(\n\x06\x66ilter\x18\x01 \x01(\tB\x18\x82\xb5\x18\x14Query filter string.\x12O\n\x05limit\x18\x02 \x01(\r:\x03\x31\x30\x30\x42;\x82\xb5\x18\x37The maximum number of servers to return in the response\"\xe0\x03\n#CGameServers_GetServerList_Response\x12\x65\n\x07servers\x18\x01 \x03(\x0b\x32+.CGameServers_GetServerList_Response.ServerB\'\x82\xb5\x18#List of servers matching the filter\x1a\xd1\x02\n\x06Server\x12\x30\n\x04\x61\x64\x64r\x18\x01 \x01(\tB\"\x82\xb5\x18\x1eThe server\'s IP and query port\x12\x10\n\x08gameport\x18\x02 \x01(\r\x12\x10\n\x08specport\x18\x03 \x01(\r\x12\x0f\n\x07steamid\x18\x04 \x01(\x06\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\r\n\x05\x61ppid\x18\x06 \x01(\r\x12\x0f\n\x07gamedir\x18\x07 \x01(\t\x12\x0f\n\x07version\x18\x08 \x01(\t\x12\x0f\n\x07product\x18\t \x01(\t\x12\x0e\n\x06region\x18\n \x01(\x05\x12\x0f\n\x07players\x18\x0b \x01(\x05\x12\x13\n\x0bmax_players\x18\x0c \x01(\x05\x12\x0c\n\x04\x62ots\x18\r \x01(\x05\x12\x0b\n\x03map\x18\x0e \x01(\t\x12\x0e\n\x06secure\x18\x0f \x01(\x08\x12\x11\n\tdedicated\x18\x10 \x01(\x08\x12\n\n\x02os\x18\x11 \x01(\t\x12\x10\n\x08gametype\x18\x12 \x01(\t\"@\n*CGameServers_GetServerSteamIDsByIP_Request\x12\x12\n\nserver_ips\x18\x01 \x03(\t\"\x90\x01\n%CGameServers_IPsWithSteamIDs_Response\x12>\n\x07servers\x18\x01 \x03(\x0b\x32-.CGameServers_IPsWithSteamIDs_Response.Server\x1a\'\n\x06Server\x12\x0c\n\x04\x61\x64\x64r\x18\x01 \x01(\t\x12\x0f\n\x07steamid\x18\x02 \x01(\x06\"E\n*CGameServers_GetServerIPsBySteamID_Request\x12\x17\n\x0fserver_steamids\x18\x01 \x03(\x06\x32\xab\x04\n\x0bGameServers\x12\x8c\x01\n\rGetServerList\x12#.CGameServers_GetServerList_Request\x1a$.CGameServers_GetServerList_Response\"0\x82\xb5\x18,Gets a list of servers given a filter string\x12\xa4\x01\n\x15GetServerSteamIDsByIP\x12+.CGameServers_GetServerSteamIDsByIP_Request\x1a&.CGameServers_IPsWithSteamIDs_Response\"6\x82\xb5\x18\x32Gets a list of server SteamIDs given a list of IPs\x12\xad\x01\n\x15GetServerIPsBySteamID\x12+.CGameServers_GetServerIPsBySteamID_Request\x1a&.CGameServers_IPsWithSteamIDs_Response\"?\x82\xb5\x18;Gets a list of server IP addresses given a list of SteamIDs\x1a\x36\x82\xb5\x18\x32\x41 service for searching and managing game servers.B\x03\x80\x01\x01')
   ,
-  dependencies=[google.protobuf.descriptor_pb2.DESCRIPTOR,steammessages_unified_base.steamclient_pb2.DESCRIPTOR,])
+  dependencies=[steammessages__unified__base_dot_steamclient__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -57,11 +57,12 @@ _CGAMESERVERS_GETSERVERLIST_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=128,
-  serialized_end=287,
+  serialized_start=94,
+  serialized_end=253,
 )
 
 
@@ -206,11 +207,12 @@ _CGAMESERVERS_GETSERVERLIST_RESPONSE_SERVER = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=433,
-  serialized_end=770,
+  serialized_start=399,
+  serialized_end=736,
 )
 
 _CGAMESERVERS_GETSERVERLIST_RESPONSE = _descriptor.Descriptor(
@@ -235,11 +237,12 @@ _CGAMESERVERS_GETSERVERLIST_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=290,
-  serialized_end=770,
+  serialized_start=256,
+  serialized_end=736,
 )
 
 
@@ -265,11 +268,12 @@ _CGAMESERVERS_GETSERVERSTEAMIDSBYIP_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=772,
-  serialized_end=836,
+  serialized_start=738,
+  serialized_end=802,
 )
 
 
@@ -302,11 +306,12 @@ _CGAMESERVERS_IPSWITHSTEAMIDS_RESPONSE_SERVER = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=944,
-  serialized_end=983,
+  serialized_start=910,
+  serialized_end=949,
 )
 
 _CGAMESERVERS_IPSWITHSTEAMIDS_RESPONSE = _descriptor.Descriptor(
@@ -331,11 +336,12 @@ _CGAMESERVERS_IPSWITHSTEAMIDS_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=839,
-  serialized_end=983,
+  serialized_start=805,
+  serialized_end=949,
 )
 
 
@@ -361,11 +367,12 @@ _CGAMESERVERS_GETSERVERIPSBYSTEAMID_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=985,
-  serialized_end=1054,
+  serialized_start=951,
+  serialized_end=1020,
 )
 
 _CGAMESERVERS_GETSERVERLIST_RESPONSE_SERVER.containing_type = _CGAMESERVERS_GETSERVERLIST_RESPONSE
@@ -430,6 +437,8 @@ CGameServers_GetServerIPsBySteamID_Request = _reflection.GeneratedProtocolMessag
 _sym_db.RegisterMessage(CGameServers_GetServerIPsBySteamID_Request)
 
 
+DESCRIPTOR.has_options = True
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\200\001\001'))
 _CGAMESERVERS_GETSERVERLIST_REQUEST.fields_by_name['filter'].has_options = True
 _CGAMESERVERS_GETSERVERLIST_REQUEST.fields_by_name['filter']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030\024Query filter string.'))
 _CGAMESERVERS_GETSERVERLIST_REQUEST.fields_by_name['limit'].has_options = True

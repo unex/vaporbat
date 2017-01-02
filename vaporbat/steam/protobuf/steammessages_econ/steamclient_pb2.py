@@ -13,16 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import google.protobuf.descriptor_pb2
-import steammessages_unified_base.steamclient_pb2
+from steammessages_unified_base import steamclient_pb2 as steammessages__unified__base_dot_steamclient__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='steammessages_econ.steamclient.proto',
   package='',
-  serialized_pb=_b('\n$steammessages_econ.steamclient.proto\x1a google/protobuf/descriptor.proto\x1a,steammessages_unified_base.steamclient.proto\"C\n-CEcon_ClientGetItemShopOverlayAuthURL_Request\x12\x12\n\nreturn_url\x18\x01 \x01(\t\"=\n.CEcon_ClientGetItemShopOverlayAuthURL_Response\x12\x0b\n\x03url\x18\x01 \x01(\t2\xa3\x02\n\x04\x45\x63on\x12\xd9\x01\n\x1f\x43lientGetItemShopOverlayAuthURL\x12..CEcon_ClientGetItemShopOverlayAuthURL_Request\x1a/.CEcon_ClientGetItemShopOverlayAuthURL_Response\"U\x82\xb5\x18QGenerates a URL which sets a secure cookie for in-game-browser itemshop purchases\x1a?\x82\xb5\x18;A service that provides communication with the econ servers')
+  syntax='proto2',
+  serialized_pb=_b('\n$steammessages_econ.steamclient.proto\x1a,steammessages_unified_base.steamclient.proto\"C\n-CEcon_ClientGetItemShopOverlayAuthURL_Request\x12\x12\n\nreturn_url\x18\x01 \x01(\t\"=\n.CEcon_ClientGetItemShopOverlayAuthURL_Response\x12\x0b\n\x03url\x18\x01 \x01(\t2\xa3\x02\n\x04\x45\x63on\x12\xd9\x01\n\x1f\x43lientGetItemShopOverlayAuthURL\x12..CEcon_ClientGetItemShopOverlayAuthURL_Request\x1a/.CEcon_ClientGetItemShopOverlayAuthURL_Response\"U\x82\xb5\x18QGenerates a URL which sets a secure cookie for in-game-browser itemshop purchases\x1a?\x82\xb5\x18;A service that provides communication with the econ serversB\x03\x80\x01\x01')
   ,
-  dependencies=[google.protobuf.descriptor_pb2.DESCRIPTOR,steammessages_unified_base.steamclient_pb2.DESCRIPTOR,])
+  dependencies=[steammessages__unified__base_dot_steamclient__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -50,11 +50,12 @@ _CECON_CLIENTGETITEMSHOPOVERLAYAUTHURL_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=120,
-  serialized_end=187,
+  serialized_start=86,
+  serialized_end=153,
 )
 
 
@@ -80,11 +81,12 @@ _CECON_CLIENTGETITEMSHOPOVERLAYAUTHURL_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=189,
-  serialized_end=250,
+  serialized_start=155,
+  serialized_end=216,
 )
 
 DESCRIPTOR.message_types_by_name['CEcon_ClientGetItemShopOverlayAuthURL_Request'] = _CECON_CLIENTGETITEMSHOPOVERLAYAUTHURL_REQUEST
@@ -105,4 +107,6 @@ CEcon_ClientGetItemShopOverlayAuthURL_Response = _reflection.GeneratedProtocolMe
 _sym_db.RegisterMessage(CEcon_ClientGetItemShopOverlayAuthURL_Response)
 
 
+DESCRIPTOR.has_options = True
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\200\001\001'))
 # @@protoc_insertion_point(module_scope)

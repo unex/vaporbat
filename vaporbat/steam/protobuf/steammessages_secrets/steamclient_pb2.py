@@ -14,16 +14,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import google.protobuf.descriptor_pb2
-import steammessages_unified_base.steamclient_pb2
+from steammessages_unified_base import steamclient_pb2 as steammessages__unified__base_dot_steamclient__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='steammessages_secrets.steamclient.proto',
   package='',
-  serialized_pb=_b('\n\'steammessages_secrets.steamclient.proto\x1a google/protobuf/descriptor.proto\x1a,steammessages_unified_base.steamclient.proto\"\x86\x01\n\x12\x43KeyEscrow_Request\x12\x1b\n\x13rsa_oaep_sha_ticket\x18\x01 \x01(\x0c\x12\x10\n\x08password\x18\x02 \x01(\x0c\x12\x41\n\x05usage\x18\x03 \x01(\x0e\x32\x10.EKeyEscrowUsage: k_EKeyEscrowUsageStreamingDevice\"\xa0\x01\n\x11\x43KeyEscrow_Ticket\x12\x10\n\x08password\x18\x01 \x01(\x0c\x12\x12\n\nidentifier\x18\x02 \x01(\x04\x12\x0f\n\x07payload\x18\x03 \x01(\x0c\x12\x11\n\ttimestamp\x18\x04 \x01(\r\x12\x41\n\x05usage\x18\x05 \x01(\x0e\x32\x10.EKeyEscrowUsage: k_EKeyEscrowUsageStreamingDevice\"9\n\x13\x43KeyEscrow_Response\x12\"\n\x06ticket\x18\x01 \x01(\x0b\x32\x12.CKeyEscrow_Ticket*7\n\x0f\x45KeyEscrowUsage\x12$\n k_EKeyEscrowUsageStreamingDevice\x10\x00\x32\xc8\x01\n\x07Secrets\x12\x80\x01\n\tKeyEscrow\x12\x13.CKeyEscrow_Request\x1a\x14.CKeyEscrow_Response\"H\x82\xb5\x18\x44Service to perform authenticated key-exchange involving Steam Client\x1a:\x82\xb5\x18\x36Service for accessing credentials and guarding secrets')
+  syntax='proto2',
+  serialized_pb=_b('\n\'steammessages_secrets.steamclient.proto\x1a,steammessages_unified_base.steamclient.proto\"\x9b\x01\n\x12\x43KeyEscrow_Request\x12\x1b\n\x13rsa_oaep_sha_ticket\x18\x01 \x01(\x0c\x12\x10\n\x08password\x18\x02 \x01(\x0c\x12\x41\n\x05usage\x18\x03 \x01(\x0e\x32\x10.EKeyEscrowUsage: k_EKeyEscrowUsageStreamingDevice\x12\x13\n\x0b\x64\x65vice_name\x18\x04 \x01(\t\"\x82\x02\n\x11\x43KeyEscrow_Ticket\x12\x10\n\x08password\x18\x01 \x01(\x0c\x12\x12\n\nidentifier\x18\x02 \x01(\x04\x12\x0f\n\x07payload\x18\x03 \x01(\x0c\x12\x11\n\ttimestamp\x18\x04 \x01(\r\x12\x41\n\x05usage\x18\x05 \x01(\x0e\x32\x10.EKeyEscrowUsage: k_EKeyEscrowUsageStreamingDevice\x12\x13\n\x0b\x64\x65vice_name\x18\x06 \x01(\t\x12\x14\n\x0c\x64\x65vice_model\x18\x07 \x01(\t\x12\x15\n\rdevice_serial\x18\x08 \x01(\t\x12\x1e\n\x16\x64\x65vice_provisioning_id\x18\t \x01(\r\"9\n\x13\x43KeyEscrow_Response\x12\"\n\x06ticket\x18\x01 \x01(\x0b\x32\x12.CKeyEscrow_Ticket*7\n\x0f\x45KeyEscrowUsage\x12$\n k_EKeyEscrowUsageStreamingDevice\x10\x00\x32\xc8\x01\n\x07Secrets\x12\x80\x01\n\tKeyEscrow\x12\x13.CKeyEscrow_Request\x1a\x14.CKeyEscrow_Response\"H\x82\xb5\x18\x44Service to perform authenticated key-exchange involving Steam Client\x1a:\x82\xb5\x18\x36Service for accessing credentials and guarding secretsB\x03\x80\x01\x01')
   ,
-  dependencies=[google.protobuf.descriptor_pb2.DESCRIPTOR,steammessages_unified_base.steamclient_pb2.DESCRIPTOR,])
+  dependencies=[steammessages__unified__base_dot_steamclient__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _EKEYESCROWUSAGE = _descriptor.EnumDescriptor(
@@ -39,8 +39,8 @@ _EKEYESCROWUSAGE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=482,
-  serialized_end=537,
+  serialized_start=567,
+  serialized_end=622,
 )
 _sym_db.RegisterEnumDescriptor(_EKEYESCROWUSAGE)
 
@@ -77,6 +77,13 @@ _CKEYESCROW_REQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='device_name', full_name='CKeyEscrow_Request.device_name', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -85,11 +92,12 @@ _CKEYESCROW_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=124,
-  serialized_end=258,
+  serialized_start=90,
+  serialized_end=245,
 )
 
 
@@ -135,6 +143,34 @@ _CKEYESCROW_TICKET = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='device_name', full_name='CKeyEscrow_Ticket.device_name', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='device_model', full_name='CKeyEscrow_Ticket.device_model', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='device_serial', full_name='CKeyEscrow_Ticket.device_serial', index=7,
+      number=8, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='device_provisioning_id', full_name='CKeyEscrow_Ticket.device_provisioning_id', index=8,
+      number=9, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -143,11 +179,12 @@ _CKEYESCROW_TICKET = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=261,
-  serialized_end=421,
+  serialized_start=248,
+  serialized_end=506,
 )
 
 
@@ -173,11 +210,12 @@ _CKEYESCROW_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=423,
-  serialized_end=480,
+  serialized_start=508,
+  serialized_end=565,
 )
 
 _CKEYESCROW_REQUEST.fields_by_name['usage'].enum_type = _EKEYESCROWUSAGE
@@ -210,4 +248,6 @@ CKeyEscrow_Response = _reflection.GeneratedProtocolMessageType('CKeyEscrow_Respo
 _sym_db.RegisterMessage(CKeyEscrow_Response)
 
 
+DESCRIPTOR.has_options = True
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\200\001\001'))
 # @@protoc_insertion_point(module_scope)

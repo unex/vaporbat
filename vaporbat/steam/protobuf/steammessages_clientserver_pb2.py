@@ -13,16 +13,17 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import steammessages_base_pb2
-import encrypted_app_ticket_pb2
+import steammessages_base_pb2 as steammessages__base__pb2
+import encrypted_app_ticket_pb2 as encrypted__app__ticket__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='steammessages_clientserver.proto',
   package='',
-  serialized_pb=_b('\n steammessages_clientserver.proto\x1a\x18steammessages_base.proto\x1a\x1a\x65ncrypted_app_ticket.proto\"\x15\n\x13\x43MsgClientHeartBeat\"G\n\x1e\x43MsgClientUDSP2PSessionStarted\x12\x16\n\x0esteamid_remote\x18\x01 \x01(\x06\x12\r\n\x05\x61ppid\x18\x02 \x01(\x05\"\x81\x02\n\x1c\x43MsgClientUDSP2PSessionEnded\x12\x16\n\x0esteamid_remote\x18\x01 \x01(\x06\x12\r\n\x05\x61ppid\x18\x02 \x01(\x05\x12\x1a\n\x12session_length_sec\x18\x03 \x01(\x05\x12\x15\n\rsession_error\x18\x04 \x01(\x05\x12\x0f\n\x07nattype\x18\x05 \x01(\x05\x12\x12\n\nbytes_recv\x18\x06 \x01(\x05\x12\x12\n\nbytes_sent\x18\x07 \x01(\x05\x12\x18\n\x10\x62ytes_sent_relay\x18\x08 \x01(\x05\x12\x18\n\x10\x62ytes_recv_relay\x18\t \x01(\x05\x12\x1a\n\x12time_to_connect_ms\x18\n \x01(\x05\"j\n\"CMsgClientRegisterAuthTicketWithCM\x12\x18\n\x10protocol_version\x18\x01 \x01(\r\x12\x0e\n\x06ticket\x18\x03 \x01(\x0c\x12\x1a\n\x12\x63lient_instance_id\x18\x04 \x01(\x04\"\xd1\x01\n\x1c\x43MsgClientTicketAuthComplete\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x0f\n\x07game_id\x18\x02 \x01(\x06\x12\x0e\n\x06\x65state\x18\x03 \x01(\r\x12\x1e\n\x16\x65\x61uth_session_response\x18\x04 \x01(\r\x12\x19\n\x11\x44\x45PRECATED_ticket\x18\x05 \x01(\x0c\x12\x12\n\nticket_crc\x18\x06 \x01(\r\x12\x17\n\x0fticket_sequence\x18\x07 \x01(\r\x12\x16\n\x0eowner_steam_id\x18\x08 \x01(\x06\"\xdc\t\n\x0f\x43MsgClientLogon\x12\x18\n\x10protocol_version\x18\x01 \x01(\r\x12\x1f\n\x17obfustucated_private_ip\x18\x02 \x01(\r\x12\x0f\n\x07\x63\x65ll_id\x18\x03 \x01(\r\x12\x17\n\x0flast_session_id\x18\x04 \x01(\r\x12\x1e\n\x16\x63lient_package_version\x18\x05 \x01(\r\x12\x17\n\x0f\x63lient_language\x18\x06 \x01(\t\x12\x16\n\x0e\x63lient_os_type\x18\x07 \x01(\r\x12\'\n\x18should_remember_password\x18\x08 \x01(\x08:\x05\x66\x61lse\x12\x14\n\x0cwine_version\x18\t \x01(\t\x12 \n\x18ping_ms_from_cell_search\x18\n \x01(\r\x12\x11\n\tpublic_ip\x18\x14 \x01(\r\x12\x11\n\tqos_level\x18\x15 \x01(\r\x12 \n\x18\x63lient_supplied_steam_id\x18\x16 \x01(\x06\x12\x12\n\nmachine_id\x18\x1e \x01(\x0c\x12\x18\n\rlauncher_type\x18\x1f \x01(\r:\x01\x30\x12\x12\n\x07ui_mode\x18  \x01(\r:\x01\x30\x12\x1a\n\x12steam2_auth_ticket\x18) \x01(\x0c\x12\x15\n\remail_address\x18* \x01(\t\x12 \n\x18rtime32_account_creation\x18+ \x01(\x07\x12\x14\n\x0c\x61\x63\x63ount_name\x18\x32 \x01(\t\x12\x10\n\x08password\x18\x33 \x01(\t\x12\x19\n\x11game_server_token\x18\x34 \x01(\t\x12\x11\n\tlogin_key\x18< \x01(\t\x12+\n\x1cwas_converted_deprecated_msg\x18\x46 \x01(\x08:\x05\x66\x61lse\x12%\n\x1d\x61non_user_target_account_name\x18P \x01(\t\x12\x1e\n\x16resolved_user_steam_id\x18Q \x01(\x06\x12\x1a\n\x12\x65result_sentryfile\x18R \x01(\x05\x12\x16\n\x0esha_sentryfile\x18S \x01(\x0c\x12\x11\n\tauth_code\x18T \x01(\t\x12\x10\n\x08otp_type\x18U \x01(\x05\x12\x11\n\totp_value\x18V \x01(\r\x12\x16\n\x0eotp_identifier\x18W \x01(\t\x12\x1d\n\x15steam2_ticket_request\x18X \x01(\x08\x12\x17\n\x0fsony_psn_ticket\x18Z \x01(\x0c\x12\x1b\n\x13sony_psn_service_id\x18[ \x01(\t\x12\x36\n\'create_new_psn_linked_account_if_needed\x18\\ \x01(\x08:\x05\x66\x61lse\x12\x15\n\rsony_psn_name\x18] \x01(\t\x12\x1a\n\x12game_server_app_id\x18^ \x01(\x05\x12)\n!steamguard_dont_remember_computer\x18_ \x01(\x08\x12\x14\n\x0cmachine_name\x18` \x01(\t\x12\x1f\n\x17machine_name_userchosen\x18\x61 \x01(\t\x12\x18\n\x10\x63ountry_override\x18\x62 \x01(\t\x12\x14\n\x0cis_steam_box\x18\x63 \x01(\x08\x12\x1a\n\x12\x63lient_instance_id\x18\x64 \x01(\x04\x12\x17\n\x0ftwo_factor_code\x18\x65 \x01(\t\"\x8c\x05\n\x17\x43MsgClientLogonResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12%\n\x1dout_of_game_heartbeat_seconds\x18\x02 \x01(\x05\x12!\n\x19in_game_heartbeat_seconds\x18\x03 \x01(\x05\x12\x11\n\tpublic_ip\x18\x04 \x01(\r\x12\x1b\n\x13rtime32_server_time\x18\x05 \x01(\x07\x12\x15\n\raccount_flags\x18\x06 \x01(\r\x12\x0f\n\x07\x63\x65ll_id\x18\x07 \x01(\r\x12\x14\n\x0c\x65mail_domain\x18\x08 \x01(\t\x12\x15\n\rsteam2_ticket\x18\t \x01(\x0c\x12\x18\n\x10\x65result_extended\x18\n \x01(\x05\x12&\n\x1ewebapi_authenticate_user_nonce\x18\x0b \x01(\t\x12\x1e\n\x16\x63\x65ll_id_ping_threshold\x18\x0c \x01(\r\x12\x10\n\x08use_pics\x18\r \x01(\x08\x12\x12\n\nvanity_url\x18\x0e \x01(\t\x12\x1f\n\x17\x63lient_supplied_steamid\x18\x14 \x01(\x06\x12\x17\n\x0fip_country_code\x18\x15 \x01(\t\x12\x19\n\x11parental_settings\x18\x16 \x01(\x0c\x12\"\n\x1aparental_setting_signature\x18\x17 \x01(\x0c\x12&\n\x1e\x63ount_loginfailures_to_migrate\x18\x18 \x01(\x05\x12$\n\x1c\x63ount_disconnects_to_migrate\x18\x19 \x01(\x05\x12#\n\x1bogs_data_report_time_window\x18\x1a \x01(\x05\x12\x1a\n\x12\x63lient_instance_id\x18\x1b \x01(\x04\".\n,CMsgClientRequestWebAPIAuthenticateUserNonce\"r\n4CMsgClientRequestWebAPIAuthenticateUserNonceResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12&\n\x1ewebapi_authenticate_user_nonce\x18\x0b \x01(\t\"\x12\n\x10\x43MsgClientLogOff\")\n\x13\x43MsgClientLoggedOff\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\":\n\x10\x43MsgClientCMList\x12\x14\n\x0c\x63m_addresses\x18\x01 \x03(\r\x12\x10\n\x08\x63m_ports\x18\x02 \x03(\r\"m\n\x1b\x43MsgClientP2PConnectionInfo\x12\x15\n\rsteam_id_dest\x18\x01 \x01(\x06\x12\x14\n\x0csteam_id_src\x18\x02 \x01(\x06\x12\x0e\n\x06\x61pp_id\x18\x03 \x01(\r\x12\x11\n\tcandidate\x18\x04 \x01(\x0c\"z\n\x1f\x43MsgClientP2PConnectionFailInfo\x12\x15\n\rsteam_id_dest\x18\x01 \x01(\x06\x12\x14\n\x0csteam_id_src\x18\x02 \x01(\x06\x12\x0e\n\x06\x61pp_id\x18\x03 \x01(\r\x12\x1a\n\x12\x65p2p_session_error\x18\x04 \x01(\r\"1\n\x1f\x43MsgClientGetAppOwnershipTicket\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\"]\n\'CMsgClientGetAppOwnershipTicketResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\x12\x0e\n\x06\x61pp_id\x18\x02 \x01(\r\x12\x0e\n\x06ticket\x18\x03 \x01(\x0c\"\'\n\x16\x43MsgClientSessionToken\x12\r\n\x05token\x18\x01 \x01(\x04\"M\n\x1b\x43MsgClientGameConnectTokens\x12\x1e\n\x12max_tokens_to_keep\x18\x01 \x01(\r:\x02\x31\x30\x12\x0e\n\x06tokens\x18\x02 \x03(\x0c\"\xa5\x01\n\x10\x43MsgGSServerType\x12\x15\n\rapp_id_served\x18\x01 \x01(\r\x12\r\n\x05\x66lags\x18\x02 \x01(\r\x12\x17\n\x0fgame_ip_address\x18\x03 \x01(\r\x12\x11\n\tgame_port\x18\x04 \x01(\r\x12\x10\n\x08game_dir\x18\x05 \x01(\t\x12\x14\n\x0cgame_version\x18\x06 \x01(\t\x12\x17\n\x0fgame_query_port\x18\x07 \x01(\r\"&\n\x11\x43MsgGSStatusReply\x12\x11\n\tis_secure\x18\x01 \x01(\x08\"{\n\x10\x43MsgGSPlayerList\x12)\n\x07players\x18\x01 \x03(\x0b\x32\x18.CMsgGSPlayerList.Player\x1a<\n\x06Player\x12\x10\n\x08steam_id\x18\x01 \x01(\x04\x12\x11\n\tpublic_ip\x18\x02 \x01(\r\x12\r\n\x05token\x18\x03 \x01(\x0c\"G\n\x11\x43MsgGSUserPlaying\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x11\n\tpublic_ip\x18\x02 \x01(\r\x12\r\n\x05token\x18\x03 \x01(\x0c\"*\n\x16\x43MsgGSDisconnectNotice\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\"\xf5\x02\n\x15\x43MsgClientGamesPlayed\x12\x37\n\x0cgames_played\x18\x01 \x03(\x0b\x32!.CMsgClientGamesPlayed.GamePlayed\x12\x16\n\x0e\x63lient_os_type\x18\x02 \x01(\r\x1a\x8a\x02\n\nGamePlayed\x12\x13\n\x0bsteam_id_gs\x18\x01 \x01(\x04\x12\x0f\n\x07game_id\x18\x02 \x01(\x06\x12\x17\n\x0fgame_ip_address\x18\x03 \x01(\r\x12\x11\n\tgame_port\x18\x04 \x01(\r\x12\x11\n\tis_secure\x18\x05 \x01(\x08\x12\r\n\x05token\x18\x06 \x01(\x0c\x12\x17\n\x0fgame_extra_info\x18\x07 \x01(\t\x12\x16\n\x0egame_data_blob\x18\x08 \x01(\x0c\x12\x12\n\nprocess_id\x18\t \x01(\r\x12\x1d\n\x15streaming_provider_id\x18\n \x01(\r\x12\x12\n\ngame_flags\x18\x0b \x01(\r\x12\x10\n\x08owner_id\x18\x0c \x01(\r\"9\n\rCMsgGSApprove\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x16\n\x0eowner_steam_id\x18\x02 \x01(\x06\"I\n\nCMsgGSDeny\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0c\x65\x64\x65ny_reason\x18\x02 \x01(\x05\x12\x13\n\x0b\x64\x65ny_string\x18\x03 \x01(\t\"4\n\nCMsgGSKick\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0c\x65\x64\x65ny_reason\x18\x02 \x01(\x05\"\xb6\x01\n\x12\x43MsgClientAuthList\x12\x13\n\x0btokens_left\x18\x01 \x01(\r\x12\x18\n\x10last_request_seq\x18\x02 \x01(\r\x12$\n\x1clast_request_seq_from_server\x18\x03 \x01(\r\x12 \n\x07tickets\x18\x04 \x03(\x0b\x32\x0f.CMsgAuthTicket\x12\x0f\n\x07\x61pp_ids\x18\x05 \x03(\r\x12\x18\n\x10message_sequence\x18\x06 \x01(\r\"V\n\x15\x43MsgClientAuthListAck\x12\x12\n\nticket_crc\x18\x01 \x03(\r\x12\x0f\n\x07\x61pp_ids\x18\x02 \x03(\r\x12\x18\n\x10message_sequence\x18\x03 \x01(\r\"\xea\x01\n\x15\x43MsgClientFriendsList\x12\x14\n\x0c\x62incremental\x18\x01 \x01(\x08\x12.\n\x07\x66riends\x18\x02 \x03(\x0b\x32\x1d.CMsgClientFriendsList.Friend\x12\x18\n\x10max_friend_count\x18\x03 \x01(\r\x12\x1b\n\x13\x61\x63tive_friend_count\x18\x04 \x01(\r\x12\x19\n\x11\x66riends_limit_hit\x18\x05 \x01(\x08\x1a\x39\n\x06\x46riend\x12\x12\n\nulfriendid\x18\x01 \x01(\x06\x12\x1b\n\x13\x65\x66riendrelationship\x18\x02 \x01(\r\"\xc5\x02\n\x1b\x43MsgClientFriendsGroupsList\x12\x10\n\x08\x62removal\x18\x01 \x01(\x08\x12\x14\n\x0c\x62incremental\x18\x02 \x01(\x08\x12>\n\x0c\x66riendGroups\x18\x03 \x03(\x0b\x32(.CMsgClientFriendsGroupsList.FriendGroup\x12H\n\x0bmemberships\x18\x04 \x03(\x0b\x32\x33.CMsgClientFriendsGroupsList.FriendGroupsMembership\x1a\x35\n\x0b\x46riendGroup\x12\x10\n\x08nGroupID\x18\x01 \x01(\x05\x12\x14\n\x0cstrGroupName\x18\x02 \x01(\t\x1a=\n\x16\x46riendGroupsMembership\x12\x11\n\tulSteamID\x18\x01 \x01(\x06\x12\x10\n\x08nGroupID\x18\x02 \x01(\x05\"\xba\x01\n\x1c\x43MsgClientPlayerNicknameList\x12\x0f\n\x07removal\x18\x01 \x01(\x08\x12\x13\n\x0bincremental\x18\x02 \x01(\x08\x12?\n\tnicknames\x18\x03 \x03(\x0b\x32,.CMsgClientPlayerNicknameList.PlayerNickname\x1a\x33\n\x0ePlayerNickname\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x10\n\x08nickname\x18\x03 \x01(\t\"@\n\x1b\x43MsgClientSetPlayerNickname\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x10\n\x08nickname\x18\x02 \x01(\t\"6\n#CMsgClientSetPlayerNicknameResponse\x12\x0f\n\x07\x65result\x18\x01 \x01(\r\"\xf7\x02\n\x15\x43MsgClientLicenseList\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x30\n\x08licenses\x18\x02 \x03(\x0b\x32\x1e.CMsgClientLicenseList.License\x1a\x97\x02\n\x07License\x12\x12\n\npackage_id\x18\x01 \x01(\r\x12\x14\n\x0ctime_created\x18\x02 \x01(\x07\x12\x19\n\x11time_next_process\x18\x03 \x01(\x07\x12\x14\n\x0cminute_limit\x18\x04 \x01(\x05\x12\x14\n\x0cminutes_used\x18\x05 \x01(\x05\x12\x16\n\x0epayment_method\x18\x06 \x01(\r\x12\r\n\x05\x66lags\x18\x07 \x01(\r\x12\x1d\n\x15purchase_country_code\x18\x08 \x01(\t\x12\x14\n\x0clicense_type\x18\t \x01(\r\x12\x16\n\x0eterritory_code\x18\n \x01(\x05\x12\x15\n\rchange_number\x18\x0b \x01(\x05\x12\x10\n\x08owner_id\x18\x0c \x01(\r\"|\n\x15\x43MsgClientLBSSetScore\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0eleaderboard_id\x18\x02 \x01(\x05\x12\r\n\x05score\x18\x03 \x01(\x05\x12\x0f\n\x07\x64\x65tails\x18\x04 \x01(\x0c\x12\x1b\n\x13upload_score_method\x18\x05 \x01(\x05\"\xa2\x01\n\x1d\x43MsgClientLBSSetScoreResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x1f\n\x17leaderboard_entry_count\x18\x02 \x01(\x05\x12\x15\n\rscore_changed\x18\x03 \x01(\x08\x12\x1c\n\x14global_rank_previous\x18\x04 \x01(\x05\x12\x17\n\x0fglobal_rank_new\x18\x05 \x01(\x05\"M\n\x13\x43MsgClientLBSSetUGC\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0eleaderboard_id\x18\x02 \x01(\x05\x12\x0e\n\x06ugc_id\x18\x03 \x01(\x06\"1\n\x1b\x43MsgClientLBSSetUGCResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\"\xa7\x01\n\x1b\x43MsgClientLBSFindOrCreateLB\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x1f\n\x17leaderboard_sort_method\x18\x02 \x01(\x05\x12 \n\x18leaderboard_display_type\x18\x03 \x01(\x05\x12\x1b\n\x13\x63reate_if_not_found\x18\x04 \x01(\x08\x12\x18\n\x10leaderboard_name\x18\x05 \x01(\t\"\xd5\x01\n#CMsgClientLBSFindOrCreateLBResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x16\n\x0eleaderboard_id\x18\x02 \x01(\x05\x12\x1f\n\x17leaderboard_entry_count\x18\x03 \x01(\x05\x12\"\n\x17leaderboard_sort_method\x18\x04 \x01(\x05:\x01\x30\x12#\n\x18leaderboard_display_type\x18\x05 \x01(\x05:\x01\x30\x12\x18\n\x10leaderboard_name\x18\x06 \x01(\t\"\x9f\x01\n\x19\x43MsgClientLBSGetLBEntries\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\x05\x12\x16\n\x0eleaderboard_id\x18\x02 \x01(\x05\x12\x13\n\x0brange_start\x18\x03 \x01(\x05\x12\x11\n\trange_end\x18\x04 \x01(\x05\x12 \n\x18leaderboard_data_request\x18\x05 \x01(\x05\x12\x10\n\x08steamids\x18\x06 \x03(\x06\"\xf8\x01\n!CMsgClientLBSGetLBEntriesResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x1f\n\x17leaderboard_entry_count\x18\x02 \x01(\x05\x12\x39\n\x07\x65ntries\x18\x03 \x03(\x0b\x32(.CMsgClientLBSGetLBEntriesResponse.Entry\x1a\x63\n\x05\x45ntry\x12\x15\n\rsteam_id_user\x18\x01 \x01(\x06\x12\x13\n\x0bglobal_rank\x18\x02 \x01(\x05\x12\r\n\x05score\x18\x03 \x01(\x05\x12\x0f\n\x07\x64\x65tails\x18\x04 \x01(\x0c\x12\x0e\n\x06ugc_id\x18\x05 \x01(\x06\"\xdb\x03\n\x15\x43MsgClientAccountInfo\x12\x14\n\x0cpersona_name\x18\x01 \x01(\t\x12\x12\n\nip_country\x18\x02 \x01(\t\x12\x15\n\rsalt_password\x18\x03 \x01(\x0c\x12\x1b\n\x13sha_digest_Password\x18\x04 \x01(\x0c\x12\x1e\n\x16\x63ount_authed_computers\x18\x05 \x01(\x05\x12\x17\n\x0flocked_with_ipt\x18\x06 \x01(\x08\x12\x15\n\raccount_flags\x18\x07 \x01(\r\x12\x13\n\x0b\x66\x61\x63\x65\x62ook_id\x18\x08 \x01(\x04\x12\x15\n\rfacebook_name\x18\t \x01(\t\x12\x1c\n\x14steam_guard_provider\x18\n \x01(\x05\x12\'\n\x1fsteamguard_require_code_default\x18\x0b \x01(\x08\x12!\n\x19steamguard_show_providers\x18\x0c \x01(\x08\x12*\n\"steamguard_can_use_mobile_provider\x18\r \x01(\x08\x12%\n\x1dsteamguard_notify_newmachines\x18\x0e \x01(\x08\x12+\n#steamguard_machine_name_user_chosen\x18\x0f \x01(\t\"\xbf\x01\n\x1e\x43MsgClientAppMinutesPlayedData\x12L\n\x0eminutes_played\x18\x01 \x03(\x0b\x32\x34.CMsgClientAppMinutesPlayedData.AppMinutesPlayedData\x1aO\n\x14\x41ppMinutesPlayedData\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x0f\n\x07\x66orever\x18\x02 \x01(\x05\x12\x16\n\x0elast_two_weeks\x18\x03 \x01(\x05\"\xaa\x01\n\x1a\x43MsgClientIsLimitedAccount\x12\x1b\n\x13\x62is_limited_account\x18\x01 \x01(\x08\x12\x1c\n\x14\x62is_community_banned\x18\x02 \x01(\x08\x12\x1a\n\x12\x62is_locked_account\x18\x03 \x01(\x08\x12\x35\n-bis_limited_account_allowed_to_invite_friends\x18\x04 \x01(\x08\"O\n\x1b\x43MsgClientRequestFriendData\x12\x1f\n\x17persona_state_requested\x18\x01 \x01(\r\x12\x0f\n\x07\x66riends\x18\x02 \x03(\x06\"\x98\x01\n\x16\x43MsgClientChangeStatus\x12\x15\n\rpersona_state\x18\x01 \x01(\r\x12\x13\n\x0bplayer_name\x18\x02 \x01(\t\x12\x1e\n\x16is_auto_generated_name\x18\x03 \x01(\x08\x12\x15\n\rhigh_priority\x18\x04 \x01(\x08\x12\x1b\n\x13persona_set_by_user\x18\x05 \x01(\x08\"@\n\x19\x43MsgPersonaChangeResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x13\n\x0bplayer_name\x18\x02 \x01(\t\"\xe7\x04\n\x16\x43MsgClientPersonaState\x12\x14\n\x0cstatus_flags\x18\x01 \x01(\r\x12/\n\x07\x66riends\x18\x02 \x03(\x0b\x32\x1e.CMsgClientPersonaState.Friend\x1a\x85\x04\n\x06\x46riend\x12\x10\n\x08\x66riendid\x18\x01 \x01(\x06\x12\x15\n\rpersona_state\x18\x02 \x01(\r\x12\x1a\n\x12game_played_app_id\x18\x03 \x01(\r\x12\x16\n\x0egame_server_ip\x18\x04 \x01(\r\x12\x18\n\x10game_server_port\x18\x05 \x01(\r\x12\x1b\n\x13persona_state_flags\x18\x06 \x01(\r\x12 \n\x18online_session_instances\x18\x07 \x01(\r\x12\x1d\n\x15published_instance_id\x18\x08 \x01(\r\x12\x1b\n\x13persona_set_by_user\x18\n \x01(\x08\x12\x13\n\x0bplayer_name\x18\x0f \x01(\t\x12\x12\n\nquery_port\x18\x14 \x01(\r\x12\x16\n\x0esteamid_source\x18\x19 \x01(\x06\x12\x13\n\x0b\x61vatar_hash\x18\x1f \x01(\x0c\x12\x13\n\x0blast_logoff\x18- \x01(\r\x12\x12\n\nlast_logon\x18. \x01(\r\x12\x11\n\tclan_rank\x18\x32 \x01(\r\x12\x11\n\tgame_name\x18\x37 \x01(\t\x12\x0e\n\x06gameid\x18\x38 \x01(\x06\x12\x16\n\x0egame_data_blob\x18< \x01(\x0c\x12\x10\n\x08\x63lan_tag\x18\x41 \x01(\t\x12\x15\n\rfacebook_name\x18\x42 \x01(\t\x12\x13\n\x0b\x66\x61\x63\x65\x62ook_id\x18\x43 \x01(\x04\"5\n\x1b\x43MsgClientFriendProfileInfo\x12\x16\n\x0esteamid_friend\x18\x01 \x01(\x06\"\xda\x01\n#CMsgClientFriendProfileInfoResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x16\n\x0esteamid_friend\x18\x02 \x01(\x06\x12\x14\n\x0ctime_created\x18\x03 \x01(\r\x12\x11\n\treal_name\x18\x04 \x01(\t\x12\x11\n\tcity_name\x18\x05 \x01(\t\x12\x12\n\nstate_name\x18\x06 \x01(\t\x12\x14\n\x0c\x63ountry_name\x18\x07 \x01(\t\x12\x10\n\x08headline\x18\x08 \x01(\t\x12\x0f\n\x07summary\x18\t \x01(\t\"\x8c\x01\n\x14\x43MsgClientServerList\x12-\n\x07servers\x18\x01 \x03(\x0b\x32\x1c.CMsgClientServerList.Server\x1a\x45\n\x06Server\x12\x13\n\x0bserver_type\x18\x01 \x01(\r\x12\x11\n\tserver_ip\x18\x02 \x01(\r\x12\x13\n\x0bserver_port\x18\x03 \x01(\r\"\xa7\x01\n\x1e\x43MsgClientRequestedClientStats\x12\x42\n\rstats_to_send\x18\x01 \x03(\x0b\x32+.CMsgClientRequestedClientStats.StatsToSend\x1a\x41\n\x0bStatsToSend\x12\x13\n\x0b\x63lient_stat\x18\x01 \x01(\r\x12\x1d\n\x15stat_aggregate_method\x18\x02 \x01(\r\"\xc0\x01\n\x0f\x43MsgClientStat2\x12\x30\n\x0bstat_detail\x18\x01 \x03(\x0b\x32\x1b.CMsgClientStat2.StatDetail\x1a{\n\nStatDetail\x12\x13\n\x0b\x63lient_stat\x18\x01 \x01(\r\x12\x10\n\x08ll_value\x18\x02 \x01(\x03\x12\x13\n\x0btime_of_day\x18\x03 \x01(\r\x12\x0f\n\x07\x63\x65ll_id\x18\x04 \x01(\r\x12\x10\n\x08\x64\x65pot_id\x18\x05 \x01(\r\x12\x0e\n\x06\x61pp_id\x18\x06 \x01(\r\"\xba\x01\n\x18\x43MsgClientMMSCreateLobby\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x13\n\x0bmax_members\x18\x02 \x01(\x05\x12\x12\n\nlobby_type\x18\x03 \x01(\x05\x12\x13\n\x0blobby_flags\x18\x04 \x01(\x05\x12\x0f\n\x07\x63\x65ll_id\x18\x05 \x01(\r\x12\x11\n\tpublic_ip\x18\x06 \x01(\r\x12\x10\n\x08metadata\x18\x07 \x01(\x0c\x12\x1a\n\x12persona_name_owner\x18\x08 \x01(\t\"^\n CMsgClientMMSCreateLobbyResponse\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x12\n\x07\x65result\x18\x03 \x01(\x05:\x01\x32\"V\n\x16\x43MsgClientMMSJoinLobby\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x03 \x01(\t\"\xcf\x02\n\x1e\x43MsgClientMMSJoinLobbyResponse\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12 \n\x18\x63hat_room_enter_response\x18\x03 \x01(\x05\x12\x13\n\x0bmax_members\x18\x04 \x01(\x05\x12\x12\n\nlobby_type\x18\x05 \x01(\x05\x12\x13\n\x0blobby_flags\x18\x06 \x01(\x05\x12\x16\n\x0esteam_id_owner\x18\x07 \x01(\x06\x12\x10\n\x08metadata\x18\x08 \x01(\x0c\x12\x37\n\x07members\x18\t \x03(\x0b\x32&.CMsgClientMMSJoinLobbyResponse.Member\x1a\x42\n\x06Member\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x10\n\x08metadata\x18\x03 \x01(\x0c\"A\n\x17\x43MsgClientMMSLeaveLobby\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\"]\n\x1f\x43MsgClientMMSLeaveLobbyResponse\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x12\n\x07\x65result\x18\x03 \x01(\x05:\x01\x32\"\xf2\x01\n\x19\x43MsgClientMMSGetLobbyList\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x1d\n\x15num_lobbies_requested\x18\x03 \x01(\x05\x12\x0f\n\x07\x63\x65ll_id\x18\x04 \x01(\r\x12\x11\n\tpublic_ip\x18\x05 \x01(\r\x12\x32\n\x07\x66ilters\x18\x06 \x03(\x0b\x32!.CMsgClientMMSGetLobbyList.Filter\x1aN\n\x06\x46ilter\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x12\x13\n\x0b\x63omparision\x18\x03 \x01(\x05\x12\x13\n\x0b\x66ilter_type\x18\x04 \x01(\x05\"\xa5\x02\n!CMsgClientMMSGetLobbyListResponse\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x12\n\x07\x65result\x18\x03 \x01(\x05:\x01\x32\x12\x39\n\x07lobbies\x18\x04 \x03(\x0b\x32(.CMsgClientMMSGetLobbyListResponse.Lobby\x1a\xa0\x01\n\x05Lobby\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x13\n\x0bmax_members\x18\x02 \x01(\x05\x12\x12\n\nlobby_type\x18\x03 \x01(\x05\x12\x13\n\x0blobby_flags\x18\x04 \x01(\x05\x12\x10\n\x08metadata\x18\x05 \x01(\x0c\x12\x13\n\x0bnum_members\x18\x06 \x01(\x05\x12\x10\n\x08\x64istance\x18\x07 \x01(\x02\x12\x0e\n\x06weight\x18\x08 \x01(\x03\"\xac\x01\n\x19\x43MsgClientMMSSetLobbyData\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x17\n\x0fsteam_id_member\x18\x03 \x01(\x06\x12\x13\n\x0bmax_members\x18\x04 \x01(\x05\x12\x12\n\nlobby_type\x18\x05 \x01(\x05\x12\x13\n\x0blobby_flags\x18\x06 \x01(\x05\x12\x10\n\x08metadata\x18\x07 \x01(\x0c\"_\n!CMsgClientMMSSetLobbyDataResponse\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x12\n\x07\x65result\x18\x03 \x01(\x05:\x01\x32\"C\n\x19\x43MsgClientMMSGetLobbyData\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\"\xc8\x02\n\x16\x43MsgClientMMSLobbyData\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x13\n\x0bnum_members\x18\x03 \x01(\x05\x12\x13\n\x0bmax_members\x18\x04 \x01(\x05\x12\x12\n\nlobby_type\x18\x05 \x01(\x05\x12\x13\n\x0blobby_flags\x18\x06 \x01(\x05\x12\x16\n\x0esteam_id_owner\x18\x07 \x01(\x06\x12\x10\n\x08metadata\x18\x08 \x01(\x0c\x12/\n\x07members\x18\t \x03(\x0b\x32\x1e.CMsgClientMMSLobbyData.Member\x12\x14\n\x0clobby_cellid\x18\n \x01(\r\x1a\x42\n\x06Member\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x10\n\x08metadata\x18\x03 \x01(\x0c\"w\n\x1d\x43MsgClientMMSSendLobbyChatMsg\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x17\n\x0fsteam_id_target\x18\x03 \x01(\x06\x12\x15\n\rlobby_message\x18\x04 \x01(\x0c\"s\n\x19\x43MsgClientMMSLobbyChatMsg\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x17\n\x0fsteam_id_sender\x18\x03 \x01(\x06\x12\x15\n\rlobby_message\x18\x04 \x01(\x0c\"`\n\x1a\x43MsgClientMMSSetLobbyOwner\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x1a\n\x12steam_id_new_owner\x18\x03 \x01(\x06\"`\n\"CMsgClientMMSSetLobbyOwnerResponse\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x12\n\x07\x65result\x18\x03 \x01(\x05:\x01\x32\"^\n\x1b\x43MsgClientMMSSetLobbyLinked\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x17\n\x0fsteam_id_lobby2\x18\x03 \x01(\x06\"\x99\x01\n\x1f\x43MsgClientMMSSetLobbyGameServer\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x16\n\x0egame_server_ip\x18\x03 \x01(\r\x12\x18\n\x10game_server_port\x18\x04 \x01(\r\x12\x1c\n\x14game_server_steam_id\x18\x05 \x01(\x06\"\x99\x01\n\x1f\x43MsgClientMMSLobbyGameServerSet\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x16\n\x0egame_server_ip\x18\x03 \x01(\r\x12\x18\n\x10game_server_port\x18\x04 \x01(\r\x12\x1c\n\x14game_server_steam_id\x18\x05 \x01(\x06\"s\n\x1c\x43MsgClientMMSUserJoinedLobby\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x15\n\rsteam_id_user\x18\x03 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x04 \x01(\t\"q\n\x1a\x43MsgClientMMSUserLeftLobby\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x15\n\rsteam_id_user\x18\x03 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x04 \x01(\t\"c\n\x1a\x43MsgClientMMSInviteToLobby\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x1d\n\x15steam_id_user_invited\x18\x03 \x01(\x06\"`\n\x19\x43MsgClientUDSInviteToGame\x12\x15\n\rsteam_id_dest\x18\x01 \x01(\x06\x12\x14\n\x0csteam_id_src\x18\x02 \x01(\x06\x12\x16\n\x0e\x63onnect_string\x18\x03 \x01(\t\"\xb9\x01\n\x14\x43MsgClientChatInvite\x12\x18\n\x10steam_id_invited\x18\x01 \x01(\x06\x12\x15\n\rsteam_id_chat\x18\x02 \x01(\x06\x12\x17\n\x0fsteam_id_patron\x18\x03 \x01(\x06\x12\x15\n\rchatroom_type\x18\x04 \x01(\x05\x12\x1c\n\x14steam_id_friend_chat\x18\x05 \x01(\x06\x12\x11\n\tchat_name\x18\x06 \x01(\t\x12\x0f\n\x07game_id\x18\x07 \x01(\x06\"\x8a\x08\n\x19\x43MsgClientConnectionStats\x12;\n\x0bstats_logon\x18\x01 \x01(\x0b\x32&.CMsgClientConnectionStats.Stats_Logon\x12;\n\x0bstats_vconn\x18\x02 \x01(\x0b\x32&.CMsgClientConnectionStats.Stats_VConn\x1a\xc7\x01\n\x0bStats_Logon\x12\x18\n\x10\x63onnect_attempts\x18\x01 \x01(\x05\x12\x19\n\x11\x63onnect_successes\x18\x02 \x01(\x05\x12\x18\n\x10\x63onnect_failures\x18\x03 \x01(\x05\x12\x1b\n\x13\x63onnections_dropped\x18\x04 \x01(\x05\x12\x17\n\x0fseconds_running\x18\x05 \x01(\r\x12\x1c\n\x14msec_tologonthistime\x18\x06 \x01(\r\x12\x15\n\rcount_bad_cms\x18\x07 \x01(\r\x1aq\n\tStats_UDP\x12\x11\n\tpkts_sent\x18\x01 \x01(\x04\x12\x12\n\nbytes_sent\x18\x02 \x01(\x04\x12\x11\n\tpkts_recv\x18\x03 \x01(\x04\x12\x16\n\x0epkts_processed\x18\x04 \x01(\x04\x12\x12\n\nbytes_recv\x18\x05 \x01(\x04\x1a\xb5\x04\n\x0bStats_VConn\x12\x17\n\x0f\x63onnections_udp\x18\x01 \x01(\r\x12\x17\n\x0f\x63onnections_tcp\x18\x02 \x01(\r\x12\x37\n\tstats_udp\x18\x03 \x01(\x0b\x32$.CMsgClientConnectionStats.Stats_UDP\x12\x16\n\x0epkts_abandoned\x18\x04 \x01(\x04\x12\x19\n\x11\x63onn_req_received\x18\x05 \x01(\x04\x12\x13\n\x0bpkts_resent\x18\x06 \x01(\x04\x12\x11\n\tmsgs_sent\x18\x07 \x01(\x04\x12\x18\n\x10msgs_sent_failed\x18\x08 \x01(\x04\x12\x11\n\tmsgs_recv\x18\t \x01(\x04\x12\x16\n\x0e\x64\x61tagrams_sent\x18\n \x01(\x04\x12\x16\n\x0e\x64\x61tagrams_recv\x18\x0b \x01(\x04\x12\x15\n\rbad_pkts_recv\x18\x0c \x01(\x04\x12\x1e\n\x16unknown_conn_pkts_recv\x18\r \x01(\x04\x12\x18\n\x10missed_pkts_recv\x18\x0e \x01(\x04\x12\x15\n\rdup_pkts_recv\x18\x0f \x01(\x04\x12!\n\x19\x66\x61iled_connect_challenges\x18\x10 \x01(\x04\x12\x1d\n\x15micro_sec_avg_latency\x18\x11 \x01(\r\x12\x1d\n\x15micro_sec_min_latency\x18\x12 \x01(\r\x12\x1d\n\x15micro_sec_max_latency\x18\x13 \x01(\r\x12\x1b\n\x13mem_pool_msg_in_use\x18\x14 \x01(\r\"\xd2\x01\n\x1a\x43MsgClientServersAvailable\x12R\n\x16server_types_available\x18\x01 \x03(\x0b\x32\x32.CMsgClientServersAvailable.Server_Types_Available\x12%\n\x1dserver_type_for_auth_services\x18\x02 \x01(\r\x1a\x39\n\x16Server_Types_Available\x12\x0e\n\x06server\x18\x01 \x01(\r\x12\x0f\n\x07\x63hanged\x18\x02 \x01(\x08\"u\n\x16\x43MsgClientGetUserStats\x12\x0f\n\x07game_id\x18\x01 \x01(\x06\x12\x11\n\tcrc_stats\x18\x02 \x01(\r\x12\x1c\n\x14schema_local_version\x18\x03 \x01(\x05\x12\x19\n\x11steam_id_for_user\x18\x04 \x01(\x06\"\xdf\x02\n\x1e\x43MsgClientGetUserStatsResponse\x12\x0f\n\x07game_id\x18\x01 \x01(\x06\x12\x12\n\x07\x65result\x18\x02 \x01(\x05:\x01\x32\x12\x11\n\tcrc_stats\x18\x03 \x01(\r\x12\x0e\n\x06schema\x18\x04 \x01(\x0c\x12\x34\n\x05stats\x18\x05 \x03(\x0b\x32%.CMsgClientGetUserStatsResponse.Stats\x12N\n\x12\x61\x63hievement_blocks\x18\x06 \x03(\x0b\x32\x32.CMsgClientGetUserStatsResponse.Achievement_Blocks\x1a,\n\x05Stats\x12\x0f\n\x07stat_id\x18\x01 \x01(\r\x12\x12\n\nstat_value\x18\x02 \x01(\r\x1a\x41\n\x12\x41\x63hievement_Blocks\x12\x16\n\x0e\x61\x63hievement_id\x18\x01 \x01(\r\x12\x13\n\x0bunlock_time\x18\x02 \x03(\x07\"\x9a\x02\n CMsgClientStoreUserStatsResponse\x12\x0f\n\x07game_id\x18\x01 \x01(\x06\x12\x12\n\x07\x65result\x18\x02 \x01(\x05:\x01\x32\x12\x11\n\tcrc_stats\x18\x03 \x01(\r\x12Z\n\x17stats_failed_validation\x18\x04 \x03(\x0b\x32\x39.CMsgClientStoreUserStatsResponse.Stats_Failed_Validation\x12\x19\n\x11stats_out_of_date\x18\x05 \x01(\x08\x1aG\n\x17Stats_Failed_Validation\x12\x0f\n\x07stat_id\x18\x01 \x01(\r\x12\x1b\n\x13reverted_stat_value\x18\x02 \x01(\r\"\xe8\x01\n\x19\x43MsgClientStoreUserStats2\x12\x0f\n\x07game_id\x18\x01 \x01(\x06\x12\x17\n\x0fsettor_steam_id\x18\x02 \x01(\x06\x12\x17\n\x0fsettee_steam_id\x18\x03 \x01(\x06\x12\x11\n\tcrc_stats\x18\x04 \x01(\r\x12\x16\n\x0e\x65xplicit_reset\x18\x05 \x01(\x08\x12/\n\x05stats\x18\x06 \x03(\x0b\x32 .CMsgClientStoreUserStats2.Stats\x1a,\n\x05Stats\x12\x0f\n\x07stat_id\x18\x01 \x01(\r\x12\x12\n\nstat_value\x18\x02 \x01(\r\"\xc2\x01\n\x16\x43MsgClientStatsUpdated\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x0f\n\x07game_id\x18\x02 \x01(\x06\x12\x11\n\tcrc_stats\x18\x03 \x01(\r\x12<\n\rupdated_stats\x18\x04 \x03(\x0b\x32%.CMsgClientStatsUpdated.Updated_Stats\x1a\x34\n\rUpdated_Stats\x12\x0f\n\x07stat_id\x18\x01 \x01(\r\x12\x12\n\nstat_value\x18\x02 \x01(\r\"\xbc\x01\n\x18\x43MsgClientStoreUserStats\x12\x0f\n\x07game_id\x18\x01 \x01(\x06\x12\x16\n\x0e\x65xplicit_reset\x18\x02 \x01(\x08\x12@\n\x0estats_to_store\x18\x03 \x03(\x0b\x32(.CMsgClientStoreUserStats.Stats_To_Store\x1a\x35\n\x0eStats_To_Store\x12\x0f\n\x07stat_id\x18\x01 \x01(\r\x12\x12\n\nstat_value\x18\x02 \x01(\r\"\x1c\n\x1a\x43MsgClientGetClientDetails\"?\n$CMsgClientReportOverlayDetourFailure\x12\x17\n\x0f\x66\x61ilure_strings\x18\x01 \x03(\t\"\xbf\x02\n\"CMsgClientGetClientDetailsResponse\x12\x17\n\x0fpackage_version\x18\x01 \x01(\r\x12\x18\n\x10protocol_version\x18\x08 \x01(\r\x12\n\n\x02os\x18\x02 \x01(\t\x12\x14\n\x0cmachine_name\x18\x03 \x01(\t\x12\x11\n\tip_public\x18\x04 \x01(\t\x12\x12\n\nip_private\x18\x05 \x01(\t\x12\x17\n\x0f\x62ytes_available\x18\x07 \x01(\x04\x12?\n\rgames_running\x18\x06 \x03(\x0b\x32(.CMsgClientGetClientDetailsResponse.Game\x1a\x43\n\x04Game\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x12\n\nextra_info\x18\x02 \x01(\t\x12\x18\n\x10time_running_sec\x18\x03 \x01(\r\"x\n\x1a\x43MsgClientGetClientAppList\x12\r\n\x05media\x18\x01 \x01(\x08\x12\r\n\x05tools\x18\x02 \x01(\x08\x12\r\n\x05games\x18\x03 \x01(\x08\x12\x16\n\x0eonly_installed\x18\x04 \x01(\x08\x12\x15\n\ronly_changing\x18\x05 \x01(\x08\"\x91\x04\n\"CMsgClientGetClientAppListResponse\x12\x35\n\x04\x61pps\x18\x01 \x03(\x0b\x32\'.CMsgClientGetClientAppListResponse.App\x12\x17\n\x0f\x62ytes_available\x18\x02 \x01(\x04\x1a\x9a\x03\n\x03\x41pp\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x10\n\x08\x63\x61tegory\x18\x02 \x01(\t\x12\x10\n\x08\x61pp_type\x18\n \x01(\t\x12\x10\n\x08\x66\x61vorite\x18\x03 \x01(\x08\x12\x11\n\tinstalled\x18\x04 \x01(\x08\x12\x13\n\x0b\x61uto_update\x18\x05 \x01(\x08\x12\x18\n\x10\x62ytes_downloaded\x18\x06 \x01(\x04\x12\x14\n\x0c\x62ytes_needed\x18\x07 \x01(\x04\x12\x1b\n\x13\x62ytes_download_rate\x18\x08 \x01(\r\x12\x17\n\x0f\x64ownload_paused\x18\x0b \x01(\x08\x12\x17\n\x0fnum_downloading\x18\x0c \x01(\r\x12\x12\n\nnum_paused\x18\r \x01(\r\x12\x10\n\x08\x63hanging\x18\x0e \x01(\x08\x12\x1d\n\x15\x61vailable_on_platform\x18\x0f \x01(\x08\x12\x39\n\x04\x64lcs\x18\t \x03(\x0b\x32+.CMsgClientGetClientAppListResponse.App.DLC\x1a\'\n\x03\x44LC\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x11\n\tinstalled\x18\x02 \x01(\x08\"+\n\x1a\x43MsgClientInstallClientApp\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\"4\n\"CMsgClientInstallClientAppResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\"-\n\x1c\x43MsgClientUninstallClientApp\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\"6\n$CMsgClientUninstallClientAppResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\"B\n!CMsgClientSetClientAppUpdateState\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0e\n\x06update\x18\x02 \x01(\x08\";\n)CMsgClientSetClientAppUpdateStateResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\"\x86\x02\n\x1e\x43MsgClientUFSUploadFileRequest\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x11\n\tfile_size\x18\x02 \x01(\r\x12\x15\n\rraw_file_size\x18\x03 \x01(\r\x12\x10\n\x08sha_file\x18\x04 \x01(\x0c\x12\x12\n\ntime_stamp\x18\x05 \x01(\x04\x12\x11\n\tfile_name\x18\x06 \x01(\t\x12$\n\x1cplatforms_to_sync_deprecated\x18\x07 \x01(\r\x12%\n\x11platforms_to_sync\x18\x08 \x01(\r:\n4294967295\x12\x0f\n\x07\x63\x65ll_id\x18\t \x01(\r\x12\x13\n\x0b\x63\x61n_encrypt\x18\n \x01(\x08\"\xbb\x01\n\x1f\x43MsgClientUFSUploadFileResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x10\n\x08sha_file\x18\x02 \x01(\x0c\x12\x10\n\x08use_http\x18\x03 \x01(\x08\x12\x11\n\thttp_host\x18\x04 \x01(\t\x12\x10\n\x08http_url\x18\x05 \x01(\t\x12\x12\n\nkv_headers\x18\x06 \x01(\x0c\x12\x11\n\tuse_https\x18\x07 \x01(\x08\x12\x14\n\x0c\x65ncrypt_file\x18\x08 \x01(\x08\"\xae\x01\n\x19\x43MsgClientUFSUploadCommit\x12.\n\x05\x66iles\x18\x01 \x03(\x0b\x32\x1f.CMsgClientUFSUploadCommit.File\x1a\x61\n\x04\x46ile\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x0e\n\x06\x61pp_id\x18\x02 \x01(\r\x12\x10\n\x08sha_file\x18\x03 \x01(\x0c\x12\x10\n\x08\x63ub_file\x18\x04 \x01(\r\x12\x11\n\tfile_name\x18\x05 \x01(\t\"\x99\x01\n!CMsgClientUFSUploadCommitResponse\x12\x36\n\x05\x66iles\x18\x01 \x03(\x0b\x32\'.CMsgClientUFSUploadCommitResponse.File\x1a<\n\x04\x46ile\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x0e\n\x06\x61pp_id\x18\x02 \x01(\r\x12\x10\n\x08sha_file\x18\x03 \x01(\x0c\"L\n\x16\x43MsgClientUFSFileChunk\x12\x10\n\x08sha_file\x18\x01 \x01(\x0c\x12\x12\n\nfile_start\x18\x02 \x01(\r\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\x0c\" \n\x1e\x43MsgClientUFSTransferHeartbeat\"G\n\x1f\x43MsgClientUFSUploadFileFinished\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x10\n\x08sha_file\x18\x02 \x01(\x0c\"_\n\x1e\x43MsgClientUFSDeleteFileRequest\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x11\n\tfile_name\x18\x02 \x01(\t\x12\x1a\n\x12is_explicit_delete\x18\x03 \x01(\x08\"H\n\x1f\x43MsgClientUFSDeleteFileResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x11\n\tfile_name\x18\x02 \x01(\t\"S\n\x1e\x43MsgClientUFSGetFileListForApp\x12\x15\n\rapps_to_query\x18\x01 \x03(\r\x12\x1a\n\x12send_path_prefixes\x18\x02 \x01(\x08\"\xc1\x02\n&CMsgClientUFSGetFileListForAppResponse\x12;\n\x05\x66iles\x18\x01 \x03(\x0b\x32,.CMsgClientUFSGetFileListForAppResponse.File\x12\x15\n\rpath_prefixes\x18\x02 \x03(\t\x1a\xb8\x01\n\x04\x46ile\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x11\n\tfile_name\x18\x02 \x01(\t\x12\x10\n\x08sha_file\x18\x03 \x01(\x0c\x12\x12\n\ntime_stamp\x18\x04 \x01(\x04\x12\x15\n\rraw_file_size\x18\x05 \x01(\r\x12\x1a\n\x12is_explicit_delete\x18\x06 \x01(\x08\x12\x19\n\x11platforms_to_sync\x18\x07 \x01(\r\x12\x19\n\x11path_prefix_index\x18\x08 \x01(\r:\x08\x80\xb5\x18\x08\x88\xb5\x18\x10\"Z\n\x1c\x43MsgClientUFSDownloadRequest\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x11\n\tfile_name\x18\x02 \x01(\t\x12\x17\n\x0f\x63\x61n_handle_http\x18\x03 \x01(\x08\"\xa0\x02\n\x1d\x43MsgClientUFSDownloadResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x0e\n\x06\x61pp_id\x18\x02 \x01(\r\x12\x11\n\tfile_size\x18\x03 \x01(\r\x12\x15\n\rraw_file_size\x18\x04 \x01(\r\x12\x10\n\x08sha_file\x18\x05 \x01(\x0c\x12\x12\n\ntime_stamp\x18\x06 \x01(\x04\x12\x1a\n\x12is_explicit_delete\x18\x07 \x01(\x08\x12\x10\n\x08use_http\x18\x08 \x01(\x08\x12\x11\n\thttp_host\x18\t \x01(\t\x12\x10\n\x08http_url\x18\n \x01(\t\x12\x12\n\nkv_headers\x18\x0b \x01(\x0c\x12\x11\n\tuse_https\x18\x0c \x01(\x08\x12\x11\n\tencrypted\x18\r \x01(\x08\"]\n\x19\x43MsgClientUFSLoginRequest\x12\x18\n\x10protocol_version\x18\x01 \x01(\r\x12\x18\n\x10\x61m_session_token\x18\x02 \x01(\x04\x12\x0c\n\x04\x61pps\x18\x03 \x03(\r\"0\n\x1a\x43MsgClientUFSLoginResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\"G\n#CMsgClientRequestEncryptedAppTicket\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x10\n\x08userdata\x18\x02 \x01(\x0c\"\x84\x01\n+CMsgClientRequestEncryptedAppTicketResponse\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x12\n\x07\x65result\x18\x02 \x01(\x05:\x01\x32\x12\x31\n\x14\x65ncrypted_app_ticket\x18\x03 \x01(\x0b\x32\x13.EncryptedAppTicket\"l\n\x1a\x43MsgClientWalletInfoUpdate\x12\x12\n\nhas_wallet\x18\x01 \x01(\x08\x12\x0f\n\x07\x62\x61lance\x18\x02 \x01(\x05\x12\x10\n\x08\x63urrency\x18\x03 \x01(\x05\x12\x17\n\x0f\x62\x61lance_delayed\x18\x04 \x01(\x05\"M\n\x17\x43MsgClientAppInfoUpdate\x12\x19\n\x11last_changenumber\x18\x01 \x01(\r\x12\x17\n\x0fsend_changelist\x18\x02 \x01(\x08\"d\n\x18\x43MsgClientAppInfoChanges\x12\x1d\n\x15\x63urrent_change_number\x18\x01 \x01(\r\x12\x19\n\x11\x66orce_full_update\x18\x02 \x01(\x08\x12\x0e\n\x06\x61ppIDs\x18\x03 \x03(\r\"\xab\x01\n\x18\x43MsgClientAppInfoRequest\x12+\n\x04\x61pps\x18\x01 \x03(\x0b\x32\x1d.CMsgClientAppInfoRequest.App\x12\x1f\n\x10supports_batches\x18\x02 \x01(\x08:\x05\x66\x61lse\x1a\x41\n\x03\x41pp\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x15\n\rsection_flags\x18\x02 \x01(\r\x12\x13\n\x0bsection_CRC\x18\x03 \x03(\r\"\x9b\x02\n\x19\x43MsgClientAppInfoResponse\x12,\n\x04\x61pps\x18\x01 \x03(\x0b\x32\x1e.CMsgClientAppInfoResponse.App\x12\x14\n\x0c\x61pps_unknown\x18\x02 \x03(\r\x12\x14\n\x0c\x61pps_pending\x18\x03 \x01(\r\x1a\x99\x01\n\x03\x41pp\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x15\n\rchange_number\x18\x02 \x01(\r\x12\x38\n\x08sections\x18\x03 \x03(\x0b\x32&.CMsgClientAppInfoResponse.App.Section\x1a\x31\n\x07Section\x12\x12\n\nsection_id\x18\x01 \x01(\r\x12\x12\n\nsection_kv\x18\x02 \x01(\x0c:\x08\x80\xb5\x18\x00\x88\xb5\x18\x00\"K\n\x1c\x43MsgClientPackageInfoRequest\x12\x13\n\x0bpackage_ids\x18\x01 \x03(\r\x12\x16\n\x0emeta_data_only\x18\x02 \x01(\x08\"\xe0\x01\n\x1d\x43MsgClientPackageInfoResponse\x12\x38\n\x08packages\x18\x01 \x03(\x0b\x32&.CMsgClientPackageInfoResponse.Package\x12\x18\n\x10packages_unknown\x18\x02 \x03(\r\x12\x18\n\x10packages_pending\x18\x03 \x01(\r\x1aQ\n\x07Package\x12\x12\n\npackage_id\x18\x01 \x01(\r\x12\x15\n\rchange_number\x18\x02 \x01(\r\x12\x0b\n\x03sha\x18\x03 \x01(\x0c\x12\x0e\n\x06\x62uffer\x18\x04 \x01(\x0c\"\xc0\x01\n!CMsgClientPICSChangesSinceRequest\x12\x1b\n\x13since_change_number\x18\x01 \x01(\r\x12\x1d\n\x15send_app_info_changes\x18\x02 \x01(\x08\x12!\n\x19send_package_info_changes\x18\x03 \x01(\x08\x12\x1b\n\x13num_app_info_cached\x18\x04 \x01(\r\x12\x1f\n\x17num_package_info_cached\x18\x05 \x01(\r\"\xe5\x03\n\"CMsgClientPICSChangesSinceResponse\x12\x1d\n\x15\x63urrent_change_number\x18\x01 \x01(\r\x12\x1b\n\x13since_change_number\x18\x02 \x01(\r\x12\x19\n\x11\x66orce_full_update\x18\x03 \x01(\x08\x12J\n\x0fpackage_changes\x18\x04 \x03(\x0b\x32\x31.CMsgClientPICSChangesSinceResponse.PackageChange\x12\x42\n\x0b\x61pp_changes\x18\x05 \x03(\x0b\x32-.CMsgClientPICSChangesSinceResponse.AppChange\x12\x1d\n\x15\x66orce_full_app_update\x18\x06 \x01(\x08\x12!\n\x19\x66orce_full_package_update\x18\x07 \x01(\x08\x1aN\n\rPackageChange\x12\x11\n\tpackageid\x18\x01 \x01(\r\x12\x15\n\rchange_number\x18\x02 \x01(\r\x12\x13\n\x0bneeds_token\x18\x03 \x01(\x08\x1a\x46\n\tAppChange\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x15\n\rchange_number\x18\x02 \x01(\r\x12\x13\n\x0bneeds_token\x18\x03 \x01(\x08\"\xca\x02\n CMsgClientPICSProductInfoRequest\x12?\n\x08packages\x18\x01 \x03(\x0b\x32-.CMsgClientPICSProductInfoRequest.PackageInfo\x12\x37\n\x04\x61pps\x18\x02 \x03(\x0b\x32).CMsgClientPICSProductInfoRequest.AppInfo\x12\x16\n\x0emeta_data_only\x18\x03 \x01(\x08\x12\x17\n\x0fnum_prev_failed\x18\x04 \x01(\r\x1a\x43\n\x07\x41ppInfo\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x02 \x01(\x04\x12\x13\n\x0bonly_public\x18\x03 \x01(\x08\x1a\x36\n\x0bPackageInfo\x12\x11\n\tpackageid\x18\x01 \x01(\r\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x02 \x01(\x04\"\xbd\x04\n!CMsgClientPICSProductInfoResponse\x12\x38\n\x04\x61pps\x18\x01 \x03(\x0b\x32*.CMsgClientPICSProductInfoResponse.AppInfo\x12\x16\n\x0eunknown_appids\x18\x02 \x03(\r\x12@\n\x08packages\x18\x03 \x03(\x0b\x32..CMsgClientPICSProductInfoResponse.PackageInfo\x12\x1a\n\x12unknown_packageids\x18\x04 \x03(\r\x12\x16\n\x0emeta_data_only\x18\x05 \x01(\x08\x12\x18\n\x10response_pending\x18\x06 \x01(\x08\x12\x15\n\rhttp_min_size\x18\x07 \x01(\r\x12\x11\n\thttp_host\x18\x08 \x01(\t\x1a\x86\x01\n\x07\x41ppInfo\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x15\n\rchange_number\x18\x02 \x01(\r\x12\x15\n\rmissing_token\x18\x03 \x01(\x08\x12\x0b\n\x03sha\x18\x04 \x01(\x0c\x12\x0e\n\x06\x62uffer\x18\x05 \x01(\x0c\x12\x13\n\x0bonly_public\x18\x06 \x01(\x08\x12\x0c\n\x04size\x18\x07 \x01(\r\x1ay\n\x0bPackageInfo\x12\x11\n\tpackageid\x18\x01 \x01(\r\x12\x15\n\rchange_number\x18\x02 \x01(\r\x12\x15\n\rmissing_token\x18\x03 \x01(\x08\x12\x0b\n\x03sha\x18\x04 \x01(\x0c\x12\x0e\n\x06\x62uffer\x18\x05 \x01(\x0c\x12\x0c\n\x04size\x18\x06 \x01(\r:\x08\x80\xb5\x18\x00\x88\xb5\x18\x00\"F\n CMsgClientPICSAccessTokenRequest\x12\x12\n\npackageids\x18\x01 \x03(\r\x12\x0e\n\x06\x61ppids\x18\x02 \x03(\r\"\xdf\x02\n!CMsgClientPICSAccessTokenResponse\x12N\n\x15package_access_tokens\x18\x01 \x03(\x0b\x32/.CMsgClientPICSAccessTokenResponse.PackageToken\x12\x1d\n\x15package_denied_tokens\x18\x02 \x03(\r\x12\x46\n\x11\x61pp_access_tokens\x18\x03 \x03(\x0b\x32+.CMsgClientPICSAccessTokenResponse.AppToken\x12\x19\n\x11\x61pp_denied_tokens\x18\x04 \x03(\r\x1a\x37\n\x0cPackageToken\x12\x11\n\tpackageid\x18\x01 \x01(\r\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x02 \x01(\x04\x1a/\n\x08\x41ppToken\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x02 \x01(\x04\"D\n\x1a\x43MsgClientUFSGetUGCDetails\x12&\n\x08hcontent\x18\x01 \x01(\x06:\x14\x31\x38\x34\x34\x36\x37\x34\x34\x30\x37\x33\x37\x30\x39\x35\x35\x31\x36\x31\x35\"\xe5\x01\n\"CMsgClientUFSGetUGCDetailsResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x0b\n\x03url\x18\x02 \x01(\t\x12\x0e\n\x06\x61pp_id\x18\x03 \x01(\r\x12\x10\n\x08\x66ilename\x18\x04 \x01(\t\x12\x17\n\x0fsteamid_creator\x18\x05 \x01(\x06\x12\x11\n\tfile_size\x18\x06 \x01(\r\x12\x1c\n\x14\x63ompressed_file_size\x18\x07 \x01(\r\x12\x17\n\x0frangecheck_host\x18\x08 \x01(\t\x12\x19\n\x11\x66ile_encoded_sha1\x18\t \x01(\t\"C\n\x1e\x43MsgClientUFSGetSingleFileInfo\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x11\n\tfile_name\x18\x02 \x01(\t\"\xb8\x01\n&CMsgClientUFSGetSingleFileInfoResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x0e\n\x06\x61pp_id\x18\x02 \x01(\r\x12\x11\n\tfile_name\x18\x03 \x01(\t\x12\x10\n\x08sha_file\x18\x04 \x01(\x0c\x12\x12\n\ntime_stamp\x18\x05 \x01(\x04\x12\x15\n\rraw_file_size\x18\x06 \x01(\r\x12\x1a\n\x12is_explicit_delete\x18\x07 \x01(\x08\";\n\x16\x43MsgClientUFSShareFile\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x11\n\tfile_name\x18\x02 \x01(\t\"\\\n\x1e\x43MsgClientUFSShareFileResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12&\n\x08hcontent\x18\x02 \x01(\x06:\x14\x31\x38\x34\x34\x36\x37\x34\x34\x30\x37\x33\x37\x30\x39\x35\x35\x31\x36\x31\x35\"=\n\x15\x43MsgClientNewLoginKey\x12\x11\n\tunique_id\x18\x01 \x01(\r\x12\x11\n\tlogin_key\x18\x02 \x01(\t\"2\n\x1d\x43MsgClientNewLoginKeyAccepted\x12\x11\n\tunique_id\x18\x01 \x01(\r\"3\n\x1b\x43MsgClientAMGetClanOfficers\x12\x14\n\x0csteamid_clan\x18\x01 \x01(\x06\"f\n#CMsgClientAMGetClanOfficersResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x14\n\x0csteamid_clan\x18\x02 \x01(\x06\x12\x15\n\rofficer_count\x18\x03 \x01(\x05\"\x90\x01\n!CMsgClientAMGetPersonaNameHistory\x12\x10\n\x08id_count\x18\x01 \x01(\x05\x12:\n\x03Ids\x18\x02 \x03(\x0b\x32-.CMsgClientAMGetPersonaNameHistory.IdInstance\x1a\x1d\n\nIdInstance\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\"\xc3\x02\n)CMsgClientAMGetPersonaNameHistoryResponse\x12O\n\tresponses\x18\x02 \x03(\x0b\x32<.CMsgClientAMGetPersonaNameHistoryResponse.NameTableInstance\x1a\xc4\x01\n\x11NameTableInstance\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x0f\n\x07steamid\x18\x02 \x01(\x06\x12X\n\x05names\x18\x03 \x03(\x0b\x32I.CMsgClientAMGetPersonaNameHistoryResponse.NameTableInstance.NameInstance\x1a\x30\n\x0cNameInstance\x12\x12\n\nname_since\x18\x01 \x01(\x07\x12\x0c\n\x04name\x18\x02 \x01(\t\"E\n\x1e\x43MsgClientDeregisterWithServer\x12\x13\n\x0b\x65servertype\x18\x01 \x01(\r\x12\x0e\n\x06\x61pp_id\x18\x02 \x01(\r\"\x8e\x04\n\x13\x43MsgClientClanState\x12\x14\n\x0csteamid_clan\x18\x01 \x01(\x06\x12\x17\n\x0fm_unStatusFlags\x18\x02 \x01(\r\x12\x1a\n\x12\x63lan_account_flags\x18\x03 \x01(\r\x12\x30\n\tname_info\x18\x04 \x01(\x0b\x32\x1d.CMsgClientClanState.NameInfo\x12\x34\n\x0buser_counts\x18\x05 \x01(\x0b\x32\x1f.CMsgClientClanState.UserCounts\x12*\n\x06\x65vents\x18\x06 \x03(\x0b\x32\x1a.CMsgClientClanState.Event\x12\x31\n\rannouncements\x18\x07 \x03(\x0b\x32\x1a.CMsgClientClanState.Event\x1a\x31\n\x08NameInfo\x12\x11\n\tclan_name\x18\x01 \x01(\t\x12\x12\n\nsha_avatar\x18\x02 \x01(\x0c\x1aP\n\nUserCounts\x12\x0f\n\x07members\x18\x01 \x01(\r\x12\x0e\n\x06online\x18\x02 \x01(\r\x12\x10\n\x08\x63hatting\x18\x03 \x01(\r\x12\x0f\n\x07in_game\x18\x04 \x01(\r\x1a`\n\x05\x45vent\x12\x0b\n\x03gid\x18\x01 \x01(\x06\x12\x12\n\nevent_time\x18\x02 \x01(\r\x12\x10\n\x08headline\x18\x03 \x01(\t\x12\x0f\n\x07game_id\x18\x04 \x01(\x06\x12\x13\n\x0bjust_posted\x18\x05 \x01(\x08\"r\n\x13\x43MsgClientFriendMsg\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x17\n\x0f\x63hat_entry_type\x18\x02 \x01(\x05\x12\x0f\n\x07message\x18\x03 \x01(\x0c\x12 \n\x18rtime32_server_timestamp\x18\x04 \x01(\x07\"\x9d\x01\n\x1b\x43MsgClientFriendMsgIncoming\x12\x14\n\x0csteamid_from\x18\x01 \x01(\x06\x12\x17\n\x0f\x63hat_entry_type\x18\x02 \x01(\x05\x12\x1c\n\x14\x66rom_limited_account\x18\x03 \x01(\x08\x12\x0f\n\x07message\x18\x04 \x01(\x0c\x12 \n\x18rtime32_server_timestamp\x18\x05 \x01(\x07\"R\n\x13\x43MsgClientAddFriend\x12\x16\n\x0esteamid_to_add\x18\x01 \x01(\x06\x12#\n\x1b\x61\x63\x63ountname_or_email_to_add\x18\x02 \x01(\t\"e\n\x1b\x43MsgClientAddFriendResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x16\n\x0esteam_id_added\x18\x02 \x01(\x06\x12\x1a\n\x12persona_name_added\x18\x03 \x01(\t\"*\n\x16\x43MsgClientRemoveFriend\x12\x10\n\x08\x66riendid\x18\x01 \x01(\x06\"6\n\x14\x43MsgClientHideFriend\x12\x10\n\x08\x66riendid\x18\x01 \x01(\x06\x12\x0c\n\x04hide\x18\x02 \x01(\x08\x42\x05H\x01\x80\x01\x00')
+  syntax='proto2',
+  serialized_pb=_b('\n steammessages_clientserver.proto\x1a\x18steammessages_base.proto\x1a\x1a\x65ncrypted_app_ticket.proto\"\x15\n\x13\x43MsgClientHeartBeat\"G\n\x1e\x43MsgClientUDSP2PSessionStarted\x12\x16\n\x0esteamid_remote\x18\x01 \x01(\x06\x12\r\n\x05\x61ppid\x18\x02 \x01(\x05\"\x81\x02\n\x1c\x43MsgClientUDSP2PSessionEnded\x12\x16\n\x0esteamid_remote\x18\x01 \x01(\x06\x12\r\n\x05\x61ppid\x18\x02 \x01(\x05\x12\x1a\n\x12session_length_sec\x18\x03 \x01(\x05\x12\x15\n\rsession_error\x18\x04 \x01(\x05\x12\x0f\n\x07nattype\x18\x05 \x01(\x05\x12\x12\n\nbytes_recv\x18\x06 \x01(\x05\x12\x12\n\nbytes_sent\x18\x07 \x01(\x05\x12\x18\n\x10\x62ytes_sent_relay\x18\x08 \x01(\x05\x12\x18\n\x10\x62ytes_recv_relay\x18\t \x01(\x05\x12\x1a\n\x12time_to_connect_ms\x18\n \x01(\x05\"j\n\"CMsgClientRegisterAuthTicketWithCM\x12\x18\n\x10protocol_version\x18\x01 \x01(\r\x12\x0e\n\x06ticket\x18\x03 \x01(\x0c\x12\x1a\n\x12\x63lient_instance_id\x18\x04 \x01(\x04\"\xd1\x01\n\x1c\x43MsgClientTicketAuthComplete\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x0f\n\x07game_id\x18\x02 \x01(\x06\x12\x0e\n\x06\x65state\x18\x03 \x01(\r\x12\x1e\n\x16\x65\x61uth_session_response\x18\x04 \x01(\r\x12\x19\n\x11\x44\x45PRECATED_ticket\x18\x05 \x01(\x0c\x12\x12\n\nticket_crc\x18\x06 \x01(\r\x12\x17\n\x0fticket_sequence\x18\x07 \x01(\r\x12\x16\n\x0eowner_steam_id\x18\x08 \x01(\x06\"\x82\n\n\x0f\x43MsgClientLogon\x12\x18\n\x10protocol_version\x18\x01 \x01(\r\x12\x1f\n\x17obfustucated_private_ip\x18\x02 \x01(\r\x12\x0f\n\x07\x63\x65ll_id\x18\x03 \x01(\r\x12\x17\n\x0flast_session_id\x18\x04 \x01(\r\x12\x1e\n\x16\x63lient_package_version\x18\x05 \x01(\r\x12\x17\n\x0f\x63lient_language\x18\x06 \x01(\t\x12\x16\n\x0e\x63lient_os_type\x18\x07 \x01(\r\x12\'\n\x18should_remember_password\x18\x08 \x01(\x08:\x05\x66\x61lse\x12\x14\n\x0cwine_version\x18\t \x01(\t\x12 \n\x18ping_ms_from_cell_search\x18\n \x01(\r\x12\x11\n\tpublic_ip\x18\x14 \x01(\r\x12\x11\n\tqos_level\x18\x15 \x01(\r\x12 \n\x18\x63lient_supplied_steam_id\x18\x16 \x01(\x06\x12\x12\n\nmachine_id\x18\x1e \x01(\x0c\x12\x18\n\rlauncher_type\x18\x1f \x01(\r:\x01\x30\x12\x12\n\x07ui_mode\x18  \x01(\r:\x01\x30\x12\x1a\n\x12steam2_auth_ticket\x18) \x01(\x0c\x12\x15\n\remail_address\x18* \x01(\t\x12 \n\x18rtime32_account_creation\x18+ \x01(\x07\x12\x14\n\x0c\x61\x63\x63ount_name\x18\x32 \x01(\t\x12\x10\n\x08password\x18\x33 \x01(\t\x12\x19\n\x11game_server_token\x18\x34 \x01(\t\x12\x11\n\tlogin_key\x18< \x01(\t\x12+\n\x1cwas_converted_deprecated_msg\x18\x46 \x01(\x08:\x05\x66\x61lse\x12%\n\x1d\x61non_user_target_account_name\x18P \x01(\t\x12\x1e\n\x16resolved_user_steam_id\x18Q \x01(\x06\x12\x1a\n\x12\x65result_sentryfile\x18R \x01(\x05\x12\x16\n\x0esha_sentryfile\x18S \x01(\x0c\x12\x11\n\tauth_code\x18T \x01(\t\x12\x10\n\x08otp_type\x18U \x01(\x05\x12\x11\n\totp_value\x18V \x01(\r\x12\x16\n\x0eotp_identifier\x18W \x01(\t\x12\x1d\n\x15steam2_ticket_request\x18X \x01(\x08\x12\x17\n\x0fsony_psn_ticket\x18Z \x01(\x0c\x12\x1b\n\x13sony_psn_service_id\x18[ \x01(\t\x12\x36\n\'create_new_psn_linked_account_if_needed\x18\\ \x01(\x08:\x05\x66\x61lse\x12\x15\n\rsony_psn_name\x18] \x01(\t\x12\x1a\n\x12game_server_app_id\x18^ \x01(\x05\x12)\n!steamguard_dont_remember_computer\x18_ \x01(\x08\x12\x14\n\x0cmachine_name\x18` \x01(\t\x12\x1f\n\x17machine_name_userchosen\x18\x61 \x01(\t\x12\x18\n\x10\x63ountry_override\x18\x62 \x01(\t\x12\x14\n\x0cis_steam_box\x18\x63 \x01(\x08\x12\x1a\n\x12\x63lient_instance_id\x18\x64 \x01(\x04\x12\x17\n\x0ftwo_factor_code\x18\x65 \x01(\t\x12$\n\x1csupports_rate_limit_response\x18\x66 \x01(\x08\"\x8c\x05\n\x17\x43MsgClientLogonResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12%\n\x1dout_of_game_heartbeat_seconds\x18\x02 \x01(\x05\x12!\n\x19in_game_heartbeat_seconds\x18\x03 \x01(\x05\x12\x11\n\tpublic_ip\x18\x04 \x01(\r\x12\x1b\n\x13rtime32_server_time\x18\x05 \x01(\x07\x12\x15\n\raccount_flags\x18\x06 \x01(\r\x12\x0f\n\x07\x63\x65ll_id\x18\x07 \x01(\r\x12\x14\n\x0c\x65mail_domain\x18\x08 \x01(\t\x12\x15\n\rsteam2_ticket\x18\t \x01(\x0c\x12\x18\n\x10\x65result_extended\x18\n \x01(\x05\x12&\n\x1ewebapi_authenticate_user_nonce\x18\x0b \x01(\t\x12\x1e\n\x16\x63\x65ll_id_ping_threshold\x18\x0c \x01(\r\x12\x10\n\x08use_pics\x18\r \x01(\x08\x12\x12\n\nvanity_url\x18\x0e \x01(\t\x12\x1f\n\x17\x63lient_supplied_steamid\x18\x14 \x01(\x06\x12\x17\n\x0fip_country_code\x18\x15 \x01(\t\x12\x19\n\x11parental_settings\x18\x16 \x01(\x0c\x12\"\n\x1aparental_setting_signature\x18\x17 \x01(\x0c\x12&\n\x1e\x63ount_loginfailures_to_migrate\x18\x18 \x01(\x05\x12$\n\x1c\x63ount_disconnects_to_migrate\x18\x19 \x01(\x05\x12#\n\x1bogs_data_report_time_window\x18\x1a \x01(\x05\x12\x1a\n\x12\x63lient_instance_id\x18\x1b \x01(\x04\".\n,CMsgClientRequestWebAPIAuthenticateUserNonce\"r\n4CMsgClientRequestWebAPIAuthenticateUserNonceResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12&\n\x1ewebapi_authenticate_user_nonce\x18\x0b \x01(\t\"\x12\n\x10\x43MsgClientLogOff\")\n\x13\x43MsgClientLoggedOff\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\":\n\x10\x43MsgClientCMList\x12\x14\n\x0c\x63m_addresses\x18\x01 \x03(\r\x12\x10\n\x08\x63m_ports\x18\x02 \x03(\r\"m\n\x1b\x43MsgClientP2PConnectionInfo\x12\x15\n\rsteam_id_dest\x18\x01 \x01(\x06\x12\x14\n\x0csteam_id_src\x18\x02 \x01(\x06\x12\x0e\n\x06\x61pp_id\x18\x03 \x01(\r\x12\x11\n\tcandidate\x18\x04 \x01(\x0c\"z\n\x1f\x43MsgClientP2PConnectionFailInfo\x12\x15\n\rsteam_id_dest\x18\x01 \x01(\x06\x12\x14\n\x0csteam_id_src\x18\x02 \x01(\x06\x12\x0e\n\x06\x61pp_id\x18\x03 \x01(\r\x12\x1a\n\x12\x65p2p_session_error\x18\x04 \x01(\r\"1\n\x1f\x43MsgClientGetAppOwnershipTicket\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\"]\n\'CMsgClientGetAppOwnershipTicketResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\r:\x01\x32\x12\x0e\n\x06\x61pp_id\x18\x02 \x01(\r\x12\x0e\n\x06ticket\x18\x03 \x01(\x0c\"\'\n\x16\x43MsgClientSessionToken\x12\r\n\x05token\x18\x01 \x01(\x04\"M\n\x1b\x43MsgClientGameConnectTokens\x12\x1e\n\x12max_tokens_to_keep\x18\x01 \x01(\r:\x02\x31\x30\x12\x0e\n\x06tokens\x18\x02 \x03(\x0c\"\xa5\x01\n\x10\x43MsgGSServerType\x12\x15\n\rapp_id_served\x18\x01 \x01(\r\x12\r\n\x05\x66lags\x18\x02 \x01(\r\x12\x17\n\x0fgame_ip_address\x18\x03 \x01(\r\x12\x11\n\tgame_port\x18\x04 \x01(\r\x12\x10\n\x08game_dir\x18\x05 \x01(\t\x12\x14\n\x0cgame_version\x18\x06 \x01(\t\x12\x17\n\x0fgame_query_port\x18\x07 \x01(\r\"&\n\x11\x43MsgGSStatusReply\x12\x11\n\tis_secure\x18\x01 \x01(\x08\"{\n\x10\x43MsgGSPlayerList\x12)\n\x07players\x18\x01 \x03(\x0b\x32\x18.CMsgGSPlayerList.Player\x1a<\n\x06Player\x12\x10\n\x08steam_id\x18\x01 \x01(\x04\x12\x11\n\tpublic_ip\x18\x02 \x01(\r\x12\r\n\x05token\x18\x03 \x01(\x0c\"G\n\x11\x43MsgGSUserPlaying\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x11\n\tpublic_ip\x18\x02 \x01(\r\x12\r\n\x05token\x18\x03 \x01(\x0c\"*\n\x16\x43MsgGSDisconnectNotice\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\"\x8d\x05\n\x15\x43MsgClientGamesPlayed\x12\x37\n\x0cgames_played\x18\x01 \x03(\x0b\x32!.CMsgClientGamesPlayed.GamePlayed\x12\x16\n\x0e\x63lient_os_type\x18\x02 \x01(\r\x1a\xa2\x04\n\nGamePlayed\x12\x13\n\x0bsteam_id_gs\x18\x01 \x01(\x04\x12\x0f\n\x07game_id\x18\x02 \x01(\x06\x12\x17\n\x0fgame_ip_address\x18\x03 \x01(\r\x12\x11\n\tgame_port\x18\x04 \x01(\r\x12\x11\n\tis_secure\x18\x05 \x01(\x08\x12\r\n\x05token\x18\x06 \x01(\x0c\x12\x17\n\x0fgame_extra_info\x18\x07 \x01(\t\x12\x16\n\x0egame_data_blob\x18\x08 \x01(\x0c\x12\x12\n\nprocess_id\x18\t \x01(\r\x12\x1d\n\x15streaming_provider_id\x18\n \x01(\r\x12\x12\n\ngame_flags\x18\x0b \x01(\r\x12\x10\n\x08owner_id\x18\x0c \x01(\r\x12\x15\n\rvr_hmd_vendor\x18\r \x01(\t\x12\x14\n\x0cvr_hmd_model\x18\x0e \x01(\t\x12\x1d\n\x12launch_option_type\x18\x0f \x01(\r:\x01\x30\x12#\n\x17primary_controller_type\x18\x10 \x01(\x05:\x02-1\x12\'\n\x1fprimary_steam_controller_serial\x18\x11 \x01(\t\x12\'\n\x1ctotal_steam_controller_count\x18\x12 \x01(\r:\x01\x30\x12+\n total_non_steam_controller_count\x18\x13 \x01(\r:\x01\x30\x12&\n\x1b\x63ontroller_workshop_file_id\x18\x14 \x01(\x04:\x01\x30\"9\n\rCMsgGSApprove\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x16\n\x0eowner_steam_id\x18\x02 \x01(\x06\"I\n\nCMsgGSDeny\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0c\x65\x64\x65ny_reason\x18\x02 \x01(\x05\x12\x13\n\x0b\x64\x65ny_string\x18\x03 \x01(\t\"4\n\nCMsgGSKick\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0c\x65\x64\x65ny_reason\x18\x02 \x01(\x05\"\xb6\x01\n\x12\x43MsgClientAuthList\x12\x13\n\x0btokens_left\x18\x01 \x01(\r\x12\x18\n\x10last_request_seq\x18\x02 \x01(\r\x12$\n\x1clast_request_seq_from_server\x18\x03 \x01(\r\x12 \n\x07tickets\x18\x04 \x03(\x0b\x32\x0f.CMsgAuthTicket\x12\x0f\n\x07\x61pp_ids\x18\x05 \x03(\r\x12\x18\n\x10message_sequence\x18\x06 \x01(\r\"V\n\x15\x43MsgClientAuthListAck\x12\x12\n\nticket_crc\x18\x01 \x03(\r\x12\x0f\n\x07\x61pp_ids\x18\x02 \x03(\r\x12\x18\n\x10message_sequence\x18\x03 \x01(\r\"\xea\x01\n\x15\x43MsgClientFriendsList\x12\x14\n\x0c\x62incremental\x18\x01 \x01(\x08\x12.\n\x07\x66riends\x18\x02 \x03(\x0b\x32\x1d.CMsgClientFriendsList.Friend\x12\x18\n\x10max_friend_count\x18\x03 \x01(\r\x12\x1b\n\x13\x61\x63tive_friend_count\x18\x04 \x01(\r\x12\x19\n\x11\x66riends_limit_hit\x18\x05 \x01(\x08\x1a\x39\n\x06\x46riend\x12\x12\n\nulfriendid\x18\x01 \x01(\x06\x12\x1b\n\x13\x65\x66riendrelationship\x18\x02 \x01(\r\"\xc5\x02\n\x1b\x43MsgClientFriendsGroupsList\x12\x10\n\x08\x62removal\x18\x01 \x01(\x08\x12\x14\n\x0c\x62incremental\x18\x02 \x01(\x08\x12>\n\x0c\x66riendGroups\x18\x03 \x03(\x0b\x32(.CMsgClientFriendsGroupsList.FriendGroup\x12H\n\x0bmemberships\x18\x04 \x03(\x0b\x32\x33.CMsgClientFriendsGroupsList.FriendGroupsMembership\x1a\x35\n\x0b\x46riendGroup\x12\x10\n\x08nGroupID\x18\x01 \x01(\x05\x12\x14\n\x0cstrGroupName\x18\x02 \x01(\t\x1a=\n\x16\x46riendGroupsMembership\x12\x11\n\tulSteamID\x18\x01 \x01(\x06\x12\x10\n\x08nGroupID\x18\x02 \x01(\x05\"\xba\x01\n\x1c\x43MsgClientPlayerNicknameList\x12\x0f\n\x07removal\x18\x01 \x01(\x08\x12\x13\n\x0bincremental\x18\x02 \x01(\x08\x12?\n\tnicknames\x18\x03 \x03(\x0b\x32,.CMsgClientPlayerNicknameList.PlayerNickname\x1a\x33\n\x0ePlayerNickname\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x10\n\x08nickname\x18\x03 \x01(\t\"@\n\x1b\x43MsgClientSetPlayerNickname\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x10\n\x08nickname\x18\x02 \x01(\t\"6\n#CMsgClientSetPlayerNicknameResponse\x12\x0f\n\x07\x65result\x18\x01 \x01(\r\"\xdd\x03\n\x15\x43MsgClientLicenseList\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x30\n\x08licenses\x18\x02 \x03(\x0b\x32\x1e.CMsgClientLicenseList.License\x1a\xfd\x02\n\x07License\x12\x12\n\npackage_id\x18\x01 \x01(\r\x12\x14\n\x0ctime_created\x18\x02 \x01(\x07\x12\x19\n\x11time_next_process\x18\x03 \x01(\x07\x12\x14\n\x0cminute_limit\x18\x04 \x01(\x05\x12\x14\n\x0cminutes_used\x18\x05 \x01(\x05\x12\x16\n\x0epayment_method\x18\x06 \x01(\r\x12\r\n\x05\x66lags\x18\x07 \x01(\r\x12\x1d\n\x15purchase_country_code\x18\x08 \x01(\t\x12\x14\n\x0clicense_type\x18\t \x01(\r\x12\x16\n\x0eterritory_code\x18\n \x01(\x05\x12\x15\n\rchange_number\x18\x0b \x01(\x05\x12\x10\n\x08owner_id\x18\x0c \x01(\r\x12\x16\n\x0einitial_period\x18\r \x01(\r\x12\x19\n\x11initial_time_unit\x18\x0e \x01(\r\x12\x16\n\x0erenewal_period\x18\x0f \x01(\r\x12\x19\n\x11renewal_time_unit\x18\x10 \x01(\r\"|\n\x15\x43MsgClientLBSSetScore\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0eleaderboard_id\x18\x02 \x01(\x05\x12\r\n\x05score\x18\x03 \x01(\x05\x12\x0f\n\x07\x64\x65tails\x18\x04 \x01(\x0c\x12\x1b\n\x13upload_score_method\x18\x05 \x01(\x05\"\xa2\x01\n\x1d\x43MsgClientLBSSetScoreResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x1f\n\x17leaderboard_entry_count\x18\x02 \x01(\x05\x12\x15\n\rscore_changed\x18\x03 \x01(\x08\x12\x1c\n\x14global_rank_previous\x18\x04 \x01(\x05\x12\x17\n\x0fglobal_rank_new\x18\x05 \x01(\x05\"M\n\x13\x43MsgClientLBSSetUGC\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0eleaderboard_id\x18\x02 \x01(\x05\x12\x0e\n\x06ugc_id\x18\x03 \x01(\x06\"1\n\x1b\x43MsgClientLBSSetUGCResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\"\xa7\x01\n\x1b\x43MsgClientLBSFindOrCreateLB\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x1f\n\x17leaderboard_sort_method\x18\x02 \x01(\x05\x12 \n\x18leaderboard_display_type\x18\x03 \x01(\x05\x12\x1b\n\x13\x63reate_if_not_found\x18\x04 \x01(\x08\x12\x18\n\x10leaderboard_name\x18\x05 \x01(\t\"\xd5\x01\n#CMsgClientLBSFindOrCreateLBResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x16\n\x0eleaderboard_id\x18\x02 \x01(\x05\x12\x1f\n\x17leaderboard_entry_count\x18\x03 \x01(\x05\x12\"\n\x17leaderboard_sort_method\x18\x04 \x01(\x05:\x01\x30\x12#\n\x18leaderboard_display_type\x18\x05 \x01(\x05:\x01\x30\x12\x18\n\x10leaderboard_name\x18\x06 \x01(\t\"\x9f\x01\n\x19\x43MsgClientLBSGetLBEntries\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\x05\x12\x16\n\x0eleaderboard_id\x18\x02 \x01(\x05\x12\x13\n\x0brange_start\x18\x03 \x01(\x05\x12\x11\n\trange_end\x18\x04 \x01(\x05\x12 \n\x18leaderboard_data_request\x18\x05 \x01(\x05\x12\x10\n\x08steamids\x18\x06 \x03(\x06\"\xf8\x01\n!CMsgClientLBSGetLBEntriesResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x1f\n\x17leaderboard_entry_count\x18\x02 \x01(\x05\x12\x39\n\x07\x65ntries\x18\x03 \x03(\x0b\x32(.CMsgClientLBSGetLBEntriesResponse.Entry\x1a\x63\n\x05\x45ntry\x12\x15\n\rsteam_id_user\x18\x01 \x01(\x06\x12\x13\n\x0bglobal_rank\x18\x02 \x01(\x05\x12\r\n\x05score\x18\x03 \x01(\x05\x12\x0f\n\x07\x64\x65tails\x18\x04 \x01(\x0c\x12\x0e\n\x06ugc_id\x18\x05 \x01(\x06\"\xee\x02\n\x15\x43MsgClientAccountInfo\x12\x14\n\x0cpersona_name\x18\x01 \x01(\t\x12\x12\n\nip_country\x18\x02 \x01(\t\x12\x1e\n\x16\x63ount_authed_computers\x18\x05 \x01(\x05\x12\x15\n\raccount_flags\x18\x07 \x01(\r\x12\x13\n\x0b\x66\x61\x63\x65\x62ook_id\x18\x08 \x01(\x04\x12\x15\n\rfacebook_name\x18\t \x01(\t\x12%\n\x1dsteamguard_notify_newmachines\x18\x0e \x01(\x08\x12+\n#steamguard_machine_name_user_chosen\x18\x0f \x01(\t\x12\x19\n\x11is_phone_verified\x18\x10 \x01(\x08\x12\x18\n\x10two_factor_state\x18\x11 \x01(\r\x12\x1c\n\x14is_phone_identifying\x18\x12 \x01(\x08\x12!\n\x19is_phone_needing_reverify\x18\x13 \x01(\x08\"\xbf\x01\n\x1e\x43MsgClientAppMinutesPlayedData\x12L\n\x0eminutes_played\x18\x01 \x03(\x0b\x32\x34.CMsgClientAppMinutesPlayedData.AppMinutesPlayedData\x1aO\n\x14\x41ppMinutesPlayedData\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x0f\n\x07\x66orever\x18\x02 \x01(\x05\x12\x16\n\x0elast_two_weeks\x18\x03 \x01(\x05\"\xaa\x01\n\x1a\x43MsgClientIsLimitedAccount\x12\x1b\n\x13\x62is_limited_account\x18\x01 \x01(\x08\x12\x1c\n\x14\x62is_community_banned\x18\x02 \x01(\x08\x12\x1a\n\x12\x62is_locked_account\x18\x03 \x01(\x08\x12\x35\n-bis_limited_account_allowed_to_invite_friends\x18\x04 \x01(\x08\"O\n\x1b\x43MsgClientRequestFriendData\x12\x1f\n\x17persona_state_requested\x18\x01 \x01(\r\x12\x0f\n\x07\x66riends\x18\x02 \x03(\x06\"\xb8\x01\n\x16\x43MsgClientChangeStatus\x12\x15\n\rpersona_state\x18\x01 \x01(\r\x12\x13\n\x0bplayer_name\x18\x02 \x01(\t\x12\x1e\n\x16is_auto_generated_name\x18\x03 \x01(\x08\x12\x15\n\rhigh_priority\x18\x04 \x01(\x08\x12\x1b\n\x13persona_set_by_user\x18\x05 \x01(\x08\x12\x1e\n\x13persona_state_flags\x18\x06 \x01(\r:\x01\x30\"@\n\x19\x43MsgPersonaChangeResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x13\n\x0bplayer_name\x18\x02 \x01(\t\"\xe7\x04\n\x16\x43MsgClientPersonaState\x12\x14\n\x0cstatus_flags\x18\x01 \x01(\r\x12/\n\x07\x66riends\x18\x02 \x03(\x0b\x32\x1e.CMsgClientPersonaState.Friend\x1a\x85\x04\n\x06\x46riend\x12\x10\n\x08\x66riendid\x18\x01 \x01(\x06\x12\x15\n\rpersona_state\x18\x02 \x01(\r\x12\x1a\n\x12game_played_app_id\x18\x03 \x01(\r\x12\x16\n\x0egame_server_ip\x18\x04 \x01(\r\x12\x18\n\x10game_server_port\x18\x05 \x01(\r\x12\x1b\n\x13persona_state_flags\x18\x06 \x01(\r\x12 \n\x18online_session_instances\x18\x07 \x01(\r\x12\x1d\n\x15published_instance_id\x18\x08 \x01(\r\x12\x1b\n\x13persona_set_by_user\x18\n \x01(\x08\x12\x13\n\x0bplayer_name\x18\x0f \x01(\t\x12\x12\n\nquery_port\x18\x14 \x01(\r\x12\x16\n\x0esteamid_source\x18\x19 \x01(\x06\x12\x13\n\x0b\x61vatar_hash\x18\x1f \x01(\x0c\x12\x13\n\x0blast_logoff\x18- \x01(\r\x12\x12\n\nlast_logon\x18. \x01(\r\x12\x11\n\tclan_rank\x18\x32 \x01(\r\x12\x11\n\tgame_name\x18\x37 \x01(\t\x12\x0e\n\x06gameid\x18\x38 \x01(\x06\x12\x16\n\x0egame_data_blob\x18< \x01(\x0c\x12\x10\n\x08\x63lan_tag\x18\x41 \x01(\t\x12\x15\n\rfacebook_name\x18\x42 \x01(\t\x12\x13\n\x0b\x66\x61\x63\x65\x62ook_id\x18\x43 \x01(\x04\"5\n\x1b\x43MsgClientFriendProfileInfo\x12\x16\n\x0esteamid_friend\x18\x01 \x01(\x06\"\xda\x01\n#CMsgClientFriendProfileInfoResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x16\n\x0esteamid_friend\x18\x02 \x01(\x06\x12\x14\n\x0ctime_created\x18\x03 \x01(\r\x12\x11\n\treal_name\x18\x04 \x01(\t\x12\x11\n\tcity_name\x18\x05 \x01(\t\x12\x12\n\nstate_name\x18\x06 \x01(\t\x12\x14\n\x0c\x63ountry_name\x18\x07 \x01(\t\x12\x10\n\x08headline\x18\x08 \x01(\t\x12\x0f\n\x07summary\x18\t \x01(\t\"\x8c\x01\n\x14\x43MsgClientServerList\x12-\n\x07servers\x18\x01 \x03(\x0b\x32\x1c.CMsgClientServerList.Server\x1a\x45\n\x06Server\x12\x13\n\x0bserver_type\x18\x01 \x01(\r\x12\x11\n\tserver_ip\x18\x02 \x01(\r\x12\x13\n\x0bserver_port\x18\x03 \x01(\r\"\xa7\x01\n\x1e\x43MsgClientRequestedClientStats\x12\x42\n\rstats_to_send\x18\x01 \x03(\x0b\x32+.CMsgClientRequestedClientStats.StatsToSend\x1a\x41\n\x0bStatsToSend\x12\x13\n\x0b\x63lient_stat\x18\x01 \x01(\r\x12\x1d\n\x15stat_aggregate_method\x18\x02 \x01(\r\"\xc0\x01\n\x0f\x43MsgClientStat2\x12\x30\n\x0bstat_detail\x18\x01 \x03(\x0b\x32\x1b.CMsgClientStat2.StatDetail\x1a{\n\nStatDetail\x12\x13\n\x0b\x63lient_stat\x18\x01 \x01(\r\x12\x10\n\x08ll_value\x18\x02 \x01(\x03\x12\x13\n\x0btime_of_day\x18\x03 \x01(\r\x12\x0f\n\x07\x63\x65ll_id\x18\x04 \x01(\r\x12\x10\n\x08\x64\x65pot_id\x18\x05 \x01(\r\x12\x0e\n\x06\x61pp_id\x18\x06 \x01(\r\"\xba\x01\n\x18\x43MsgClientMMSCreateLobby\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x13\n\x0bmax_members\x18\x02 \x01(\x05\x12\x12\n\nlobby_type\x18\x03 \x01(\x05\x12\x13\n\x0blobby_flags\x18\x04 \x01(\x05\x12\x0f\n\x07\x63\x65ll_id\x18\x05 \x01(\r\x12\x11\n\tpublic_ip\x18\x06 \x01(\r\x12\x10\n\x08metadata\x18\x07 \x01(\x0c\x12\x1a\n\x12persona_name_owner\x18\x08 \x01(\t\"^\n CMsgClientMMSCreateLobbyResponse\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x12\n\x07\x65result\x18\x03 \x01(\x05:\x01\x32\"V\n\x16\x43MsgClientMMSJoinLobby\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x03 \x01(\t\"\xcf\x02\n\x1e\x43MsgClientMMSJoinLobbyResponse\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12 \n\x18\x63hat_room_enter_response\x18\x03 \x01(\x05\x12\x13\n\x0bmax_members\x18\x04 \x01(\x05\x12\x12\n\nlobby_type\x18\x05 \x01(\x05\x12\x13\n\x0blobby_flags\x18\x06 \x01(\x05\x12\x16\n\x0esteam_id_owner\x18\x07 \x01(\x06\x12\x10\n\x08metadata\x18\x08 \x01(\x0c\x12\x37\n\x07members\x18\t \x03(\x0b\x32&.CMsgClientMMSJoinLobbyResponse.Member\x1a\x42\n\x06Member\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x10\n\x08metadata\x18\x03 \x01(\x0c\"A\n\x17\x43MsgClientMMSLeaveLobby\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\"]\n\x1f\x43MsgClientMMSLeaveLobbyResponse\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x12\n\x07\x65result\x18\x03 \x01(\x05:\x01\x32\"\xf2\x01\n\x19\x43MsgClientMMSGetLobbyList\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x1d\n\x15num_lobbies_requested\x18\x03 \x01(\x05\x12\x0f\n\x07\x63\x65ll_id\x18\x04 \x01(\r\x12\x11\n\tpublic_ip\x18\x05 \x01(\r\x12\x32\n\x07\x66ilters\x18\x06 \x03(\x0b\x32!.CMsgClientMMSGetLobbyList.Filter\x1aN\n\x06\x46ilter\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x12\x13\n\x0b\x63omparision\x18\x03 \x01(\x05\x12\x13\n\x0b\x66ilter_type\x18\x04 \x01(\x05\"\xa5\x02\n!CMsgClientMMSGetLobbyListResponse\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x12\n\x07\x65result\x18\x03 \x01(\x05:\x01\x32\x12\x39\n\x07lobbies\x18\x04 \x03(\x0b\x32(.CMsgClientMMSGetLobbyListResponse.Lobby\x1a\xa0\x01\n\x05Lobby\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x13\n\x0bmax_members\x18\x02 \x01(\x05\x12\x12\n\nlobby_type\x18\x03 \x01(\x05\x12\x13\n\x0blobby_flags\x18\x04 \x01(\x05\x12\x10\n\x08metadata\x18\x05 \x01(\x0c\x12\x13\n\x0bnum_members\x18\x06 \x01(\x05\x12\x10\n\x08\x64istance\x18\x07 \x01(\x02\x12\x0e\n\x06weight\x18\x08 \x01(\x03\"\xac\x01\n\x19\x43MsgClientMMSSetLobbyData\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x17\n\x0fsteam_id_member\x18\x03 \x01(\x06\x12\x13\n\x0bmax_members\x18\x04 \x01(\x05\x12\x12\n\nlobby_type\x18\x05 \x01(\x05\x12\x13\n\x0blobby_flags\x18\x06 \x01(\x05\x12\x10\n\x08metadata\x18\x07 \x01(\x0c\"_\n!CMsgClientMMSSetLobbyDataResponse\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x12\n\x07\x65result\x18\x03 \x01(\x05:\x01\x32\"C\n\x19\x43MsgClientMMSGetLobbyData\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\"\xc8\x02\n\x16\x43MsgClientMMSLobbyData\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x13\n\x0bnum_members\x18\x03 \x01(\x05\x12\x13\n\x0bmax_members\x18\x04 \x01(\x05\x12\x12\n\nlobby_type\x18\x05 \x01(\x05\x12\x13\n\x0blobby_flags\x18\x06 \x01(\x05\x12\x16\n\x0esteam_id_owner\x18\x07 \x01(\x06\x12\x10\n\x08metadata\x18\x08 \x01(\x0c\x12/\n\x07members\x18\t \x03(\x0b\x32\x1e.CMsgClientMMSLobbyData.Member\x12\x14\n\x0clobby_cellid\x18\n \x01(\r\x1a\x42\n\x06Member\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x02 \x01(\t\x12\x10\n\x08metadata\x18\x03 \x01(\x0c\"w\n\x1d\x43MsgClientMMSSendLobbyChatMsg\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x17\n\x0fsteam_id_target\x18\x03 \x01(\x06\x12\x15\n\rlobby_message\x18\x04 \x01(\x0c\"s\n\x19\x43MsgClientMMSLobbyChatMsg\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x17\n\x0fsteam_id_sender\x18\x03 \x01(\x06\x12\x15\n\rlobby_message\x18\x04 \x01(\x0c\"`\n\x1a\x43MsgClientMMSSetLobbyOwner\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x1a\n\x12steam_id_new_owner\x18\x03 \x01(\x06\"`\n\"CMsgClientMMSSetLobbyOwnerResponse\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x12\n\x07\x65result\x18\x03 \x01(\x05:\x01\x32\"^\n\x1b\x43MsgClientMMSSetLobbyLinked\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x17\n\x0fsteam_id_lobby2\x18\x03 \x01(\x06\"\x99\x01\n\x1f\x43MsgClientMMSSetLobbyGameServer\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x16\n\x0egame_server_ip\x18\x03 \x01(\r\x12\x18\n\x10game_server_port\x18\x04 \x01(\r\x12\x1c\n\x14game_server_steam_id\x18\x05 \x01(\x06\"\x99\x01\n\x1f\x43MsgClientMMSLobbyGameServerSet\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x16\n\x0egame_server_ip\x18\x03 \x01(\r\x12\x18\n\x10game_server_port\x18\x04 \x01(\r\x12\x1c\n\x14game_server_steam_id\x18\x05 \x01(\x06\"s\n\x1c\x43MsgClientMMSUserJoinedLobby\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x15\n\rsteam_id_user\x18\x03 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x04 \x01(\t\"q\n\x1a\x43MsgClientMMSUserLeftLobby\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x15\n\rsteam_id_user\x18\x03 \x01(\x06\x12\x14\n\x0cpersona_name\x18\x04 \x01(\t\"c\n\x1a\x43MsgClientMMSInviteToLobby\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x16\n\x0esteam_id_lobby\x18\x02 \x01(\x06\x12\x1d\n\x15steam_id_user_invited\x18\x03 \x01(\x06\"`\n\x19\x43MsgClientUDSInviteToGame\x12\x15\n\rsteam_id_dest\x18\x01 \x01(\x06\x12\x14\n\x0csteam_id_src\x18\x02 \x01(\x06\x12\x16\n\x0e\x63onnect_string\x18\x03 \x01(\t\"\xb9\x01\n\x14\x43MsgClientChatInvite\x12\x18\n\x10steam_id_invited\x18\x01 \x01(\x06\x12\x15\n\rsteam_id_chat\x18\x02 \x01(\x06\x12\x17\n\x0fsteam_id_patron\x18\x03 \x01(\x06\x12\x15\n\rchatroom_type\x18\x04 \x01(\x05\x12\x1c\n\x14steam_id_friend_chat\x18\x05 \x01(\x06\x12\x11\n\tchat_name\x18\x06 \x01(\t\x12\x0f\n\x07game_id\x18\x07 \x01(\x06\"\x8a\x08\n\x19\x43MsgClientConnectionStats\x12;\n\x0bstats_logon\x18\x01 \x01(\x0b\x32&.CMsgClientConnectionStats.Stats_Logon\x12;\n\x0bstats_vconn\x18\x02 \x01(\x0b\x32&.CMsgClientConnectionStats.Stats_VConn\x1a\xc7\x01\n\x0bStats_Logon\x12\x18\n\x10\x63onnect_attempts\x18\x01 \x01(\x05\x12\x19\n\x11\x63onnect_successes\x18\x02 \x01(\x05\x12\x18\n\x10\x63onnect_failures\x18\x03 \x01(\x05\x12\x1b\n\x13\x63onnections_dropped\x18\x04 \x01(\x05\x12\x17\n\x0fseconds_running\x18\x05 \x01(\r\x12\x1c\n\x14msec_tologonthistime\x18\x06 \x01(\r\x12\x15\n\rcount_bad_cms\x18\x07 \x01(\r\x1aq\n\tStats_UDP\x12\x11\n\tpkts_sent\x18\x01 \x01(\x04\x12\x12\n\nbytes_sent\x18\x02 \x01(\x04\x12\x11\n\tpkts_recv\x18\x03 \x01(\x04\x12\x16\n\x0epkts_processed\x18\x04 \x01(\x04\x12\x12\n\nbytes_recv\x18\x05 \x01(\x04\x1a\xb5\x04\n\x0bStats_VConn\x12\x17\n\x0f\x63onnections_udp\x18\x01 \x01(\r\x12\x17\n\x0f\x63onnections_tcp\x18\x02 \x01(\r\x12\x37\n\tstats_udp\x18\x03 \x01(\x0b\x32$.CMsgClientConnectionStats.Stats_UDP\x12\x16\n\x0epkts_abandoned\x18\x04 \x01(\x04\x12\x19\n\x11\x63onn_req_received\x18\x05 \x01(\x04\x12\x13\n\x0bpkts_resent\x18\x06 \x01(\x04\x12\x11\n\tmsgs_sent\x18\x07 \x01(\x04\x12\x18\n\x10msgs_sent_failed\x18\x08 \x01(\x04\x12\x11\n\tmsgs_recv\x18\t \x01(\x04\x12\x16\n\x0e\x64\x61tagrams_sent\x18\n \x01(\x04\x12\x16\n\x0e\x64\x61tagrams_recv\x18\x0b \x01(\x04\x12\x15\n\rbad_pkts_recv\x18\x0c \x01(\x04\x12\x1e\n\x16unknown_conn_pkts_recv\x18\r \x01(\x04\x12\x18\n\x10missed_pkts_recv\x18\x0e \x01(\x04\x12\x15\n\rdup_pkts_recv\x18\x0f \x01(\x04\x12!\n\x19\x66\x61iled_connect_challenges\x18\x10 \x01(\x04\x12\x1d\n\x15micro_sec_avg_latency\x18\x11 \x01(\r\x12\x1d\n\x15micro_sec_min_latency\x18\x12 \x01(\r\x12\x1d\n\x15micro_sec_max_latency\x18\x13 \x01(\r\x12\x1b\n\x13mem_pool_msg_in_use\x18\x14 \x01(\r\"\xd2\x01\n\x1a\x43MsgClientServersAvailable\x12R\n\x16server_types_available\x18\x01 \x03(\x0b\x32\x32.CMsgClientServersAvailable.Server_Types_Available\x12%\n\x1dserver_type_for_auth_services\x18\x02 \x01(\r\x1a\x39\n\x16Server_Types_Available\x12\x0e\n\x06server\x18\x01 \x01(\r\x12\x0f\n\x07\x63hanged\x18\x02 \x01(\x08\"u\n\x16\x43MsgClientGetUserStats\x12\x0f\n\x07game_id\x18\x01 \x01(\x06\x12\x11\n\tcrc_stats\x18\x02 \x01(\r\x12\x1c\n\x14schema_local_version\x18\x03 \x01(\x05\x12\x19\n\x11steam_id_for_user\x18\x04 \x01(\x06\"\xdf\x02\n\x1e\x43MsgClientGetUserStatsResponse\x12\x0f\n\x07game_id\x18\x01 \x01(\x06\x12\x12\n\x07\x65result\x18\x02 \x01(\x05:\x01\x32\x12\x11\n\tcrc_stats\x18\x03 \x01(\r\x12\x0e\n\x06schema\x18\x04 \x01(\x0c\x12\x34\n\x05stats\x18\x05 \x03(\x0b\x32%.CMsgClientGetUserStatsResponse.Stats\x12N\n\x12\x61\x63hievement_blocks\x18\x06 \x03(\x0b\x32\x32.CMsgClientGetUserStatsResponse.Achievement_Blocks\x1a,\n\x05Stats\x12\x0f\n\x07stat_id\x18\x01 \x01(\r\x12\x12\n\nstat_value\x18\x02 \x01(\r\x1a\x41\n\x12\x41\x63hievement_Blocks\x12\x16\n\x0e\x61\x63hievement_id\x18\x01 \x01(\r\x12\x13\n\x0bunlock_time\x18\x02 \x03(\x07\"\x9a\x02\n CMsgClientStoreUserStatsResponse\x12\x0f\n\x07game_id\x18\x01 \x01(\x06\x12\x12\n\x07\x65result\x18\x02 \x01(\x05:\x01\x32\x12\x11\n\tcrc_stats\x18\x03 \x01(\r\x12Z\n\x17stats_failed_validation\x18\x04 \x03(\x0b\x32\x39.CMsgClientStoreUserStatsResponse.Stats_Failed_Validation\x12\x19\n\x11stats_out_of_date\x18\x05 \x01(\x08\x1aG\n\x17Stats_Failed_Validation\x12\x0f\n\x07stat_id\x18\x01 \x01(\r\x12\x1b\n\x13reverted_stat_value\x18\x02 \x01(\r\"\xe8\x01\n\x19\x43MsgClientStoreUserStats2\x12\x0f\n\x07game_id\x18\x01 \x01(\x06\x12\x17\n\x0fsettor_steam_id\x18\x02 \x01(\x06\x12\x17\n\x0fsettee_steam_id\x18\x03 \x01(\x06\x12\x11\n\tcrc_stats\x18\x04 \x01(\r\x12\x16\n\x0e\x65xplicit_reset\x18\x05 \x01(\x08\x12/\n\x05stats\x18\x06 \x03(\x0b\x32 .CMsgClientStoreUserStats2.Stats\x1a,\n\x05Stats\x12\x0f\n\x07stat_id\x18\x01 \x01(\r\x12\x12\n\nstat_value\x18\x02 \x01(\r\"\xc2\x01\n\x16\x43MsgClientStatsUpdated\x12\x10\n\x08steam_id\x18\x01 \x01(\x06\x12\x0f\n\x07game_id\x18\x02 \x01(\x06\x12\x11\n\tcrc_stats\x18\x03 \x01(\r\x12<\n\rupdated_stats\x18\x04 \x03(\x0b\x32%.CMsgClientStatsUpdated.Updated_Stats\x1a\x34\n\rUpdated_Stats\x12\x0f\n\x07stat_id\x18\x01 \x01(\r\x12\x12\n\nstat_value\x18\x02 \x01(\r\"\xbc\x01\n\x18\x43MsgClientStoreUserStats\x12\x0f\n\x07game_id\x18\x01 \x01(\x06\x12\x16\n\x0e\x65xplicit_reset\x18\x02 \x01(\x08\x12@\n\x0estats_to_store\x18\x03 \x03(\x0b\x32(.CMsgClientStoreUserStats.Stats_To_Store\x1a\x35\n\x0eStats_To_Store\x12\x0f\n\x07stat_id\x18\x01 \x01(\r\x12\x12\n\nstat_value\x18\x02 \x01(\r\"\x1c\n\x1a\x43MsgClientGetClientDetails\"?\n$CMsgClientReportOverlayDetourFailure\x12\x17\n\x0f\x66\x61ilure_strings\x18\x01 \x03(\t\"\xbf\x02\n\"CMsgClientGetClientDetailsResponse\x12\x17\n\x0fpackage_version\x18\x01 \x01(\r\x12\x18\n\x10protocol_version\x18\x08 \x01(\r\x12\n\n\x02os\x18\x02 \x01(\t\x12\x14\n\x0cmachine_name\x18\x03 \x01(\t\x12\x11\n\tip_public\x18\x04 \x01(\t\x12\x12\n\nip_private\x18\x05 \x01(\t\x12\x17\n\x0f\x62ytes_available\x18\x07 \x01(\x04\x12?\n\rgames_running\x18\x06 \x03(\x0b\x32(.CMsgClientGetClientDetailsResponse.Game\x1a\x43\n\x04Game\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x12\n\nextra_info\x18\x02 \x01(\t\x12\x18\n\x10time_running_sec\x18\x03 \x01(\r\"x\n\x1a\x43MsgClientGetClientAppList\x12\r\n\x05media\x18\x01 \x01(\x08\x12\r\n\x05tools\x18\x02 \x01(\x08\x12\r\n\x05games\x18\x03 \x01(\x08\x12\x16\n\x0eonly_installed\x18\x04 \x01(\x08\x12\x15\n\ronly_changing\x18\x05 \x01(\x08\"\x91\x04\n\"CMsgClientGetClientAppListResponse\x12\x35\n\x04\x61pps\x18\x01 \x03(\x0b\x32\'.CMsgClientGetClientAppListResponse.App\x12\x17\n\x0f\x62ytes_available\x18\x02 \x01(\x04\x1a\x9a\x03\n\x03\x41pp\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x10\n\x08\x63\x61tegory\x18\x02 \x01(\t\x12\x10\n\x08\x61pp_type\x18\n \x01(\t\x12\x10\n\x08\x66\x61vorite\x18\x03 \x01(\x08\x12\x11\n\tinstalled\x18\x04 \x01(\x08\x12\x13\n\x0b\x61uto_update\x18\x05 \x01(\x08\x12\x18\n\x10\x62ytes_downloaded\x18\x06 \x01(\x04\x12\x14\n\x0c\x62ytes_needed\x18\x07 \x01(\x04\x12\x1b\n\x13\x62ytes_download_rate\x18\x08 \x01(\r\x12\x17\n\x0f\x64ownload_paused\x18\x0b \x01(\x08\x12\x17\n\x0fnum_downloading\x18\x0c \x01(\r\x12\x12\n\nnum_paused\x18\r \x01(\r\x12\x10\n\x08\x63hanging\x18\x0e \x01(\x08\x12\x1d\n\x15\x61vailable_on_platform\x18\x0f \x01(\x08\x12\x39\n\x04\x64lcs\x18\t \x03(\x0b\x32+.CMsgClientGetClientAppListResponse.App.DLC\x1a\'\n\x03\x44LC\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x11\n\tinstalled\x18\x02 \x01(\x08\"+\n\x1a\x43MsgClientInstallClientApp\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\"4\n\"CMsgClientInstallClientAppResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\"-\n\x1c\x43MsgClientUninstallClientApp\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\"6\n$CMsgClientUninstallClientAppResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\"B\n!CMsgClientSetClientAppUpdateState\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0e\n\x06update\x18\x02 \x01(\x08\";\n)CMsgClientSetClientAppUpdateStateResponse\x12\x0e\n\x06result\x18\x01 \x01(\r\"\x86\x02\n\x1e\x43MsgClientUFSUploadFileRequest\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x11\n\tfile_size\x18\x02 \x01(\r\x12\x15\n\rraw_file_size\x18\x03 \x01(\r\x12\x10\n\x08sha_file\x18\x04 \x01(\x0c\x12\x12\n\ntime_stamp\x18\x05 \x01(\x04\x12\x11\n\tfile_name\x18\x06 \x01(\t\x12$\n\x1cplatforms_to_sync_deprecated\x18\x07 \x01(\r\x12%\n\x11platforms_to_sync\x18\x08 \x01(\r:\n4294967295\x12\x0f\n\x07\x63\x65ll_id\x18\t \x01(\r\x12\x13\n\x0b\x63\x61n_encrypt\x18\n \x01(\x08\"\xbb\x01\n\x1f\x43MsgClientUFSUploadFileResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x10\n\x08sha_file\x18\x02 \x01(\x0c\x12\x10\n\x08use_http\x18\x03 \x01(\x08\x12\x11\n\thttp_host\x18\x04 \x01(\t\x12\x10\n\x08http_url\x18\x05 \x01(\t\x12\x12\n\nkv_headers\x18\x06 \x01(\x0c\x12\x11\n\tuse_https\x18\x07 \x01(\x08\x12\x14\n\x0c\x65ncrypt_file\x18\x08 \x01(\x08\"\xae\x01\n\x19\x43MsgClientUFSUploadCommit\x12.\n\x05\x66iles\x18\x01 \x03(\x0b\x32\x1f.CMsgClientUFSUploadCommit.File\x1a\x61\n\x04\x46ile\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x0e\n\x06\x61pp_id\x18\x02 \x01(\r\x12\x10\n\x08sha_file\x18\x03 \x01(\x0c\x12\x10\n\x08\x63ub_file\x18\x04 \x01(\r\x12\x11\n\tfile_name\x18\x05 \x01(\t\"\x99\x01\n!CMsgClientUFSUploadCommitResponse\x12\x36\n\x05\x66iles\x18\x01 \x03(\x0b\x32\'.CMsgClientUFSUploadCommitResponse.File\x1a<\n\x04\x46ile\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x0e\n\x06\x61pp_id\x18\x02 \x01(\r\x12\x10\n\x08sha_file\x18\x03 \x01(\x0c\"L\n\x16\x43MsgClientUFSFileChunk\x12\x10\n\x08sha_file\x18\x01 \x01(\x0c\x12\x12\n\nfile_start\x18\x02 \x01(\r\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\x0c\" \n\x1e\x43MsgClientUFSTransferHeartbeat\"G\n\x1f\x43MsgClientUFSUploadFileFinished\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x10\n\x08sha_file\x18\x02 \x01(\x0c\"_\n\x1e\x43MsgClientUFSDeleteFileRequest\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x11\n\tfile_name\x18\x02 \x01(\t\x12\x1a\n\x12is_explicit_delete\x18\x03 \x01(\x08\"H\n\x1f\x43MsgClientUFSDeleteFileResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x11\n\tfile_name\x18\x02 \x01(\t\"S\n\x1e\x43MsgClientUFSGetFileListForApp\x12\x15\n\rapps_to_query\x18\x01 \x03(\r\x12\x1a\n\x12send_path_prefixes\x18\x02 \x01(\x08\"\xc1\x02\n&CMsgClientUFSGetFileListForAppResponse\x12;\n\x05\x66iles\x18\x01 \x03(\x0b\x32,.CMsgClientUFSGetFileListForAppResponse.File\x12\x15\n\rpath_prefixes\x18\x02 \x03(\t\x1a\xb8\x01\n\x04\x46ile\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x11\n\tfile_name\x18\x02 \x01(\t\x12\x10\n\x08sha_file\x18\x03 \x01(\x0c\x12\x12\n\ntime_stamp\x18\x04 \x01(\x04\x12\x15\n\rraw_file_size\x18\x05 \x01(\r\x12\x1a\n\x12is_explicit_delete\x18\x06 \x01(\x08\x12\x19\n\x11platforms_to_sync\x18\x07 \x01(\r\x12\x19\n\x11path_prefix_index\x18\x08 \x01(\r:\x08\x80\xb5\x18\x08\x88\xb5\x18\x10\"Z\n\x1c\x43MsgClientUFSDownloadRequest\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x11\n\tfile_name\x18\x02 \x01(\t\x12\x17\n\x0f\x63\x61n_handle_http\x18\x03 \x01(\x08\"\xa0\x02\n\x1d\x43MsgClientUFSDownloadResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x0e\n\x06\x61pp_id\x18\x02 \x01(\r\x12\x11\n\tfile_size\x18\x03 \x01(\r\x12\x15\n\rraw_file_size\x18\x04 \x01(\r\x12\x10\n\x08sha_file\x18\x05 \x01(\x0c\x12\x12\n\ntime_stamp\x18\x06 \x01(\x04\x12\x1a\n\x12is_explicit_delete\x18\x07 \x01(\x08\x12\x10\n\x08use_http\x18\x08 \x01(\x08\x12\x11\n\thttp_host\x18\t \x01(\t\x12\x10\n\x08http_url\x18\n \x01(\t\x12\x12\n\nkv_headers\x18\x0b \x01(\x0c\x12\x11\n\tuse_https\x18\x0c \x01(\x08\x12\x11\n\tencrypted\x18\r \x01(\x08\"]\n\x19\x43MsgClientUFSLoginRequest\x12\x18\n\x10protocol_version\x18\x01 \x01(\r\x12\x18\n\x10\x61m_session_token\x18\x02 \x01(\x04\x12\x0c\n\x04\x61pps\x18\x03 \x03(\r\"0\n\x1a\x43MsgClientUFSLoginResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\"G\n#CMsgClientRequestEncryptedAppTicket\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x10\n\x08userdata\x18\x02 \x01(\x0c\"\x84\x01\n+CMsgClientRequestEncryptedAppTicketResponse\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x12\n\x07\x65result\x18\x02 \x01(\x05:\x01\x32\x12\x31\n\x14\x65ncrypted_app_ticket\x18\x03 \x01(\x0b\x32\x13.EncryptedAppTicket\"l\n\x1a\x43MsgClientWalletInfoUpdate\x12\x12\n\nhas_wallet\x18\x01 \x01(\x08\x12\x0f\n\x07\x62\x61lance\x18\x02 \x01(\x05\x12\x10\n\x08\x63urrency\x18\x03 \x01(\x05\x12\x17\n\x0f\x62\x61lance_delayed\x18\x04 \x01(\x05\"M\n\x17\x43MsgClientAppInfoUpdate\x12\x19\n\x11last_changenumber\x18\x01 \x01(\r\x12\x17\n\x0fsend_changelist\x18\x02 \x01(\x08\"d\n\x18\x43MsgClientAppInfoChanges\x12\x1d\n\x15\x63urrent_change_number\x18\x01 \x01(\r\x12\x19\n\x11\x66orce_full_update\x18\x02 \x01(\x08\x12\x0e\n\x06\x61ppIDs\x18\x03 \x03(\r\"\xab\x01\n\x18\x43MsgClientAppInfoRequest\x12+\n\x04\x61pps\x18\x01 \x03(\x0b\x32\x1d.CMsgClientAppInfoRequest.App\x12\x1f\n\x10supports_batches\x18\x02 \x01(\x08:\x05\x66\x61lse\x1a\x41\n\x03\x41pp\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x15\n\rsection_flags\x18\x02 \x01(\r\x12\x13\n\x0bsection_CRC\x18\x03 \x03(\r\"\x9b\x02\n\x19\x43MsgClientAppInfoResponse\x12,\n\x04\x61pps\x18\x01 \x03(\x0b\x32\x1e.CMsgClientAppInfoResponse.App\x12\x14\n\x0c\x61pps_unknown\x18\x02 \x03(\r\x12\x14\n\x0c\x61pps_pending\x18\x03 \x01(\r\x1a\x99\x01\n\x03\x41pp\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x15\n\rchange_number\x18\x02 \x01(\r\x12\x38\n\x08sections\x18\x03 \x03(\x0b\x32&.CMsgClientAppInfoResponse.App.Section\x1a\x31\n\x07Section\x12\x12\n\nsection_id\x18\x01 \x01(\r\x12\x12\n\nsection_kv\x18\x02 \x01(\x0c:\x08\x80\xb5\x18\x00\x88\xb5\x18\x00\"K\n\x1c\x43MsgClientPackageInfoRequest\x12\x13\n\x0bpackage_ids\x18\x01 \x03(\r\x12\x16\n\x0emeta_data_only\x18\x02 \x01(\x08\"\xe0\x01\n\x1d\x43MsgClientPackageInfoResponse\x12\x38\n\x08packages\x18\x01 \x03(\x0b\x32&.CMsgClientPackageInfoResponse.Package\x12\x18\n\x10packages_unknown\x18\x02 \x03(\r\x12\x18\n\x10packages_pending\x18\x03 \x01(\r\x1aQ\n\x07Package\x12\x12\n\npackage_id\x18\x01 \x01(\r\x12\x15\n\rchange_number\x18\x02 \x01(\r\x12\x0b\n\x03sha\x18\x03 \x01(\x0c\x12\x0e\n\x06\x62uffer\x18\x04 \x01(\x0c\"\xc0\x01\n!CMsgClientPICSChangesSinceRequest\x12\x1b\n\x13since_change_number\x18\x01 \x01(\r\x12\x1d\n\x15send_app_info_changes\x18\x02 \x01(\x08\x12!\n\x19send_package_info_changes\x18\x03 \x01(\x08\x12\x1b\n\x13num_app_info_cached\x18\x04 \x01(\r\x12\x1f\n\x17num_package_info_cached\x18\x05 \x01(\r\"\xe5\x03\n\"CMsgClientPICSChangesSinceResponse\x12\x1d\n\x15\x63urrent_change_number\x18\x01 \x01(\r\x12\x1b\n\x13since_change_number\x18\x02 \x01(\r\x12\x19\n\x11\x66orce_full_update\x18\x03 \x01(\x08\x12J\n\x0fpackage_changes\x18\x04 \x03(\x0b\x32\x31.CMsgClientPICSChangesSinceResponse.PackageChange\x12\x42\n\x0b\x61pp_changes\x18\x05 \x03(\x0b\x32-.CMsgClientPICSChangesSinceResponse.AppChange\x12\x1d\n\x15\x66orce_full_app_update\x18\x06 \x01(\x08\x12!\n\x19\x66orce_full_package_update\x18\x07 \x01(\x08\x1aN\n\rPackageChange\x12\x11\n\tpackageid\x18\x01 \x01(\r\x12\x15\n\rchange_number\x18\x02 \x01(\r\x12\x13\n\x0bneeds_token\x18\x03 \x01(\x08\x1a\x46\n\tAppChange\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x15\n\rchange_number\x18\x02 \x01(\r\x12\x13\n\x0bneeds_token\x18\x03 \x01(\x08\"\xca\x02\n CMsgClientPICSProductInfoRequest\x12?\n\x08packages\x18\x01 \x03(\x0b\x32-.CMsgClientPICSProductInfoRequest.PackageInfo\x12\x37\n\x04\x61pps\x18\x02 \x03(\x0b\x32).CMsgClientPICSProductInfoRequest.AppInfo\x12\x16\n\x0emeta_data_only\x18\x03 \x01(\x08\x12\x17\n\x0fnum_prev_failed\x18\x04 \x01(\r\x1a\x43\n\x07\x41ppInfo\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x02 \x01(\x04\x12\x13\n\x0bonly_public\x18\x03 \x01(\x08\x1a\x36\n\x0bPackageInfo\x12\x11\n\tpackageid\x18\x01 \x01(\r\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x02 \x01(\x04\"\xbd\x04\n!CMsgClientPICSProductInfoResponse\x12\x38\n\x04\x61pps\x18\x01 \x03(\x0b\x32*.CMsgClientPICSProductInfoResponse.AppInfo\x12\x16\n\x0eunknown_appids\x18\x02 \x03(\r\x12@\n\x08packages\x18\x03 \x03(\x0b\x32..CMsgClientPICSProductInfoResponse.PackageInfo\x12\x1a\n\x12unknown_packageids\x18\x04 \x03(\r\x12\x16\n\x0emeta_data_only\x18\x05 \x01(\x08\x12\x18\n\x10response_pending\x18\x06 \x01(\x08\x12\x15\n\rhttp_min_size\x18\x07 \x01(\r\x12\x11\n\thttp_host\x18\x08 \x01(\t\x1a\x86\x01\n\x07\x41ppInfo\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x15\n\rchange_number\x18\x02 \x01(\r\x12\x15\n\rmissing_token\x18\x03 \x01(\x08\x12\x0b\n\x03sha\x18\x04 \x01(\x0c\x12\x0e\n\x06\x62uffer\x18\x05 \x01(\x0c\x12\x13\n\x0bonly_public\x18\x06 \x01(\x08\x12\x0c\n\x04size\x18\x07 \x01(\r\x1ay\n\x0bPackageInfo\x12\x11\n\tpackageid\x18\x01 \x01(\r\x12\x15\n\rchange_number\x18\x02 \x01(\r\x12\x15\n\rmissing_token\x18\x03 \x01(\x08\x12\x0b\n\x03sha\x18\x04 \x01(\x0c\x12\x0e\n\x06\x62uffer\x18\x05 \x01(\x0c\x12\x0c\n\x04size\x18\x06 \x01(\r:\x08\x80\xb5\x18\x00\x88\xb5\x18\x00\"F\n CMsgClientPICSAccessTokenRequest\x12\x12\n\npackageids\x18\x01 \x03(\r\x12\x0e\n\x06\x61ppids\x18\x02 \x03(\r\"\xdf\x02\n!CMsgClientPICSAccessTokenResponse\x12N\n\x15package_access_tokens\x18\x01 \x03(\x0b\x32/.CMsgClientPICSAccessTokenResponse.PackageToken\x12\x1d\n\x15package_denied_tokens\x18\x02 \x03(\r\x12\x46\n\x11\x61pp_access_tokens\x18\x03 \x03(\x0b\x32+.CMsgClientPICSAccessTokenResponse.AppToken\x12\x19\n\x11\x61pp_denied_tokens\x18\x04 \x03(\r\x1a\x37\n\x0cPackageToken\x12\x11\n\tpackageid\x18\x01 \x01(\r\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x02 \x01(\x04\x1a/\n\x08\x41ppToken\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x02 \x01(\x04\"D\n\x1a\x43MsgClientUFSGetUGCDetails\x12&\n\x08hcontent\x18\x01 \x01(\x06:\x14\x31\x38\x34\x34\x36\x37\x34\x34\x30\x37\x33\x37\x30\x39\x35\x35\x31\x36\x31\x35\"\xe5\x01\n\"CMsgClientUFSGetUGCDetailsResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x0b\n\x03url\x18\x02 \x01(\t\x12\x0e\n\x06\x61pp_id\x18\x03 \x01(\r\x12\x10\n\x08\x66ilename\x18\x04 \x01(\t\x12\x17\n\x0fsteamid_creator\x18\x05 \x01(\x06\x12\x11\n\tfile_size\x18\x06 \x01(\r\x12\x1c\n\x14\x63ompressed_file_size\x18\x07 \x01(\r\x12\x17\n\x0frangecheck_host\x18\x08 \x01(\t\x12\x19\n\x11\x66ile_encoded_sha1\x18\t \x01(\t\"C\n\x1e\x43MsgClientUFSGetSingleFileInfo\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x11\n\tfile_name\x18\x02 \x01(\t\"\xb8\x01\n&CMsgClientUFSGetSingleFileInfoResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x0e\n\x06\x61pp_id\x18\x02 \x01(\r\x12\x11\n\tfile_name\x18\x03 \x01(\t\x12\x10\n\x08sha_file\x18\x04 \x01(\x0c\x12\x12\n\ntime_stamp\x18\x05 \x01(\x04\x12\x15\n\rraw_file_size\x18\x06 \x01(\r\x12\x1a\n\x12is_explicit_delete\x18\x07 \x01(\x08\";\n\x16\x43MsgClientUFSShareFile\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x11\n\tfile_name\x18\x02 \x01(\t\"\\\n\x1e\x43MsgClientUFSShareFileResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12&\n\x08hcontent\x18\x02 \x01(\x06:\x14\x31\x38\x34\x34\x36\x37\x34\x34\x30\x37\x33\x37\x30\x39\x35\x35\x31\x36\x31\x35\"=\n\x15\x43MsgClientNewLoginKey\x12\x11\n\tunique_id\x18\x01 \x01(\r\x12\x11\n\tlogin_key\x18\x02 \x01(\t\"2\n\x1d\x43MsgClientNewLoginKeyAccepted\x12\x11\n\tunique_id\x18\x01 \x01(\r\"3\n\x1b\x43MsgClientAMGetClanOfficers\x12\x14\n\x0csteamid_clan\x18\x01 \x01(\x06\"f\n#CMsgClientAMGetClanOfficersResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x14\n\x0csteamid_clan\x18\x02 \x01(\x06\x12\x15\n\rofficer_count\x18\x03 \x01(\x05\"\x90\x01\n!CMsgClientAMGetPersonaNameHistory\x12\x10\n\x08id_count\x18\x01 \x01(\x05\x12:\n\x03Ids\x18\x02 \x03(\x0b\x32-.CMsgClientAMGetPersonaNameHistory.IdInstance\x1a\x1d\n\nIdInstance\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\"\xc3\x02\n)CMsgClientAMGetPersonaNameHistoryResponse\x12O\n\tresponses\x18\x02 \x03(\x0b\x32<.CMsgClientAMGetPersonaNameHistoryResponse.NameTableInstance\x1a\xc4\x01\n\x11NameTableInstance\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x0f\n\x07steamid\x18\x02 \x01(\x06\x12X\n\x05names\x18\x03 \x03(\x0b\x32I.CMsgClientAMGetPersonaNameHistoryResponse.NameTableInstance.NameInstance\x1a\x30\n\x0cNameInstance\x12\x12\n\nname_since\x18\x01 \x01(\x07\x12\x0c\n\x04name\x18\x02 \x01(\t\"E\n\x1e\x43MsgClientDeregisterWithServer\x12\x13\n\x0b\x65servertype\x18\x01 \x01(\r\x12\x0e\n\x06\x61pp_id\x18\x02 \x01(\r\"\x8e\x04\n\x13\x43MsgClientClanState\x12\x14\n\x0csteamid_clan\x18\x01 \x01(\x06\x12\x17\n\x0fm_unStatusFlags\x18\x02 \x01(\r\x12\x1a\n\x12\x63lan_account_flags\x18\x03 \x01(\r\x12\x30\n\tname_info\x18\x04 \x01(\x0b\x32\x1d.CMsgClientClanState.NameInfo\x12\x34\n\x0buser_counts\x18\x05 \x01(\x0b\x32\x1f.CMsgClientClanState.UserCounts\x12*\n\x06\x65vents\x18\x06 \x03(\x0b\x32\x1a.CMsgClientClanState.Event\x12\x31\n\rannouncements\x18\x07 \x03(\x0b\x32\x1a.CMsgClientClanState.Event\x1a\x31\n\x08NameInfo\x12\x11\n\tclan_name\x18\x01 \x01(\t\x12\x12\n\nsha_avatar\x18\x02 \x01(\x0c\x1aP\n\nUserCounts\x12\x0f\n\x07members\x18\x01 \x01(\r\x12\x0e\n\x06online\x18\x02 \x01(\r\x12\x10\n\x08\x63hatting\x18\x03 \x01(\r\x12\x0f\n\x07in_game\x18\x04 \x01(\r\x1a`\n\x05\x45vent\x12\x0b\n\x03gid\x18\x01 \x01(\x06\x12\x12\n\nevent_time\x18\x02 \x01(\r\x12\x10\n\x08headline\x18\x03 \x01(\t\x12\x0f\n\x07game_id\x18\x04 \x01(\x06\x12\x13\n\x0bjust_posted\x18\x05 \x01(\x08\"r\n\x13\x43MsgClientFriendMsg\x12\x0f\n\x07steamid\x18\x01 \x01(\x06\x12\x17\n\x0f\x63hat_entry_type\x18\x02 \x01(\x05\x12\x0f\n\x07message\x18\x03 \x01(\x0c\x12 \n\x18rtime32_server_timestamp\x18\x04 \x01(\x07\"\x9d\x01\n\x1b\x43MsgClientFriendMsgIncoming\x12\x14\n\x0csteamid_from\x18\x01 \x01(\x06\x12\x17\n\x0f\x63hat_entry_type\x18\x02 \x01(\x05\x12\x1c\n\x14\x66rom_limited_account\x18\x03 \x01(\x08\x12\x0f\n\x07message\x18\x04 \x01(\x0c\x12 \n\x18rtime32_server_timestamp\x18\x05 \x01(\x07\"R\n\x13\x43MsgClientAddFriend\x12\x16\n\x0esteamid_to_add\x18\x01 \x01(\x06\x12#\n\x1b\x61\x63\x63ountname_or_email_to_add\x18\x02 \x01(\t\"e\n\x1b\x43MsgClientAddFriendResponse\x12\x12\n\x07\x65result\x18\x01 \x01(\x05:\x01\x32\x12\x16\n\x0esteam_id_added\x18\x02 \x01(\x06\x12\x1a\n\x12persona_name_added\x18\x03 \x01(\t\"*\n\x16\x43MsgClientRemoveFriend\x12\x10\n\x08\x66riendid\x18\x01 \x01(\x06\"6\n\x14\x43MsgClientHideFriend\x12\x10\n\x08\x66riendid\x18\x01 \x01(\x06\x12\x0c\n\x04hide\x18\x02 \x01(\x08\x42\x05H\x01\x80\x01\x00')
   ,
-  dependencies=[steammessages_base_pb2.DESCRIPTOR,encrypted_app_ticket_pb2.DESCRIPTOR,])
+  dependencies=[steammessages__base__pb2.DESCRIPTOR,encrypted__app__ticket__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -43,6 +44,7 @@ _CMSGCLIENTHEARTBEAT = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -80,6 +82,7 @@ _CMSGCLIENTUDSP2PSESSIONSTARTED = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -173,6 +176,7 @@ _CMSGCLIENTUDSP2PSESSIONENDED = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -217,6 +221,7 @@ _CMSGCLIENTREGISTERAUTHTICKETWITHCM = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -296,6 +301,7 @@ _CMSGCLIENTTICKETAUTHCOMPLETE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -626,6 +632,13 @@ _CMSGCLIENTLOGON = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='supports_rate_limit_response', full_name='CMsgClientLogon.supports_rate_limit_response', index=45,
+      number=102, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -634,11 +647,12 @@ _CMSGCLIENTLOGON = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
   serialized_start=767,
-  serialized_end=2011,
+  serialized_end=2049,
 )
 
 
@@ -811,11 +825,12 @@ _CMSGCLIENTLOGONRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2014,
-  serialized_end=2666,
+  serialized_start=2052,
+  serialized_end=2704,
 )
 
 
@@ -834,11 +849,12 @@ _CMSGCLIENTREQUESTWEBAPIAUTHENTICATEUSERNONCE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2668,
-  serialized_end=2714,
+  serialized_start=2706,
+  serialized_end=2752,
 )
 
 
@@ -871,11 +887,12 @@ _CMSGCLIENTREQUESTWEBAPIAUTHENTICATEUSERNONCERESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2716,
-  serialized_end=2830,
+  serialized_start=2754,
+  serialized_end=2868,
 )
 
 
@@ -894,11 +911,12 @@ _CMSGCLIENTLOGOFF = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2832,
-  serialized_end=2850,
+  serialized_start=2870,
+  serialized_end=2888,
 )
 
 
@@ -924,11 +942,12 @@ _CMSGCLIENTLOGGEDOFF = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2852,
-  serialized_end=2893,
+  serialized_start=2890,
+  serialized_end=2931,
 )
 
 
@@ -961,11 +980,12 @@ _CMSGCLIENTCMLIST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2895,
-  serialized_end=2953,
+  serialized_start=2933,
+  serialized_end=2991,
 )
 
 
@@ -1012,11 +1032,12 @@ _CMSGCLIENTP2PCONNECTIONINFO = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2955,
-  serialized_end=3064,
+  serialized_start=2993,
+  serialized_end=3102,
 )
 
 
@@ -1063,11 +1084,12 @@ _CMSGCLIENTP2PCONNECTIONFAILINFO = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3066,
-  serialized_end=3188,
+  serialized_start=3104,
+  serialized_end=3226,
 )
 
 
@@ -1093,11 +1115,12 @@ _CMSGCLIENTGETAPPOWNERSHIPTICKET = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3190,
-  serialized_end=3239,
+  serialized_start=3228,
+  serialized_end=3277,
 )
 
 
@@ -1137,11 +1160,12 @@ _CMSGCLIENTGETAPPOWNERSHIPTICKETRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3241,
-  serialized_end=3334,
+  serialized_start=3279,
+  serialized_end=3372,
 )
 
 
@@ -1167,11 +1191,12 @@ _CMSGCLIENTSESSIONTOKEN = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3336,
-  serialized_end=3375,
+  serialized_start=3374,
+  serialized_end=3413,
 )
 
 
@@ -1204,11 +1229,12 @@ _CMSGCLIENTGAMECONNECTTOKENS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3377,
-  serialized_end=3454,
+  serialized_start=3415,
+  serialized_end=3492,
 )
 
 
@@ -1276,11 +1302,12 @@ _CMSGGSSERVERTYPE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3457,
-  serialized_end=3622,
+  serialized_start=3495,
+  serialized_end=3660,
 )
 
 
@@ -1306,11 +1333,12 @@ _CMSGGSSTATUSREPLY = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3624,
-  serialized_end=3662,
+  serialized_start=3662,
+  serialized_end=3700,
 )
 
 
@@ -1350,11 +1378,12 @@ _CMSGGSPLAYERLIST_PLAYER = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3727,
-  serialized_end=3787,
+  serialized_start=3765,
+  serialized_end=3825,
 )
 
 _CMSGGSPLAYERLIST = _descriptor.Descriptor(
@@ -1379,11 +1408,12 @@ _CMSGGSPLAYERLIST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3664,
-  serialized_end=3787,
+  serialized_start=3702,
+  serialized_end=3825,
 )
 
 
@@ -1423,11 +1453,12 @@ _CMSGGSUSERPLAYING = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3789,
-  serialized_end=3860,
+  serialized_start=3827,
+  serialized_end=3898,
 )
 
 
@@ -1453,11 +1484,12 @@ _CMSGGSDISCONNECTNOTICE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3862,
-  serialized_end=3904,
+  serialized_start=3900,
+  serialized_end=3942,
 )
 
 
@@ -1552,6 +1584,62 @@ _CMSGCLIENTGAMESPLAYED_GAMEPLAYED = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='vr_hmd_vendor', full_name='CMsgClientGamesPlayed.GamePlayed.vr_hmd_vendor', index=12,
+      number=13, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='vr_hmd_model', full_name='CMsgClientGamesPlayed.GamePlayed.vr_hmd_model', index=13,
+      number=14, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='launch_option_type', full_name='CMsgClientGamesPlayed.GamePlayed.launch_option_type', index=14,
+      number=15, type=13, cpp_type=3, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='primary_controller_type', full_name='CMsgClientGamesPlayed.GamePlayed.primary_controller_type', index=15,
+      number=16, type=5, cpp_type=1, label=1,
+      has_default_value=True, default_value=-1,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='primary_steam_controller_serial', full_name='CMsgClientGamesPlayed.GamePlayed.primary_steam_controller_serial', index=16,
+      number=17, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='total_steam_controller_count', full_name='CMsgClientGamesPlayed.GamePlayed.total_steam_controller_count', index=17,
+      number=18, type=13, cpp_type=3, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='total_non_steam_controller_count', full_name='CMsgClientGamesPlayed.GamePlayed.total_non_steam_controller_count', index=18,
+      number=19, type=13, cpp_type=3, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='controller_workshop_file_id', full_name='CMsgClientGamesPlayed.GamePlayed.controller_workshop_file_id', index=19,
+      number=20, type=4, cpp_type=4, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -1560,11 +1648,12 @@ _CMSGCLIENTGAMESPLAYED_GAMEPLAYED = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4014,
-  serialized_end=4280,
+  serialized_start=4052,
+  serialized_end=4598,
 )
 
 _CMSGCLIENTGAMESPLAYED = _descriptor.Descriptor(
@@ -1596,11 +1685,12 @@ _CMSGCLIENTGAMESPLAYED = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3907,
-  serialized_end=4280,
+  serialized_start=3945,
+  serialized_end=4598,
 )
 
 
@@ -1633,11 +1723,12 @@ _CMSGGSAPPROVE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4282,
-  serialized_end=4339,
+  serialized_start=4600,
+  serialized_end=4657,
 )
 
 
@@ -1677,11 +1768,12 @@ _CMSGGSDENY = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4341,
-  serialized_end=4414,
+  serialized_start=4659,
+  serialized_end=4732,
 )
 
 
@@ -1714,11 +1806,12 @@ _CMSGGSKICK = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4416,
-  serialized_end=4468,
+  serialized_start=4734,
+  serialized_end=4786,
 )
 
 
@@ -1779,11 +1872,12 @@ _CMSGCLIENTAUTHLIST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4471,
-  serialized_end=4653,
+  serialized_start=4789,
+  serialized_end=4971,
 )
 
 
@@ -1823,11 +1917,12 @@ _CMSGCLIENTAUTHLISTACK = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4655,
-  serialized_end=4741,
+  serialized_start=4973,
+  serialized_end=5059,
 )
 
 
@@ -1860,11 +1955,12 @@ _CMSGCLIENTFRIENDSLIST_FRIEND = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4921,
-  serialized_end=4978,
+  serialized_start=5239,
+  serialized_end=5296,
 )
 
 _CMSGCLIENTFRIENDSLIST = _descriptor.Descriptor(
@@ -1917,11 +2013,12 @@ _CMSGCLIENTFRIENDSLIST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4744,
-  serialized_end=4978,
+  serialized_start=5062,
+  serialized_end=5296,
 )
 
 
@@ -1954,11 +2051,12 @@ _CMSGCLIENTFRIENDSGROUPSLIST_FRIENDGROUP = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5190,
-  serialized_end=5243,
+  serialized_start=5508,
+  serialized_end=5561,
 )
 
 _CMSGCLIENTFRIENDSGROUPSLIST_FRIENDGROUPSMEMBERSHIP = _descriptor.Descriptor(
@@ -1990,11 +2088,12 @@ _CMSGCLIENTFRIENDSGROUPSLIST_FRIENDGROUPSMEMBERSHIP = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5245,
-  serialized_end=5306,
+  serialized_start=5563,
+  serialized_end=5624,
 )
 
 _CMSGCLIENTFRIENDSGROUPSLIST = _descriptor.Descriptor(
@@ -2040,11 +2139,12 @@ _CMSGCLIENTFRIENDSGROUPSLIST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4981,
-  serialized_end=5306,
+  serialized_start=5299,
+  serialized_end=5624,
 )
 
 
@@ -2077,11 +2177,12 @@ _CMSGCLIENTPLAYERNICKNAMELIST_PLAYERNICKNAME = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5444,
-  serialized_end=5495,
+  serialized_start=5762,
+  serialized_end=5813,
 )
 
 _CMSGCLIENTPLAYERNICKNAMELIST = _descriptor.Descriptor(
@@ -2120,11 +2221,12 @@ _CMSGCLIENTPLAYERNICKNAMELIST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5309,
-  serialized_end=5495,
+  serialized_start=5627,
+  serialized_end=5813,
 )
 
 
@@ -2157,11 +2259,12 @@ _CMSGCLIENTSETPLAYERNICKNAME = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5497,
-  serialized_end=5561,
+  serialized_start=5815,
+  serialized_end=5879,
 )
 
 
@@ -2187,11 +2290,12 @@ _CMSGCLIENTSETPLAYERNICKNAMERESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5563,
-  serialized_end=5617,
+  serialized_start=5881,
+  serialized_end=5935,
 )
 
 
@@ -2286,6 +2390,34 @@ _CMSGCLIENTLICENSELIST_LICENSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='initial_period', full_name='CMsgClientLicenseList.License.initial_period', index=12,
+      number=13, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='initial_time_unit', full_name='CMsgClientLicenseList.License.initial_time_unit', index=13,
+      number=14, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='renewal_period', full_name='CMsgClientLicenseList.License.renewal_period', index=14,
+      number=15, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='renewal_time_unit', full_name='CMsgClientLicenseList.License.renewal_time_unit', index=15,
+      number=16, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -2294,11 +2426,12 @@ _CMSGCLIENTLICENSELIST_LICENSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5716,
-  serialized_end=5995,
+  serialized_start=6034,
+  serialized_end=6415,
 )
 
 _CMSGCLIENTLICENSELIST = _descriptor.Descriptor(
@@ -2330,11 +2463,12 @@ _CMSGCLIENTLICENSELIST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5620,
-  serialized_end=5995,
+  serialized_start=5938,
+  serialized_end=6415,
 )
 
 
@@ -2388,11 +2522,12 @@ _CMSGCLIENTLBSSETSCORE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5997,
-  serialized_end=6121,
+  serialized_start=6417,
+  serialized_end=6541,
 )
 
 
@@ -2446,11 +2581,12 @@ _CMSGCLIENTLBSSETSCORERESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6124,
-  serialized_end=6286,
+  serialized_start=6544,
+  serialized_end=6706,
 )
 
 
@@ -2490,11 +2626,12 @@ _CMSGCLIENTLBSSETUGC = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6288,
-  serialized_end=6365,
+  serialized_start=6708,
+  serialized_end=6785,
 )
 
 
@@ -2520,11 +2657,12 @@ _CMSGCLIENTLBSSETUGCRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6367,
-  serialized_end=6416,
+  serialized_start=6787,
+  serialized_end=6836,
 )
 
 
@@ -2578,11 +2716,12 @@ _CMSGCLIENTLBSFINDORCREATELB = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6419,
-  serialized_end=6586,
+  serialized_start=6839,
+  serialized_end=7006,
 )
 
 
@@ -2643,11 +2782,12 @@ _CMSGCLIENTLBSFINDORCREATELBRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6589,
-  serialized_end=6802,
+  serialized_start=7009,
+  serialized_end=7222,
 )
 
 
@@ -2708,11 +2848,12 @@ _CMSGCLIENTLBSGETLBENTRIES = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6805,
-  serialized_end=6964,
+  serialized_start=7225,
+  serialized_end=7384,
 )
 
 
@@ -2766,11 +2907,12 @@ _CMSGCLIENTLBSGETLBENTRIESRESPONSE_ENTRY = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7116,
-  serialized_end=7215,
+  serialized_start=7536,
+  serialized_end=7635,
 )
 
 _CMSGCLIENTLBSGETLBENTRIESRESPONSE = _descriptor.Descriptor(
@@ -2809,11 +2951,12 @@ _CMSGCLIENTLBSGETLBENTRIESRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6967,
-  serialized_end=7215,
+  serialized_start=7387,
+  serialized_end=7635,
 )
 
 
@@ -2839,93 +2982,72 @@ _CMSGCLIENTACCOUNTINFO = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='salt_password', full_name='CMsgClientAccountInfo.salt_password', index=2,
-      number=3, type=12, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b(""),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='sha_digest_Password', full_name='CMsgClientAccountInfo.sha_digest_Password', index=3,
-      number=4, type=12, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b(""),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='count_authed_computers', full_name='CMsgClientAccountInfo.count_authed_computers', index=4,
+      name='count_authed_computers', full_name='CMsgClientAccountInfo.count_authed_computers', index=2,
       number=5, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='locked_with_ipt', full_name='CMsgClientAccountInfo.locked_with_ipt', index=5,
-      number=6, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='account_flags', full_name='CMsgClientAccountInfo.account_flags', index=6,
+      name='account_flags', full_name='CMsgClientAccountInfo.account_flags', index=3,
       number=7, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='facebook_id', full_name='CMsgClientAccountInfo.facebook_id', index=7,
+      name='facebook_id', full_name='CMsgClientAccountInfo.facebook_id', index=4,
       number=8, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='facebook_name', full_name='CMsgClientAccountInfo.facebook_name', index=8,
+      name='facebook_name', full_name='CMsgClientAccountInfo.facebook_name', index=5,
       number=9, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='steam_guard_provider', full_name='CMsgClientAccountInfo.steam_guard_provider', index=9,
-      number=10, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='steamguard_require_code_default', full_name='CMsgClientAccountInfo.steamguard_require_code_default', index=10,
-      number=11, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='steamguard_show_providers', full_name='CMsgClientAccountInfo.steamguard_show_providers', index=11,
-      number=12, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='steamguard_can_use_mobile_provider', full_name='CMsgClientAccountInfo.steamguard_can_use_mobile_provider', index=12,
-      number=13, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='steamguard_notify_newmachines', full_name='CMsgClientAccountInfo.steamguard_notify_newmachines', index=13,
+      name='steamguard_notify_newmachines', full_name='CMsgClientAccountInfo.steamguard_notify_newmachines', index=6,
       number=14, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='steamguard_machine_name_user_chosen', full_name='CMsgClientAccountInfo.steamguard_machine_name_user_chosen', index=14,
+      name='steamguard_machine_name_user_chosen', full_name='CMsgClientAccountInfo.steamguard_machine_name_user_chosen', index=7,
       number=15, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_phone_verified', full_name='CMsgClientAccountInfo.is_phone_verified', index=8,
+      number=16, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='two_factor_state', full_name='CMsgClientAccountInfo.two_factor_state', index=9,
+      number=17, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_phone_identifying', full_name='CMsgClientAccountInfo.is_phone_identifying', index=10,
+      number=18, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_phone_needing_reverify', full_name='CMsgClientAccountInfo.is_phone_needing_reverify', index=11,
+      number=19, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2937,11 +3059,12 @@ _CMSGCLIENTACCOUNTINFO = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7218,
-  serialized_end=7693,
+  serialized_start=7638,
+  serialized_end=8004,
 )
 
 
@@ -2981,11 +3104,12 @@ _CMSGCLIENTAPPMINUTESPLAYEDDATA_APPMINUTESPLAYEDDATA = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7808,
-  serialized_end=7887,
+  serialized_start=8119,
+  serialized_end=8198,
 )
 
 _CMSGCLIENTAPPMINUTESPLAYEDDATA = _descriptor.Descriptor(
@@ -3010,11 +3134,12 @@ _CMSGCLIENTAPPMINUTESPLAYEDDATA = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7696,
-  serialized_end=7887,
+  serialized_start=8007,
+  serialized_end=8198,
 )
 
 
@@ -3061,11 +3186,12 @@ _CMSGCLIENTISLIMITEDACCOUNT = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7890,
-  serialized_end=8060,
+  serialized_start=8201,
+  serialized_end=8371,
 )
 
 
@@ -3098,11 +3224,12 @@ _CMSGCLIENTREQUESTFRIENDDATA = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8062,
-  serialized_end=8141,
+  serialized_start=8373,
+  serialized_end=8452,
 )
 
 
@@ -3148,6 +3275,13 @@ _CMSGCLIENTCHANGESTATUS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='persona_state_flags', full_name='CMsgClientChangeStatus.persona_state_flags', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -3156,11 +3290,12 @@ _CMSGCLIENTCHANGESTATUS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8144,
-  serialized_end=8296,
+  serialized_start=8455,
+  serialized_end=8639,
 )
 
 
@@ -3193,11 +3328,12 @@ _CMSGPERSONACHANGERESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8298,
-  serialized_end=8362,
+  serialized_start=8641,
+  serialized_end=8705,
 )
 
 
@@ -3370,11 +3506,12 @@ _CMSGCLIENTPERSONASTATE_FRIEND = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8463,
-  serialized_end=8980,
+  serialized_start=8806,
+  serialized_end=9323,
 )
 
 _CMSGCLIENTPERSONASTATE = _descriptor.Descriptor(
@@ -3406,11 +3543,12 @@ _CMSGCLIENTPERSONASTATE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8365,
-  serialized_end=8980,
+  serialized_start=8708,
+  serialized_end=9323,
 )
 
 
@@ -3436,11 +3574,12 @@ _CMSGCLIENTFRIENDPROFILEINFO = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8982,
-  serialized_end=9035,
+  serialized_start=9325,
+  serialized_end=9378,
 )
 
 
@@ -3522,11 +3661,12 @@ _CMSGCLIENTFRIENDPROFILEINFORESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9038,
-  serialized_end=9256,
+  serialized_start=9381,
+  serialized_end=9599,
 )
 
 
@@ -3566,11 +3706,12 @@ _CMSGCLIENTSERVERLIST_SERVER = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9330,
-  serialized_end=9399,
+  serialized_start=9673,
+  serialized_end=9742,
 )
 
 _CMSGCLIENTSERVERLIST = _descriptor.Descriptor(
@@ -3595,11 +3736,12 @@ _CMSGCLIENTSERVERLIST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9259,
-  serialized_end=9399,
+  serialized_start=9602,
+  serialized_end=9742,
 )
 
 
@@ -3632,11 +3774,12 @@ _CMSGCLIENTREQUESTEDCLIENTSTATS_STATSTOSEND = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9504,
-  serialized_end=9569,
+  serialized_start=9847,
+  serialized_end=9912,
 )
 
 _CMSGCLIENTREQUESTEDCLIENTSTATS = _descriptor.Descriptor(
@@ -3661,11 +3804,12 @@ _CMSGCLIENTREQUESTEDCLIENTSTATS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9402,
-  serialized_end=9569,
+  serialized_start=9745,
+  serialized_end=9912,
 )
 
 
@@ -3726,11 +3870,12 @@ _CMSGCLIENTSTAT2_STATDETAIL = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9641,
-  serialized_end=9764,
+  serialized_start=9984,
+  serialized_end=10107,
 )
 
 _CMSGCLIENTSTAT2 = _descriptor.Descriptor(
@@ -3755,11 +3900,12 @@ _CMSGCLIENTSTAT2 = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9572,
-  serialized_end=9764,
+  serialized_start=9915,
+  serialized_end=10107,
 )
 
 
@@ -3834,11 +3980,12 @@ _CMSGCLIENTMMSCREATELOBBY = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9767,
-  serialized_end=9953,
+  serialized_start=10110,
+  serialized_end=10296,
 )
 
 
@@ -3878,11 +4025,12 @@ _CMSGCLIENTMMSCREATELOBBYRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9955,
-  serialized_end=10049,
+  serialized_start=10298,
+  serialized_end=10392,
 )
 
 
@@ -3922,11 +4070,12 @@ _CMSGCLIENTMMSJOINLOBBY = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10051,
-  serialized_end=10137,
+  serialized_start=10394,
+  serialized_end=10480,
 )
 
 
@@ -3966,11 +4115,12 @@ _CMSGCLIENTMMSJOINLOBBYRESPONSE_MEMBER = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10409,
-  serialized_end=10475,
+  serialized_start=10752,
+  serialized_end=10818,
 )
 
 _CMSGCLIENTMMSJOINLOBBYRESPONSE = _descriptor.Descriptor(
@@ -4051,11 +4201,12 @@ _CMSGCLIENTMMSJOINLOBBYRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10140,
-  serialized_end=10475,
+  serialized_start=10483,
+  serialized_end=10818,
 )
 
 
@@ -4088,11 +4239,12 @@ _CMSGCLIENTMMSLEAVELOBBY = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10477,
-  serialized_end=10542,
+  serialized_start=10820,
+  serialized_end=10885,
 )
 
 
@@ -4132,11 +4284,12 @@ _CMSGCLIENTMMSLEAVELOBBYRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10544,
-  serialized_end=10637,
+  serialized_start=10887,
+  serialized_end=10980,
 )
 
 
@@ -4183,11 +4336,12 @@ _CMSGCLIENTMMSGETLOBBYLIST_FILTER = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10804,
-  serialized_end=10882,
+  serialized_start=11147,
+  serialized_end=11225,
 )
 
 _CMSGCLIENTMMSGETLOBBYLIST = _descriptor.Descriptor(
@@ -4240,11 +4394,12 @@ _CMSGCLIENTMMSGETLOBBYLIST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10640,
-  serialized_end=10882,
+  serialized_start=10983,
+  serialized_end=11225,
 )
 
 
@@ -4300,7 +4455,7 @@ _CMSGCLIENTMMSGETLOBBYLISTRESPONSE_LOBBY = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='distance', full_name='CMsgClientMMSGetLobbyListResponse.Lobby.distance', index=6,
       number=7, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -4319,11 +4474,12 @@ _CMSGCLIENTMMSGETLOBBYLISTRESPONSE_LOBBY = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11018,
-  serialized_end=11178,
+  serialized_start=11361,
+  serialized_end=11521,
 )
 
 _CMSGCLIENTMMSGETLOBBYLISTRESPONSE = _descriptor.Descriptor(
@@ -4362,11 +4518,12 @@ _CMSGCLIENTMMSGETLOBBYLISTRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10885,
-  serialized_end=11178,
+  serialized_start=11228,
+  serialized_end=11521,
 )
 
 
@@ -4434,11 +4591,12 @@ _CMSGCLIENTMMSSETLOBBYDATA = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11181,
-  serialized_end=11353,
+  serialized_start=11524,
+  serialized_end=11696,
 )
 
 
@@ -4478,11 +4636,12 @@ _CMSGCLIENTMMSSETLOBBYDATARESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11355,
-  serialized_end=11450,
+  serialized_start=11698,
+  serialized_end=11793,
 )
 
 
@@ -4515,11 +4674,12 @@ _CMSGCLIENTMMSGETLOBBYDATA = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11452,
-  serialized_end=11519,
+  serialized_start=11795,
+  serialized_end=11862,
 )
 
 
@@ -4559,11 +4719,12 @@ _CMSGCLIENTMMSLOBBYDATA_MEMBER = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10409,
-  serialized_end=10475,
+  serialized_start=10752,
+  serialized_end=10818,
 )
 
 _CMSGCLIENTMMSLOBBYDATA = _descriptor.Descriptor(
@@ -4651,11 +4812,12 @@ _CMSGCLIENTMMSLOBBYDATA = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11522,
-  serialized_end=11850,
+  serialized_start=11865,
+  serialized_end=12193,
 )
 
 
@@ -4702,11 +4864,12 @@ _CMSGCLIENTMMSSENDLOBBYCHATMSG = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11852,
-  serialized_end=11971,
+  serialized_start=12195,
+  serialized_end=12314,
 )
 
 
@@ -4753,11 +4916,12 @@ _CMSGCLIENTMMSLOBBYCHATMSG = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11973,
-  serialized_end=12088,
+  serialized_start=12316,
+  serialized_end=12431,
 )
 
 
@@ -4797,11 +4961,12 @@ _CMSGCLIENTMMSSETLOBBYOWNER = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12090,
-  serialized_end=12186,
+  serialized_start=12433,
+  serialized_end=12529,
 )
 
 
@@ -4841,11 +5006,12 @@ _CMSGCLIENTMMSSETLOBBYOWNERRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12188,
-  serialized_end=12284,
+  serialized_start=12531,
+  serialized_end=12627,
 )
 
 
@@ -4885,11 +5051,12 @@ _CMSGCLIENTMMSSETLOBBYLINKED = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12286,
-  serialized_end=12380,
+  serialized_start=12629,
+  serialized_end=12723,
 )
 
 
@@ -4943,11 +5110,12 @@ _CMSGCLIENTMMSSETLOBBYGAMESERVER = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12383,
-  serialized_end=12536,
+  serialized_start=12726,
+  serialized_end=12879,
 )
 
 
@@ -5001,11 +5169,12 @@ _CMSGCLIENTMMSLOBBYGAMESERVERSET = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12539,
-  serialized_end=12692,
+  serialized_start=12882,
+  serialized_end=13035,
 )
 
 
@@ -5052,11 +5221,12 @@ _CMSGCLIENTMMSUSERJOINEDLOBBY = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12694,
-  serialized_end=12809,
+  serialized_start=13037,
+  serialized_end=13152,
 )
 
 
@@ -5103,11 +5273,12 @@ _CMSGCLIENTMMSUSERLEFTLOBBY = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12811,
-  serialized_end=12924,
+  serialized_start=13154,
+  serialized_end=13267,
 )
 
 
@@ -5147,11 +5318,12 @@ _CMSGCLIENTMMSINVITETOLOBBY = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12926,
-  serialized_end=13025,
+  serialized_start=13269,
+  serialized_end=13368,
 )
 
 
@@ -5191,11 +5363,12 @@ _CMSGCLIENTUDSINVITETOGAME = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13027,
-  serialized_end=13123,
+  serialized_start=13370,
+  serialized_end=13466,
 )
 
 
@@ -5263,11 +5436,12 @@ _CMSGCLIENTCHATINVITE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13126,
-  serialized_end=13311,
+  serialized_start=13469,
+  serialized_end=13654,
 )
 
 
@@ -5335,11 +5509,12 @@ _CMSGCLIENTCONNECTIONSTATS_STATS_LOGON = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13466,
-  serialized_end=13665,
+  serialized_start=13809,
+  serialized_end=14008,
 )
 
 _CMSGCLIENTCONNECTIONSTATS_STATS_UDP = _descriptor.Descriptor(
@@ -5392,11 +5567,12 @@ _CMSGCLIENTCONNECTIONSTATS_STATS_UDP = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13667,
-  serialized_end=13780,
+  serialized_start=14010,
+  serialized_end=14123,
 )
 
 _CMSGCLIENTCONNECTIONSTATS_STATS_VCONN = _descriptor.Descriptor(
@@ -5554,11 +5730,12 @@ _CMSGCLIENTCONNECTIONSTATS_STATS_VCONN = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13783,
-  serialized_end=14348,
+  serialized_start=14126,
+  serialized_end=14691,
 )
 
 _CMSGCLIENTCONNECTIONSTATS = _descriptor.Descriptor(
@@ -5590,11 +5767,12 @@ _CMSGCLIENTCONNECTIONSTATS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13314,
-  serialized_end=14348,
+  serialized_start=13657,
+  serialized_end=14691,
 )
 
 
@@ -5627,11 +5805,12 @@ _CMSGCLIENTSERVERSAVAILABLE_SERVER_TYPES_AVAILABLE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14504,
-  serialized_end=14561,
+  serialized_start=14847,
+  serialized_end=14904,
 )
 
 _CMSGCLIENTSERVERSAVAILABLE = _descriptor.Descriptor(
@@ -5663,11 +5842,12 @@ _CMSGCLIENTSERVERSAVAILABLE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14351,
-  serialized_end=14561,
+  serialized_start=14694,
+  serialized_end=14904,
 )
 
 
@@ -5714,11 +5894,12 @@ _CMSGCLIENTGETUSERSTATS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14563,
-  serialized_end=14680,
+  serialized_start=14906,
+  serialized_end=15023,
 )
 
 
@@ -5751,11 +5932,12 @@ _CMSGCLIENTGETUSERSTATSRESPONSE_STATS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14923,
-  serialized_end=14967,
+  serialized_start=15266,
+  serialized_end=15310,
 )
 
 _CMSGCLIENTGETUSERSTATSRESPONSE_ACHIEVEMENT_BLOCKS = _descriptor.Descriptor(
@@ -5787,11 +5969,12 @@ _CMSGCLIENTGETUSERSTATSRESPONSE_ACHIEVEMENT_BLOCKS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14969,
-  serialized_end=15034,
+  serialized_start=15312,
+  serialized_end=15377,
 )
 
 _CMSGCLIENTGETUSERSTATSRESPONSE = _descriptor.Descriptor(
@@ -5851,11 +6034,12 @@ _CMSGCLIENTGETUSERSTATSRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14683,
-  serialized_end=15034,
+  serialized_start=15026,
+  serialized_end=15377,
 )
 
 
@@ -5888,11 +6072,12 @@ _CMSGCLIENTSTOREUSERSTATSRESPONSE_STATS_FAILED_VALIDATION = _descriptor.Descript
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15248,
-  serialized_end=15319,
+  serialized_start=15591,
+  serialized_end=15662,
 )
 
 _CMSGCLIENTSTOREUSERSTATSRESPONSE = _descriptor.Descriptor(
@@ -5945,11 +6130,12 @@ _CMSGCLIENTSTOREUSERSTATSRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15037,
-  serialized_end=15319,
+  serialized_start=15380,
+  serialized_end=15662,
 )
 
 
@@ -5982,11 +6168,12 @@ _CMSGCLIENTSTOREUSERSTATS2_STATS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14923,
-  serialized_end=14967,
+  serialized_start=15266,
+  serialized_end=15310,
 )
 
 _CMSGCLIENTSTOREUSERSTATS2 = _descriptor.Descriptor(
@@ -6046,11 +6233,12 @@ _CMSGCLIENTSTOREUSERSTATS2 = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15322,
-  serialized_end=15554,
+  serialized_start=15665,
+  serialized_end=15897,
 )
 
 
@@ -6083,11 +6271,12 @@ _CMSGCLIENTSTATSUPDATED_UPDATED_STATS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15699,
-  serialized_end=15751,
+  serialized_start=16042,
+  serialized_end=16094,
 )
 
 _CMSGCLIENTSTATSUPDATED = _descriptor.Descriptor(
@@ -6133,11 +6322,12 @@ _CMSGCLIENTSTATSUPDATED = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15557,
-  serialized_end=15751,
+  serialized_start=15900,
+  serialized_end=16094,
 )
 
 
@@ -6170,11 +6360,12 @@ _CMSGCLIENTSTOREUSERSTATS_STATS_TO_STORE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15889,
-  serialized_end=15942,
+  serialized_start=16232,
+  serialized_end=16285,
 )
 
 _CMSGCLIENTSTOREUSERSTATS = _descriptor.Descriptor(
@@ -6213,11 +6404,12 @@ _CMSGCLIENTSTOREUSERSTATS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15754,
-  serialized_end=15942,
+  serialized_start=16097,
+  serialized_end=16285,
 )
 
 
@@ -6236,11 +6428,12 @@ _CMSGCLIENTGETCLIENTDETAILS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15944,
-  serialized_end=15972,
+  serialized_start=16287,
+  serialized_end=16315,
 )
 
 
@@ -6266,11 +6459,12 @@ _CMSGCLIENTREPORTOVERLAYDETOURFAILURE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15974,
-  serialized_end=16037,
+  serialized_start=16317,
+  serialized_end=16380,
 )
 
 
@@ -6310,11 +6504,12 @@ _CMSGCLIENTGETCLIENTDETAILSRESPONSE_GAME = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16292,
-  serialized_end=16359,
+  serialized_start=16635,
+  serialized_end=16702,
 )
 
 _CMSGCLIENTGETCLIENTDETAILSRESPONSE = _descriptor.Descriptor(
@@ -6388,11 +6583,12 @@ _CMSGCLIENTGETCLIENTDETAILSRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16040,
-  serialized_end=16359,
+  serialized_start=16383,
+  serialized_end=16702,
 )
 
 
@@ -6446,11 +6642,12 @@ _CMSGCLIENTGETCLIENTAPPLIST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16361,
-  serialized_end=16481,
+  serialized_start=16704,
+  serialized_end=16824,
 )
 
 
@@ -6483,11 +6680,12 @@ _CMSGCLIENTGETCLIENTAPPLISTRESPONSE_APP_DLC = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16974,
-  serialized_end=17013,
+  serialized_start=17317,
+  serialized_end=17356,
 )
 
 _CMSGCLIENTGETCLIENTAPPLISTRESPONSE_APP = _descriptor.Descriptor(
@@ -6610,11 +6808,12 @@ _CMSGCLIENTGETCLIENTAPPLISTRESPONSE_APP = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16603,
-  serialized_end=17013,
+  serialized_start=16946,
+  serialized_end=17356,
 )
 
 _CMSGCLIENTGETCLIENTAPPLISTRESPONSE = _descriptor.Descriptor(
@@ -6646,11 +6845,12 @@ _CMSGCLIENTGETCLIENTAPPLISTRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16484,
-  serialized_end=17013,
+  serialized_start=16827,
+  serialized_end=17356,
 )
 
 
@@ -6676,11 +6876,12 @@ _CMSGCLIENTINSTALLCLIENTAPP = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17015,
-  serialized_end=17058,
+  serialized_start=17358,
+  serialized_end=17401,
 )
 
 
@@ -6706,11 +6907,12 @@ _CMSGCLIENTINSTALLCLIENTAPPRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17060,
-  serialized_end=17112,
+  serialized_start=17403,
+  serialized_end=17455,
 )
 
 
@@ -6736,11 +6938,12 @@ _CMSGCLIENTUNINSTALLCLIENTAPP = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17114,
-  serialized_end=17159,
+  serialized_start=17457,
+  serialized_end=17502,
 )
 
 
@@ -6766,11 +6969,12 @@ _CMSGCLIENTUNINSTALLCLIENTAPPRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17161,
-  serialized_end=17215,
+  serialized_start=17504,
+  serialized_end=17558,
 )
 
 
@@ -6803,11 +7007,12 @@ _CMSGCLIENTSETCLIENTAPPUPDATESTATE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17217,
-  serialized_end=17283,
+  serialized_start=17560,
+  serialized_end=17626,
 )
 
 
@@ -6833,11 +7038,12 @@ _CMSGCLIENTSETCLIENTAPPUPDATESTATERESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17285,
-  serialized_end=17344,
+  serialized_start=17628,
+  serialized_end=17687,
 )
 
 
@@ -6926,11 +7132,12 @@ _CMSGCLIENTUFSUPLOADFILEREQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17347,
-  serialized_end=17609,
+  serialized_start=17690,
+  serialized_end=17952,
 )
 
 
@@ -7005,11 +7212,12 @@ _CMSGCLIENTUFSUPLOADFILERESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17612,
-  serialized_end=17799,
+  serialized_start=17955,
+  serialized_end=18142,
 )
 
 
@@ -7063,11 +7271,12 @@ _CMSGCLIENTUFSUPLOADCOMMIT_FILE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17879,
-  serialized_end=17976,
+  serialized_start=18222,
+  serialized_end=18319,
 )
 
 _CMSGCLIENTUFSUPLOADCOMMIT = _descriptor.Descriptor(
@@ -7092,11 +7301,12 @@ _CMSGCLIENTUFSUPLOADCOMMIT = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17802,
-  serialized_end=17976,
+  serialized_start=18145,
+  serialized_end=18319,
 )
 
 
@@ -7136,11 +7346,12 @@ _CMSGCLIENTUFSUPLOADCOMMITRESPONSE_FILE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17879,
-  serialized_end=17939,
+  serialized_start=18222,
+  serialized_end=18282,
 )
 
 _CMSGCLIENTUFSUPLOADCOMMITRESPONSE = _descriptor.Descriptor(
@@ -7165,11 +7376,12 @@ _CMSGCLIENTUFSUPLOADCOMMITRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17979,
-  serialized_end=18132,
+  serialized_start=18322,
+  serialized_end=18475,
 )
 
 
@@ -7209,11 +7421,12 @@ _CMSGCLIENTUFSFILECHUNK = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18134,
-  serialized_end=18210,
+  serialized_start=18477,
+  serialized_end=18553,
 )
 
 
@@ -7232,11 +7445,12 @@ _CMSGCLIENTUFSTRANSFERHEARTBEAT = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18212,
-  serialized_end=18244,
+  serialized_start=18555,
+  serialized_end=18587,
 )
 
 
@@ -7269,11 +7483,12 @@ _CMSGCLIENTUFSUPLOADFILEFINISHED = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18246,
-  serialized_end=18317,
+  serialized_start=18589,
+  serialized_end=18660,
 )
 
 
@@ -7313,11 +7528,12 @@ _CMSGCLIENTUFSDELETEFILEREQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18319,
-  serialized_end=18414,
+  serialized_start=18662,
+  serialized_end=18757,
 )
 
 
@@ -7350,11 +7566,12 @@ _CMSGCLIENTUFSDELETEFILERESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18416,
-  serialized_end=18488,
+  serialized_start=18759,
+  serialized_end=18831,
 )
 
 
@@ -7387,11 +7604,12 @@ _CMSGCLIENTUFSGETFILELISTFORAPP = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18490,
-  serialized_end=18573,
+  serialized_start=18833,
+  serialized_end=18916,
 )
 
 
@@ -7466,11 +7684,12 @@ _CMSGCLIENTUFSGETFILELISTFORAPPRESPONSE_FILE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18703,
-  serialized_end=18887,
+  serialized_start=19046,
+  serialized_end=19230,
 )
 
 _CMSGCLIENTUFSGETFILELISTFORAPPRESPONSE = _descriptor.Descriptor(
@@ -7502,11 +7721,12 @@ _CMSGCLIENTUFSGETFILELISTFORAPPRESPONSE = _descriptor.Descriptor(
   ],
   options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\200\265\030\010\210\265\030\020')),
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18576,
-  serialized_end=18897,
+  serialized_start=18919,
+  serialized_end=19240,
 )
 
 
@@ -7546,11 +7766,12 @@ _CMSGCLIENTUFSDOWNLOADREQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18899,
-  serialized_end=18989,
+  serialized_start=19242,
+  serialized_end=19332,
 )
 
 
@@ -7660,11 +7881,12 @@ _CMSGCLIENTUFSDOWNLOADRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18992,
-  serialized_end=19280,
+  serialized_start=19335,
+  serialized_end=19623,
 )
 
 
@@ -7704,11 +7926,12 @@ _CMSGCLIENTUFSLOGINREQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19282,
-  serialized_end=19375,
+  serialized_start=19625,
+  serialized_end=19718,
 )
 
 
@@ -7734,11 +7957,12 @@ _CMSGCLIENTUFSLOGINRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19377,
-  serialized_end=19425,
+  serialized_start=19720,
+  serialized_end=19768,
 )
 
 
@@ -7771,11 +7995,12 @@ _CMSGCLIENTREQUESTENCRYPTEDAPPTICKET = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19427,
-  serialized_end=19498,
+  serialized_start=19770,
+  serialized_end=19841,
 )
 
 
@@ -7815,11 +8040,12 @@ _CMSGCLIENTREQUESTENCRYPTEDAPPTICKETRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19501,
-  serialized_end=19633,
+  serialized_start=19844,
+  serialized_end=19976,
 )
 
 
@@ -7866,11 +8092,12 @@ _CMSGCLIENTWALLETINFOUPDATE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19635,
-  serialized_end=19743,
+  serialized_start=19978,
+  serialized_end=20086,
 )
 
 
@@ -7903,11 +8130,12 @@ _CMSGCLIENTAPPINFOUPDATE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19745,
-  serialized_end=19822,
+  serialized_start=20088,
+  serialized_end=20165,
 )
 
 
@@ -7947,11 +8175,12 @@ _CMSGCLIENTAPPINFOCHANGES = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19824,
-  serialized_end=19924,
+  serialized_start=20167,
+  serialized_end=20267,
 )
 
 
@@ -7991,11 +8220,12 @@ _CMSGCLIENTAPPINFOREQUEST_APP = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20033,
-  serialized_end=20098,
+  serialized_start=20376,
+  serialized_end=20441,
 )
 
 _CMSGCLIENTAPPINFOREQUEST = _descriptor.Descriptor(
@@ -8027,11 +8257,12 @@ _CMSGCLIENTAPPINFOREQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19927,
-  serialized_end=20098,
+  serialized_start=20270,
+  serialized_end=20441,
 )
 
 
@@ -8064,11 +8295,12 @@ _CMSGCLIENTAPPINFORESPONSE_APP_SECTION = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20325,
-  serialized_end=20374,
+  serialized_start=20668,
+  serialized_end=20717,
 )
 
 _CMSGCLIENTAPPINFORESPONSE_APP = _descriptor.Descriptor(
@@ -8107,11 +8339,12 @@ _CMSGCLIENTAPPINFORESPONSE_APP = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20221,
-  serialized_end=20374,
+  serialized_start=20564,
+  serialized_end=20717,
 )
 
 _CMSGCLIENTAPPINFORESPONSE = _descriptor.Descriptor(
@@ -8150,11 +8383,12 @@ _CMSGCLIENTAPPINFORESPONSE = _descriptor.Descriptor(
   ],
   options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\200\265\030\000\210\265\030\000')),
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20101,
-  serialized_end=20384,
+  serialized_start=20444,
+  serialized_end=20727,
 )
 
 
@@ -8187,11 +8421,12 @@ _CMSGCLIENTPACKAGEINFOREQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20386,
-  serialized_end=20461,
+  serialized_start=20729,
+  serialized_end=20804,
 )
 
 
@@ -8238,11 +8473,12 @@ _CMSGCLIENTPACKAGEINFORESPONSE_PACKAGE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20607,
-  serialized_end=20688,
+  serialized_start=20950,
+  serialized_end=21031,
 )
 
 _CMSGCLIENTPACKAGEINFORESPONSE = _descriptor.Descriptor(
@@ -8281,11 +8517,12 @@ _CMSGCLIENTPACKAGEINFORESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20464,
-  serialized_end=20688,
+  serialized_start=20807,
+  serialized_end=21031,
 )
 
 
@@ -8339,11 +8576,12 @@ _CMSGCLIENTPICSCHANGESSINCEREQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20691,
-  serialized_end=20883,
+  serialized_start=21034,
+  serialized_end=21226,
 )
 
 
@@ -8383,11 +8621,12 @@ _CMSGCLIENTPICSCHANGESSINCERESPONSE_PACKAGECHANGE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21221,
-  serialized_end=21299,
+  serialized_start=21564,
+  serialized_end=21642,
 )
 
 _CMSGCLIENTPICSCHANGESSINCERESPONSE_APPCHANGE = _descriptor.Descriptor(
@@ -8426,11 +8665,12 @@ _CMSGCLIENTPICSCHANGESSINCERESPONSE_APPCHANGE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21301,
-  serialized_end=21371,
+  serialized_start=21644,
+  serialized_end=21714,
 )
 
 _CMSGCLIENTPICSCHANGESSINCERESPONSE = _descriptor.Descriptor(
@@ -8497,11 +8737,12 @@ _CMSGCLIENTPICSCHANGESSINCERESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20886,
-  serialized_end=21371,
+  serialized_start=21229,
+  serialized_end=21714,
 )
 
 
@@ -8541,11 +8782,12 @@ _CMSGCLIENTPICSPRODUCTINFOREQUEST_APPINFO = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21581,
-  serialized_end=21648,
+  serialized_start=21924,
+  serialized_end=21991,
 )
 
 _CMSGCLIENTPICSPRODUCTINFOREQUEST_PACKAGEINFO = _descriptor.Descriptor(
@@ -8577,11 +8819,12 @@ _CMSGCLIENTPICSPRODUCTINFOREQUEST_PACKAGEINFO = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21650,
-  serialized_end=21704,
+  serialized_start=21993,
+  serialized_end=22047,
 )
 
 _CMSGCLIENTPICSPRODUCTINFOREQUEST = _descriptor.Descriptor(
@@ -8627,11 +8870,12 @@ _CMSGCLIENTPICSPRODUCTINFOREQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21374,
-  serialized_end=21704,
+  serialized_start=21717,
+  serialized_end=22047,
 )
 
 
@@ -8699,11 +8943,12 @@ _CMSGCLIENTPICSPRODUCTINFORESPONSE_APPINFO = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22013,
-  serialized_end=22147,
+  serialized_start=22356,
+  serialized_end=22490,
 )
 
 _CMSGCLIENTPICSPRODUCTINFORESPONSE_PACKAGEINFO = _descriptor.Descriptor(
@@ -8763,11 +9008,12 @@ _CMSGCLIENTPICSPRODUCTINFORESPONSE_PACKAGEINFO = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22149,
-  serialized_end=22270,
+  serialized_start=22492,
+  serialized_end=22613,
 )
 
 _CMSGCLIENTPICSPRODUCTINFORESPONSE = _descriptor.Descriptor(
@@ -8841,11 +9087,12 @@ _CMSGCLIENTPICSPRODUCTINFORESPONSE = _descriptor.Descriptor(
   ],
   options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\200\265\030\000\210\265\030\000')),
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21707,
-  serialized_end=22280,
+  serialized_start=22050,
+  serialized_end=22623,
 )
 
 
@@ -8878,11 +9125,12 @@ _CMSGCLIENTPICSACCESSTOKENREQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22282,
-  serialized_end=22352,
+  serialized_start=22625,
+  serialized_end=22695,
 )
 
 
@@ -8915,11 +9163,12 @@ _CMSGCLIENTPICSACCESSTOKENRESPONSE_PACKAGETOKEN = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22602,
-  serialized_end=22657,
+  serialized_start=22945,
+  serialized_end=23000,
 )
 
 _CMSGCLIENTPICSACCESSTOKENRESPONSE_APPTOKEN = _descriptor.Descriptor(
@@ -8951,11 +9200,12 @@ _CMSGCLIENTPICSACCESSTOKENRESPONSE_APPTOKEN = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22659,
-  serialized_end=22706,
+  serialized_start=23002,
+  serialized_end=23049,
 )
 
 _CMSGCLIENTPICSACCESSTOKENRESPONSE = _descriptor.Descriptor(
@@ -9001,11 +9251,12 @@ _CMSGCLIENTPICSACCESSTOKENRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22355,
-  serialized_end=22706,
+  serialized_start=22698,
+  serialized_end=23049,
 )
 
 
@@ -9031,11 +9282,12 @@ _CMSGCLIENTUFSGETUGCDETAILS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22708,
-  serialized_end=22776,
+  serialized_start=23051,
+  serialized_end=23119,
 )
 
 
@@ -9117,11 +9369,12 @@ _CMSGCLIENTUFSGETUGCDETAILSRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22779,
-  serialized_end=23008,
+  serialized_start=23122,
+  serialized_end=23351,
 )
 
 
@@ -9154,11 +9407,12 @@ _CMSGCLIENTUFSGETSINGLEFILEINFO = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23010,
-  serialized_end=23077,
+  serialized_start=23353,
+  serialized_end=23420,
 )
 
 
@@ -9226,11 +9480,12 @@ _CMSGCLIENTUFSGETSINGLEFILEINFORESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23080,
-  serialized_end=23264,
+  serialized_start=23423,
+  serialized_end=23607,
 )
 
 
@@ -9263,11 +9518,12 @@ _CMSGCLIENTUFSSHAREFILE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23266,
-  serialized_end=23325,
+  serialized_start=23609,
+  serialized_end=23668,
 )
 
 
@@ -9300,11 +9556,12 @@ _CMSGCLIENTUFSSHAREFILERESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23327,
-  serialized_end=23419,
+  serialized_start=23670,
+  serialized_end=23762,
 )
 
 
@@ -9337,11 +9594,12 @@ _CMSGCLIENTNEWLOGINKEY = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23421,
-  serialized_end=23482,
+  serialized_start=23764,
+  serialized_end=23825,
 )
 
 
@@ -9367,11 +9625,12 @@ _CMSGCLIENTNEWLOGINKEYACCEPTED = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23484,
-  serialized_end=23534,
+  serialized_start=23827,
+  serialized_end=23877,
 )
 
 
@@ -9397,11 +9656,12 @@ _CMSGCLIENTAMGETCLANOFFICERS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23536,
-  serialized_end=23587,
+  serialized_start=23879,
+  serialized_end=23930,
 )
 
 
@@ -9441,11 +9701,12 @@ _CMSGCLIENTAMGETCLANOFFICERSRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23589,
-  serialized_end=23691,
+  serialized_start=23932,
+  serialized_end=24034,
 )
 
 
@@ -9471,11 +9732,12 @@ _CMSGCLIENTAMGETPERSONANAMEHISTORY_IDINSTANCE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23809,
-  serialized_end=23838,
+  serialized_start=24152,
+  serialized_end=24181,
 )
 
 _CMSGCLIENTAMGETPERSONANAMEHISTORY = _descriptor.Descriptor(
@@ -9507,11 +9769,12 @@ _CMSGCLIENTAMGETPERSONANAMEHISTORY = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23694,
-  serialized_end=23838,
+  serialized_start=24037,
+  serialized_end=24181,
 )
 
 
@@ -9544,11 +9807,12 @@ _CMSGCLIENTAMGETPERSONANAMEHISTORYRESPONSE_NAMETABLEINSTANCE_NAMEINSTANCE = _des
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24116,
-  serialized_end=24164,
+  serialized_start=24459,
+  serialized_end=24507,
 )
 
 _CMSGCLIENTAMGETPERSONANAMEHISTORYRESPONSE_NAMETABLEINSTANCE = _descriptor.Descriptor(
@@ -9587,11 +9851,12 @@ _CMSGCLIENTAMGETPERSONANAMEHISTORYRESPONSE_NAMETABLEINSTANCE = _descriptor.Descr
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23968,
-  serialized_end=24164,
+  serialized_start=24311,
+  serialized_end=24507,
 )
 
 _CMSGCLIENTAMGETPERSONANAMEHISTORYRESPONSE = _descriptor.Descriptor(
@@ -9616,11 +9881,12 @@ _CMSGCLIENTAMGETPERSONANAMEHISTORYRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23841,
-  serialized_end=24164,
+  serialized_start=24184,
+  serialized_end=24507,
 )
 
 
@@ -9653,11 +9919,12 @@ _CMSGCLIENTDEREGISTERWITHSERVER = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24166,
-  serialized_end=24235,
+  serialized_start=24509,
+  serialized_end=24578,
 )
 
 
@@ -9690,11 +9957,12 @@ _CMSGCLIENTCLANSTATE_NAMEINFO = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24535,
-  serialized_end=24584,
+  serialized_start=24878,
+  serialized_end=24927,
 )
 
 _CMSGCLIENTCLANSTATE_USERCOUNTS = _descriptor.Descriptor(
@@ -9740,11 +10008,12 @@ _CMSGCLIENTCLANSTATE_USERCOUNTS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24586,
-  serialized_end=24666,
+  serialized_start=24929,
+  serialized_end=25009,
 )
 
 _CMSGCLIENTCLANSTATE_EVENT = _descriptor.Descriptor(
@@ -9797,11 +10066,12 @@ _CMSGCLIENTCLANSTATE_EVENT = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24668,
-  serialized_end=24764,
+  serialized_start=25011,
+  serialized_end=25107,
 )
 
 _CMSGCLIENTCLANSTATE = _descriptor.Descriptor(
@@ -9868,11 +10138,12 @@ _CMSGCLIENTCLANSTATE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24238,
-  serialized_end=24764,
+  serialized_start=24581,
+  serialized_end=25107,
 )
 
 
@@ -9919,11 +10190,12 @@ _CMSGCLIENTFRIENDMSG = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24766,
-  serialized_end=24880,
+  serialized_start=25109,
+  serialized_end=25223,
 )
 
 
@@ -9977,11 +10249,12 @@ _CMSGCLIENTFRIENDMSGINCOMING = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24883,
-  serialized_end=25040,
+  serialized_start=25226,
+  serialized_end=25383,
 )
 
 
@@ -10014,11 +10287,12 @@ _CMSGCLIENTADDFRIEND = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25042,
-  serialized_end=25124,
+  serialized_start=25385,
+  serialized_end=25467,
 )
 
 
@@ -10058,11 +10332,12 @@ _CMSGCLIENTADDFRIENDRESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25126,
-  serialized_end=25227,
+  serialized_start=25469,
+  serialized_end=25570,
 )
 
 
@@ -10088,11 +10363,12 @@ _CMSGCLIENTREMOVEFRIEND = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25229,
-  serialized_end=25271,
+  serialized_start=25572,
+  serialized_end=25614,
 )
 
 
@@ -10125,18 +10401,19 @@ _CMSGCLIENTHIDEFRIEND = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25273,
-  serialized_end=25327,
+  serialized_start=25616,
+  serialized_end=25670,
 )
 
 _CMSGGSPLAYERLIST_PLAYER.containing_type = _CMSGGSPLAYERLIST
 _CMSGGSPLAYERLIST.fields_by_name['players'].message_type = _CMSGGSPLAYERLIST_PLAYER
 _CMSGCLIENTGAMESPLAYED_GAMEPLAYED.containing_type = _CMSGCLIENTGAMESPLAYED
 _CMSGCLIENTGAMESPLAYED.fields_by_name['games_played'].message_type = _CMSGCLIENTGAMESPLAYED_GAMEPLAYED
-_CMSGCLIENTAUTHLIST.fields_by_name['tickets'].message_type = steammessages_base_pb2._CMSGAUTHTICKET
+_CMSGCLIENTAUTHLIST.fields_by_name['tickets'].message_type = steammessages__base__pb2._CMSGAUTHTICKET
 _CMSGCLIENTFRIENDSLIST_FRIEND.containing_type = _CMSGCLIENTFRIENDSLIST
 _CMSGCLIENTFRIENDSLIST.fields_by_name['friends'].message_type = _CMSGCLIENTFRIENDSLIST_FRIEND
 _CMSGCLIENTFRIENDSGROUPSLIST_FRIENDGROUP.containing_type = _CMSGCLIENTFRIENDSGROUPSLIST
@@ -10199,7 +10476,7 @@ _CMSGCLIENTUFSUPLOADCOMMITRESPONSE_FILE.containing_type = _CMSGCLIENTUFSUPLOADCO
 _CMSGCLIENTUFSUPLOADCOMMITRESPONSE.fields_by_name['files'].message_type = _CMSGCLIENTUFSUPLOADCOMMITRESPONSE_FILE
 _CMSGCLIENTUFSGETFILELISTFORAPPRESPONSE_FILE.containing_type = _CMSGCLIENTUFSGETFILELISTFORAPPRESPONSE
 _CMSGCLIENTUFSGETFILELISTFORAPPRESPONSE.fields_by_name['files'].message_type = _CMSGCLIENTUFSGETFILELISTFORAPPRESPONSE_FILE
-_CMSGCLIENTREQUESTENCRYPTEDAPPTICKETRESPONSE.fields_by_name['encrypted_app_ticket'].message_type = encrypted_app_ticket_pb2._ENCRYPTEDAPPTICKET
+_CMSGCLIENTREQUESTENCRYPTEDAPPTICKETRESPONSE.fields_by_name['encrypted_app_ticket'].message_type = encrypted__app__ticket__pb2._ENCRYPTEDAPPTICKET
 _CMSGCLIENTAPPINFOREQUEST_APP.containing_type = _CMSGCLIENTAPPINFOREQUEST
 _CMSGCLIENTAPPINFOREQUEST.fields_by_name['apps'].message_type = _CMSGCLIENTAPPINFOREQUEST_APP
 _CMSGCLIENTAPPINFORESPONSE_APP_SECTION.containing_type = _CMSGCLIENTAPPINFORESPONSE_APP

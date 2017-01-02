@@ -13,16 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import google.protobuf.descriptor_pb2
-import steammessages_unified_base.steamclient_pb2
+from steammessages_unified_base import steamclient_pb2 as steammessages__unified__base_dot_steamclient__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='steammessages_publishedfile.steamclient.proto',
   package='',
-  serialized_pb=_b('\n-steammessages_publishedfile.steamclient.proto\x1a google/protobuf/descriptor.proto\x1a,steammessages_unified_base.steamclient.proto\"t\n CPublishedFile_Subscribe_Request\x12\x17\n\x0fpublishedfileid\x18\x01 \x01(\x04\x12\x11\n\tlist_type\x18\x02 \x01(\r\x12\r\n\x05\x61ppid\x18\x03 \x01(\x05\x12\x15\n\rnotify_client\x18\x04 \x01(\x08\"#\n!CPublishedFile_Subscribe_Response\"v\n\"CPublishedFile_Unsubscribe_Request\x12\x17\n\x0fpublishedfileid\x18\x01 \x01(\x04\x12\x11\n\tlist_type\x18\x02 \x01(\r\x12\r\n\x05\x61ppid\x18\x03 \x01(\x05\x12\x15\n\rnotify_client\x18\x04 \x01(\x08\"%\n#CPublishedFile_Unsubscribe_Response\">\n#CPublishedFile_CanSubscribe_Request\x12\x17\n\x0fpublishedfileid\x18\x01 \x01(\x04\"=\n$CPublishedFile_CanSubscribe_Response\x12\x15\n\rcan_subscribe\x18\x01 \x01(\x08\"\xcc\n\n\x1e\x43PublishedFile_Publish_Request\x12<\n\x05\x61ppid\x18\x01 \x01(\rB-\x82\xb5\x18)App Id this file is being published FROM.\x12\x43\n\x0e\x63onsumer_appid\x18\x02 \x01(\rB+\x82\xb5\x18\'App Id this file is being published TO.\x12K\n\rcloudfilename\x18\x03 \x01(\tB4\x82\xb5\x18\x30Name of the file to publish in the user\'s cloud.\x12[\n\x15preview_cloudfilename\x18\x04 \x01(\tB<\x82\xb5\x18\x38Name of the file to use as the published file\'s preview.\x12\x35\n\x05title\x18\x05 \x01(\tB&\x82\xb5\x18\"Text title for the published file.\x12\x46\n\x10\x66ile_description\x18\x06 \x01(\tB,\x82\xb5\x18(Text description for the published file.\x12L\n\tfile_type\x18\x07 \x01(\rB9\x82\xb5\x18\x35(EWorkshopFileType) Type of Workshop file to publish.\x12I\n\x16\x63onsumer_shortcut_name\x18\x08 \x01(\tB)\x82\xb5\x18%Shortcut name for the published file.\x12I\n\x10youtube_username\x18\t \x01(\tB/\x82\xb5\x18+(Optional) User\'s YouTube account username.\x12\\\n\x0fyoutube_videoid\x18\n \x01(\tBC\x82\xb5\x18?(Optional) Video Id of a YouTube video for this published file.\x12\x81\x01\n\nvisibility\x18\x0b \x01(\rBm\x82\xb5\x18i(ERemoteStoragePublishedFileVisibility) Visibility of the published file (private, friends, public, etc.)\x12k\n\x0credirect_uri\x18\x0c \x01(\tBU\x82\xb5\x18Q(Optional) If supplied, the resulting published file\'s Id is appended to the URI.\x12\x44\n\x04tags\x18\r \x03(\tB6\x82\xb5\x18\x32\x41rray of text tags to apply to the published file.\x12Y\n\x0f\x63ollection_type\x18\x0e \x01(\tB@\x82\xb5\x18<(Optional) Type of collection the published file represents.\x12M\n\tgame_type\x18\x0f \x01(\tB:\x82\xb5\x18\x36(Optional) Type of game the published file represents.\x12[\n\x03url\x18\x10 \x01(\tBN\x82\xb5\x18J(Optional) If this represents a game, this is the URL to that game\'s page.\"P\n\x1f\x43PublishedFile_Publish_Response\x12\x17\n\x0fpublishedfileid\x18\x01 \x01(\x04\x12\x14\n\x0credirect_uri\x18\x02 \x01(\t\"\xed\x06\n!CPublishedFile_GetDetails_Request\x12P\n\x10publishedfileids\x18\x01 \x03(\x06\x42\x36\x82\xb5\x18\x32Set of published file Ids to retrieve details for.\x12Q\n\x0bincludetags\x18\x02 \x01(\x08\x42<\x82\xb5\x18\x38If true, return tag information in the returned details.\x12\x63\n\x19includeadditionalpreviews\x18\x03 \x01(\x08\x42@\x82\xb5\x18<If true, return preview information in the returned details.\x12N\n\x0fincludechildren\x18\x04 \x01(\x08\x42\x35\x82\xb5\x18\x31If true, return children in the returned details.\x12R\n\rincludekvtags\x18\x05 \x01(\x08\x42;\x82\xb5\x18\x37If true, return key value tags in the returned details.\x12L\n\x0cincludevotes\x18\x06 \x01(\x08\x42\x36\x82\xb5\x18\x32If true, return vote data in the returned details.\x12\x63\n\x11short_description\x18\x08 \x01(\x08\x42H\x82\xb5\x18\x44If true, return a short description instead of the full description.\x12L\n\x12includeforsaledata\x18\n \x01(\x08\x42\x30\x82\xb5\x18,If true, return pricing data, if applicable.\x12\x42\n\x0fincludemetadata\x18\x0b \x01(\x08\x42)\x82\xb5\x18%If true, populate the metadata field.\x12U\n\x08language\x18\x0c \x01(\x05:\x01\x30\x42@\x82\xb5\x18<Specifies the localized text to return. Defaults to English.\"\xc6\x13\n\x14PublishedFileDetails\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x17\n\x0fpublishedfileid\x18\x02 \x01(\x04\x12\x0f\n\x07\x63reator\x18\x03 \x01(\x06\x12\x15\n\rcreator_appid\x18\x04 \x01(\r\x12\x16\n\x0e\x63onsumer_appid\x18\x05 \x01(\r\x12\x1b\n\x13\x63onsumer_shortcutid\x18\x06 \x01(\r\x12\x10\n\x08\x66ilename\x18\x07 \x01(\t\x12\x11\n\tfile_size\x18\x08 \x01(\x04\x12\x19\n\x11preview_file_size\x18\t \x01(\x04\x12\x10\n\x08\x66ile_url\x18\n \x01(\t\x12\x13\n\x0bpreview_url\x18\x0b \x01(\t\x12\x16\n\x0eyoutubevideoid\x18\x0c \x01(\t\x12\x0b\n\x03url\x18\r \x01(\t\x12\x15\n\rhcontent_file\x18\x0e \x01(\x06\x12\x18\n\x10hcontent_preview\x18\x0f \x01(\x06\x12\r\n\x05title\x18\x10 \x01(\t\x12\x18\n\x10\x66ile_description\x18\x11 \x01(\t\x12\x19\n\x11short_description\x18\x12 \x01(\t\x12\x14\n\x0ctime_created\x18\x13 \x01(\r\x12\x14\n\x0ctime_updated\x18\x14 \x01(\r\x12\x12\n\nvisibility\x18\x15 \x01(\r\x12\r\n\x05\x66lags\x18\x16 \x01(\r\x12\x15\n\rworkshop_file\x18\x17 \x01(\x08\x12\x19\n\x11workshop_accepted\x18\x18 \x01(\x08\x12\x1a\n\x12show_subscribe_all\x18\x19 \x01(\x08\x12\x1e\n\x16num_comments_developer\x18\x1a \x01(\x05\x12\x1b\n\x13num_comments_public\x18\x1b \x01(\x05\x12\x0e\n\x06\x62\x61nned\x18\x1c \x01(\x08\x12\x12\n\nban_reason\x18\x1d \x01(\t\x12\x0e\n\x06\x62\x61nner\x18\x1e \x01(\x06\x12\x16\n\x0e\x63\x61n_be_deleted\x18\x1f \x01(\x08\x12\x14\n\x0cincompatible\x18  \x01(\x08\x12\x10\n\x08\x61pp_name\x18! \x01(\t\x12\x11\n\tfile_type\x18\" \x01(\r\x12\x15\n\rcan_subscribe\x18# \x01(\x08\x12\x15\n\rsubscriptions\x18$ \x01(\r\x12\x11\n\tfavorited\x18% \x01(\r\x12\x11\n\tfollowers\x18& \x01(\r\x12\x1e\n\x16lifetime_subscriptions\x18\' \x01(\r\x12\x1a\n\x12lifetime_favorited\x18( \x01(\r\x12\x1a\n\x12lifetime_followers\x18) \x01(\r\x12\r\n\x05views\x18* \x01(\r\x12\x13\n\x0bimage_width\x18+ \x01(\r\x12\x14\n\x0cimage_height\x18, \x01(\r\x12\x11\n\timage_url\x18- \x01(\t\x12\x13\n\x0bspoiler_tag\x18. \x01(\x08\x12\x12\n\nshortcutid\x18/ \x01(\r\x12\x14\n\x0cshortcutname\x18\x30 \x01(\t\x12\x14\n\x0cnum_children\x18\x31 \x01(\r\x12\x13\n\x0bnum_reports\x18\x32 \x01(\r\x12/\n\x08previews\x18\x33 \x03(\x0b\x32\x1d.PublishedFileDetails.Preview\x12\'\n\x04tags\x18\x34 \x03(\x0b\x32\x19.PublishedFileDetails.Tag\x12-\n\x08\x63hildren\x18\x35 \x03(\x0b\x32\x1b.PublishedFileDetails.Child\x12+\n\x06kvtags\x18\x36 \x03(\x0b\x32\x1b.PublishedFileDetails.KVTag\x12\x31\n\tvote_data\x18\x37 \x01(\x0b\x32\x1e.PublishedFileDetails.VoteData\x12r\n\x0ftime_subscribed\x18\x38 \x01(\rBY\x82\xb5\x18UOnly valid in PublishedFile.GetUserFiles and not normal PublishedFile.GetDetail calls\x12\x61\n\rfor_sale_data\x18\x39 \x01(\x0b\x32!.PublishedFileDetails.ForSaleDataB\'\x82\xb5\x18#Pricing information, if applicable.\x12\x37\n\x08metadata\x18: \x01(\tB%\x82\xb5\x18!Metadata associated with the item\x12\x1a\n\x12incompatible_actor\x18; \x01(\x06\x12\x1e\n\x16incompatible_timestamp\x18< \x01(\r\x12\x43\n\x08language\x18= \x01(\x05:\x01\x30\x42.\x82\xb5\x18*The language of the title and description.\x1a%\n\x03Tag\x12\x0b\n\x03tag\x18\x01 \x01(\t\x12\x11\n\tadminonly\x18\x02 \x01(\x08\x1at\n\x07Preview\x12\x11\n\tpreviewid\x18\x01 \x01(\x04\x12\x11\n\tsortorder\x18\x02 \x01(\r\x12\x0b\n\x03url\x18\x03 \x01(\t\x12\x0c\n\x04size\x18\x04 \x01(\r\x12\x10\n\x08\x66ilename\x18\x05 \x01(\t\x12\x16\n\x0eyoutubevideoid\x18\x06 \x01(\t\x1a\x46\n\x05\x43hild\x12\x17\n\x0fpublishedfileid\x18\x01 \x01(\x04\x12\x11\n\tsortorder\x18\x02 \x01(\r\x12\x11\n\tfile_type\x18\x03 \x01(\r\x1a#\n\x05KVTag\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x1a?\n\x08VoteData\x12\r\n\x05score\x18\x01 \x01(\x02\x12\x10\n\x08votes_up\x18\x02 \x01(\r\x12\x12\n\nvotes_down\x18\x03 \x01(\r\x1a\xf1\x01\n\x0b\x46orSaleData\x12\x13\n\x0bis_for_sale\x18\x01 \x01(\x08\x12\x16\n\x0eprice_category\x18\x02 \x01(\r\x12V\n\x07\x65status\x18\x03 \x01(\x0e\x32\x31.PublishedFileDetails.EPublishedFileForSaleStatus:\x12k_PFFSS_NotForSale\x12\x1c\n\x14price_category_floor\x18\x04 \x01(\r\x12\"\n\x1aprice_is_pay_what_you_want\x18\x05 \x01(\x08\x12\x1b\n\x13\x64iscount_percentage\x18\x06 \x01(\r\"\xa9\x01\n\x1b\x45PublishedFileForSaleStatus\x12\x16\n\x12k_PFFSS_NotForSale\x10\x00\x12\x1b\n\x17k_PFFSS_PendingApproval\x10\x01\x12\x1b\n\x17k_PFFSS_ApprovedForSale\x10\x02\x12\x1b\n\x17k_PFFSS_RejectedForSale\x10\x03\x12\x1b\n\x17k_PFFSS_NoLongerForSale\x10\x04\"Y\n\"CPublishedFile_GetDetails_Response\x12\x33\n\x14publishedfiledetails\x18\x01 \x03(\x0b\x32\x15.PublishedFileDetails\"\xda\x01\n\"CPublishedFile_GetItemInfo_Request\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x19\n\x11last_time_updated\x18\x02 \x01(\r\x12H\n\x0eworkshop_items\x18\x03 \x03(\x0b\x32\x30.CPublishedFile_GetItemInfo_Request.WorkshopItem\x1a?\n\x0cWorkshopItem\x12\x19\n\x11published_file_id\x18\x01 \x01(\x06\x12\x14\n\x0ctime_updated\x18\x02 \x01(\r\"\xe3\x01\n#CPublishedFile_GetItemInfo_Response\x12\x13\n\x0bupdate_time\x18\x01 \x01(\r\x12M\n\x0eworkshop_items\x18\x02 \x03(\x0b\x32\x35.CPublishedFile_GetItemInfo_Response.WorkshopItemInfo\x1aX\n\x10WorkshopItemInfo\x12\x19\n\x11published_file_id\x18\x01 \x01(\x06\x12\x14\n\x0ctime_updated\x18\x02 \x01(\r\x12\x13\n\x0bmanifest_id\x18\x03 \x01(\x06\"\xe1\x0f\n#CPublishedFile_GetUserFiles_Request\x12J\n\x07steamid\x18\x01 \x01(\x06\x42\x39\x82\xb5\x18\x35Steam ID of the user whose files are being requested.\x12\x46\n\x05\x61ppid\x18\x02 \x01(\rB7\x82\xb5\x18\x33\x41pp Id of the app that the files were published to.\x12:\n\x04page\x18\x04 \x01(\r:\x01\x31\x42)\x82\xb5\x18%(Optional) Starting page for results.\x12P\n\nnumperpage\x18\x05 \x01(\r:\x01\x31\x42\x39\x82\xb5\x18\x35(Optional) The number of results, per page to return.\x12\x43\n\x04type\x18\x06 \x01(\t:\x07myfilesB,\x82\xb5\x18((Optional) Type of files to be returned.\x12Y\n\nsortmethod\x18\x07 \x01(\t:\x0blastupdatedB8\x82\xb5\x18\x34(Optional) Sorting method to use on returned values.\x12;\n\x07privacy\x18\t \x01(\rB*\x82\xb5\x18&(optional) Filter by privacy settings.\x12h\n\x0crequiredtags\x18\n \x03(\tBR\x82\xb5\x18N(Optional) Tags that must be present on a published file to satisfy the query.\x12l\n\x0c\x65xcludedtags\x18\x0b \x03(\tBV\x82\xb5\x18R(Optional) Tags that must NOT be present on a published file to satisfy the query.\x12=\n\x08\x66iletype\x18\x0e \x01(\rB+\x82\xb5\x18\'(Optional) File type to match files to.\x12\x61\n\rcreator_appid\x18\x0f \x01(\rBJ\x82\xb5\x18\x46\x41pp Id of the app that published the files, only matched if specified.\x12I\n\x14match_cloud_filename\x18\x10 \x01(\tB+\x82\xb5\x18\'Match this cloud filename if specified.\x12j\n\x15\x63\x61\x63he_max_age_seconds\x18\x1b \x01(\r:\x01\x30\x42H\x82\xb5\x18\x44\x41llow stale data to be returned for the specified number of seconds.\x12U\n\x08language\x18\x1d \x01(\x05:\x01\x30\x42@\x82\xb5\x18<Specifies the localized text to return. Defaults to English.\x12i\n\ttotalonly\x18\x11 \x01(\x08\x42V\x82\xb5\x18R(Optional) If true, only return the total number of files that satisfy this query.\x12n\n\x08ids_only\x18\x12 \x01(\x08\x42\\\x82\xb5\x18X(Optional) If true, only return the published file ids of files that satisfy this query.\x12\x34\n\x10return_vote_data\x18\x13 \x01(\x08:\x04trueB\x14\x82\xb5\x18\x10Return vote data\x12\x38\n\x0breturn_tags\x18\x14 \x01(\x08\x42#\x82\xb5\x18\x1fReturn tags in the file details\x12K\n\x0ereturn_kv_tags\x18\x15 \x01(\x08:\x04trueB-\x82\xb5\x18)Return key-value tags in the file details\x12W\n\x0freturn_previews\x18\x16 \x01(\x08\x42>\x82\xb5\x18:Return preview image and video details in the file details\x12\x46\n\x0freturn_children\x18\x17 \x01(\x08\x42-\x82\xb5\x18)Return child item ids in the file details\x12l\n\x18return_short_description\x18\x18 \x01(\x08:\x04trueBD\x82\xb5\x18@Populate the short_description field instead of file_description\x12K\n\x14return_for_sale_data\x18\x1a \x01(\x08\x42-\x82\xb5\x18)Return pricing information, if applicable\x12?\n\x0freturn_metadata\x18\x1c \x01(\x08:\x05\x66\x61lseB\x1f\x82\xb5\x18\x1bPopulate the metadata field\"\x80\x02\n$CPublishedFile_GetUserFiles_Response\x12\r\n\x05total\x18\x01 \x01(\r\x12\x12\n\nstartindex\x18\x02 \x01(\r\x12\x33\n\x14publishedfiledetails\x18\x03 \x03(\x0b\x32\x15.PublishedFileDetails\x12\x37\n\x04\x61pps\x18\x04 \x03(\x0b\x32).CPublishedFile_GetUserFiles_Response.App\x1aG\n\x03\x41pp\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x12\n\nshortcutid\x18\x03 \x01(\r\x12\x0f\n\x07private\x18\x04 \x01(\x08\"\x91\x06\n\x1d\x43PublishedFile_Update_Request\x12\x39\n\x05\x61ppid\x18\x01 \x01(\rB*\x82\xb5\x18&App Id this published file belongs to.\x12L\n\x0fpublishedfileid\x18\x02 \x01(\x06\x42\x33\x82\xb5\x18/Published file id of the file we\'d like update.\x12:\n\x05title\x18\x03 \x01(\tB+\x82\xb5\x18\'(Optional) Title of the published file.\x12K\n\x10\x66ile_description\x18\x04 \x01(\tB1\x82\xb5\x18-(Optional) Description of the published file.\x12\x44\n\nvisibility\x18\x05 \x01(\rB0\x82\xb5\x18,(Optional) Visibility of the published file.\x12@\n\x04tags\x18\x06 \x03(\tB2\x82\xb5\x18.(Optional) Set of tags for the published file.\x12\x41\n\x08\x66ilename\x18\x07 \x01(\tB/\x82\xb5\x18+(Optional) Filename for the published file.\x12Q\n\x10preview_filename\x18\x08 \x01(\tB7\x82\xb5\x18\x33(Optional) Preview filename for the published file.\x12^\n\x0bimage_width\x18\x0f \x01(\rBI\x82\xb5\x18\x45(Optional) If this is an image file, you can specify the image width.\x12`\n\x0cimage_height\x18\x10 \x01(\rBJ\x82\xb5\x18\x46(Optional) If this is an image file, you can specify the image height.\" \n\x1e\x43PublishedFile_Update_Response\"\xb8\x01\n,CPublishedFile_GetChangeHistoryEntry_Request\x12\x63\n\x0fpublishedfileid\x18\x01 \x01(\x06\x42J\x82\xb5\x18\x46Published file id of the file we\'d like to get the change history for.\x12\x11\n\ttimestamp\x18\x02 \x01(\r\x12\x10\n\x08language\x18\x03 \x01(\x05\"]\n-CPublishedFile_GetChangeHistoryEntry_Response\x12\x1a\n\x12\x63hange_description\x18\x01 \x01(\t\x12\x10\n\x08language\x18\x02 \x01(\x05\"\x9e\x02\n\'CPublishedFile_GetChangeHistory_Request\x12\x63\n\x0fpublishedfileid\x18\x01 \x01(\x06\x42J\x82\xb5\x18\x46Published file id of the file we\'d like to get the change history for.\x12@\n\ntotal_only\x18\x02 \x01(\x08\x42,\x82\xb5\x18(Return the total number of changes only.\x12\x12\n\nstartindex\x18\x03 \x01(\r\x12\r\n\x05\x63ount\x18\x04 \x01(\r\x12)\n\x08language\x18\x05 \x01(\x05:\x01\x30\x42\x14\x82\xb5\x18\x10\x44\x65sired language\"\xcd\x01\n(CPublishedFile_GetChangeHistory_Response\x12\x44\n\x07\x63hanges\x18\x01 \x03(\x0b\x32\x33.CPublishedFile_GetChangeHistory_Response.ChangeLog\x12\r\n\x05total\x18\x02 \x01(\r\x1aL\n\tChangeLog\x12\x11\n\ttimestamp\x18\x01 \x01(\r\x12\x1a\n\x12\x63hange_description\x18\x02 \x01(\t\x12\x10\n\x08language\x18\x03 \x01(\x05\"\xbb\x04\n)CPublishedFile_RefreshVotingQueue_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x42\n\x12matching_file_type\x18\x02 \x01(\rB&\x82\xb5\x18\"EPublishedFileInfoMatchingFileType\x12l\n\x04tags\x18\x03 \x03(\tB^\x82\xb5\x18ZInclude files that have all the tags or any of the tags if match_all_tags is set to false.\x12\x95\x01\n\x0ematch_all_tags\x18\x04 \x01(\x08:\x04trueBw\x82\xb5\x18sIf true, then files must have all the tags specified.  If false, then must have at least one of the tags specified.\x12I\n\rexcluded_tags\x18\x05 \x03(\tB2\x82\xb5\x18.Exclude any files that have any of these tags.\x12j\n\x12\x64\x65sired_queue_size\x18\x06 \x01(\rBN\x82\xb5\x18JDesired number of items in the voting queue.  May be clamped by the server\",\n*CPublishedFile_RefreshVotingQueue_Response\"\xd2\x12\n!CPublishedFile_QueryFiles_Request\x12L\n\nquery_type\x18\x01 \x01(\rB8\x82\xb5\x18\x34\x65numeration EPublishedFileQueryType in clientenums.h\x12\x1e\n\x04page\x18\x02 \x01(\rB\x10\x82\xb5\x18\x0c\x43urrent page\x12P\n\nnumperpage\x18\x03 \x01(\r:\x01\x31\x42\x39\x82\xb5\x18\x35(Optional) The number of results, per page to return.\x12\x35\n\rcreator_appid\x18\x04 \x01(\rB\x1e\x82\xb5\x18\x1a\x41pp that created the files\x12.\n\x05\x61ppid\x18\x05 \x01(\rB\x1f\x82\xb5\x18\x1b\x41pp that consumes the files\x12N\n\x0crequiredtags\x18\x06 \x03(\tB8\x82\xb5\x18\x34Tags to match on. See match_all_tags parameter below\x12l\n\x0c\x65xcludedtags\x18\x07 \x03(\tBV\x82\xb5\x18R(Optional) Tags that must NOT be present on a published file to satisfy the query.\x12\x8a\x01\n\x0ematch_all_tags\x18\x08 \x01(\x08:\x04trueBl\x82\xb5\x18hIf true, then items must have all the tags specified, otherwise they must have at least one of the tags.\x12Q\n\x0erequired_flags\x18\t \x03(\tB9\x82\xb5\x18\x35Required flags that must be set on any returned items\x12K\n\romitted_flags\x18\n \x03(\tB4\x82\xb5\x18\x30\x46lags that must not be set on any returned items\x12I\n\x0bsearch_text\x18\x0b \x01(\tB4\x82\xb5\x18\x30Text to match in the item\'s title or description\x12\x38\n\x08\x66iletype\x18\x0c \x01(\rB&\x82\xb5\x18\"EPublishedFileInfoMatchingFileType\x12P\n\x15\x63hild_publishedfileid\x18\r \x01(\x06\x42\x31\x82\xb5\x18-Find all items that reference the given item.\x12\x82\x01\n\x04\x64\x61ys\x18\x0e \x01(\rBt\x82\xb5\x18pIf query_type is k_PublishedFileQueryType_RankedByTrend, then this is the number of days to get votes for [1,7].\x12\xb0\x01\n\x19include_recent_votes_only\x18\x0f \x01(\x08\x42\x8c\x01\x82\xb5\x18\x87\x01If query_type is k_PublishedFileQueryType_RankedByTrend, then limit result set just to items that have votes within the day range given\x12j\n\x15\x63\x61\x63he_max_age_seconds\x18\x1f \x01(\r:\x01\x30\x42H\x82\xb5\x18\x44\x41llow stale data to be returned for the specified number of seconds.\x12`\n\x08language\x18! \x01(\x05:\x01\x30\x42K\x82\xb5\x18GLanguage to search in and also what gets returned. Defaults to English.\x12l\n\x10required_kv_tags\x18\" \x03(\x0b\x32(.CPublishedFile_QueryFiles_Request.KVTagB(\x82\xb5\x18$Required key-value tags to match on.\x12i\n\ttotalonly\x18\x10 \x01(\x08\x42V\x82\xb5\x18R(Optional) If true, only return the total number of files that satisfy this query.\x12.\n\x10return_vote_data\x18\x11 \x01(\x08\x42\x14\x82\xb5\x18\x10Return vote data\x12\x38\n\x0breturn_tags\x18\x12 \x01(\x08\x42#\x82\xb5\x18\x1fReturn tags in the file details\x12\x45\n\x0ereturn_kv_tags\x18\x13 \x01(\x08\x42-\x82\xb5\x18)Return key-value tags in the file details\x12W\n\x0freturn_previews\x18\x14 \x01(\x08\x42>\x82\xb5\x18:Return preview image and video details in the file details\x12\x46\n\x0freturn_children\x18\x15 \x01(\x08\x42-\x82\xb5\x18)Return child item ids in the file details\x12\x66\n\x18return_short_description\x18\x16 \x01(\x08\x42\x44\x82\xb5\x18@Populate the short_description field instead of file_description\x12K\n\x14return_for_sale_data\x18\x1e \x01(\x08\x42-\x82\xb5\x18)Return pricing information, if applicable\x12\x39\n\x0freturn_metadata\x18  \x01(\x08:\x05\x66\x61lseB\x19\x82\xb5\x18\x15Populate the metadata\x1a#\n\x05KVTag\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\x8a\x02\n\"CPublishedFile_QueryFiles_Response\x12T\n\x05total\x18\x01 \x01(\rBE\x82\xb5\x18\x41Number of matches found, not necessarily number of items returned\x12\x8d\x01\n\x14publishedfiledetails\x18\x02 \x03(\x0b\x32\x15.PublishedFileDetailsBX\x82\xb5\x18TEach file details will be populated, depending on what return values were requested.2\xa5\x0e\n\rPublishedFile\x12\x81\x01\n\tSubscribe\x12!.CPublishedFile_Subscribe_Request\x1a\".CPublishedFile_Subscribe_Response\"-\x82\xb5\x18)Subscribes the user to the published file\x12\x8b\x01\n\x0bUnsubscribe\x12#.CPublishedFile_Unsubscribe_Request\x1a$.CPublishedFile_Unsubscribe_Response\"1\x82\xb5\x18-Unsubscribes the user from the published file\x12\x96\x01\n\x0c\x43\x61nSubscribe\x12$.CPublishedFile_CanSubscribe_Request\x1a%.CPublishedFile_CanSubscribe_Response\"9\x82\xb5\x18\x35\x43heck if the user can subscribe to the published file\x12\x80\x01\n\x07Publish\x12\x1f.CPublishedFile_Publish_Request\x1a .CPublishedFile_Publish_Response\"2\x82\xb5\x18.Publishes a clouded user file to the Workshop.\x12\x90\x01\n\nGetDetails\x12\".CPublishedFile_GetDetails_Request\x1a#.CPublishedFile_GetDetails_Response\"9\x82\xb5\x18\x35Retrieves information about a set of published files.\x12\x93\x01\n\x0bGetItemInfo\x12#.CPublishedFile_GetItemInfo_Request\x1a$.CPublishedFile_GetItemInfo_Response\"9\x82\xb5\x18\x35Retrieves information about a set of published files.\x12\x85\x01\n\x0cGetUserFiles\x12$.CPublishedFile_GetUserFiles_Request\x1a%.CPublishedFile_GetUserFiles_Response\"(\x82\xb5\x18$Retrieves files published by a user.\x12z\n\x06Update\x12\x1e.CPublishedFile_Update_Request\x1a\x1f.CPublishedFile_Update_Response\"/\x82\xb5\x18+Updates information about a published file.\x12\xc0\x01\n\x15GetChangeHistoryEntry\x12-.CPublishedFile_GetChangeHistoryEntry_Request\x1a..CPublishedFile_GetChangeHistoryEntry_Response\"H\x82\xb5\x18\x44Returns data on a specific change history entry for a published file\x12\xa4\x01\n\x10GetChangeHistory\x12(.CPublishedFile_GetChangeHistory_Request\x1a).CPublishedFile_GetChangeHistory_Response\";\x82\xb5\x18\x37Returns data on the change history for a published file\x12\x98\x01\n\x12RefreshVotingQueue\x12*.CPublishedFile_RefreshVotingQueue_Request\x1a+.CPublishedFile_RefreshVotingQueue_Response\")\x82\xb5\x18%Refresh the voting queue for the user\x12\x86\x01\n\nQueryFiles\x12\".CPublishedFile_QueryFiles_Request\x1a#.CPublishedFile_QueryFiles_Response\"/\x82\xb5\x18+Performs a search query for published files\x1a+\x82\xb5\x18\'A service to access published file data')
+  syntax='proto2',
+  serialized_pb=_b('\n-steammessages_publishedfile.steamclient.proto\x1a,steammessages_unified_base.steamclient.proto\"t\n CPublishedFile_Subscribe_Request\x12\x17\n\x0fpublishedfileid\x18\x01 \x01(\x04\x12\x11\n\tlist_type\x18\x02 \x01(\r\x12\r\n\x05\x61ppid\x18\x03 \x01(\x05\x12\x15\n\rnotify_client\x18\x04 \x01(\x08\"#\n!CPublishedFile_Subscribe_Response\"v\n\"CPublishedFile_Unsubscribe_Request\x12\x17\n\x0fpublishedfileid\x18\x01 \x01(\x04\x12\x11\n\tlist_type\x18\x02 \x01(\r\x12\r\n\x05\x61ppid\x18\x03 \x01(\x05\x12\x15\n\rnotify_client\x18\x04 \x01(\x08\"%\n#CPublishedFile_Unsubscribe_Response\">\n#CPublishedFile_CanSubscribe_Request\x12\x17\n\x0fpublishedfileid\x18\x01 \x01(\x04\"=\n$CPublishedFile_CanSubscribe_Response\x12\x15\n\rcan_subscribe\x18\x01 \x01(\x08\"\xcc\n\n\x1e\x43PublishedFile_Publish_Request\x12<\n\x05\x61ppid\x18\x01 \x01(\rB-\x82\xb5\x18)App Id this file is being published FROM.\x12\x43\n\x0e\x63onsumer_appid\x18\x02 \x01(\rB+\x82\xb5\x18\'App Id this file is being published TO.\x12K\n\rcloudfilename\x18\x03 \x01(\tB4\x82\xb5\x18\x30Name of the file to publish in the user\'s cloud.\x12[\n\x15preview_cloudfilename\x18\x04 \x01(\tB<\x82\xb5\x18\x38Name of the file to use as the published file\'s preview.\x12\x35\n\x05title\x18\x05 \x01(\tB&\x82\xb5\x18\"Text title for the published file.\x12\x46\n\x10\x66ile_description\x18\x06 \x01(\tB,\x82\xb5\x18(Text description for the published file.\x12L\n\tfile_type\x18\x07 \x01(\rB9\x82\xb5\x18\x35(EWorkshopFileType) Type of Workshop file to publish.\x12I\n\x16\x63onsumer_shortcut_name\x18\x08 \x01(\tB)\x82\xb5\x18%Shortcut name for the published file.\x12I\n\x10youtube_username\x18\t \x01(\tB/\x82\xb5\x18+(Optional) User\'s YouTube account username.\x12\\\n\x0fyoutube_videoid\x18\n \x01(\tBC\x82\xb5\x18?(Optional) Video Id of a YouTube video for this published file.\x12\x81\x01\n\nvisibility\x18\x0b \x01(\rBm\x82\xb5\x18i(ERemoteStoragePublishedFileVisibility) Visibility of the published file (private, friends, public, etc.)\x12k\n\x0credirect_uri\x18\x0c \x01(\tBU\x82\xb5\x18Q(Optional) If supplied, the resulting published file\'s Id is appended to the URI.\x12\x44\n\x04tags\x18\r \x03(\tB6\x82\xb5\x18\x32\x41rray of text tags to apply to the published file.\x12Y\n\x0f\x63ollection_type\x18\x0e \x01(\tB@\x82\xb5\x18<(Optional) Type of collection the published file represents.\x12M\n\tgame_type\x18\x0f \x01(\tB:\x82\xb5\x18\x36(Optional) Type of game the published file represents.\x12[\n\x03url\x18\x10 \x01(\tBN\x82\xb5\x18J(Optional) If this represents a game, this is the URL to that game\'s page.\"P\n\x1f\x43PublishedFile_Publish_Response\x12\x17\n\x0fpublishedfileid\x18\x01 \x01(\x04\x12\x14\n\x0credirect_uri\x18\x02 \x01(\t\"\xed\x06\n!CPublishedFile_GetDetails_Request\x12P\n\x10publishedfileids\x18\x01 \x03(\x06\x42\x36\x82\xb5\x18\x32Set of published file Ids to retrieve details for.\x12Q\n\x0bincludetags\x18\x02 \x01(\x08\x42<\x82\xb5\x18\x38If true, return tag information in the returned details.\x12\x63\n\x19includeadditionalpreviews\x18\x03 \x01(\x08\x42@\x82\xb5\x18<If true, return preview information in the returned details.\x12N\n\x0fincludechildren\x18\x04 \x01(\x08\x42\x35\x82\xb5\x18\x31If true, return children in the returned details.\x12R\n\rincludekvtags\x18\x05 \x01(\x08\x42;\x82\xb5\x18\x37If true, return key value tags in the returned details.\x12L\n\x0cincludevotes\x18\x06 \x01(\x08\x42\x36\x82\xb5\x18\x32If true, return vote data in the returned details.\x12\x63\n\x11short_description\x18\x08 \x01(\x08\x42H\x82\xb5\x18\x44If true, return a short description instead of the full description.\x12L\n\x12includeforsaledata\x18\n \x01(\x08\x42\x30\x82\xb5\x18,If true, return pricing data, if applicable.\x12\x42\n\x0fincludemetadata\x18\x0b \x01(\x08\x42)\x82\xb5\x18%If true, populate the metadata field.\x12U\n\x08language\x18\x0c \x01(\x05:\x01\x30\x42@\x82\xb5\x18<Specifies the localized text to return. Defaults to English.\"\xd7\x14\n\x14PublishedFileDetails\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x17\n\x0fpublishedfileid\x18\x02 \x01(\x04\x12\x0f\n\x07\x63reator\x18\x03 \x01(\x06\x12\x15\n\rcreator_appid\x18\x04 \x01(\r\x12\x16\n\x0e\x63onsumer_appid\x18\x05 \x01(\r\x12\x1b\n\x13\x63onsumer_shortcutid\x18\x06 \x01(\r\x12\x10\n\x08\x66ilename\x18\x07 \x01(\t\x12\x11\n\tfile_size\x18\x08 \x01(\x04\x12\x19\n\x11preview_file_size\x18\t \x01(\x04\x12\x10\n\x08\x66ile_url\x18\n \x01(\t\x12\x13\n\x0bpreview_url\x18\x0b \x01(\t\x12\x16\n\x0eyoutubevideoid\x18\x0c \x01(\t\x12\x0b\n\x03url\x18\r \x01(\t\x12\x15\n\rhcontent_file\x18\x0e \x01(\x06\x12\x18\n\x10hcontent_preview\x18\x0f \x01(\x06\x12\r\n\x05title\x18\x10 \x01(\t\x12\x18\n\x10\x66ile_description\x18\x11 \x01(\t\x12\x19\n\x11short_description\x18\x12 \x01(\t\x12\x14\n\x0ctime_created\x18\x13 \x01(\r\x12\x14\n\x0ctime_updated\x18\x14 \x01(\r\x12\x12\n\nvisibility\x18\x15 \x01(\r\x12\r\n\x05\x66lags\x18\x16 \x01(\r\x12\x15\n\rworkshop_file\x18\x17 \x01(\x08\x12\x19\n\x11workshop_accepted\x18\x18 \x01(\x08\x12\x1a\n\x12show_subscribe_all\x18\x19 \x01(\x08\x12\x1e\n\x16num_comments_developer\x18\x1a \x01(\x05\x12\x1b\n\x13num_comments_public\x18\x1b \x01(\x05\x12\x0e\n\x06\x62\x61nned\x18\x1c \x01(\x08\x12\x12\n\nban_reason\x18\x1d \x01(\t\x12\x0e\n\x06\x62\x61nner\x18\x1e \x01(\x06\x12\x16\n\x0e\x63\x61n_be_deleted\x18\x1f \x01(\x08\x12\x14\n\x0cincompatible\x18  \x01(\x08\x12\x10\n\x08\x61pp_name\x18! \x01(\t\x12\x11\n\tfile_type\x18\" \x01(\r\x12\x15\n\rcan_subscribe\x18# \x01(\x08\x12\x15\n\rsubscriptions\x18$ \x01(\r\x12\x11\n\tfavorited\x18% \x01(\r\x12\x11\n\tfollowers\x18& \x01(\r\x12\x1e\n\x16lifetime_subscriptions\x18\' \x01(\r\x12\x1a\n\x12lifetime_favorited\x18( \x01(\r\x12\x1a\n\x12lifetime_followers\x18) \x01(\r\x12\x19\n\x11lifetime_playtime\x18> \x01(\x04\x12\"\n\x1alifetime_playtime_sessions\x18? \x01(\x04\x12\r\n\x05views\x18* \x01(\r\x12\x13\n\x0bimage_width\x18+ \x01(\r\x12\x14\n\x0cimage_height\x18, \x01(\r\x12\x11\n\timage_url\x18- \x01(\t\x12\x13\n\x0bspoiler_tag\x18. \x01(\x08\x12\x12\n\nshortcutid\x18/ \x01(\r\x12\x14\n\x0cshortcutname\x18\x30 \x01(\t\x12\x14\n\x0cnum_children\x18\x31 \x01(\r\x12\x13\n\x0bnum_reports\x18\x32 \x01(\r\x12/\n\x08previews\x18\x33 \x03(\x0b\x32\x1d.PublishedFileDetails.Preview\x12\'\n\x04tags\x18\x34 \x03(\x0b\x32\x19.PublishedFileDetails.Tag\x12-\n\x08\x63hildren\x18\x35 \x03(\x0b\x32\x1b.PublishedFileDetails.Child\x12+\n\x06kvtags\x18\x36 \x03(\x0b\x32\x1b.PublishedFileDetails.KVTag\x12\x31\n\tvote_data\x18\x37 \x01(\x0b\x32\x1e.PublishedFileDetails.VoteData\x12r\n\x0ftime_subscribed\x18\x38 \x01(\rBY\x82\xb5\x18UOnly valid in PublishedFile.GetUserFiles and not normal PublishedFile.GetDetail calls\x12\x61\n\rfor_sale_data\x18\x39 \x01(\x0b\x32!.PublishedFileDetails.ForSaleDataB\'\x82\xb5\x18#Pricing information, if applicable.\x12\x37\n\x08metadata\x18: \x01(\tB%\x82\xb5\x18!Metadata associated with the item\x12\x1a\n\x12incompatible_actor\x18; \x01(\x06\x12\x1e\n\x16incompatible_timestamp\x18< \x01(\r\x12\x43\n\x08language\x18= \x01(\x05:\x01\x30\x42.\x82\xb5\x18*The language of the title and description.\x1a%\n\x03Tag\x12\x0b\n\x03tag\x18\x01 \x01(\t\x12\x11\n\tadminonly\x18\x02 \x01(\x08\x1a\xa6\x01\n\x07Preview\x12\x11\n\tpreviewid\x18\x01 \x01(\x04\x12\x11\n\tsortorder\x18\x02 \x01(\r\x12\x0b\n\x03url\x18\x03 \x01(\t\x12\x0c\n\x04size\x18\x04 \x01(\r\x12\x10\n\x08\x66ilename\x18\x05 \x01(\t\x12\x16\n\x0eyoutubevideoid\x18\x06 \x01(\t\x12\x14\n\x0cpreview_type\x18\x07 \x01(\r\x12\x1a\n\x12\x65xternal_reference\x18\x08 \x01(\t\x1a\x46\n\x05\x43hild\x12\x17\n\x0fpublishedfileid\x18\x01 \x01(\x04\x12\x11\n\tsortorder\x18\x02 \x01(\r\x12\x11\n\tfile_type\x18\x03 \x01(\r\x1a#\n\x05KVTag\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x1a?\n\x08VoteData\x12\r\n\x05score\x18\x01 \x01(\x02\x12\x10\n\x08votes_up\x18\x02 \x01(\r\x12\x12\n\nvotes_down\x18\x03 \x01(\r\x1a\xf1\x01\n\x0b\x46orSaleData\x12\x13\n\x0bis_for_sale\x18\x01 \x01(\x08\x12\x16\n\x0eprice_category\x18\x02 \x01(\r\x12V\n\x07\x65status\x18\x03 \x01(\x0e\x32\x31.PublishedFileDetails.EPublishedFileForSaleStatus:\x12k_PFFSS_NotForSale\x12\x1c\n\x14price_category_floor\x18\x04 \x01(\r\x12\"\n\x1aprice_is_pay_what_you_want\x18\x05 \x01(\x08\x12\x1b\n\x13\x64iscount_percentage\x18\x06 \x01(\r\"\xc8\x01\n\x1b\x45PublishedFileForSaleStatus\x12\x16\n\x12k_PFFSS_NotForSale\x10\x00\x12\x1b\n\x17k_PFFSS_PendingApproval\x10\x01\x12\x1b\n\x17k_PFFSS_ApprovedForSale\x10\x02\x12\x1b\n\x17k_PFFSS_RejectedForSale\x10\x03\x12\x1b\n\x17k_PFFSS_NoLongerForSale\x10\x04\x12\x1d\n\x19k_PFFSS_TentativeApproval\x10\x05\"Y\n\"CPublishedFile_GetDetails_Response\x12\x33\n\x14publishedfiledetails\x18\x01 \x03(\x0b\x32\x15.PublishedFileDetails\"\xda\x01\n\"CPublishedFile_GetItemInfo_Request\x12\x0e\n\x06\x61pp_id\x18\x01 \x01(\r\x12\x19\n\x11last_time_updated\x18\x02 \x01(\r\x12H\n\x0eworkshop_items\x18\x03 \x03(\x0b\x32\x30.CPublishedFile_GetItemInfo_Request.WorkshopItem\x1a?\n\x0cWorkshopItem\x12\x19\n\x11published_file_id\x18\x01 \x01(\x06\x12\x14\n\x0ctime_updated\x18\x02 \x01(\r\"\xf2\x01\n#CPublishedFile_GetItemInfo_Response\x12\x13\n\x0bupdate_time\x18\x01 \x01(\r\x12M\n\x0eworkshop_items\x18\x02 \x03(\x0b\x32\x35.CPublishedFile_GetItemInfo_Response.WorkshopItemInfo\x1ag\n\x10WorkshopItemInfo\x12\x19\n\x11published_file_id\x18\x01 \x01(\x06\x12\x14\n\x0ctime_updated\x18\x02 \x01(\r\x12\x13\n\x0bmanifest_id\x18\x03 \x01(\x06\x12\r\n\x05\x66lags\x18\x04 \x01(\r\"\xf6\x10\n#CPublishedFile_GetUserFiles_Request\x12J\n\x07steamid\x18\x01 \x01(\x06\x42\x39\x82\xb5\x18\x35Steam ID of the user whose files are being requested.\x12\x46\n\x05\x61ppid\x18\x02 \x01(\rB7\x82\xb5\x18\x33\x41pp Id of the app that the files were published to.\x12:\n\x04page\x18\x04 \x01(\r:\x01\x31\x42)\x82\xb5\x18%(Optional) Starting page for results.\x12P\n\nnumperpage\x18\x05 \x01(\r:\x01\x31\x42\x39\x82\xb5\x18\x35(Optional) The number of results, per page to return.\x12\x43\n\x04type\x18\x06 \x01(\t:\x07myfilesB,\x82\xb5\x18((Optional) Type of files to be returned.\x12Y\n\nsortmethod\x18\x07 \x01(\t:\x0blastupdatedB8\x82\xb5\x18\x34(Optional) Sorting method to use on returned values.\x12;\n\x07privacy\x18\t \x01(\rB*\x82\xb5\x18&(optional) Filter by privacy settings.\x12h\n\x0crequiredtags\x18\n \x03(\tBR\x82\xb5\x18N(Optional) Tags that must be present on a published file to satisfy the query.\x12l\n\x0c\x65xcludedtags\x18\x0b \x03(\tBV\x82\xb5\x18R(Optional) Tags that must NOT be present on a published file to satisfy the query.\x12n\n\x10required_kv_tags\x18\x1e \x03(\x0b\x32*.CPublishedFile_GetUserFiles_Request.KVTagB(\x82\xb5\x18$Required key-value tags to match on.\x12=\n\x08\x66iletype\x18\x0e \x01(\rB+\x82\xb5\x18\'(Optional) File type to match files to.\x12\x61\n\rcreator_appid\x18\x0f \x01(\rBJ\x82\xb5\x18\x46\x41pp Id of the app that published the files, only matched if specified.\x12I\n\x14match_cloud_filename\x18\x10 \x01(\tB+\x82\xb5\x18\'Match this cloud filename if specified.\x12j\n\x15\x63\x61\x63he_max_age_seconds\x18\x1b \x01(\r:\x01\x30\x42H\x82\xb5\x18\x44\x41llow stale data to be returned for the specified number of seconds.\x12U\n\x08language\x18\x1d \x01(\x05:\x01\x30\x42@\x82\xb5\x18<Specifies the localized text to return. Defaults to English.\x12i\n\ttotalonly\x18\x11 \x01(\x08\x42V\x82\xb5\x18R(Optional) If true, only return the total number of files that satisfy this query.\x12n\n\x08ids_only\x18\x12 \x01(\x08\x42\\\x82\xb5\x18X(Optional) If true, only return the published file ids of files that satisfy this query.\x12\x34\n\x10return_vote_data\x18\x13 \x01(\x08:\x04trueB\x14\x82\xb5\x18\x10Return vote data\x12\x38\n\x0breturn_tags\x18\x14 \x01(\x08\x42#\x82\xb5\x18\x1fReturn tags in the file details\x12K\n\x0ereturn_kv_tags\x18\x15 \x01(\x08:\x04trueB-\x82\xb5\x18)Return key-value tags in the file details\x12W\n\x0freturn_previews\x18\x16 \x01(\x08\x42>\x82\xb5\x18:Return preview image and video details in the file details\x12\x46\n\x0freturn_children\x18\x17 \x01(\x08\x42-\x82\xb5\x18)Return child item ids in the file details\x12l\n\x18return_short_description\x18\x18 \x01(\x08:\x04trueBD\x82\xb5\x18@Populate the short_description field instead of file_description\x12K\n\x14return_for_sale_data\x18\x1a \x01(\x08\x42-\x82\xb5\x18)Return pricing information, if applicable\x12?\n\x0freturn_metadata\x18\x1c \x01(\x08:\x05\x66\x61lseB\x1f\x82\xb5\x18\x1bPopulate the metadata field\x1a#\n\x05KVTag\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\x80\x02\n$CPublishedFile_GetUserFiles_Response\x12\r\n\x05total\x18\x01 \x01(\r\x12\x12\n\nstartindex\x18\x02 \x01(\r\x12\x33\n\x14publishedfiledetails\x18\x03 \x03(\x0b\x32\x15.PublishedFileDetails\x12\x37\n\x04\x61pps\x18\x04 \x03(\x0b\x32).CPublishedFile_GetUserFiles_Response.App\x1aG\n\x03\x41pp\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x12\n\nshortcutid\x18\x03 \x01(\r\x12\x0f\n\x07private\x18\x04 \x01(\x08\"\x91\x06\n\x1d\x43PublishedFile_Update_Request\x12\x39\n\x05\x61ppid\x18\x01 \x01(\rB*\x82\xb5\x18&App Id this published file belongs to.\x12L\n\x0fpublishedfileid\x18\x02 \x01(\x06\x42\x33\x82\xb5\x18/Published file id of the file we\'d like update.\x12:\n\x05title\x18\x03 \x01(\tB+\x82\xb5\x18\'(Optional) Title of the published file.\x12K\n\x10\x66ile_description\x18\x04 \x01(\tB1\x82\xb5\x18-(Optional) Description of the published file.\x12\x44\n\nvisibility\x18\x05 \x01(\rB0\x82\xb5\x18,(Optional) Visibility of the published file.\x12@\n\x04tags\x18\x06 \x03(\tB2\x82\xb5\x18.(Optional) Set of tags for the published file.\x12\x41\n\x08\x66ilename\x18\x07 \x01(\tB/\x82\xb5\x18+(Optional) Filename for the published file.\x12Q\n\x10preview_filename\x18\x08 \x01(\tB7\x82\xb5\x18\x33(Optional) Preview filename for the published file.\x12^\n\x0bimage_width\x18\x0f \x01(\rBI\x82\xb5\x18\x45(Optional) If this is an image file, you can specify the image width.\x12`\n\x0cimage_height\x18\x10 \x01(\rBJ\x82\xb5\x18\x46(Optional) If this is an image file, you can specify the image height.\" \n\x1e\x43PublishedFile_Update_Response\"\xb8\x01\n,CPublishedFile_GetChangeHistoryEntry_Request\x12\x63\n\x0fpublishedfileid\x18\x01 \x01(\x06\x42J\x82\xb5\x18\x46Published file id of the file we\'d like to get the change history for.\x12\x11\n\ttimestamp\x18\x02 \x01(\r\x12\x10\n\x08language\x18\x03 \x01(\x05\"]\n-CPublishedFile_GetChangeHistoryEntry_Response\x12\x1a\n\x12\x63hange_description\x18\x01 \x01(\t\x12\x10\n\x08language\x18\x02 \x01(\x05\"\x9e\x02\n\'CPublishedFile_GetChangeHistory_Request\x12\x63\n\x0fpublishedfileid\x18\x01 \x01(\x06\x42J\x82\xb5\x18\x46Published file id of the file we\'d like to get the change history for.\x12@\n\ntotal_only\x18\x02 \x01(\x08\x42,\x82\xb5\x18(Return the total number of changes only.\x12\x12\n\nstartindex\x18\x03 \x01(\r\x12\r\n\x05\x63ount\x18\x04 \x01(\r\x12)\n\x08language\x18\x05 \x01(\x05:\x01\x30\x42\x14\x82\xb5\x18\x10\x44\x65sired language\"\xcd\x01\n(CPublishedFile_GetChangeHistory_Response\x12\x44\n\x07\x63hanges\x18\x01 \x03(\x0b\x32\x33.CPublishedFile_GetChangeHistory_Response.ChangeLog\x12\r\n\x05total\x18\x02 \x01(\r\x1aL\n\tChangeLog\x12\x11\n\ttimestamp\x18\x01 \x01(\r\x12\x1a\n\x12\x63hange_description\x18\x02 \x01(\t\x12\x10\n\x08language\x18\x03 \x01(\x05\"\xbb\x04\n)CPublishedFile_RefreshVotingQueue_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x42\n\x12matching_file_type\x18\x02 \x01(\rB&\x82\xb5\x18\"EPublishedFileInfoMatchingFileType\x12l\n\x04tags\x18\x03 \x03(\tB^\x82\xb5\x18ZInclude files that have all the tags or any of the tags if match_all_tags is set to false.\x12\x95\x01\n\x0ematch_all_tags\x18\x04 \x01(\x08:\x04trueBw\x82\xb5\x18sIf true, then files must have all the tags specified.  If false, then must have at least one of the tags specified.\x12I\n\rexcluded_tags\x18\x05 \x03(\tB2\x82\xb5\x18.Exclude any files that have any of these tags.\x12j\n\x12\x64\x65sired_queue_size\x18\x06 \x01(\rBN\x82\xb5\x18JDesired number of items in the voting queue.  May be clamped by the server\",\n*CPublishedFile_RefreshVotingQueue_Response\"\xc2\x13\n!CPublishedFile_QueryFiles_Request\x12L\n\nquery_type\x18\x01 \x01(\rB8\x82\xb5\x18\x34\x65numeration EPublishedFileQueryType in clientenums.h\x12\x1e\n\x04page\x18\x02 \x01(\rB\x10\x82\xb5\x18\x0c\x43urrent page\x12P\n\nnumperpage\x18\x03 \x01(\r:\x01\x31\x42\x39\x82\xb5\x18\x35(Optional) The number of results, per page to return.\x12\x35\n\rcreator_appid\x18\x04 \x01(\rB\x1e\x82\xb5\x18\x1a\x41pp that created the files\x12.\n\x05\x61ppid\x18\x05 \x01(\rB\x1f\x82\xb5\x18\x1b\x41pp that consumes the files\x12N\n\x0crequiredtags\x18\x06 \x03(\tB8\x82\xb5\x18\x34Tags to match on. See match_all_tags parameter below\x12l\n\x0c\x65xcludedtags\x18\x07 \x03(\tBV\x82\xb5\x18R(Optional) Tags that must NOT be present on a published file to satisfy the query.\x12\x8a\x01\n\x0ematch_all_tags\x18\x08 \x01(\x08:\x04trueBl\x82\xb5\x18hIf true, then items must have all the tags specified, otherwise they must have at least one of the tags.\x12Q\n\x0erequired_flags\x18\t \x03(\tB9\x82\xb5\x18\x35Required flags that must be set on any returned items\x12K\n\romitted_flags\x18\n \x03(\tB4\x82\xb5\x18\x30\x46lags that must not be set on any returned items\x12I\n\x0bsearch_text\x18\x0b \x01(\tB4\x82\xb5\x18\x30Text to match in the item\'s title or description\x12\x38\n\x08\x66iletype\x18\x0c \x01(\rB&\x82\xb5\x18\"EPublishedFileInfoMatchingFileType\x12P\n\x15\x63hild_publishedfileid\x18\r \x01(\x06\x42\x31\x82\xb5\x18-Find all items that reference the given item.\x12\x82\x01\n\x04\x64\x61ys\x18\x0e \x01(\rBt\x82\xb5\x18pIf query_type is k_PublishedFileQueryType_RankedByTrend, then this is the number of days to get votes for [1,7].\x12\xb0\x01\n\x19include_recent_votes_only\x18\x0f \x01(\x08\x42\x8c\x01\x82\xb5\x18\x87\x01If query_type is k_PublishedFileQueryType_RankedByTrend, then limit result set just to items that have votes within the day range given\x12j\n\x15\x63\x61\x63he_max_age_seconds\x18\x1f \x01(\r:\x01\x30\x42H\x82\xb5\x18\x44\x41llow stale data to be returned for the specified number of seconds.\x12`\n\x08language\x18! \x01(\x05:\x01\x30\x42K\x82\xb5\x18GLanguage to search in and also what gets returned. Defaults to English.\x12l\n\x10required_kv_tags\x18\" \x03(\x0b\x32(.CPublishedFile_QueryFiles_Request.KVTagB(\x82\xb5\x18$Required key-value tags to match on.\x12i\n\ttotalonly\x18\x10 \x01(\x08\x42V\x82\xb5\x18R(Optional) If true, only return the total number of files that satisfy this query.\x12n\n\x08ids_only\x18# \x01(\x08\x42\\\x82\xb5\x18X(Optional) If true, only return the published file ids of files that satisfy this query.\x12.\n\x10return_vote_data\x18\x11 \x01(\x08\x42\x14\x82\xb5\x18\x10Return vote data\x12\x38\n\x0breturn_tags\x18\x12 \x01(\x08\x42#\x82\xb5\x18\x1fReturn tags in the file details\x12\x45\n\x0ereturn_kv_tags\x18\x13 \x01(\x08\x42-\x82\xb5\x18)Return key-value tags in the file details\x12W\n\x0freturn_previews\x18\x14 \x01(\x08\x42>\x82\xb5\x18:Return preview image and video details in the file details\x12\x46\n\x0freturn_children\x18\x15 \x01(\x08\x42-\x82\xb5\x18)Return child item ids in the file details\x12\x66\n\x18return_short_description\x18\x16 \x01(\x08\x42\x44\x82\xb5\x18@Populate the short_description field instead of file_description\x12K\n\x14return_for_sale_data\x18\x1e \x01(\x08\x42-\x82\xb5\x18)Return pricing information, if applicable\x12\x39\n\x0freturn_metadata\x18  \x01(\x08:\x05\x66\x61lseB\x19\x82\xb5\x18\x15Populate the metadata\x1a#\n\x05KVTag\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\x8a\x02\n\"CPublishedFile_QueryFiles_Response\x12T\n\x05total\x18\x01 \x01(\rBE\x82\xb5\x18\x41Number of matches found, not necessarily number of items returned\x12\x8d\x01\n\x14publishedfiledetails\x18\x02 \x03(\x0b\x32\x15.PublishedFileDetailsBX\x82\xb5\x18TEach file details will be populated, depending on what return values were requested.\"W\n,CPublishedFile_StartPlaytimeTracking_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x18\n\x10publishedfileids\x18\x02 \x03(\x04\"/\n-CPublishedFile_StartPlaytimeTracking_Response\"V\n+CPublishedFile_StopPlaytimeTracking_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x18\n\x10publishedfileids\x18\x02 \x03(\x04\".\n,CPublishedFile_StopPlaytimeTracking_Response\"J\n9CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\"<\n:CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response\"\x81\x02\n6CPublishedFile_SetPlaytimeForControllerConfigs_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12n\n\x17\x63ontroller_config_usage\x18\x02 \x03(\x0b\x32M.CPublishedFile_SetPlaytimeForControllerConfigs_Request.ControllerConfigUsage\x1aH\n\x15\x43ontrollerConfigUsage\x12\x17\n\x0fpublishedfileid\x18\x01 \x01(\x04\x12\x16\n\x0eseconds_active\x18\x02 \x01(\x02\"9\n7CPublishedFile_SetPlaytimeForControllerConfigs_Response2\x99\x15\n\rPublishedFile\x12\x81\x01\n\tSubscribe\x12!.CPublishedFile_Subscribe_Request\x1a\".CPublishedFile_Subscribe_Response\"-\x82\xb5\x18)Subscribes the user to the published file\x12\x8b\x01\n\x0bUnsubscribe\x12#.CPublishedFile_Unsubscribe_Request\x1a$.CPublishedFile_Unsubscribe_Response\"1\x82\xb5\x18-Unsubscribes the user from the published file\x12\x96\x01\n\x0c\x43\x61nSubscribe\x12$.CPublishedFile_CanSubscribe_Request\x1a%.CPublishedFile_CanSubscribe_Response\"9\x82\xb5\x18\x35\x43heck if the user can subscribe to the published file\x12\x80\x01\n\x07Publish\x12\x1f.CPublishedFile_Publish_Request\x1a .CPublishedFile_Publish_Response\"2\x82\xb5\x18.Publishes a clouded user file to the Workshop.\x12\x90\x01\n\nGetDetails\x12\".CPublishedFile_GetDetails_Request\x1a#.CPublishedFile_GetDetails_Response\"9\x82\xb5\x18\x35Retrieves information about a set of published files.\x12\x93\x01\n\x0bGetItemInfo\x12#.CPublishedFile_GetItemInfo_Request\x1a$.CPublishedFile_GetItemInfo_Response\"9\x82\xb5\x18\x35Retrieves information about a set of published files.\x12\x85\x01\n\x0cGetUserFiles\x12$.CPublishedFile_GetUserFiles_Request\x1a%.CPublishedFile_GetUserFiles_Response\"(\x82\xb5\x18$Retrieves files published by a user.\x12z\n\x06Update\x12\x1e.CPublishedFile_Update_Request\x1a\x1f.CPublishedFile_Update_Response\"/\x82\xb5\x18+Updates information about a published file.\x12\xc0\x01\n\x15GetChangeHistoryEntry\x12-.CPublishedFile_GetChangeHistoryEntry_Request\x1a..CPublishedFile_GetChangeHistoryEntry_Response\"H\x82\xb5\x18\x44Returns data on a specific change history entry for a published file\x12\xa4\x01\n\x10GetChangeHistory\x12(.CPublishedFile_GetChangeHistory_Request\x1a).CPublishedFile_GetChangeHistory_Response\";\x82\xb5\x18\x37Returns data on the change history for a published file\x12\x98\x01\n\x12RefreshVotingQueue\x12*.CPublishedFile_RefreshVotingQueue_Request\x1a+.CPublishedFile_RefreshVotingQueue_Response\")\x82\xb5\x18%Refresh the voting queue for the user\x12\x86\x01\n\nQueryFiles\x12\".CPublishedFile_QueryFiles_Request\x1a#.CPublishedFile_QueryFiles_Response\"/\x82\xb5\x18+Performs a search query for published files\x12\xb3\x01\n\x15StartPlaytimeTracking\x12-.CPublishedFile_StartPlaytimeTracking_Request\x1a..CPublishedFile_StartPlaytimeTracking_Response\";\x82\xb5\x18\x37Start usage tracking for a given set of published files\x12\xb0\x01\n\x14StopPlaytimeTracking\x12,.CPublishedFile_StopPlaytimeTracking_Request\x1a-.CPublishedFile_StopPlaytimeTracking_Response\";\x82\xb5\x18\x37Stops usage tracking for a given set of published files\x12\xed\x01\n\"StopPlaytimeTrackingForAllAppItems\x12:.CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request\x1a;.CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response\"N\x82\xb5\x18JStops usage tracking for all items currently tracked for the specified app\x12\x98\x02\n\x1fSetPlaytimeForControllerConfigs\x12\x37.CPublishedFile_SetPlaytimeForControllerConfigs_Request\x1a\x38.CPublishedFile_SetPlaytimeForControllerConfigs_Response\"\x81\x01\x82\xb5\x18}Stops usage tracking all controller configs for the given app and set the usage time for the for the given controller configs\x1a+\x82\xb5\x18\'A service to access published file dataB\x03\x80\x01\x01')
   ,
-  dependencies=[google.protobuf.descriptor_pb2.DESCRIPTOR,steammessages_unified_base.steamclient_pb2.DESCRIPTOR,])
+  dependencies=[steammessages__unified__base_dot_steamclient__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -53,11 +53,15 @@ _PUBLISHEDFILEDETAILS_EPUBLISHEDFILEFORSALESTATUS = _descriptor.EnumDescriptor(
       name='k_PFFSS_NoLongerForSale', index=4, number=4,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='k_PFFSS_TentativeApproval', index=5, number=5,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=5225,
-  serialized_end=5394,
+  serialized_start=5305,
+  serialized_end=5505,
 )
 _sym_db.RegisterEnumDescriptor(_PUBLISHEDFILEDETAILS_EPUBLISHEDFILEFORSALESTATUS)
 
@@ -105,11 +109,12 @@ _CPUBLISHEDFILE_SUBSCRIBE_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=129,
-  serialized_end=245,
+  serialized_start=95,
+  serialized_end=211,
 )
 
 
@@ -128,11 +133,12 @@ _CPUBLISHEDFILE_SUBSCRIBE_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=247,
-  serialized_end=282,
+  serialized_start=213,
+  serialized_end=248,
 )
 
 
@@ -179,11 +185,12 @@ _CPUBLISHEDFILE_UNSUBSCRIBE_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=284,
-  serialized_end=402,
+  serialized_start=250,
+  serialized_end=368,
 )
 
 
@@ -202,11 +209,12 @@ _CPUBLISHEDFILE_UNSUBSCRIBE_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=404,
-  serialized_end=441,
+  serialized_start=370,
+  serialized_end=407,
 )
 
 
@@ -232,11 +240,12 @@ _CPUBLISHEDFILE_CANSUBSCRIBE_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=443,
-  serialized_end=505,
+  serialized_start=409,
+  serialized_end=471,
 )
 
 
@@ -262,11 +271,12 @@ _CPUBLISHEDFILE_CANSUBSCRIBE_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=507,
-  serialized_end=568,
+  serialized_start=473,
+  serialized_end=534,
 )
 
 
@@ -397,11 +407,12 @@ _CPUBLISHEDFILE_PUBLISH_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=571,
-  serialized_end=1927,
+  serialized_start=537,
+  serialized_end=1893,
 )
 
 
@@ -434,11 +445,12 @@ _CPUBLISHEDFILE_PUBLISH_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1929,
-  serialized_end=2009,
+  serialized_start=1895,
+  serialized_end=1975,
 )
 
 
@@ -527,11 +539,12 @@ _CPUBLISHEDFILE_GETDETAILS_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2012,
-  serialized_end=2889,
+  serialized_start=1978,
+  serialized_end=2855,
 )
 
 
@@ -564,11 +577,12 @@ _PUBLISHEDFILEDETAILS_TAG = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4649,
-  serialized_end=4686,
+  serialized_start=4678,
+  serialized_end=4715,
 )
 
 _PUBLISHEDFILEDETAILS_PREVIEW = _descriptor.Descriptor(
@@ -620,6 +634,20 @@ _PUBLISHEDFILEDETAILS_PREVIEW = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='preview_type', full_name='PublishedFileDetails.Preview.preview_type', index=6,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='external_reference', full_name='PublishedFileDetails.Preview.external_reference', index=7,
+      number=8, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -628,11 +656,12 @@ _PUBLISHEDFILEDETAILS_PREVIEW = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4688,
-  serialized_end=4804,
+  serialized_start=4718,
+  serialized_end=4884,
 )
 
 _PUBLISHEDFILEDETAILS_CHILD = _descriptor.Descriptor(
@@ -671,11 +700,12 @@ _PUBLISHEDFILEDETAILS_CHILD = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4806,
-  serialized_end=4876,
+  serialized_start=4886,
+  serialized_end=4956,
 )
 
 _PUBLISHEDFILEDETAILS_KVTAG = _descriptor.Descriptor(
@@ -707,11 +737,12 @@ _PUBLISHEDFILEDETAILS_KVTAG = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4878,
-  serialized_end=4913,
+  serialized_start=4958,
+  serialized_end=4993,
 )
 
 _PUBLISHEDFILEDETAILS_VOTEDATA = _descriptor.Descriptor(
@@ -724,7 +755,7 @@ _PUBLISHEDFILEDETAILS_VOTEDATA = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='score', full_name='PublishedFileDetails.VoteData.score', index=0,
       number=1, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -750,11 +781,12 @@ _PUBLISHEDFILEDETAILS_VOTEDATA = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4915,
-  serialized_end=4978,
+  serialized_start=4995,
+  serialized_end=5058,
 )
 
 _PUBLISHEDFILEDETAILS_FORSALEDATA = _descriptor.Descriptor(
@@ -814,11 +846,12 @@ _PUBLISHEDFILEDETAILS_FORSALEDATA = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4981,
-  serialized_end=5222,
+  serialized_start=5061,
+  serialized_end=5302,
 )
 
 _PUBLISHEDFILEDETAILS = _descriptor.Descriptor(
@@ -1116,140 +1149,154 @@ _PUBLISHEDFILEDETAILS = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='views', full_name='PublishedFileDetails.views', index=41,
+      name='lifetime_playtime', full_name='PublishedFileDetails.lifetime_playtime', index=41,
+      number=62, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='lifetime_playtime_sessions', full_name='PublishedFileDetails.lifetime_playtime_sessions', index=42,
+      number=63, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='views', full_name='PublishedFileDetails.views', index=43,
       number=42, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='image_width', full_name='PublishedFileDetails.image_width', index=42,
+      name='image_width', full_name='PublishedFileDetails.image_width', index=44,
       number=43, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='image_height', full_name='PublishedFileDetails.image_height', index=43,
+      name='image_height', full_name='PublishedFileDetails.image_height', index=45,
       number=44, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='image_url', full_name='PublishedFileDetails.image_url', index=44,
+      name='image_url', full_name='PublishedFileDetails.image_url', index=46,
       number=45, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='spoiler_tag', full_name='PublishedFileDetails.spoiler_tag', index=45,
+      name='spoiler_tag', full_name='PublishedFileDetails.spoiler_tag', index=47,
       number=46, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='shortcutid', full_name='PublishedFileDetails.shortcutid', index=46,
+      name='shortcutid', full_name='PublishedFileDetails.shortcutid', index=48,
       number=47, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='shortcutname', full_name='PublishedFileDetails.shortcutname', index=47,
+      name='shortcutname', full_name='PublishedFileDetails.shortcutname', index=49,
       number=48, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='num_children', full_name='PublishedFileDetails.num_children', index=48,
+      name='num_children', full_name='PublishedFileDetails.num_children', index=50,
       number=49, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='num_reports', full_name='PublishedFileDetails.num_reports', index=49,
+      name='num_reports', full_name='PublishedFileDetails.num_reports', index=51,
       number=50, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='previews', full_name='PublishedFileDetails.previews', index=50,
+      name='previews', full_name='PublishedFileDetails.previews', index=52,
       number=51, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='tags', full_name='PublishedFileDetails.tags', index=51,
+      name='tags', full_name='PublishedFileDetails.tags', index=53,
       number=52, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='children', full_name='PublishedFileDetails.children', index=52,
+      name='children', full_name='PublishedFileDetails.children', index=54,
       number=53, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='kvtags', full_name='PublishedFileDetails.kvtags', index=53,
+      name='kvtags', full_name='PublishedFileDetails.kvtags', index=55,
       number=54, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='vote_data', full_name='PublishedFileDetails.vote_data', index=54,
+      name='vote_data', full_name='PublishedFileDetails.vote_data', index=56,
       number=55, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='time_subscribed', full_name='PublishedFileDetails.time_subscribed', index=55,
+      name='time_subscribed', full_name='PublishedFileDetails.time_subscribed', index=57,
       number=56, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030UOnly valid in PublishedFile.GetUserFiles and not normal PublishedFile.GetDetail calls'))),
     _descriptor.FieldDescriptor(
-      name='for_sale_data', full_name='PublishedFileDetails.for_sale_data', index=56,
+      name='for_sale_data', full_name='PublishedFileDetails.for_sale_data', index=58,
       number=57, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030#Pricing information, if applicable.'))),
     _descriptor.FieldDescriptor(
-      name='metadata', full_name='PublishedFileDetails.metadata', index=57,
+      name='metadata', full_name='PublishedFileDetails.metadata', index=59,
       number=58, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030!Metadata associated with the item'))),
     _descriptor.FieldDescriptor(
-      name='incompatible_actor', full_name='PublishedFileDetails.incompatible_actor', index=58,
+      name='incompatible_actor', full_name='PublishedFileDetails.incompatible_actor', index=60,
       number=59, type=6, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='incompatible_timestamp', full_name='PublishedFileDetails.incompatible_timestamp', index=59,
+      name='incompatible_timestamp', full_name='PublishedFileDetails.incompatible_timestamp', index=61,
       number=60, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='language', full_name='PublishedFileDetails.language', index=60,
+      name='language', full_name='PublishedFileDetails.language', index=62,
       number=61, type=5, cpp_type=1, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1264,11 +1311,12 @@ _PUBLISHEDFILEDETAILS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2892,
-  serialized_end=5394,
+  serialized_start=2858,
+  serialized_end=5505,
 )
 
 
@@ -1294,11 +1342,12 @@ _CPUBLISHEDFILE_GETDETAILS_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5396,
-  serialized_end=5485,
+  serialized_start=5507,
+  serialized_end=5596,
 )
 
 
@@ -1331,11 +1380,12 @@ _CPUBLISHEDFILE_GETITEMINFO_REQUEST_WORKSHOPITEM = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5643,
-  serialized_end=5706,
+  serialized_start=5754,
+  serialized_end=5817,
 )
 
 _CPUBLISHEDFILE_GETITEMINFO_REQUEST = _descriptor.Descriptor(
@@ -1374,11 +1424,12 @@ _CPUBLISHEDFILE_GETITEMINFO_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5488,
-  serialized_end=5706,
+  serialized_start=5599,
+  serialized_end=5817,
 )
 
 
@@ -1410,6 +1461,13 @@ _CPUBLISHEDFILE_GETITEMINFO_RESPONSE_WORKSHOPITEMINFO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='flags', full_name='CPublishedFile_GetItemInfo_Response.WorkshopItemInfo.flags', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -1418,11 +1476,12 @@ _CPUBLISHEDFILE_GETITEMINFO_RESPONSE_WORKSHOPITEMINFO = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5848,
-  serialized_end=5936,
+  serialized_start=5959,
+  serialized_end=6062,
 )
 
 _CPUBLISHEDFILE_GETITEMINFO_RESPONSE = _descriptor.Descriptor(
@@ -1454,13 +1513,51 @@ _CPUBLISHEDFILE_GETITEMINFO_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5709,
-  serialized_end=5936,
+  serialized_start=5820,
+  serialized_end=6062,
 )
 
+
+_CPUBLISHEDFILE_GETUSERFILES_REQUEST_KVTAG = _descriptor.Descriptor(
+  name='KVTag',
+  full_name='CPublishedFile_GetUserFiles_Request.KVTag',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='CPublishedFile_GetUserFiles_Request.KVTag.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='CPublishedFile_GetUserFiles_Request.KVTag.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4958,
+  serialized_end=4993,
+)
 
 _CPUBLISHEDFILE_GETUSERFILES_REQUEST = _descriptor.Descriptor(
   name='CPublishedFile_GetUserFiles_Request',
@@ -1533,105 +1630,112 @@ _CPUBLISHEDFILE_GETUSERFILES_REQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030R(Optional) Tags that must NOT be present on a published file to satisfy the query.'))),
     _descriptor.FieldDescriptor(
-      name='filetype', full_name='CPublishedFile_GetUserFiles_Request.filetype', index=9,
+      name='required_kv_tags', full_name='CPublishedFile_GetUserFiles_Request.required_kv_tags', index=9,
+      number=30, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030$Required key-value tags to match on.'))),
+    _descriptor.FieldDescriptor(
+      name='filetype', full_name='CPublishedFile_GetUserFiles_Request.filetype', index=10,
       number=14, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030\'(Optional) File type to match files to.'))),
     _descriptor.FieldDescriptor(
-      name='creator_appid', full_name='CPublishedFile_GetUserFiles_Request.creator_appid', index=10,
+      name='creator_appid', full_name='CPublishedFile_GetUserFiles_Request.creator_appid', index=11,
       number=15, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030FApp Id of the app that published the files, only matched if specified.'))),
     _descriptor.FieldDescriptor(
-      name='match_cloud_filename', full_name='CPublishedFile_GetUserFiles_Request.match_cloud_filename', index=11,
+      name='match_cloud_filename', full_name='CPublishedFile_GetUserFiles_Request.match_cloud_filename', index=12,
       number=16, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030\'Match this cloud filename if specified.'))),
     _descriptor.FieldDescriptor(
-      name='cache_max_age_seconds', full_name='CPublishedFile_GetUserFiles_Request.cache_max_age_seconds', index=12,
+      name='cache_max_age_seconds', full_name='CPublishedFile_GetUserFiles_Request.cache_max_age_seconds', index=13,
       number=27, type=13, cpp_type=3, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030DAllow stale data to be returned for the specified number of seconds.'))),
     _descriptor.FieldDescriptor(
-      name='language', full_name='CPublishedFile_GetUserFiles_Request.language', index=13,
+      name='language', full_name='CPublishedFile_GetUserFiles_Request.language', index=14,
       number=29, type=5, cpp_type=1, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030<Specifies the localized text to return. Defaults to English.'))),
     _descriptor.FieldDescriptor(
-      name='totalonly', full_name='CPublishedFile_GetUserFiles_Request.totalonly', index=14,
+      name='totalonly', full_name='CPublishedFile_GetUserFiles_Request.totalonly', index=15,
       number=17, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030R(Optional) If true, only return the total number of files that satisfy this query.'))),
     _descriptor.FieldDescriptor(
-      name='ids_only', full_name='CPublishedFile_GetUserFiles_Request.ids_only', index=15,
+      name='ids_only', full_name='CPublishedFile_GetUserFiles_Request.ids_only', index=16,
       number=18, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030X(Optional) If true, only return the published file ids of files that satisfy this query.'))),
     _descriptor.FieldDescriptor(
-      name='return_vote_data', full_name='CPublishedFile_GetUserFiles_Request.return_vote_data', index=16,
+      name='return_vote_data', full_name='CPublishedFile_GetUserFiles_Request.return_vote_data', index=17,
       number=19, type=8, cpp_type=7, label=1,
       has_default_value=True, default_value=True,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030\020Return vote data'))),
     _descriptor.FieldDescriptor(
-      name='return_tags', full_name='CPublishedFile_GetUserFiles_Request.return_tags', index=17,
+      name='return_tags', full_name='CPublishedFile_GetUserFiles_Request.return_tags', index=18,
       number=20, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030\037Return tags in the file details'))),
     _descriptor.FieldDescriptor(
-      name='return_kv_tags', full_name='CPublishedFile_GetUserFiles_Request.return_kv_tags', index=18,
+      name='return_kv_tags', full_name='CPublishedFile_GetUserFiles_Request.return_kv_tags', index=19,
       number=21, type=8, cpp_type=7, label=1,
       has_default_value=True, default_value=True,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030)Return key-value tags in the file details'))),
     _descriptor.FieldDescriptor(
-      name='return_previews', full_name='CPublishedFile_GetUserFiles_Request.return_previews', index=19,
+      name='return_previews', full_name='CPublishedFile_GetUserFiles_Request.return_previews', index=20,
       number=22, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030:Return preview image and video details in the file details'))),
     _descriptor.FieldDescriptor(
-      name='return_children', full_name='CPublishedFile_GetUserFiles_Request.return_children', index=20,
+      name='return_children', full_name='CPublishedFile_GetUserFiles_Request.return_children', index=21,
       number=23, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030)Return child item ids in the file details'))),
     _descriptor.FieldDescriptor(
-      name='return_short_description', full_name='CPublishedFile_GetUserFiles_Request.return_short_description', index=21,
+      name='return_short_description', full_name='CPublishedFile_GetUserFiles_Request.return_short_description', index=22,
       number=24, type=8, cpp_type=7, label=1,
       has_default_value=True, default_value=True,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030@Populate the short_description field instead of file_description'))),
     _descriptor.FieldDescriptor(
-      name='return_for_sale_data', full_name='CPublishedFile_GetUserFiles_Request.return_for_sale_data', index=22,
+      name='return_for_sale_data', full_name='CPublishedFile_GetUserFiles_Request.return_for_sale_data', index=23,
       number=26, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030)Return pricing information, if applicable'))),
     _descriptor.FieldDescriptor(
-      name='return_metadata', full_name='CPublishedFile_GetUserFiles_Request.return_metadata', index=23,
+      name='return_metadata', full_name='CPublishedFile_GetUserFiles_Request.return_metadata', index=24,
       number=28, type=8, cpp_type=7, label=1,
       has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -1640,16 +1744,17 @@ _CPUBLISHEDFILE_GETUSERFILES_REQUEST = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[],
+  nested_types=[_CPUBLISHEDFILE_GETUSERFILES_REQUEST_KVTAG, ],
   enum_types=[
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5939,
-  serialized_end=7956,
+  serialized_start=6065,
+  serialized_end=8231,
 )
 
 
@@ -1696,11 +1801,12 @@ _CPUBLISHEDFILE_GETUSERFILES_RESPONSE_APP = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8144,
-  serialized_end=8215,
+  serialized_start=8419,
+  serialized_end=8490,
 )
 
 _CPUBLISHEDFILE_GETUSERFILES_RESPONSE = _descriptor.Descriptor(
@@ -1746,11 +1852,12 @@ _CPUBLISHEDFILE_GETUSERFILES_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7959,
-  serialized_end=8215,
+  serialized_start=8234,
+  serialized_end=8490,
 )
 
 
@@ -1839,11 +1946,12 @@ _CPUBLISHEDFILE_UPDATE_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8218,
-  serialized_end=9003,
+  serialized_start=8493,
+  serialized_end=9278,
 )
 
 
@@ -1862,11 +1970,12 @@ _CPUBLISHEDFILE_UPDATE_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9005,
-  serialized_end=9037,
+  serialized_start=9280,
+  serialized_end=9312,
 )
 
 
@@ -1906,11 +2015,12 @@ _CPUBLISHEDFILE_GETCHANGEHISTORYENTRY_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9040,
-  serialized_end=9224,
+  serialized_start=9315,
+  serialized_end=9499,
 )
 
 
@@ -1943,11 +2053,12 @@ _CPUBLISHEDFILE_GETCHANGEHISTORYENTRY_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9226,
-  serialized_end=9319,
+  serialized_start=9501,
+  serialized_end=9594,
 )
 
 
@@ -2001,11 +2112,12 @@ _CPUBLISHEDFILE_GETCHANGEHISTORY_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9322,
-  serialized_end=9608,
+  serialized_start=9597,
+  serialized_end=9883,
 )
 
 
@@ -2045,11 +2157,12 @@ _CPUBLISHEDFILE_GETCHANGEHISTORY_RESPONSE_CHANGELOG = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9740,
-  serialized_end=9816,
+  serialized_start=10015,
+  serialized_end=10091,
 )
 
 _CPUBLISHEDFILE_GETCHANGEHISTORY_RESPONSE = _descriptor.Descriptor(
@@ -2081,11 +2194,12 @@ _CPUBLISHEDFILE_GETCHANGEHISTORY_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9611,
-  serialized_end=9816,
+  serialized_start=9886,
+  serialized_end=10091,
 )
 
 
@@ -2146,11 +2260,12 @@ _CPUBLISHEDFILE_REFRESHVOTINGQUEUE_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9819,
-  serialized_end=10390,
+  serialized_start=10094,
+  serialized_end=10665,
 )
 
 
@@ -2169,11 +2284,12 @@ _CPUBLISHEDFILE_REFRESHVOTINGQUEUE_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10392,
-  serialized_end=10436,
+  serialized_start=10667,
+  serialized_end=10711,
 )
 
 
@@ -2206,11 +2322,12 @@ _CPUBLISHEDFILE_QUERYFILES_REQUEST_KVTAG = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4878,
-  serialized_end=4913,
+  serialized_start=4958,
+  serialized_end=4993,
 )
 
 _CPUBLISHEDFILE_QUERYFILES_REQUEST = _descriptor.Descriptor(
@@ -2354,56 +2471,63 @@ _CPUBLISHEDFILE_QUERYFILES_REQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030R(Optional) If true, only return the total number of files that satisfy this query.'))),
     _descriptor.FieldDescriptor(
-      name='return_vote_data', full_name='CPublishedFile_QueryFiles_Request.return_vote_data', index=19,
+      name='ids_only', full_name='CPublishedFile_QueryFiles_Request.ids_only', index=19,
+      number=35, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030X(Optional) If true, only return the published file ids of files that satisfy this query.'))),
+    _descriptor.FieldDescriptor(
+      name='return_vote_data', full_name='CPublishedFile_QueryFiles_Request.return_vote_data', index=20,
       number=17, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030\020Return vote data'))),
     _descriptor.FieldDescriptor(
-      name='return_tags', full_name='CPublishedFile_QueryFiles_Request.return_tags', index=20,
+      name='return_tags', full_name='CPublishedFile_QueryFiles_Request.return_tags', index=21,
       number=18, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030\037Return tags in the file details'))),
     _descriptor.FieldDescriptor(
-      name='return_kv_tags', full_name='CPublishedFile_QueryFiles_Request.return_kv_tags', index=21,
+      name='return_kv_tags', full_name='CPublishedFile_QueryFiles_Request.return_kv_tags', index=22,
       number=19, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030)Return key-value tags in the file details'))),
     _descriptor.FieldDescriptor(
-      name='return_previews', full_name='CPublishedFile_QueryFiles_Request.return_previews', index=22,
+      name='return_previews', full_name='CPublishedFile_QueryFiles_Request.return_previews', index=23,
       number=20, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030:Return preview image and video details in the file details'))),
     _descriptor.FieldDescriptor(
-      name='return_children', full_name='CPublishedFile_QueryFiles_Request.return_children', index=23,
+      name='return_children', full_name='CPublishedFile_QueryFiles_Request.return_children', index=24,
       number=21, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030)Return child item ids in the file details'))),
     _descriptor.FieldDescriptor(
-      name='return_short_description', full_name='CPublishedFile_QueryFiles_Request.return_short_description', index=24,
+      name='return_short_description', full_name='CPublishedFile_QueryFiles_Request.return_short_description', index=25,
       number=22, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030@Populate the short_description field instead of file_description'))),
     _descriptor.FieldDescriptor(
-      name='return_for_sale_data', full_name='CPublishedFile_QueryFiles_Request.return_for_sale_data', index=25,
+      name='return_for_sale_data', full_name='CPublishedFile_QueryFiles_Request.return_for_sale_data', index=26,
       number=30, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030)Return pricing information, if applicable'))),
     _descriptor.FieldDescriptor(
-      name='return_metadata', full_name='CPublishedFile_QueryFiles_Request.return_metadata', index=26,
+      name='return_metadata', full_name='CPublishedFile_QueryFiles_Request.return_metadata', index=27,
       number=32, type=8, cpp_type=7, label=1,
       has_default_value=True, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -2417,11 +2541,12 @@ _CPUBLISHEDFILE_QUERYFILES_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10439,
-  serialized_end=12825,
+  serialized_start=10714,
+  serialized_end=13212,
 )
 
 
@@ -2454,11 +2579,290 @@ _CPUBLISHEDFILE_QUERYFILES_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12828,
-  serialized_end=13094,
+  serialized_start=13215,
+  serialized_end=13481,
+)
+
+
+_CPUBLISHEDFILE_STARTPLAYTIMETRACKING_REQUEST = _descriptor.Descriptor(
+  name='CPublishedFile_StartPlaytimeTracking_Request',
+  full_name='CPublishedFile_StartPlaytimeTracking_Request',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='appid', full_name='CPublishedFile_StartPlaytimeTracking_Request.appid', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='publishedfileids', full_name='CPublishedFile_StartPlaytimeTracking_Request.publishedfileids', index=1,
+      number=2, type=4, cpp_type=4, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=13483,
+  serialized_end=13570,
+)
+
+
+_CPUBLISHEDFILE_STARTPLAYTIMETRACKING_RESPONSE = _descriptor.Descriptor(
+  name='CPublishedFile_StartPlaytimeTracking_Response',
+  full_name='CPublishedFile_StartPlaytimeTracking_Response',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=13572,
+  serialized_end=13619,
+)
+
+
+_CPUBLISHEDFILE_STOPPLAYTIMETRACKING_REQUEST = _descriptor.Descriptor(
+  name='CPublishedFile_StopPlaytimeTracking_Request',
+  full_name='CPublishedFile_StopPlaytimeTracking_Request',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='appid', full_name='CPublishedFile_StopPlaytimeTracking_Request.appid', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='publishedfileids', full_name='CPublishedFile_StopPlaytimeTracking_Request.publishedfileids', index=1,
+      number=2, type=4, cpp_type=4, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=13621,
+  serialized_end=13707,
+)
+
+
+_CPUBLISHEDFILE_STOPPLAYTIMETRACKING_RESPONSE = _descriptor.Descriptor(
+  name='CPublishedFile_StopPlaytimeTracking_Response',
+  full_name='CPublishedFile_StopPlaytimeTracking_Response',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=13709,
+  serialized_end=13755,
+)
+
+
+_CPUBLISHEDFILE_STOPPLAYTIMETRACKINGFORALLAPPITEMS_REQUEST = _descriptor.Descriptor(
+  name='CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request',
+  full_name='CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='appid', full_name='CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request.appid', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=13757,
+  serialized_end=13831,
+)
+
+
+_CPUBLISHEDFILE_STOPPLAYTIMETRACKINGFORALLAPPITEMS_RESPONSE = _descriptor.Descriptor(
+  name='CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response',
+  full_name='CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=13833,
+  serialized_end=13893,
+)
+
+
+_CPUBLISHEDFILE_SETPLAYTIMEFORCONTROLLERCONFIGS_REQUEST_CONTROLLERCONFIGUSAGE = _descriptor.Descriptor(
+  name='ControllerConfigUsage',
+  full_name='CPublishedFile_SetPlaytimeForControllerConfigs_Request.ControllerConfigUsage',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='publishedfileid', full_name='CPublishedFile_SetPlaytimeForControllerConfigs_Request.ControllerConfigUsage.publishedfileid', index=0,
+      number=1, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='seconds_active', full_name='CPublishedFile_SetPlaytimeForControllerConfigs_Request.ControllerConfigUsage.seconds_active', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=14081,
+  serialized_end=14153,
+)
+
+_CPUBLISHEDFILE_SETPLAYTIMEFORCONTROLLERCONFIGS_REQUEST = _descriptor.Descriptor(
+  name='CPublishedFile_SetPlaytimeForControllerConfigs_Request',
+  full_name='CPublishedFile_SetPlaytimeForControllerConfigs_Request',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='appid', full_name='CPublishedFile_SetPlaytimeForControllerConfigs_Request.appid', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='controller_config_usage', full_name='CPublishedFile_SetPlaytimeForControllerConfigs_Request.controller_config_usage', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[_CPUBLISHEDFILE_SETPLAYTIMEFORCONTROLLERCONFIGS_REQUEST_CONTROLLERCONFIGUSAGE, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=13896,
+  serialized_end=14153,
+)
+
+
+_CPUBLISHEDFILE_SETPLAYTIMEFORCONTROLLERCONFIGS_RESPONSE = _descriptor.Descriptor(
+  name='CPublishedFile_SetPlaytimeForControllerConfigs_Response',
+  full_name='CPublishedFile_SetPlaytimeForControllerConfigs_Response',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=14155,
+  serialized_end=14212,
 )
 
 _PUBLISHEDFILEDETAILS_TAG.containing_type = _PUBLISHEDFILEDETAILS
@@ -2480,6 +2884,8 @@ _CPUBLISHEDFILE_GETITEMINFO_REQUEST_WORKSHOPITEM.containing_type = _CPUBLISHEDFI
 _CPUBLISHEDFILE_GETITEMINFO_REQUEST.fields_by_name['workshop_items'].message_type = _CPUBLISHEDFILE_GETITEMINFO_REQUEST_WORKSHOPITEM
 _CPUBLISHEDFILE_GETITEMINFO_RESPONSE_WORKSHOPITEMINFO.containing_type = _CPUBLISHEDFILE_GETITEMINFO_RESPONSE
 _CPUBLISHEDFILE_GETITEMINFO_RESPONSE.fields_by_name['workshop_items'].message_type = _CPUBLISHEDFILE_GETITEMINFO_RESPONSE_WORKSHOPITEMINFO
+_CPUBLISHEDFILE_GETUSERFILES_REQUEST_KVTAG.containing_type = _CPUBLISHEDFILE_GETUSERFILES_REQUEST
+_CPUBLISHEDFILE_GETUSERFILES_REQUEST.fields_by_name['required_kv_tags'].message_type = _CPUBLISHEDFILE_GETUSERFILES_REQUEST_KVTAG
 _CPUBLISHEDFILE_GETUSERFILES_RESPONSE_APP.containing_type = _CPUBLISHEDFILE_GETUSERFILES_RESPONSE
 _CPUBLISHEDFILE_GETUSERFILES_RESPONSE.fields_by_name['publishedfiledetails'].message_type = _PUBLISHEDFILEDETAILS
 _CPUBLISHEDFILE_GETUSERFILES_RESPONSE.fields_by_name['apps'].message_type = _CPUBLISHEDFILE_GETUSERFILES_RESPONSE_APP
@@ -2488,6 +2894,8 @@ _CPUBLISHEDFILE_GETCHANGEHISTORY_RESPONSE.fields_by_name['changes'].message_type
 _CPUBLISHEDFILE_QUERYFILES_REQUEST_KVTAG.containing_type = _CPUBLISHEDFILE_QUERYFILES_REQUEST
 _CPUBLISHEDFILE_QUERYFILES_REQUEST.fields_by_name['required_kv_tags'].message_type = _CPUBLISHEDFILE_QUERYFILES_REQUEST_KVTAG
 _CPUBLISHEDFILE_QUERYFILES_RESPONSE.fields_by_name['publishedfiledetails'].message_type = _PUBLISHEDFILEDETAILS
+_CPUBLISHEDFILE_SETPLAYTIMEFORCONTROLLERCONFIGS_REQUEST_CONTROLLERCONFIGUSAGE.containing_type = _CPUBLISHEDFILE_SETPLAYTIMEFORCONTROLLERCONFIGS_REQUEST
+_CPUBLISHEDFILE_SETPLAYTIMEFORCONTROLLERCONFIGS_REQUEST.fields_by_name['controller_config_usage'].message_type = _CPUBLISHEDFILE_SETPLAYTIMEFORCONTROLLERCONFIGS_REQUEST_CONTROLLERCONFIGUSAGE
 DESCRIPTOR.message_types_by_name['CPublishedFile_Subscribe_Request'] = _CPUBLISHEDFILE_SUBSCRIBE_REQUEST
 DESCRIPTOR.message_types_by_name['CPublishedFile_Subscribe_Response'] = _CPUBLISHEDFILE_SUBSCRIBE_RESPONSE
 DESCRIPTOR.message_types_by_name['CPublishedFile_Unsubscribe_Request'] = _CPUBLISHEDFILE_UNSUBSCRIBE_REQUEST
@@ -2513,6 +2921,14 @@ DESCRIPTOR.message_types_by_name['CPublishedFile_RefreshVotingQueue_Request'] = 
 DESCRIPTOR.message_types_by_name['CPublishedFile_RefreshVotingQueue_Response'] = _CPUBLISHEDFILE_REFRESHVOTINGQUEUE_RESPONSE
 DESCRIPTOR.message_types_by_name['CPublishedFile_QueryFiles_Request'] = _CPUBLISHEDFILE_QUERYFILES_REQUEST
 DESCRIPTOR.message_types_by_name['CPublishedFile_QueryFiles_Response'] = _CPUBLISHEDFILE_QUERYFILES_RESPONSE
+DESCRIPTOR.message_types_by_name['CPublishedFile_StartPlaytimeTracking_Request'] = _CPUBLISHEDFILE_STARTPLAYTIMETRACKING_REQUEST
+DESCRIPTOR.message_types_by_name['CPublishedFile_StartPlaytimeTracking_Response'] = _CPUBLISHEDFILE_STARTPLAYTIMETRACKING_RESPONSE
+DESCRIPTOR.message_types_by_name['CPublishedFile_StopPlaytimeTracking_Request'] = _CPUBLISHEDFILE_STOPPLAYTIMETRACKING_REQUEST
+DESCRIPTOR.message_types_by_name['CPublishedFile_StopPlaytimeTracking_Response'] = _CPUBLISHEDFILE_STOPPLAYTIMETRACKING_RESPONSE
+DESCRIPTOR.message_types_by_name['CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request'] = _CPUBLISHEDFILE_STOPPLAYTIMETRACKINGFORALLAPPITEMS_REQUEST
+DESCRIPTOR.message_types_by_name['CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response'] = _CPUBLISHEDFILE_STOPPLAYTIMETRACKINGFORALLAPPITEMS_RESPONSE
+DESCRIPTOR.message_types_by_name['CPublishedFile_SetPlaytimeForControllerConfigs_Request'] = _CPUBLISHEDFILE_SETPLAYTIMEFORCONTROLLERCONFIGS_REQUEST
+DESCRIPTOR.message_types_by_name['CPublishedFile_SetPlaytimeForControllerConfigs_Response'] = _CPUBLISHEDFILE_SETPLAYTIMEFORCONTROLLERCONFIGS_RESPONSE
 
 CPublishedFile_Subscribe_Request = _reflection.GeneratedProtocolMessageType('CPublishedFile_Subscribe_Request', (_message.Message,), dict(
   DESCRIPTOR = _CPUBLISHEDFILE_SUBSCRIBE_REQUEST,
@@ -2670,11 +3086,19 @@ _sym_db.RegisterMessage(CPublishedFile_GetItemInfo_Response)
 _sym_db.RegisterMessage(CPublishedFile_GetItemInfo_Response.WorkshopItemInfo)
 
 CPublishedFile_GetUserFiles_Request = _reflection.GeneratedProtocolMessageType('CPublishedFile_GetUserFiles_Request', (_message.Message,), dict(
+
+  KVTag = _reflection.GeneratedProtocolMessageType('KVTag', (_message.Message,), dict(
+    DESCRIPTOR = _CPUBLISHEDFILE_GETUSERFILES_REQUEST_KVTAG,
+    __module__ = 'steammessages_publishedfile.steamclient_pb2'
+    # @@protoc_insertion_point(class_scope:CPublishedFile_GetUserFiles_Request.KVTag)
+    ))
+  ,
   DESCRIPTOR = _CPUBLISHEDFILE_GETUSERFILES_REQUEST,
   __module__ = 'steammessages_publishedfile.steamclient_pb2'
   # @@protoc_insertion_point(class_scope:CPublishedFile_GetUserFiles_Request)
   ))
 _sym_db.RegisterMessage(CPublishedFile_GetUserFiles_Request)
+_sym_db.RegisterMessage(CPublishedFile_GetUserFiles_Request.KVTag)
 
 CPublishedFile_GetUserFiles_Response = _reflection.GeneratedProtocolMessageType('CPublishedFile_GetUserFiles_Response', (_message.Message,), dict(
 
@@ -2777,7 +3201,73 @@ CPublishedFile_QueryFiles_Response = _reflection.GeneratedProtocolMessageType('C
   ))
 _sym_db.RegisterMessage(CPublishedFile_QueryFiles_Response)
 
+CPublishedFile_StartPlaytimeTracking_Request = _reflection.GeneratedProtocolMessageType('CPublishedFile_StartPlaytimeTracking_Request', (_message.Message,), dict(
+  DESCRIPTOR = _CPUBLISHEDFILE_STARTPLAYTIMETRACKING_REQUEST,
+  __module__ = 'steammessages_publishedfile.steamclient_pb2'
+  # @@protoc_insertion_point(class_scope:CPublishedFile_StartPlaytimeTracking_Request)
+  ))
+_sym_db.RegisterMessage(CPublishedFile_StartPlaytimeTracking_Request)
 
+CPublishedFile_StartPlaytimeTracking_Response = _reflection.GeneratedProtocolMessageType('CPublishedFile_StartPlaytimeTracking_Response', (_message.Message,), dict(
+  DESCRIPTOR = _CPUBLISHEDFILE_STARTPLAYTIMETRACKING_RESPONSE,
+  __module__ = 'steammessages_publishedfile.steamclient_pb2'
+  # @@protoc_insertion_point(class_scope:CPublishedFile_StartPlaytimeTracking_Response)
+  ))
+_sym_db.RegisterMessage(CPublishedFile_StartPlaytimeTracking_Response)
+
+CPublishedFile_StopPlaytimeTracking_Request = _reflection.GeneratedProtocolMessageType('CPublishedFile_StopPlaytimeTracking_Request', (_message.Message,), dict(
+  DESCRIPTOR = _CPUBLISHEDFILE_STOPPLAYTIMETRACKING_REQUEST,
+  __module__ = 'steammessages_publishedfile.steamclient_pb2'
+  # @@protoc_insertion_point(class_scope:CPublishedFile_StopPlaytimeTracking_Request)
+  ))
+_sym_db.RegisterMessage(CPublishedFile_StopPlaytimeTracking_Request)
+
+CPublishedFile_StopPlaytimeTracking_Response = _reflection.GeneratedProtocolMessageType('CPublishedFile_StopPlaytimeTracking_Response', (_message.Message,), dict(
+  DESCRIPTOR = _CPUBLISHEDFILE_STOPPLAYTIMETRACKING_RESPONSE,
+  __module__ = 'steammessages_publishedfile.steamclient_pb2'
+  # @@protoc_insertion_point(class_scope:CPublishedFile_StopPlaytimeTracking_Response)
+  ))
+_sym_db.RegisterMessage(CPublishedFile_StopPlaytimeTracking_Response)
+
+CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request = _reflection.GeneratedProtocolMessageType('CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request', (_message.Message,), dict(
+  DESCRIPTOR = _CPUBLISHEDFILE_STOPPLAYTIMETRACKINGFORALLAPPITEMS_REQUEST,
+  __module__ = 'steammessages_publishedfile.steamclient_pb2'
+  # @@protoc_insertion_point(class_scope:CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request)
+  ))
+_sym_db.RegisterMessage(CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request)
+
+CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response = _reflection.GeneratedProtocolMessageType('CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response', (_message.Message,), dict(
+  DESCRIPTOR = _CPUBLISHEDFILE_STOPPLAYTIMETRACKINGFORALLAPPITEMS_RESPONSE,
+  __module__ = 'steammessages_publishedfile.steamclient_pb2'
+  # @@protoc_insertion_point(class_scope:CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response)
+  ))
+_sym_db.RegisterMessage(CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response)
+
+CPublishedFile_SetPlaytimeForControllerConfigs_Request = _reflection.GeneratedProtocolMessageType('CPublishedFile_SetPlaytimeForControllerConfigs_Request', (_message.Message,), dict(
+
+  ControllerConfigUsage = _reflection.GeneratedProtocolMessageType('ControllerConfigUsage', (_message.Message,), dict(
+    DESCRIPTOR = _CPUBLISHEDFILE_SETPLAYTIMEFORCONTROLLERCONFIGS_REQUEST_CONTROLLERCONFIGUSAGE,
+    __module__ = 'steammessages_publishedfile.steamclient_pb2'
+    # @@protoc_insertion_point(class_scope:CPublishedFile_SetPlaytimeForControllerConfigs_Request.ControllerConfigUsage)
+    ))
+  ,
+  DESCRIPTOR = _CPUBLISHEDFILE_SETPLAYTIMEFORCONTROLLERCONFIGS_REQUEST,
+  __module__ = 'steammessages_publishedfile.steamclient_pb2'
+  # @@protoc_insertion_point(class_scope:CPublishedFile_SetPlaytimeForControllerConfigs_Request)
+  ))
+_sym_db.RegisterMessage(CPublishedFile_SetPlaytimeForControllerConfigs_Request)
+_sym_db.RegisterMessage(CPublishedFile_SetPlaytimeForControllerConfigs_Request.ControllerConfigUsage)
+
+CPublishedFile_SetPlaytimeForControllerConfigs_Response = _reflection.GeneratedProtocolMessageType('CPublishedFile_SetPlaytimeForControllerConfigs_Response', (_message.Message,), dict(
+  DESCRIPTOR = _CPUBLISHEDFILE_SETPLAYTIMEFORCONTROLLERCONFIGS_RESPONSE,
+  __module__ = 'steammessages_publishedfile.steamclient_pb2'
+  # @@protoc_insertion_point(class_scope:CPublishedFile_SetPlaytimeForControllerConfigs_Response)
+  ))
+_sym_db.RegisterMessage(CPublishedFile_SetPlaytimeForControllerConfigs_Response)
+
+
+DESCRIPTOR.has_options = True
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\200\001\001'))
 _CPUBLISHEDFILE_PUBLISH_REQUEST.fields_by_name['appid'].has_options = True
 _CPUBLISHEDFILE_PUBLISH_REQUEST.fields_by_name['appid']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030)App Id this file is being published FROM.'))
 _CPUBLISHEDFILE_PUBLISH_REQUEST.fields_by_name['consumer_appid'].has_options = True
@@ -2856,6 +3346,8 @@ _CPUBLISHEDFILE_GETUSERFILES_REQUEST.fields_by_name['requiredtags'].has_options 
 _CPUBLISHEDFILE_GETUSERFILES_REQUEST.fields_by_name['requiredtags']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030N(Optional) Tags that must be present on a published file to satisfy the query.'))
 _CPUBLISHEDFILE_GETUSERFILES_REQUEST.fields_by_name['excludedtags'].has_options = True
 _CPUBLISHEDFILE_GETUSERFILES_REQUEST.fields_by_name['excludedtags']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030R(Optional) Tags that must NOT be present on a published file to satisfy the query.'))
+_CPUBLISHEDFILE_GETUSERFILES_REQUEST.fields_by_name['required_kv_tags'].has_options = True
+_CPUBLISHEDFILE_GETUSERFILES_REQUEST.fields_by_name['required_kv_tags']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030$Required key-value tags to match on.'))
 _CPUBLISHEDFILE_GETUSERFILES_REQUEST.fields_by_name['filetype'].has_options = True
 _CPUBLISHEDFILE_GETUSERFILES_REQUEST.fields_by_name['filetype']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030\'(Optional) File type to match files to.'))
 _CPUBLISHEDFILE_GETUSERFILES_REQUEST.fields_by_name['creator_appid'].has_options = True
@@ -2962,6 +3454,8 @@ _CPUBLISHEDFILE_QUERYFILES_REQUEST.fields_by_name['required_kv_tags'].has_option
 _CPUBLISHEDFILE_QUERYFILES_REQUEST.fields_by_name['required_kv_tags']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030$Required key-value tags to match on.'))
 _CPUBLISHEDFILE_QUERYFILES_REQUEST.fields_by_name['totalonly'].has_options = True
 _CPUBLISHEDFILE_QUERYFILES_REQUEST.fields_by_name['totalonly']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030R(Optional) If true, only return the total number of files that satisfy this query.'))
+_CPUBLISHEDFILE_QUERYFILES_REQUEST.fields_by_name['ids_only'].has_options = True
+_CPUBLISHEDFILE_QUERYFILES_REQUEST.fields_by_name['ids_only']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030X(Optional) If true, only return the published file ids of files that satisfy this query.'))
 _CPUBLISHEDFILE_QUERYFILES_REQUEST.fields_by_name['return_vote_data'].has_options = True
 _CPUBLISHEDFILE_QUERYFILES_REQUEST.fields_by_name['return_vote_data']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030\020Return vote data'))
 _CPUBLISHEDFILE_QUERYFILES_REQUEST.fields_by_name['return_tags'].has_options = True

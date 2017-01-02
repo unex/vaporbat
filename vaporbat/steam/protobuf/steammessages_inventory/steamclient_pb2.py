@@ -13,16 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import google.protobuf.descriptor_pb2
-import steammessages_unified_base.steamclient_pb2
+from steammessages_unified_base import steamclient_pb2 as steammessages__unified__base_dot_steamclient__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='steammessages_inventory.steamclient.proto',
   package='',
-  serialized_pb=_b('\n)steammessages_inventory.steamclient.proto\x1a google/protobuf/descriptor.proto\x1a,steammessages_unified_base.steamclient.proto\"A\n\x1f\x43Inventory_GetInventory_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0f\n\x07steamid\x18\x02 \x01(\x04\"t\n\x13\x43Inventory_Response\x12\x0c\n\x04\x65tag\x18\x01 \x01(\t\x12\x16\n\x0eremoveditemids\x18\x02 \x03(\x04\x12\x11\n\titem_json\x18\x03 \x01(\t\x12\x14\n\x0citemdef_json\x18\x04 \x01(\t\x12\x0e\n\x06ticket\x18\x05 \x01(\x0c\"\x8e\x01\n\x1f\x43Inventory_ExchangeItem_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0f\n\x07steamid\x18\x02 \x01(\x04\x12\x17\n\x0fmaterialsitemid\x18\x03 \x03(\x04\x12\x19\n\x11materialsquantity\x18\x04 \x03(\r\x12\x17\n\x0foutputitemdefid\x18\x05 \x01(\x04\"f\n\x1a\x43Inventory_AddItem_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x11\n\titemdefid\x18\x02 \x03(\x04\x12\x15\n\ritempropsjson\x18\x03 \x03(\t\x12\x0f\n\x07steamid\x18\x04 \x01(\x04\"i\n!CInventory_SafeModifyItem_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0e\n\x06\x61\x63\x63tid\x18\x02 \x01(\x04\x12\x0e\n\x06itemid\x18\x03 \x01(\x04\x12\x15\n\ritempropsjson\x18\x04 \x01(\t\"F\n\"CInventory_ConsumePlaytime_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x11\n\titemdefid\x18\x02 \x01(\x04\"\x88\x01\n\x1e\x43Inventory_GetItemDefs_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x15\n\rmodifiedsince\x18\x02 \x01(\t\x12\x17\n\x0fincludeworkshop\x18\x03 \x01(\x08\x12\x12\n\nitemdefids\x18\x04 \x03(\x04\x12\x13\n\x0bworkshopids\x18\x05 \x03(\x04\"d\n\x1e\x43Inventory_ConsumeItem_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0e\n\x06itemid\x18\x02 \x01(\x04\x12\x10\n\x08quantity\x18\x03 \x01(\r\x12\x11\n\ttimestamp\x18\x04 \x01(\t\"W\n!CInventory_DevSetNextDrop_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x11\n\titemdefid\x18\x02 \x01(\x04\x12\x10\n\x08\x64roptime\x18\x03 \x01(\t\"g\n!CInventory_SplitItemStack_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0e\n\x06itemid\x18\x02 \x01(\x04\x12\x10\n\x08quantity\x18\x03 \x01(\r\x12\x11\n\ttimestamp\x18\x04 \x01(\t\"\x9d\x01\n$CInventory_CombineItemStacks_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x12\n\nfromitemid\x18\x02 \x01(\x04\x12\x12\n\ndestitemid\x18\x03 \x01(\x04\x12\x10\n\x08quantity\x18\x04 \x01(\r\x12\x15\n\rfromtimestamp\x18\x05 \x01(\t\x12\x15\n\rdesttimestamp\x18\x06 \x01(\t2\xa5\n\n\tInventory\x12z\n\x0cGetInventory\x12 .CInventory_GetInventory_Request\x1a\x14.CInventory_Response\"2\x82\xb5\x18.Retrieves a users inventory as a big JSON blob\x12o\n\x0c\x45xchangeItem\x12 .CInventory_ExchangeItem_Request\x1a\x14.CInventory_Response\"\'\x82\xb5\x18#Craft an item in a user\'s inventory\x12n\n\x0c\x41\x64\x64PromoItem\x12\x1b.CInventory_AddItem_Request\x1a\x14.CInventory_Response\"+\x82\xb5\x18\'Adds a promo item to a user\'s inventory\x12\x8b\x01\n\x0eSafeModifyItem\x12\".CInventory_SafeModifyItem_Request\x1a\x14.CInventory_Response\"?\x82\xb5\x18;Modify an item in a user\'s inventory (safe properties only)\x12\x87\x01\n\x0f\x43onsumePlaytime\x12#.CInventory_ConsumePlaytime_Request\x1a\x14.CInventory_Response\"9\x82\xb5\x18\x35\x43onsumes playtime and possibly returns a granted item\x12^\n\x0bGetItemDefs\x12\x1f.CInventory_GetItemDefs_Request\x1a\x14.CInventory_Response\"\x18\x82\xb5\x18\x14Get item definitions\x12Y\n\x0b\x43onsumeItem\x12\x1f.CInventory_ConsumeItem_Request\x1a\x14.CInventory_Response\"\x13\x82\xb5\x18\x0f\x43onsume an item\x12n\n\x0f\x44\x65vGenerateItem\x12\x1b.CInventory_AddItem_Request\x1a\x14.CInventory_Response\"(\x82\xb5\x18$Grant an item when in developer mode\x12_\n\x0e\x44\x65vSetNextDrop\x12\".CInventory_DevSetNextDrop_Request\x1a\x14.CInventory_Response\"\x13\x82\xb5\x18\x0f\x43onsume an item\x12s\n\x0eSplitItemStack\x12\".CInventory_SplitItemStack_Request\x1a\x14.CInventory_Response\"\'\x82\xb5\x18#Split an item stack into two stacks\x12q\n\x11\x43ombineItemStacks\x12%.CInventory_CombineItemStacks_Request\x1a\x14.CInventory_Response\"\x1f\x82\xb5\x18\x1b\x43ombine two stacks of items\x1a/\x82\xb5\x18+A service that provides access to inventory')
+  syntax='proto2',
+  serialized_pb=_b('\n)steammessages_inventory.steamclient.proto\x1a,steammessages_unified_base.steamclient.proto\"A\n\x1f\x43Inventory_GetInventory_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0f\n\x07steamid\x18\x02 \x01(\x04\"t\n\x13\x43Inventory_Response\x12\x0c\n\x04\x65tag\x18\x01 \x01(\t\x12\x16\n\x0eremoveditemids\x18\x02 \x03(\x04\x12\x11\n\titem_json\x18\x03 \x01(\t\x12\x14\n\x0citemdef_json\x18\x04 \x01(\t\x12\x0e\n\x06ticket\x18\x05 \x01(\x0c\"\x8e\x01\n\x1f\x43Inventory_ExchangeItem_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0f\n\x07steamid\x18\x02 \x01(\x04\x12\x17\n\x0fmaterialsitemid\x18\x03 \x03(\x04\x12\x19\n\x11materialsquantity\x18\x04 \x03(\r\x12\x17\n\x0foutputitemdefid\x18\x05 \x01(\x04\"\xc4\x01\n\x1a\x43Inventory_AddItem_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x11\n\titemdefid\x18\x02 \x03(\x04\x12\x15\n\ritempropsjson\x18\x03 \x03(\t\x12\x0f\n\x07steamid\x18\x04 \x01(\x04\x12\\\n\x06notify\x18\x05 \x01(\x08\x42L\x82\xb5\x18HShould notify the user that the item was added to their Steam Inventory.\"i\n!CInventory_SafeModifyItem_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0e\n\x06\x61\x63\x63tid\x18\x02 \x01(\x04\x12\x0e\n\x06itemid\x18\x03 \x01(\x04\x12\x15\n\ritempropsjson\x18\x04 \x01(\t\"F\n\"CInventory_ConsumePlaytime_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x11\n\titemdefid\x18\x02 \x01(\x04\"\xdb\x01\n\x1e\x43Inventory_GetItemDefs_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x15\n\rmodifiedsince\x18\x02 \x01(\t\x12\x12\n\nitemdefids\x18\x04 \x03(\x04\x12\x13\n\x0bworkshopids\x18\x05 \x03(\x04\x12j\n\x15\x63\x61\x63he_max_age_seconds\x18\x07 \x01(\r:\x01\x30\x42H\x82\xb5\x18\x44\x41llow stale data to be returned for the specified number of seconds.\"u\n\x1e\x43Inventory_ConsumeItem_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0e\n\x06itemid\x18\x02 \x01(\x04\x12\x10\n\x08quantity\x18\x03 \x01(\r\x12\x11\n\ttimestamp\x18\x04 \x01(\t\x12\x0f\n\x07steamid\x18\x05 \x01(\x04\"W\n!CInventory_DevSetNextDrop_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x11\n\titemdefid\x18\x02 \x01(\x04\x12\x10\n\x08\x64roptime\x18\x03 \x01(\t\"g\n!CInventory_SplitItemStack_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x0e\n\x06itemid\x18\x02 \x01(\x04\x12\x10\n\x08quantity\x18\x03 \x01(\r\x12\x11\n\ttimestamp\x18\x04 \x01(\t\"\x9d\x01\n$CInventory_CombineItemStacks_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\x12\x12\n\nfromitemid\x18\x02 \x01(\x04\x12\x12\n\ndestitemid\x18\x03 \x01(\x04\x12\x10\n\x08quantity\x18\x04 \x01(\r\x12\x15\n\rfromtimestamp\x18\x05 \x01(\t\x12\x15\n\rdesttimestamp\x18\x06 \x01(\t\"2\n!CInventory_GetItemDefMeta_Request\x12\r\n\x05\x61ppid\x18\x01 \x01(\r\"F\n\"CInventory_GetItemDefMeta_Response\x12\x10\n\x08modified\x18\x01 \x01(\r\x12\x0e\n\x06\x64igest\x18\x02 \x01(\t2\xc4\x0b\n\tInventory\x12z\n\x0cGetInventory\x12 .CInventory_GetInventory_Request\x1a\x14.CInventory_Response\"2\x82\xb5\x18.Retrieves a users inventory as a big JSON blob\x12o\n\x0c\x45xchangeItem\x12 .CInventory_ExchangeItem_Request\x1a\x14.CInventory_Response\"\'\x82\xb5\x18#Craft an item in a user\'s inventory\x12n\n\x0c\x41\x64\x64PromoItem\x12\x1b.CInventory_AddItem_Request\x1a\x14.CInventory_Response\"+\x82\xb5\x18\'Adds a promo item to a user\'s inventory\x12\x8b\x01\n\x0eSafeModifyItem\x12\".CInventory_SafeModifyItem_Request\x1a\x14.CInventory_Response\"?\x82\xb5\x18;Modify an item in a user\'s inventory (safe properties only)\x12\x87\x01\n\x0f\x43onsumePlaytime\x12#.CInventory_ConsumePlaytime_Request\x1a\x14.CInventory_Response\"9\x82\xb5\x18\x35\x43onsumes playtime and possibly returns a granted item\x12^\n\x0bGetItemDefs\x12\x1f.CInventory_GetItemDefs_Request\x1a\x14.CInventory_Response\"\x18\x82\xb5\x18\x14Get item definitions\x12Y\n\x0b\x43onsumeItem\x12\x1f.CInventory_ConsumeItem_Request\x1a\x14.CInventory_Response\"\x13\x82\xb5\x18\x0f\x43onsume an item\x12n\n\x0f\x44\x65vGenerateItem\x12\x1b.CInventory_AddItem_Request\x1a\x14.CInventory_Response\"(\x82\xb5\x18$Grant an item when in developer mode\x12_\n\x0e\x44\x65vSetNextDrop\x12\".CInventory_DevSetNextDrop_Request\x1a\x14.CInventory_Response\"\x13\x82\xb5\x18\x0f\x43onsume an item\x12s\n\x0eSplitItemStack\x12\".CInventory_SplitItemStack_Request\x1a\x14.CInventory_Response\"\'\x82\xb5\x18#Split an item stack into two stacks\x12q\n\x11\x43ombineItemStacks\x12%.CInventory_CombineItemStacks_Request\x1a\x14.CInventory_Response\"\x1f\x82\xb5\x18\x1b\x43ombine two stacks of items\x12\x9c\x01\n\x0eGetItemDefMeta\x12\".CInventory_GetItemDefMeta_Request\x1a#.CInventory_GetItemDefMeta_Response\"A\x82\xb5\x18=Get metadata about the current item definition for this game.\x1a/\x82\xb5\x18+A service that provides access to inventoryB\x03\x80\x01\x01')
   ,
-  dependencies=[google.protobuf.descriptor_pb2.DESCRIPTOR,steammessages_unified_base.steamclient_pb2.DESCRIPTOR,])
+  dependencies=[steammessages__unified__base_dot_steamclient__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -57,11 +57,12 @@ _CINVENTORY_GETINVENTORY_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=125,
-  serialized_end=190,
+  serialized_start=91,
+  serialized_end=156,
 )
 
 
@@ -115,11 +116,12 @@ _CINVENTORY_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=192,
-  serialized_end=308,
+  serialized_start=158,
+  serialized_end=274,
 )
 
 
@@ -173,11 +175,12 @@ _CINVENTORY_EXCHANGEITEM_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=311,
-  serialized_end=453,
+  serialized_start=277,
+  serialized_end=419,
 )
 
 
@@ -216,6 +219,13 @@ _CINVENTORY_ADDITEM_REQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='notify', full_name='CInventory_AddItem_Request.notify', index=4,
+      number=5, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030HShould notify the user that the item was added to their Steam Inventory.'))),
   ],
   extensions=[
   ],
@@ -224,11 +234,12 @@ _CINVENTORY_ADDITEM_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=455,
-  serialized_end=557,
+  serialized_start=422,
+  serialized_end=618,
 )
 
 
@@ -275,11 +286,12 @@ _CINVENTORY_SAFEMODIFYITEM_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=559,
-  serialized_end=664,
+  serialized_start=620,
+  serialized_end=725,
 )
 
 
@@ -312,11 +324,12 @@ _CINVENTORY_CONSUMEPLAYTIME_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=666,
-  serialized_end=736,
+  serialized_start=727,
+  serialized_end=797,
 )
 
 
@@ -342,26 +355,26 @@ _CINVENTORY_GETITEMDEFS_REQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='includeworkshop', full_name='CInventory_GetItemDefs_Request.includeworkshop', index=2,
-      number=3, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='itemdefids', full_name='CInventory_GetItemDefs_Request.itemdefids', index=3,
+      name='itemdefids', full_name='CInventory_GetItemDefs_Request.itemdefids', index=2,
       number=4, type=4, cpp_type=4, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='workshopids', full_name='CInventory_GetItemDefs_Request.workshopids', index=4,
+      name='workshopids', full_name='CInventory_GetItemDefs_Request.workshopids', index=3,
       number=5, type=4, cpp_type=4, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='cache_max_age_seconds', full_name='CInventory_GetItemDefs_Request.cache_max_age_seconds', index=4,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=True, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030DAllow stale data to be returned for the specified number of seconds.'))),
   ],
   extensions=[
   ],
@@ -370,11 +383,12 @@ _CINVENTORY_GETITEMDEFS_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=739,
-  serialized_end=875,
+  serialized_start=800,
+  serialized_end=1019,
 )
 
 
@@ -413,6 +427,13 @@ _CINVENTORY_CONSUMEITEM_REQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='steamid', full_name='CInventory_ConsumeItem_Request.steamid', index=4,
+      number=5, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -421,11 +442,12 @@ _CINVENTORY_CONSUMEITEM_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=877,
-  serialized_end=977,
+  serialized_start=1021,
+  serialized_end=1138,
 )
 
 
@@ -465,11 +487,12 @@ _CINVENTORY_DEVSETNEXTDROP_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=979,
-  serialized_end=1066,
+  serialized_start=1140,
+  serialized_end=1227,
 )
 
 
@@ -516,11 +539,12 @@ _CINVENTORY_SPLITITEMSTACK_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1068,
-  serialized_end=1171,
+  serialized_start=1229,
+  serialized_end=1332,
 )
 
 
@@ -581,11 +605,81 @@ _CINVENTORY_COMBINEITEMSTACKS_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1174,
-  serialized_end=1331,
+  serialized_start=1335,
+  serialized_end=1492,
+)
+
+
+_CINVENTORY_GETITEMDEFMETA_REQUEST = _descriptor.Descriptor(
+  name='CInventory_GetItemDefMeta_Request',
+  full_name='CInventory_GetItemDefMeta_Request',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='appid', full_name='CInventory_GetItemDefMeta_Request.appid', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1494,
+  serialized_end=1544,
+)
+
+
+_CINVENTORY_GETITEMDEFMETA_RESPONSE = _descriptor.Descriptor(
+  name='CInventory_GetItemDefMeta_Response',
+  full_name='CInventory_GetItemDefMeta_Response',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='modified', full_name='CInventory_GetItemDefMeta_Response.modified', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='digest', full_name='CInventory_GetItemDefMeta_Response.digest', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1546,
+  serialized_end=1616,
 )
 
 DESCRIPTOR.message_types_by_name['CInventory_GetInventory_Request'] = _CINVENTORY_GETINVENTORY_REQUEST
@@ -599,6 +693,8 @@ DESCRIPTOR.message_types_by_name['CInventory_ConsumeItem_Request'] = _CINVENTORY
 DESCRIPTOR.message_types_by_name['CInventory_DevSetNextDrop_Request'] = _CINVENTORY_DEVSETNEXTDROP_REQUEST
 DESCRIPTOR.message_types_by_name['CInventory_SplitItemStack_Request'] = _CINVENTORY_SPLITITEMSTACK_REQUEST
 DESCRIPTOR.message_types_by_name['CInventory_CombineItemStacks_Request'] = _CINVENTORY_COMBINEITEMSTACKS_REQUEST
+DESCRIPTOR.message_types_by_name['CInventory_GetItemDefMeta_Request'] = _CINVENTORY_GETITEMDEFMETA_REQUEST
+DESCRIPTOR.message_types_by_name['CInventory_GetItemDefMeta_Response'] = _CINVENTORY_GETITEMDEFMETA_RESPONSE
 
 CInventory_GetInventory_Request = _reflection.GeneratedProtocolMessageType('CInventory_GetInventory_Request', (_message.Message,), dict(
   DESCRIPTOR = _CINVENTORY_GETINVENTORY_REQUEST,
@@ -677,5 +773,25 @@ CInventory_CombineItemStacks_Request = _reflection.GeneratedProtocolMessageType(
   ))
 _sym_db.RegisterMessage(CInventory_CombineItemStacks_Request)
 
+CInventory_GetItemDefMeta_Request = _reflection.GeneratedProtocolMessageType('CInventory_GetItemDefMeta_Request', (_message.Message,), dict(
+  DESCRIPTOR = _CINVENTORY_GETITEMDEFMETA_REQUEST,
+  __module__ = 'steammessages_inventory.steamclient_pb2'
+  # @@protoc_insertion_point(class_scope:CInventory_GetItemDefMeta_Request)
+  ))
+_sym_db.RegisterMessage(CInventory_GetItemDefMeta_Request)
 
+CInventory_GetItemDefMeta_Response = _reflection.GeneratedProtocolMessageType('CInventory_GetItemDefMeta_Response', (_message.Message,), dict(
+  DESCRIPTOR = _CINVENTORY_GETITEMDEFMETA_RESPONSE,
+  __module__ = 'steammessages_inventory.steamclient_pb2'
+  # @@protoc_insertion_point(class_scope:CInventory_GetItemDefMeta_Response)
+  ))
+_sym_db.RegisterMessage(CInventory_GetItemDefMeta_Response)
+
+
+DESCRIPTOR.has_options = True
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\200\001\001'))
+_CINVENTORY_ADDITEM_REQUEST.fields_by_name['notify'].has_options = True
+_CINVENTORY_ADDITEM_REQUEST.fields_by_name['notify']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030HShould notify the user that the item was added to their Steam Inventory.'))
+_CINVENTORY_GETITEMDEFS_REQUEST.fields_by_name['cache_max_age_seconds'].has_options = True
+_CINVENTORY_GETITEMDEFS_REQUEST.fields_by_name['cache_max_age_seconds']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030DAllow stale data to be returned for the specified number of seconds.'))
 # @@protoc_insertion_point(module_scope)

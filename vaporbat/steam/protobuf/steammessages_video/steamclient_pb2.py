@@ -13,16 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import google.protobuf.descriptor_pb2
-import steammessages_unified_base.steamclient_pb2
+from steammessages_unified_base import steamclient_pb2 as steammessages__unified__base_dot_steamclient__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='steammessages_video.steamclient.proto',
   package='',
-  serialized_pb=_b('\n%steammessages_video.steamclient.proto\x1a google/protobuf/descriptor.proto\x1a,steammessages_unified_base.steamclient.proto\"\x81\x01\n CVideo_ClientGetVideoURL_Request\x12\x1e\n\x08video_id\x18\x01 \x01(\x04\x42\x0c\x82\xb5\x18\x08Video ID\x12=\n\rclient_cellid\x18\x02 \x01(\rB&\x82\xb5\x18\"Cell ID of client, zero if unknown\"r\n!CVideo_ClientGetVideoURL_Response\x12\x1e\n\x08video_id\x18\x01 \x01(\x04\x42\x0c\x82\xb5\x18\x08Video ID\x12-\n\tvideo_url\x18\x02 \x01(\tB\x1a\x82\xb5\x18\x16URL for video manifest\":\n CVideo_UnlockedH264_Notification\x12\x16\n\x0e\x65ncryption_key\x18\x01 \x01(\x0c\x32\xab\x01\n\x05Video\x12\x8e\x01\n\x11\x43lientGetVideoURL\x12!.CVideo_ClientGetVideoURL_Request\x1a\".CVideo_ClientGetVideoURL_Response\"2\x82\xb5\x18.Get the initial URL to begin streaming a video\x1a\x11\x82\xb5\x18\rVideo methods2\x9e\x01\n\x0bVideoClient\x12\x88\x01\n\x12NotifyUnlockedH264\x12!.CVideo_UnlockedH264_Notification\x1a\x0b.NoResponse\"B\x82\xb5\x18>Notification from server to client that h264 has been unlocked\x1a\x04\xc0\xb5\x18\x02')
+  syntax='proto2',
+  serialized_pb=_b('\n%steammessages_video.steamclient.proto\x1a,steammessages_unified_base.steamclient.proto\"\x81\x01\n CVideo_ClientGetVideoURL_Request\x12\x1e\n\x08video_id\x18\x01 \x01(\x04\x42\x0c\x82\xb5\x18\x08Video ID\x12=\n\rclient_cellid\x18\x02 \x01(\rB&\x82\xb5\x18\"Cell ID of client, zero if unknown\"r\n!CVideo_ClientGetVideoURL_Response\x12\x1e\n\x08video_id\x18\x01 \x01(\x04\x42\x0c\x82\xb5\x18\x08Video ID\x12-\n\tvideo_url\x18\x02 \x01(\tB\x1a\x82\xb5\x18\x16URL for video manifest\":\n CVideo_UnlockedH264_Notification\x12\x16\n\x0e\x65ncryption_key\x18\x01 \x01(\x0c\x32\xab\x01\n\x05Video\x12\x8e\x01\n\x11\x43lientGetVideoURL\x12!.CVideo_ClientGetVideoURL_Request\x1a\".CVideo_ClientGetVideoURL_Response\"2\x82\xb5\x18.Get the initial URL to begin streaming a video\x1a\x11\x82\xb5\x18\rVideo methods2\x9e\x01\n\x0bVideoClient\x12\x88\x01\n\x12NotifyUnlockedH264\x12!.CVideo_UnlockedH264_Notification\x1a\x0b.NoResponse\"B\x82\xb5\x18>Notification from server to client that h264 has been unlocked\x1a\x04\xc0\xb5\x18\x02\x42\x03\x80\x01\x01')
   ,
-  dependencies=[google.protobuf.descriptor_pb2.DESCRIPTOR,steammessages_unified_base.steamclient_pb2.DESCRIPTOR,])
+  dependencies=[steammessages__unified__base_dot_steamclient__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -57,11 +57,12 @@ _CVIDEO_CLIENTGETVIDEOURL_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=122,
-  serialized_end=251,
+  serialized_start=88,
+  serialized_end=217,
 )
 
 
@@ -94,11 +95,12 @@ _CVIDEO_CLIENTGETVIDEOURL_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=253,
-  serialized_end=367,
+  serialized_start=219,
+  serialized_end=333,
 )
 
 
@@ -124,11 +126,12 @@ _CVIDEO_UNLOCKEDH264_NOTIFICATION = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=369,
-  serialized_end=427,
+  serialized_start=335,
+  serialized_end=393,
 )
 
 DESCRIPTOR.message_types_by_name['CVideo_ClientGetVideoURL_Request'] = _CVIDEO_CLIENTGETVIDEOURL_REQUEST
@@ -157,6 +160,8 @@ CVideo_UnlockedH264_Notification = _reflection.GeneratedProtocolMessageType('CVi
 _sym_db.RegisterMessage(CVideo_UnlockedH264_Notification)
 
 
+DESCRIPTOR.has_options = True
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\200\001\001'))
 _CVIDEO_CLIENTGETVIDEOURL_REQUEST.fields_by_name['video_id'].has_options = True
 _CVIDEO_CLIENTGETVIDEOURL_REQUEST.fields_by_name['video_id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\030\010Video ID'))
 _CVIDEO_CLIENTGETVIDEOURL_REQUEST.fields_by_name['client_cellid'].has_options = True

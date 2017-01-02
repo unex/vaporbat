@@ -13,16 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import google.protobuf.descriptor_pb2
-import steammessages_unified_base.steamclient_pb2
+from steammessages_unified_base import steamclient_pb2 as steammessages__unified__base_dot_steamclient__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='steammessages_linkfilter.steamclient.proto',
   package='',
-  serialized_pb=_b('\n*steammessages_linkfilter.steamclient.proto\x1a google/protobuf/descriptor.proto\x1a,steammessages_unified_base.steamclient.proto\"\x9d\x02\n,CCommunity_GetLinkFilterHashPrefixes_Request\x12G\n\x08hit_type\x18\x01 \x01(\rB5\x82\xb5\x18\x31The retrieved hits will be filtered to this type.\x12\\\n\x05\x63ount\x18\x02 \x01(\rBM\x82\xb5\x18IThe number of hits to retrieve in a single batch. Specify 0 for no limit.\x12\x46\n\x05start\x18\x03 \x01(\x04\x42\x37\x82\xb5\x18\x33The starting count when retrieving hits in batches.\"\x87\x01\n-CCommunity_GetLinkFilterHashPrefixes_Response\x12V\n\rhash_prefixes\x18\x01 \x03(\rB?\x82\xb5\x18;The first 32 bits of the SHA1 hashes of each hit requested.\"\x97\x02\n&CCommunity_GetLinkFilterHashes_Request\x12G\n\x08hit_type\x18\x01 \x01(\rB5\x82\xb5\x18\x31The retrieved hits will be filtered to this type.\x12\\\n\x05\x63ount\x18\x02 \x01(\rBM\x82\xb5\x18IThe number of hits to retrieve in a single batch. Specify 0 for no limit.\x12\x46\n\x05start\x18\x03 \x01(\x04\x42\x37\x82\xb5\x18\x33The starting count when retrieving hits in batches.\"j\n\'CCommunity_GetLinkFilterHashes_Response\x12?\n\x06hashes\x18\x01 \x03(\x0c\x42/\x82\xb5\x18+A list of hashes returned from our request.\"\x80\x01\n+CCommunity_GetLinkFilterListVersion_Request\x12Q\n\x08hit_type\x18\x01 \x01(\rB?\x82\xb5\x18;The version hashes for this type\'s chunks will be returned.\"\xaa\x01\n,CCommunity_GetLinkFilterListVersion_Response\x12\x46\n\x07version\x18\x01 \x01(\tB5\x82\xb5\x18\x31\x41 hash built using the IDs of the contained hits.\x12\x32\n\x05\x63ount\x18\x02 \x01(\x04\x42#\x82\xb5\x18\x1fThe number of hits of this type2\xc6\x05\n\x13\x43ommunityLinkFilter\x12\xd2\x01\n\x19GetLinkFilterHashPrefixes\x12-.CCommunity_GetLinkFilterHashPrefixes_Request\x1a..CCommunity_GetLinkFilterHashPrefixes_Response\"V\x82\xb5\x18RGet a list of hash prefixes for the specified hit type, to use for client caching.\x12\xb9\x01\n\x13GetLinkFilterHashes\x12\'.CCommunity_GetLinkFilterHashes_Request\x1a(.CCommunity_GetLinkFilterHashes_Response\"O\x82\xb5\x18KGet a list of hashes for the specified hit type, to use for client caching.\x12\xcd\x01\n\x18GetLinkFilterListVersion\x12,.CCommunity_GetLinkFilterListVersion_Request\x1a-.CCommunity_GetLinkFilterListVersion_Response\"T\x82\xb5\x18PGet a list of hashes describing the version of each chunk of the requested size.\x1aN\x82\xb5\x18JA service for recording data about Steam Community phishing link filtering')
+  syntax='proto2',
+  serialized_pb=_b('\n*steammessages_linkfilter.steamclient.proto\x1a,steammessages_unified_base.steamclient.proto\"\x9d\x02\n,CCommunity_GetLinkFilterHashPrefixes_Request\x12G\n\x08hit_type\x18\x01 \x01(\rB5\x82\xb5\x18\x31The retrieved hits will be filtered to this type.\x12\\\n\x05\x63ount\x18\x02 \x01(\rBM\x82\xb5\x18IThe number of hits to retrieve in a single batch. Specify 0 for no limit.\x12\x46\n\x05start\x18\x03 \x01(\x04\x42\x37\x82\xb5\x18\x33The starting count when retrieving hits in batches.\"\x87\x01\n-CCommunity_GetLinkFilterHashPrefixes_Response\x12V\n\rhash_prefixes\x18\x01 \x03(\rB?\x82\xb5\x18;The first 32 bits of the SHA1 hashes of each hit requested.\"\x97\x02\n&CCommunity_GetLinkFilterHashes_Request\x12G\n\x08hit_type\x18\x01 \x01(\rB5\x82\xb5\x18\x31The retrieved hits will be filtered to this type.\x12\\\n\x05\x63ount\x18\x02 \x01(\rBM\x82\xb5\x18IThe number of hits to retrieve in a single batch. Specify 0 for no limit.\x12\x46\n\x05start\x18\x03 \x01(\x04\x42\x37\x82\xb5\x18\x33The starting count when retrieving hits in batches.\"j\n\'CCommunity_GetLinkFilterHashes_Response\x12?\n\x06hashes\x18\x01 \x03(\x0c\x42/\x82\xb5\x18+A list of hashes returned from our request.\"\x80\x01\n+CCommunity_GetLinkFilterListVersion_Request\x12Q\n\x08hit_type\x18\x01 \x01(\rB?\x82\xb5\x18;The version hashes for this type\'s chunks will be returned.\"\xaa\x01\n,CCommunity_GetLinkFilterListVersion_Response\x12\x46\n\x07version\x18\x01 \x01(\tB5\x82\xb5\x18\x31\x41 hash built using the IDs of the contained hits.\x12\x32\n\x05\x63ount\x18\x02 \x01(\x04\x42#\x82\xb5\x18\x1fThe number of hits of this type2\xc6\x05\n\x13\x43ommunityLinkFilter\x12\xd2\x01\n\x19GetLinkFilterHashPrefixes\x12-.CCommunity_GetLinkFilterHashPrefixes_Request\x1a..CCommunity_GetLinkFilterHashPrefixes_Response\"V\x82\xb5\x18RGet a list of hash prefixes for the specified hit type, to use for client caching.\x12\xb9\x01\n\x13GetLinkFilterHashes\x12\'.CCommunity_GetLinkFilterHashes_Request\x1a(.CCommunity_GetLinkFilterHashes_Response\"O\x82\xb5\x18KGet a list of hashes for the specified hit type, to use for client caching.\x12\xcd\x01\n\x18GetLinkFilterListVersion\x12,.CCommunity_GetLinkFilterListVersion_Request\x1a-.CCommunity_GetLinkFilterListVersion_Response\"T\x82\xb5\x18PGet a list of hashes describing the version of each chunk of the requested size.\x1aN\x82\xb5\x18JA service for recording data about Steam Community phishing link filteringB\x03\x80\x01\x01')
   ,
-  dependencies=[google.protobuf.descriptor_pb2.DESCRIPTOR,steammessages_unified_base.steamclient_pb2.DESCRIPTOR,])
+  dependencies=[steammessages__unified__base_dot_steamclient__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -64,11 +64,12 @@ _CCOMMUNITY_GETLINKFILTERHASHPREFIXES_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=127,
-  serialized_end=412,
+  serialized_start=93,
+  serialized_end=378,
 )
 
 
@@ -94,11 +95,12 @@ _CCOMMUNITY_GETLINKFILTERHASHPREFIXES_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=415,
-  serialized_end=550,
+  serialized_start=381,
+  serialized_end=516,
 )
 
 
@@ -138,11 +140,12 @@ _CCOMMUNITY_GETLINKFILTERHASHES_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=553,
-  serialized_end=832,
+  serialized_start=519,
+  serialized_end=798,
 )
 
 
@@ -168,11 +171,12 @@ _CCOMMUNITY_GETLINKFILTERHASHES_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=834,
-  serialized_end=940,
+  serialized_start=800,
+  serialized_end=906,
 )
 
 
@@ -198,11 +202,12 @@ _CCOMMUNITY_GETLINKFILTERLISTVERSION_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=943,
-  serialized_end=1071,
+  serialized_start=909,
+  serialized_end=1037,
 )
 
 
@@ -235,11 +240,12 @@ _CCOMMUNITY_GETLINKFILTERLISTVERSION_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1074,
-  serialized_end=1244,
+  serialized_start=1040,
+  serialized_end=1210,
 )
 
 DESCRIPTOR.message_types_by_name['CCommunity_GetLinkFilterHashPrefixes_Request'] = _CCOMMUNITY_GETLINKFILTERHASHPREFIXES_REQUEST
@@ -292,6 +298,8 @@ CCommunity_GetLinkFilterListVersion_Response = _reflection.GeneratedProtocolMess
 _sym_db.RegisterMessage(CCommunity_GetLinkFilterListVersion_Response)
 
 
+DESCRIPTOR.has_options = True
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\200\001\001'))
 _CCOMMUNITY_GETLINKFILTERHASHPREFIXES_REQUEST.fields_by_name['hit_type'].has_options = True
 _CCOMMUNITY_GETLINKFILTERHASHPREFIXES_REQUEST.fields_by_name['hit_type']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\202\265\0301The retrieved hits will be filtered to this type.'))
 _CCOMMUNITY_GETLINKFILTERHASHPREFIXES_REQUEST.fields_by_name['count'].has_options = True

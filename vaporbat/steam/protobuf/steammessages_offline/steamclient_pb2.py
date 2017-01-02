@@ -13,16 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import google.protobuf.descriptor_pb2
-import steammessages_unified_base.steamclient_pb2
+from steammessages_unified_base import steamclient_pb2 as steammessages__unified__base_dot_steamclient__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='steammessages_offline.steamclient.proto',
   package='',
-  serialized_pb=_b('\n\'steammessages_offline.steamclient.proto\x1a google/protobuf/descriptor.proto\x1a,steammessages_unified_base.steamclient.proto\":\n&COffline_GetOfflineLogonTicket_Request\x12\x10\n\x08priority\x18\x01 \x01(\r\"W\n\'COffline_GetOfflineLogonTicket_Response\x12\x19\n\x11serialized_ticket\x18\x01 \x01(\x0c\x12\x11\n\tsignature\x18\x02 \x01(\x0c\"0\n.COffline_GetUnsignedOfflineLogonTicket_Request\"O\n\x1b\x43Offline_OfflineLogonTicket\x12\x11\n\taccountid\x18\x01 \x01(\r\x12\x1d\n\x15rtime32_creation_time\x18\x02 \x01(\x07\"_\n/COffline_GetUnsignedOfflineLogonTicket_Response\x12,\n\x06ticket\x18\x01 \x01(\x0b\x32\x1c.COffline_OfflineLogonTicket2\xa3\x03\n\x07Offline\x12\xb5\x01\n\x15GetOfflineLogonTicket\x12\'.COffline_GetOfflineLogonTicket_Request\x1a(.COffline_GetOfflineLogonTicket_Response\"I\x82\xb5\x18\x45Get a serialized and signed offline logon ticket for the current user\x12\xc1\x01\n\x1dGetUnsignedOfflineLogonTicket\x12/.COffline_GetUnsignedOfflineLogonTicket_Request\x1a\x30.COffline_GetUnsignedOfflineLogonTicket_Response\"=\x82\xb5\x18\x39Get an unsigned offline logon ticket for the current user\x1a\x1c\x82\xb5\x18\x18Offline settings service')
+  syntax='proto2',
+  serialized_pb=_b('\n\'steammessages_offline.steamclient.proto\x1a,steammessages_unified_base.steamclient.proto\":\n&COffline_GetOfflineLogonTicket_Request\x12\x10\n\x08priority\x18\x01 \x01(\r\"W\n\'COffline_GetOfflineLogonTicket_Response\x12\x19\n\x11serialized_ticket\x18\x01 \x01(\x0c\x12\x11\n\tsignature\x18\x02 \x01(\x0c\"0\n.COffline_GetUnsignedOfflineLogonTicket_Request\"O\n\x1b\x43Offline_OfflineLogonTicket\x12\x11\n\taccountid\x18\x01 \x01(\r\x12\x1d\n\x15rtime32_creation_time\x18\x02 \x01(\x07\"_\n/COffline_GetUnsignedOfflineLogonTicket_Response\x12,\n\x06ticket\x18\x01 \x01(\x0b\x32\x1c.COffline_OfflineLogonTicket2\xa3\x03\n\x07Offline\x12\xb5\x01\n\x15GetOfflineLogonTicket\x12\'.COffline_GetOfflineLogonTicket_Request\x1a(.COffline_GetOfflineLogonTicket_Response\"I\x82\xb5\x18\x45Get a serialized and signed offline logon ticket for the current user\x12\xc1\x01\n\x1dGetUnsignedOfflineLogonTicket\x12/.COffline_GetUnsignedOfflineLogonTicket_Request\x1a\x30.COffline_GetUnsignedOfflineLogonTicket_Response\"=\x82\xb5\x18\x39Get an unsigned offline logon ticket for the current user\x1a\x1c\x82\xb5\x18\x18Offline settings serviceB\x03\x80\x01\x01')
   ,
-  dependencies=[google.protobuf.descriptor_pb2.DESCRIPTOR,steammessages_unified_base.steamclient_pb2.DESCRIPTOR,])
+  dependencies=[steammessages__unified__base_dot_steamclient__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -50,11 +50,12 @@ _COFFLINE_GETOFFLINELOGONTICKET_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=123,
-  serialized_end=181,
+  serialized_start=89,
+  serialized_end=147,
 )
 
 
@@ -87,11 +88,12 @@ _COFFLINE_GETOFFLINELOGONTICKET_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=183,
-  serialized_end=270,
+  serialized_start=149,
+  serialized_end=236,
 )
 
 
@@ -110,11 +112,12 @@ _COFFLINE_GETUNSIGNEDOFFLINELOGONTICKET_REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=272,
-  serialized_end=320,
+  serialized_start=238,
+  serialized_end=286,
 )
 
 
@@ -147,11 +150,12 @@ _COFFLINE_OFFLINELOGONTICKET = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=322,
-  serialized_end=401,
+  serialized_start=288,
+  serialized_end=367,
 )
 
 
@@ -177,11 +181,12 @@ _COFFLINE_GETUNSIGNEDOFFLINELOGONTICKET_RESPONSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=403,
-  serialized_end=498,
+  serialized_start=369,
+  serialized_end=464,
 )
 
 _COFFLINE_GETUNSIGNEDOFFLINELOGONTICKET_RESPONSE.fields_by_name['ticket'].message_type = _COFFLINE_OFFLINELOGONTICKET
@@ -227,4 +232,6 @@ COffline_GetUnsignedOfflineLogonTicket_Response = _reflection.GeneratedProtocolM
 _sym_db.RegisterMessage(COffline_GetUnsignedOfflineLogonTicket_Response)
 
 
+DESCRIPTOR.has_options = True
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\200\001\001'))
 # @@protoc_insertion_point(module_scope)
