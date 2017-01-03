@@ -54,6 +54,7 @@ class SteamClient:
 
         self.persona_name = ''
         self.persona_state = EPersonaState.Offline
+        self.persona_state_flags = 0
 
     def dispatch(self, emsg, hdr, data):
         handlers = self.handlers.get(emsg, [])
@@ -91,13 +92,15 @@ class SteamClient:
 
         self.connect()
 
-    def set_persona(self, name=None, state=None):
+    def set_persona(self, name=None, state=None, flags=0):
         # FIXME: online state doesn't seem to work
         msg = steam_server.CMsgClientChangeStatus()
         self.persona_name = name or self.persona_name
         self.persona_state = state or self.persona_state
+        self.persona_state_flags = flags or self.persona_state_flags
         msg.player_name = self.persona_name
         msg.persona_state = self.persona_state
+        msg.persona_state_flags = self.persona_state_flags
         self.send(EMsg.ClientChangeStatus | proto_mask, msg)
 
     def add_friend(self, friend):
