@@ -65,15 +65,18 @@ class SteamClient:
                 handler(data)
 
     def connect(self):
-        for i in xrange(3):
-            for server in random.sample(steam.servers, len(steam.servers)):
-                print 'connecting to:', server
-                try:
-                    self.connection = Connection(*server)
-                    return
-                except Exception:
-                    print 'timeout'
-        raise socket.error('could not connect to server')
+        while True:
+            for i in xrange(3):
+                for server in random.sample(steam.servers, len(steam.servers)):
+                    print 'connecting to:', server
+                    try:
+                        self.connection = Connection(*server)
+                        return
+                    except Exception:
+                        print 'timeout'
+
+            print('Failed to connect, trying again in a minute')
+            time.sleep(60)
 
     def login(self, username, password, sentry_hash=None, code=None):
         self.steam_id = steam.SteamID(0)
@@ -129,12 +132,6 @@ class SteamClient:
         game.games_played.extend([played])
         self.send(EMsg.ClientGamesPlayedWithDataBlob | proto_mask, game)
         self.in_game = app_id
-
-    def disconnect(self):
-        print('Disconnect')
-        if self.connection.recv():
-            msg = steam_server.CMsgGSDisconnectNotice()
-            self.send(EMsg.ClientBroadcastDisconnect | proto_mask, msg)
 
     def pump(self):
         thread.start_new_thread(self.msg_pump, ())
@@ -347,10 +344,14 @@ class SteamClient:
         self.connect()
 
     def heartbeat(self, wait=9):
-        while 1:
-            self.send(
-                EMsg.ClientHeartBeat | proto_mask, steam_server.CMsgClientHeartBeat())
-            time.sleep(wait)
+        try:
+            while 1:
+                self.send(
+                    EMsg.ClientHeartBeat | proto_mask, steam_server.CMsgClientHeartBeat())
+                time.sleep(wait)
+
+        except socket.error:
+            self.connect()
 
     def msg_pump(self):
         while True:
