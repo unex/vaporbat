@@ -65,7 +65,7 @@ class SteamClient:
                 handler(data)
 
     def connect(self):
-        while True:
+        while(True):
             for i in xrange(3):
                 for server in random.sample(steam.servers, len(steam.servers)):
                     print 'connecting to:', server
@@ -75,8 +75,9 @@ class SteamClient:
                     except Exception:
                         print 'timeout'
 
-            print('Failed to connect, trying again in a minute')
-            time.sleep(60)
+                        if hasattr(self, 'conenction'): self.connection.socket.close()
+
+                    time.sleep(1)
 
     def login(self, username, password, sentry_hash=None, code=None):
         self.steam_id = steam.SteamID(0)
@@ -121,15 +122,18 @@ class SteamClient:
         self.friends[steamid] = friend
         return friend
 
-    def play(self, app_id):
+    def play(self, app_ids):
         game = steam_server.CMsgClientGamesPlayed()
-        played = steam_server.CMsgClientGamesPlayed.GamePlayed()
-        played.game_id = app_id
-        # This just errors
-        # played.game_extra_info = steam.games[app_id]
-        played.process_id = 1234
-        played.token = self.connect_tokens.pop(-1)
-        game.games_played.extend([played])
+
+        for app_id in app_ids:
+            played = steam_server.CMsgClientGamesPlayed.GamePlayed()
+            played.game_id = app_id
+            # This just errors
+            # played.game_extra_info = steam.games[app_id]
+            played.process_id = 1234
+            played.token = self.connect_tokens.pop(-1)
+            game.games_played.extend([played])
+
         self.send(EMsg.ClientGamesPlayedWithDataBlob | proto_mask, game)
         self.in_game = app_id
 
@@ -284,11 +288,11 @@ class SteamClient:
         addrs = []
         for ip, port in zip(msg.cm_addresses, msg.cm_ports):
             addrs.append(['.'.join(map(str, reversed(struct.unpack('<BBBB', struct.pack('<I', ip))))), port])
-        print 'Server list:', addrs
+        # print 'Server list:', addrs
 
     def on_friend_list(self, friends):
         more_info = steam_server.CMsgClientRequestFriendData()
-        more_info.persona_state_requested = EClientPersonaStateFlag.PlayerName | EClientPersonaStateFlag.Presence
+        more_info.persona_state_requested = EClientPersonaStateFlag.PlayerName | EClientPersonaStateFlag.Presence# | EClientPersonaStateFlag.Metadata
         if not friends.bincremental:
             self.friends = {}
         for friend in friends.friends:
@@ -309,6 +313,8 @@ class SteamClient:
                 self.friends[fid] = steam.Friend(self, fid)
             if msg.status_flags & EClientPersonaStateFlag.PlayerName:
                 self.friends[fid].name = friend.player_name
+            self.friends[fid].id = fid
+            self.friends[fid].gameid = friend.gameid
 
     def on_friend_msg(self, msg):
         if msg.chat_entry_type == 1:
